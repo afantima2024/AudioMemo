@@ -1,0 +1,77 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <PlatformTarget>x64</PlatformTarget>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <Version>0.1.0</Version>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon Condition="Exists('Assets\AudioMemo.ico')">Assets\AudioMemo.ico</ApplicationIcon>
+    <Product>AudioMemo</Product>
+    <Copyright>Copyright © 2026 Afanti Ma</Copyright>
+    <Description>Local-first audio recording, transcription, and meeting notes.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <RuntimeHostConfigurationOption Include="Switch.System.Windows.Controls.Text.UseAdornerForTextboxSelectionRendering" Value="false" />
+    <ProjectReference Include="..\AudioMemo.Core\AudioMemo.Core.csproj" />
+    <PackageReference Include="NAudio" Version="2.2.1" GeneratePathProperty="true" />
+    <PackageReference Include="Whisper.net" Version="1.9.1" GeneratePathProperty="true" />
+    <PackageReference Include="Whisper.net.Runtime" Version="1.9.1" />
+    <PackageReference Include="Whisper.net.Runtime.NoAvx" Version="1.9.1" />
+    <PackageReference Include="Whisper.net.Runtime.Vulkan" Version="1.9.1" />
+    <PackageReference Include="org.k2fsa.sherpa.onnx" Version="1.13.8" />
+    <PackageReference Include="org.k2fsa.sherpa.onnx.runtime.win-x64" Version="1.13.8"
+                      ExcludeAssets="all" GeneratePathProperty="true" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\BrandLogo.png" />
+    <Resource Include="Assets\AppIcon.png" />
+    <None Include="$(PkgNAudio)\license.txt" Link="Licenses\NAudio.txt" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <None Include="$(PkgWhisper_net)\LICENSE" Link="Licenses\Whisper.net.txt" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <None Update="Licenses\*.txt" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <None Update="Licenses\FFmpeg\**\*" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <None Update="Native\FFmpeg\win-x64\*" TargetPath="FFmpeg\%(Filename)%(Extension)"
+          CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <None Update="Native\win-x64\sherpa-onnx-c-api.dll" TargetPath="sherpa-onnx-c-api.dll"
+          CopyToOutputDirectory="Always" CopyToPublishDirectory="Always" />
+    <None Include="$(Pkgorg_k2fsa_sherpa_onnx_runtime_win-x64)\runtimes\win-x64\native\onnxruntime.dll"
+          Link="onnxruntime.dll" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <Target Name="CheckSpeakerRuntime" BeforeTargets="PrepareForBuild">
+    <Error Condition="!Exists('Native\win-x64\sherpa-onnx-c-api.dll')"
+           Text="The no-TTS speaker runtime is missing. Run scripts\Build-SpeakerRuntime.ps1; do not substitute the stock native package." />
+  </Target>
+
+  <Target Name="CheckVideoRuntime" BeforeTargets="PrepareForBuild">
+    <Error Condition="!Exists('Native\FFmpeg\win-x64\ffmpeg.exe') Or !Exists('Native\FFmpeg\win-x64\ffprobe.exe') Or !Exists('Native\FFmpeg\win-x64\manifest.json')"
+           Text="The pinned FFmpeg video tools are missing. Run scripts\Get-FFmpeg.ps1 before building." />
+  </Target>
+
+  <Target Name="KeepWindowsWhisperRuntimes" AfterTargets="ComputeFilesToPublish">
+    <ItemGroup>
+      <ResolvedFileToPublish Remove="@(ResolvedFileToPublish)"
+          Condition="$([System.Text.RegularExpressions.Regex]::IsMatch('%(ResolvedFileToPublish.RelativePath)', '^runtimes[\\/]')) And !$([System.Text.RegularExpressions.Regex]::IsMatch('%(ResolvedFileToPublish.RelativePath)', '^runtimes[\\/](win-x64|(noavx|vulkan)[\\/]win-x64)[\\/]'))" />
+    </ItemGroup>
+  </Target>
+
+  <Target Name="CreatePortableHost" DependsOnTargets="_GetAppHostPaths;_GetAppHostCreationConfiguration">
+    <Error Condition="'$(PortableOutputDirectory)' == ''"
+           Text="PortableOutputDirectory is required to create the portable application host." />
+    <Error Condition="!Exists('$(PortableOutputDirectory)\support\Runtime\$(AssemblyName)$(TargetExt)')"
+           Text="Publish the application into support\Runtime before creating the portable host." />
+    <CreateAppHost AppHostSourcePath="$(AppHostSourcePath)"
+                   AppHostDestinationPath="$(PortableOutputDirectory)\$(AssemblyName).exe"
+                   AppBinaryName="support\Runtime\$(AssemblyName)$(TargetExt)"
+                   IntermediateAssembly="$(PortableOutputDirectory)\support\Runtime\$(AssemblyName)$(TargetExt)"
+                   WindowsGraphicalUserInterface="$(_UseWindowsGraphicalUserInterface)"
+                   DotNetSearchLocations="AppLocal" />
+  </Target>
+
+</Project>

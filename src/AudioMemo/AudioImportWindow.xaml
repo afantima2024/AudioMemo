@@ -1,0 +1,40 @@
+<Window x:Class="AudioMemo.AudioImportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:loc="clr-namespace:AudioMemo.Localization"
+        xmlns:services="clr-namespace:AudioMemo.Services"
+        Title="{loc:Loc ImportAudio}" Width="520" Height="260" MinWidth="360" MinHeight="220"
+        WindowStartupLocation="CenterOwner" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Grid Margin="20">
+        <Grid.RowDefinitions><RowDefinition Height="Auto" /><RowDefinition /><RowDefinition Height="Auto" /></Grid.RowDefinitions>
+        <StackPanel>
+            <TextBlock Text="{loc:Loc ImportAudio}" FontSize="22" FontWeight="SemiBold" TextWrapping="Wrap" />
+            <TextBlock Text="{loc:Loc ImportAudioHint}" Style="{StaticResource MutedText}" Margin="0,6,0,12" />
+            <ProgressBar x:Name="ImportProgress" Height="6" Maximum="100" />
+        </StackPanel>
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Margin="0,12">
+            <StackPanel>
+                <TextBlock x:Name="ImportStatus" services:MessageJournal.Reason="{loc:Loc ImportAudio}" TextWrapping="Wrap" AutomationProperties.LiveSetting="Polite" />
+                <StackPanel x:Name="AudioTrackPanel" Visibility="Collapsed" Margin="0,12,0,0">
+                    <TextBlock Text="{loc:Loc VideoAudioTrack}" FontWeight="SemiBold" Margin="0,0,0,6" />
+                    <ComboBox x:Name="AudioTrackBox" SelectedValuePath="StreamIndex"
+                              SelectionChanged="AudioTrack_SelectionChanged" MaxDropDownHeight="240"
+                              ToolTip="{Binding SelectedItem.Label, RelativeSource={RelativeSource Self}}"
+                              AutomationProperties.Name="{loc:Loc VideoAudioTrack}">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Label}" TextTrimming="CharacterEllipsis" ToolTip="{Binding Label}" />
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <TextBlock Text="{loc:Loc VideoTrackHint}" Style="{StaticResource MutedText}" Margin="0,8,0,0" />
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="ImportSelectedButton" Content="{loc:Loc VideoImportSelected}" Visibility="Collapsed"
+                    IsDefault="True" Margin="0,0,8,0" Click="ImportSelected_Click" />
+            <Button x:Name="CancelImportButton" Content="{loc:Loc Cancel}" Click="Cancel_Click" />
+        </StackPanel>
+    </Grid>
+</Window>

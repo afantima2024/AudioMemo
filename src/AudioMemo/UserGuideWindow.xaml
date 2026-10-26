@@ -1,0 +1,24 @@
+<Window x:Class="AudioMemo.UserGuideWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:loc="clr-namespace:AudioMemo.Localization"
+        Title="{loc:Loc UserGuide}" Width="820" Height="680" MinWidth="420" MinHeight="420"
+        ShowInTaskbar="False" WindowStartupLocation="CenterOwner">
+    <DockPanel Margin="20">
+        <Button x:Name="CloseGuideButton" DockPanel.Dock="Bottom" Content="{loc:Loc Close}" IsCancel="True"
+                MinWidth="80" HorizontalAlignment="Right" Margin="0,14,0,0" />
+        <StackPanel DockPanel.Dock="Top">
+            <TextBlock Text="{loc:Loc UserGuide}" Style="{StaticResource SectionTitle}" Margin="0,0,0,8" />
+            <TextBlock Text="{loc:Loc UserGuideHint}" Style="{StaticResource MutedText}" Margin="0,0,0,12" />
+            <Label Content="{loc:Loc UserGuideTopic}" Target="{Binding ElementName=GuideTopics}" Padding="0,0,0,4" />
+            <ComboBox x:Name="GuideTopics" DisplayMemberPath="Title" Margin="0,0,0,14"
+                      AutomationProperties.Name="{loc:Loc UserGuideTopic}" />
+            <TextBlock x:Name="GuideHeading" Text="{Binding SelectedItem.Title, ElementName=GuideTopics}"
+                       Style="{StaticResource SectionTitle}" TextWrapping="Wrap" Margin="0,0,0,10" />
+        </StackPanel>
+        <TextBox x:Name="GuideBody" Text="{Binding SelectedItem.Body, ElementName=GuideTopics, Mode=OneWay}"
+                 IsReadOnly="True" IsReadOnlyCaretVisible="True" IsUndoEnabled="False" AcceptsReturn="True" TextWrapping="Wrap"
+                 VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Padding="12"
+                 VerticalContentAlignment="Top" AutomationProperties.Name="{loc:Loc UserGuide}" TextChanged="GuideBody_TextChanged" />
+    </DockPanel>
+</Window>

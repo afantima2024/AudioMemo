@@ -1,0 +1,71 @@
+AudioMemo uses third-party components:
+
+- .NET and WPF, Microsoft and contributors (MIT and applicable .NET notices).
+  https://github.com/dotnet/runtime
+  https://github.com/dotnet/wpf
+- NAudio 2.2.1, Mark Heath and contributors (MIT).
+  https://github.com/naudio/NAudio
+- FFmpeg/ffprobe n9.0.2-17-g2a571b6068, FFmpeg developers and contributors
+  (LGPL-3.0-or-later shared build from BtbN; GPL/nonfree variants are not used).
+  https://ffmpeg.org/
+  https://github.com/BtbN/FFmpeg-Builds
+  Used as unmodified local subprocesses for video-audio import. See
+  support\Licenses\FFmpeg for notices, license texts, exact FFmpeg source,
+  build recipes, configuration, and dependency checksums. This software is
+  based in part on the work of the Independent JPEG Group.
+- Whisper.net 1.9.1, Sandro Hanea and contributors (MIT).
+  https://github.com/sandrohanea/whisper.net
+- whisper.cpp / ggml and contributors (MIT; included via Whisper.net runtimes).
+  https://github.com/ggml-org/whisper.cpp
+  https://github.com/ggml-org/ggml
+- Whisper.net.Runtime.Vulkan 1.9.1 (MIT) includes the ggml Vulkan backend.
+  Vulkan support also uses the separately installed GPU vendor driver.
+  https://github.com/sandrohanea/whisper.net
+- sherpa-onnx 1.13.8, the Next-gen Kaldi team/Xiaomi and contributors
+  (Apache-2.0), including its C# binding and a no-TTS Windows x64 native build.
+  https://github.com/k2-fsa/sherpa-onnx/tree/v1.13.8
+  The stock native binary is excluded; see support\Licenses\Speaker-runtime-build.txt
+  for the source/build recipe and native dependency notices. Unused
+  Piper/eSpeak-ng text-to-speech code is not linked into this build.
+- ONNX Runtime 1.28.2, Microsoft and contributors (MIT and its bundled
+  third-party notices), redistributed by sherpa-onnx.
+  https://github.com/microsoft/onnxruntime/tree/v1.28.2
+- Optional Pyannote segmentation-3.0 model, CNRS (MIT).
+  The download archive includes its original model LICENSE.
+  https://github.com/k2-fsa/sherpa-onnx/releases/tag/speaker-segmentation-models
+- Optional 3D-Speaker ERes2Net speaker-embedding model (Apache-2.0).
+  https://github.com/modelscope/3D-Speaker
+  https://github.com/k2-fsa/sherpa-onnx/releases/tag/speaker-recongition-models
+- OpenAI Whisper model weights (MIT), distributed in ggml format by whisper.cpp.
+  https://github.com/openai/whisper
+  https://huggingface.co/ggerganov/whisper.cpp
+- OpenccNetLib 1.7.0, laisuk (MIT), with OpenCC dictionary data (Apache-2.0).
+  https://github.com/laisuk/OpenccNet
+  https://github.com/BYVoid/OpenCC
+- ZstdSharp.Port 0.8.8, Oleg Stepanischev (MIT), derived from Zstandard
+  by Meta Platforms, Inc. and affiliates (BSD-3-Clause).
+  https://github.com/oleg-st/ZstdSharp
+  https://github.com/facebook/zstd
+- System.Formats.Cbor and related .NET support libraries, Microsoft and
+  contributors (MIT and applicable .NET notices).
+  https://github.com/dotnet/runtime
+
+Development-only dependencies include xUnit.net, Microsoft.NET.Test.Sdk,
+xunit.runner.visualstudio, and coverlet.collector under their respective
+licenses. They are not part of the published application.
+
+The optional Setup.exe installer/uninstaller uses unmodified NSIS 3.13 or later
+components, Copyright (C) 1999-2026 Contributors. NSIS is licensed under the
+zlib/libpng license; its LZMA module uses the Common Public License 1.0 with
+the NSIS installer-linking exception. Setup distributions include the complete
+NSIS COPYING file as support\Licenses\NSIS.txt.
+https://nsis.sourceforge.io/
+
+Copilot CLI is separately installed software and is not redistributed here.
+The application icon is generated specifically for AudioMemo by
+scripts\Generate-Icons.ps1.
+
+Full applicable license texts are included in the application's support\Licenses
+directory. Publish.ps1 also copies the bundled .NET runtimes' own license
+and third-party notices there. Retain that directory when distributing the app.
+This component list is not a replacement for those license texts.

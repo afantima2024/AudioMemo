@@ -1,0 +1,54 @@
+using System.Windows;
+using System.Windows.Input;
+using AudioMemo.Core.Models;
+
+namespace AudioMemo.Controls;
+
+public partial class TranscriptView
+{
+    public ShortcutSettings Shortcuts { get; private set; } = new();
+    public event Action<KeyEventArgs>? GlobalShortcutRequested;
+
+    public void FocusTranscript() => RowsGrid.Focus();
+
+    public FrameworkElement? ShortcutTarget(string id) => id switch
+    {
+        "copy" => CopyVisibleButton,
+        "copyAnnotated" => CopyAnnotatedButton,
+        "export" => ExportAudioMenu,
+        "latest" => FollowButton,
+        "first" => TranscriptTopButton,
+        "pageUp" => TranscriptPageUpButton,
+        "pageDown" => TranscriptPageDownButton,
+        "speakerFilter" => SpeakerFilterButton,
+        "play" => PlayRangeButton,
+        "replayPause" => ReplayTransport.Visibility == Visibility.Visible ? ReplayPauseButton : null,
+        "replayStop" => ReplayTransport.Visibility == Visibility.Visible ? ReplayStopButton : null,
+        "silence" => MuteRowsButton,
+        "edit" => CorrectRowsButton,
+        "reviewUnclear" => ReviewUnclearMenu,
+        "retranscribe" => RetranscribeRowsMenu,
+        "online" => OnlineRowsButton,
+        "search" => SearchButton,
+        "searchNext" => SearchNextButton,
+        "searchPrevious" => SearchPreviousButton,
+        "searchClear" => ClearSearchButton,
+        "speakerColor" => SpeakerColorMenu,
+        "speakerCorrection" => CorrectSpeakerMenu,
+        _ => null
+    };
+
+    public void ConfigureShortcuts(ShortcutSettings settings)
+    {
+        settings.Validate();
+        Shortcuts = settings;
+        foreach (var command in ShortcutSettings.Commands)
+            if (ShortcutTarget(command.Id) is { } target)
+                ShortcutActions.SetHint(target, settings, command.Id);
+        CorrectRowsMenu.InputGestureText = ShortcutInput.Display(settings.Gesture("edit"));
+        OnlineRowsMenu.InputGestureText = ShortcutInput.Display(settings.Gesture("online"));
+        ShortcutActions.SetHint(ReplayPauseButton, settings, "replayPause");
+        ShortcutActions.SetHint(ReplayStopButton, settings, "replayStop");
+        ShortcutActions.SetHint(TranscriptBottomButton, settings, "latest");
+    }
+}

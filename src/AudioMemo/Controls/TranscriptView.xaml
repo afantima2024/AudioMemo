@@ -1,0 +1,196 @@
+<UserControl x:Class="AudioMemo.Controls.TranscriptView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:loc="clr-namespace:AudioMemo.Localization"
+             xmlns:local="clr-namespace:AudioMemo.Controls">
+    <UserControl.Resources>
+        <Style x:Key="TranscriptNavigationButton" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Width" Value="28" /><Setter Property="Height" Value="28" />
+            <Setter Property="MinWidth" Value="28" /><Setter Property="MinHeight" Value="28" />
+            <Setter Property="Padding" Value="0" /><Setter Property="BorderThickness" Value="0" />
+            <Setter Property="ToolTipService.ShowOnDisabled" Value="True" />
+        </Style>
+    </UserControl.Resources>
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top" Margin="0,0,0,6" Padding="0" Background="Transparent"
+                 ToolBarTray.IsLocked="True" AutomationProperties.Name="{loc:Loc Transcript}">
+            <ToolBar.Resources>
+                <Style x:Key="{x:Static ToolBar.ButtonStyleKey}" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}" />
+            </ToolBar.Resources>
+            <Button x:Name="SpeakerFilterButton" Click="SpeakerFilter_Click" Padding="8,4" MinHeight="28" FontSize="12" Margin="0,0,6,0"
+                    AutomationProperties.Name="{loc:Loc SpeakerFilterLabel}">
+                <TextBlock x:Name="SpeakerFilterText" Text="{loc:Loc AllSpeakers}" MaxWidth="135" TextTrimming="CharacterEllipsis" />
+            </Button>
+            <Button x:Name="CopyVisibleButton" Content="{loc:Loc CopyAllText}" Click="CopyAll_Click" Padding="8,4" MinHeight="28" FontSize="12" Margin="0,0,6,0" />
+            <Button x:Name="CopyAnnotatedButton" Content="{loc:Loc CopyAnnotated}" Click="CopyAnnotated_Click" Padding="8,4" MinHeight="28" FontSize="12" Margin="0,0,6,0" />
+            <Button x:Name="FollowButton" Content="{loc:Loc FollowingTranscript}" Click="Follow_Click" Padding="8,4" MinHeight="28" FontSize="12" Margin="0,0,6,0" />
+            <Button x:Name="PlayRangeButton" Content="{loc:Loc PlaySelectedRange}" Click="PlayRange_Click" Padding="8,4" MinHeight="28" FontSize="12" ToolTip="{loc:Loc ReplayHint}" />
+            <Button x:Name="MuteRowsButton" Content="{loc:Loc MuteSelectedRows}" Click="MuteRows_Click" Padding="8,4" MinHeight="28" FontSize="12" Margin="6,0,0,0" ToolTip="{loc:Loc MuteSelectedRowsHint}" />
+            <Button x:Name="CorrectRowsButton" ToolBar.OverflowMode="Never" Content="{loc:Loc EditTranscriptText}" Click="CorrectRows_Click" Padding="8,4" MinHeight="28" FontSize="12" Margin="6,0,0,0" ToolTip="{loc:Loc CorrectSelectionHint}" />
+            <Button x:Name="SearchButton" ToolBar.OverflowMode="Never" Content="{loc:Loc SearchButton}" Click="OpenSearch_Click" Padding="8,4" MinHeight="28" FontSize="12" Margin="6,0,0,0" ToolTip="{loc:Loc SearchWindowHint}" />
+            <Button x:Name="OnlineRowsButton" Content="{loc:Loc OnlineTranscription}" Click="OnlineRows_Click" Padding="8,4" MinHeight="28" FontSize="12" Margin="6,0,0,0" ToolTip="{loc:Loc OnlineSelectionHint}" />
+        </ToolBar>
+        <DockPanel x:Name="ReplayTransport" DockPanel.Dock="Bottom" Visibility="Collapsed" Margin="0,5,0,0">
+            <Button x:Name="ReplayPauseButton" DockPanel.Dock="Left" Content="{loc:Loc ReplayPause}" Click="ReplayPause_Click" Padding="8,3" MinHeight="26" FontSize="12" Margin="0,0,5,0" />
+            <Button x:Name="ReplayStopButton" DockPanel.Dock="Left" Content="{loc:Loc ReplayStop}" Click="ReplayStop_Click" Padding="8,3" MinHeight="26" FontSize="12" Margin="0,0,8,0" />
+            <TextBlock x:Name="ReplayPositionText" DockPanel.Dock="Right" FontSize="11" VerticalAlignment="Center" Margin="8,0,0,0" />
+            <Slider x:Name="ReplayProgress" Minimum="0" Maximum="1" Height="20" VerticalAlignment="Center"
+                    IsMoveToPointEnabled="True" SmallChange="1" LargeChange="5" ValueChanged="ReplayPosition_Changed"
+                    ToolTip="{loc:Loc ReplaySeekHint}" AutomationProperties.Name="{loc:Loc ReplayProgressLabel}" />
+        </DockPanel>
+        <Grid>
+        <DataGrid x:Name="RowsGrid" AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False"
+                  CanUserDeleteRows="False" CanUserSortColumns="False" CanUserReorderColumns="False"
+                  SelectionMode="Extended" SelectionUnit="FullRow" HeadersVisibility="Column"
+                  BorderThickness="0" GridLinesVisibility="Horizontal" HorizontalGridLinesBrush="{DynamicResource RowDivider}"
+                  RowHeaderWidth="0" Background="{DynamicResource SolidBackgroundFillColorQuarternaryBrush}" AlternatingRowBackground="{DynamicResource SubtleFillColorTertiaryBrush}"
+                  EnableRowVirtualization="True" VirtualizingPanel.VirtualizationMode="Recycling"
+                  VirtualizingPanel.ScrollUnit="Pixel" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                  CellStyle="{StaticResource TranscriptDataGridCell}" MinRowHeight="24"
+                  PreviewKeyDown="Grid_PreviewKeyDown" PreviewMouseWheel="Grid_PreviewMouseWheel"
+                  PreviewMouseRightButtonDown="Grid_PreviewMouseRightButtonDown"
+                  PreviewMouseDoubleClick="Grid_PreviewMouseDoubleClick" SelectionChanged="Rows_SelectionChanged" LoadingRow="Rows_LoadingRow"
+                  AutomationProperties.Name="{loc:Loc AudioTranscript}">
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow" BasedOn="{StaticResource {x:Type DataGridRow}}">
+                    <Setter Property="MinHeight" Value="24" />
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem x:Name="PlayRangeMenu" Header="{loc:Loc PlaySelectedRange}" Click="PlayRange_Click" />
+                    <MenuItem x:Name="RetranscribeRowsMenu" Header="{loc:Loc RetranscribeSelection}" Click="RetranscribeRows_Click" />
+                    <MenuItem x:Name="OnlineRowsMenu" Header="{loc:Loc OnlineTranscription}" Click="OnlineRows_Click" />
+                    <MenuItem x:Name="CorrectRowsMenu" Header="{loc:Loc EditTranscriptText}" Click="CorrectRows_Click" InputGestureText="F2" />
+                    <MenuItem x:Name="ReviewUnclearMenu" Header="{loc:Loc ReviewUnclearTranscript}" Click="ReviewUnclear_Click"
+                              ToolTip="{loc:Loc ReviewUnclearTranscriptHint}" />
+                    <MenuItem x:Name="SelectVisibleRowsMenu" Header="{loc:Loc SelectAllVisibleRows}" Click="SelectVisibleRows_Click" />
+                    <MenuItem x:Name="MuteRowsMenu" Header="{loc:Loc MuteSelectedRows}" Click="MuteRows_Click" />
+                    <MenuItem x:Name="ShowMutedRowsMenu" Header="{loc:Loc ShowMutedRows}" Click="ShowMutedRows_Click" />
+                    <Separator />
+                    <MenuItem x:Name="CopySelectedMenu" Header="{loc:Loc CopySelectedText}" Click="CopySelected_Click" />
+                    <MenuItem x:Name="CopySelectedAnnotatedMenu" Header="{loc:Loc CopySelectedAnnotated}" Click="CopySelectedAnnotated_Click" />
+                    <MenuItem x:Name="ExportAudioMenu" Header="{loc:Loc ExportWholeRecording}" Click="ExportAudio_Click"
+                              ToolTip="{loc:Loc ExportWholeRecordingHint}" />
+                    <Separator />
+                    <MenuItem x:Name="RenameSpeakerMenu" Header="{loc:Loc RenameSpeaker}" Click="RenameSpeaker_Click" />
+                    <MenuItem x:Name="CorrectSpeakerMenu" Header="{loc:Loc CorrectSpeaker}" Click="CorrectSpeaker_Click" />
+                    <MenuItem x:Name="RecheckUnlabeledMenu" Header="{loc:Loc RecheckUnlabeledSpeakers}" Click="RecheckUnlabeled_Click"
+                              ToolTip="{loc:Loc RecheckUnlabeledHint}" />
+                    <MenuItem x:Name="SpeakerColorMenu" Header="{loc:Loc SetSpeakerColor}" Click="SpeakerColor_Click"
+                              ToolTip="{loc:Loc SpeakerColorHint}" />
+                    <Separator />
+                    <MenuItem x:Name="MarkMeMenu" Header="{loc:Loc MarkAsMe}" Click="MarkMe_Click" />
+                    <MenuItem x:Name="RemoveMeMenu" Header="{loc:Loc RemoveMeTag}" Click="RemoveMe_Click" />
+                    <MenuItem x:Name="SummarizeAboutMeMenu" Header="{loc:Loc SummarizeAboutMe}" Click="SummarizeAboutMe_Click"
+                              ToolTip="{loc:Loc SummarizeAboutMeHint}" />
+                    <Separator />
+                    <MenuItem x:Name="FollowMenu" Header="{loc:Loc JumpToLatest}" Click="Follow_Click" />
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="TimeColumn" Header="{loc:Loc TimestampColumn}" Binding="{Binding Time}" Width="78">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="FontSize" Value="11" />
+                            <Setter Property="Foreground" Value="{Binding Foreground, RelativeSource={RelativeSource AncestorType=DataGridRow}}" />
+                            <Setter Property="Margin" Value="2,4,2,0" />
+                            <Setter Property="ToolTip" Value="{loc:Loc TimestampReplayHint}" />
+                            <Setter Property="Cursor" Value="Hand" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTemplateColumn x:Name="SpeakerColumn" Header="{loc:Loc SpeakerColumn}" Width="92">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DockPanel Margin="2,3,4,0" Cursor="Hand" ToolTip="{loc:Loc SpeakerColorHint}">
+                                <Border DockPanel.Dock="Left" Width="6" Height="18" CornerRadius="2" Margin="0,0,5,0"
+                                        VerticalAlignment="Top" Background="{DynamicResource SpeakerSwatchBrush}" />
+                                <TextBlock Text="{Binding DisplaySpeaker}" TextWrapping="Wrap" FontSize="12"
+                                           Foreground="{Binding Foreground, RelativeSource={RelativeSource AncestorType=DataGridRow}}" />
+                            </DockPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn x:Name="TranscriptTextColumn" Header="{loc:Loc TranscriptTextColumn}" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <local:TranscriptTextBox Text="{Binding Text, Mode=OneWay}" IsReadOnly="True" TextWrapping="Wrap"
+                                     Style="{StaticResource TranscriptCellText}" Loaded="TextCell_Loaded" DataContextChanged="TextCell_DataContextChanged"
+                                     BorderThickness="0" Background="Transparent" Padding="4,2"
+                                     Foreground="{Binding Foreground, RelativeSource={RelativeSource AncestorType=DataGridRow}}"
+                                     SelectionBrush="{DynamicResource SearchActiveHighlight}" SelectionOpacity="1"
+                                     SelectionTextBrush="{DynamicResource TranscriptTextSelectionForeground}"
+                                     IsInactiveSelectionHighlightEnabled="True"
+                                     FontSize="15" AcceptsReturn="True" SelectionChanged="Text_SelectionChanged"
+                                     LostKeyboardFocus="Text_LostKeyboardFocus"
+                                     VerticalContentAlignment="Top" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+            <TextBlock x:Name="NoMatchingSpeakers" Text="{loc:Loc NoMatchingSpeakers}" Visibility="Collapsed"
+                       HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" MaxWidth="300"
+                       Foreground="{DynamicResource TextFillColorSecondaryBrush}" IsHitTestVisible="False" />
+            <Canvas x:Name="NavigationCanvas" Panel.ZIndex="1" ClipToBounds="True"
+                    SizeChanged="NavigationCanvas_SizeChanged" PreviewMouseWheel="Navigation_MouseWheel">
+                <Border x:Name="FloatingNavigation" Canvas.Left="8" Canvas.Top="8" Width="136" Height="36" Visibility="Collapsed"
+                        Background="{DynamicResource SolidBackgroundFillColorQuarternaryBrush}"
+                        BorderBrush="{DynamicResource AppDivider}" BorderThickness="1" CornerRadius="8" Padding="3">
+                    <StackPanel Orientation="Horizontal">
+                        <Thumb x:Name="NavigationDragHandle" Width="12" Height="28" Margin="0,0,4,0" Cursor="SizeAll"
+                               Focusable="True" IsTabStop="True" DragStarted="NavigationDrag_Started"
+                               DragDelta="NavigationDrag_Delta" DragCompleted="NavigationDrag_Completed"
+                               PreviewKeyDown="NavigationDrag_KeyDown" Unloaded="NavigationDrag_Unloaded"
+                               ToolTip="{loc:Loc MoveTranscriptNavigationHint}" AutomationProperties.Name="{loc:Loc MoveTranscriptNavigation}">
+                            <Thumb.Template>
+                                <ControlTemplate TargetType="Thumb">
+                                    <Border x:Name="GripBackground" Background="Transparent" CornerRadius="3">
+                                        <Path Data="M2,2 L3,2 M7,2 L8,2 M2,6 L3,6 M7,6 L8,6 M2,10 L3,10 M7,10 L8,10"
+                                              Width="10" Height="12" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                              Stroke="{DynamicResource TextFillColorSecondaryBrush}" StrokeThickness="1.5"
+                                              StrokeStartLineCap="Round" StrokeEndLineCap="Round" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="GripBackground" Property="Background" Value="{DynamicResource SubtleFillColorSecondaryBrush}" />
+                                        </Trigger>
+                                        <Trigger Property="IsDragging" Value="True">
+                                            <Setter TargetName="GripBackground" Property="Background" Value="{DynamicResource SubtleFillColorSecondaryBrush}" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Thumb.Template>
+                        </Thumb>
+                        <Button x:Name="TranscriptTopButton" Tag="first" Style="{StaticResource TranscriptNavigationButton}" Click="Navigation_Click"
+                                ToolTip="{loc:Loc TranscriptBeginning}" AutomationProperties.Name="{loc:Loc TranscriptBeginning}">
+                            <Path Data="M1,1 L11,1 M2,7 L6,3 10,7 M6,3 L6,11" Width="12" Height="12"
+                                  Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" StrokeThickness="1.4"
+                                  StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeEndLineCap="Round" />
+                        </Button>
+                        <Button x:Name="TranscriptPageUpButton" Tag="pageUp" Style="{StaticResource TranscriptNavigationButton}" Click="Navigation_Click"
+                                ToolTip="{loc:Loc TranscriptPageUp}" AutomationProperties.Name="{loc:Loc TranscriptPageUp}">
+                            <Path Data="M2,6 L6,2 10,6 M2,11 L6,7 10,11" Width="12" Height="12"
+                                  Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" StrokeThickness="1.4"
+                                  StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeEndLineCap="Round" />
+                        </Button>
+                        <Button x:Name="TranscriptPageDownButton" Tag="pageDown" Style="{StaticResource TranscriptNavigationButton}" Click="Navigation_Click"
+                                ToolTip="{loc:Loc TranscriptPageDown}" AutomationProperties.Name="{loc:Loc TranscriptPageDown}">
+                            <Path Data="M2,1 L6,5 10,1 M2,6 L6,10 10,6" Width="12" Height="12"
+                                  Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" StrokeThickness="1.4"
+                                  StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeEndLineCap="Round" />
+                        </Button>
+                        <Button x:Name="TranscriptBottomButton" Tag="latest" Style="{StaticResource TranscriptNavigationButton}" Click="Navigation_Click"
+                                ToolTip="{loc:Loc TranscriptBottomHint}" AutomationProperties.Name="{loc:Loc TranscriptBottom}">
+                            <Path Data="M1,11 L11,11 M2,5 L6,9 10,5 M6,1 L6,9" Width="12" Height="12"
+                                  Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" StrokeThickness="1.4"
+                                  StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeEndLineCap="Round" />
+                        </Button>
+                    </StackPanel>
+                </Border>
+            </Canvas>
+        </Grid>
+    </DockPanel>
+</UserControl>

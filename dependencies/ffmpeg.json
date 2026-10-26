@@ -1,0 +1,28 @@
+{
+  "version": "n9.0.2-17-g2a571b6068",
+  "variant": "win64-lgpl-shared-9.0",
+  "release": "autobuild-2026-09-30-13-08",
+  "archive": "ffmpeg-n9.0.2-17-g2a571b6068-win64-lgpl-shared-9.0.zip",
+  "url": "https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2026-09-30-13-08/ffmpeg-n9.0.2-17-g2a571b6068-win64-lgpl-shared-9.0.zip",
+  "sha256": "7157177B8A6CB2174C1650BA8C71B363F2C78CBA5330F88C4C02CF5B2B880646",
+  "buildRepository": "https://github.com/BtbN/FFmpeg-Builds",
+  "sourceRepository": "https://github.com/FFmpeg/FFmpeg",
+  "sourceCommit": "2a571b606854520cf89804d8030c8b328e621689",
+  "buildCommit": "6c9aec5fc9a72ec3abedd1fa84db141fa18cf52b",
+  "license": "LGPL-3.0-or-later",
+  "files": [
+    "ffmpeg.exe",
+    "ffprobe.exe",
+    "avcodec-63.dll",
+    "avdevice-63.dll",
+    "avfilter-12.dll",
+    "avformat-63.dll",
+    "avutil-61.dll",
+    "swresample-7.dll",
+    "swscale-10.dll"
+  ],
+  "sourceUrl": "https://github.com/FFmpeg/FFmpeg/archive/2a571b606854520cf89804d8030c8b328e621689.zip",
+  "buildSourceUrl": "https://github.com/BtbN/FFmpeg-Builds/archive/6c9aec5fc9a72ec3abedd1fa84db141fa18cf52b.zip",
+  "sourceSha256": "25C3B714EBBB3D43FFD2A5126D8CE34217DADE0D8CD4829C618666E3E19B3858",
+  "buildSourceSha256": "A3C33D42D85429CF42B93B31D4FAD9B186AC343FF66CB9452ECFB47B4BCA73D8"
+}

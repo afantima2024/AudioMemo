@@ -1,0 +1,389 @@
+<Window x:Class="AudioMemo.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:loc="clr-namespace:AudioMemo.Localization"
+        xmlns:controls="clr-namespace:AudioMemo.Controls"
+        xmlns:services="clr-namespace:AudioMemo.Services"
+        Title="{loc:Loc SettingsWindowTitle}" Width="1040" Height="860" MinWidth="640" MinHeight="420"
+        WindowStartupLocation="CenterOwner" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Window.Resources>
+        <Style x:Key="CategoryItem" TargetType="ListBoxItem">
+            <Setter Property="Padding" Value="12,10" />
+            <Setter Property="Margin" Value="0,2" />
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground" Value="{DynamicResource TextFillColorPrimaryBrush}" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="5" Padding="{TemplateBinding Padding}"
+                                BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1">
+                            <ContentPresenter />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource TranscriptSelectionBackground}" />
+                    <Setter Property="Foreground" Value="{DynamicResource TranscriptSelectionForeground}" />
+                    <Setter Property="FontWeight" Value="SemiBold" />
+                </Trigger>
+                <Trigger Property="IsKeyboardFocused" Value="True">
+                    <Setter Property="BorderBrush" Value="{DynamicResource AccentTextFillColorPrimaryBrush}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <DockPanel Margin="24">
+        <StackPanel DockPanel.Dock="Top" Margin="0,0,0,18">
+            <TextBlock Text="{loc:Loc MakeItYours}" FontSize="26" FontWeight="SemiBold" />
+            <TextBlock Text="{loc:Loc SettingsHint}"
+                       Style="{StaticResource MutedText}" Margin="0,7,0,0" />
+        </StackPanel>
+        <StackPanel DockPanel.Dock="Bottom">
+            <TextBlock x:Name="ModelValidationNotice" Visibility="Collapsed" TextWrapping="Wrap"
+                       Style="{StaticResource MutedText}" Margin="0,8,0,0" />
+            <TextBlock x:Name="SettingsStatus" services:MessageJournal.Reason="{loc:Loc Settings}" Style="{StaticResource MutedText}" Margin="0,12,0,12" TextWrapping="Wrap" AutomationProperties.LiveSetting="Polite" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button x:Name="SaveButton" Content="{loc:Loc SaveSettings}" Style="{StaticResource PrimaryButton}" Click="Save_Click" MinWidth="130" ToolTipService.ShowOnDisabled="True" />
+                <Button Content="{loc:Loc Cancel}" IsCancel="True" Margin="10,0,0,0" MinWidth="80" />
+            </StackPanel>
+        </StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions><ColumnDefinition Width="174" /><ColumnDefinition Width="16" /><ColumnDefinition /></Grid.ColumnDefinitions>
+            <Border BorderBrush="{DynamicResource AppDivider}" BorderThickness="0,0,1,0" Padding="0,0,10,0">
+                <ListBox x:Name="SettingsCategories" Background="Transparent" BorderThickness="0"
+                         ItemContainerStyle="{StaticResource CategoryItem}" SelectedIndex="0"
+                         SelectionChanged="Category_SelectionChanged" AutomationProperties.Name="{loc:Loc SettingsCategories}">
+                    <ListBoxItem Tag="appearance" Content="{loc:Loc SettingsAppearanceCategory}" />
+                    <ListBoxItem Tag="recording" Content="{loc:Loc SettingsRecordingCategory}" />
+                    <ListBoxItem Tag="speech" Content="{loc:Loc SettingsSpeechCategory}" />
+                    <ListBoxItem Tag="summary" Content="{loc:Loc SettingsSummaryCategory}" />
+                    <ListBoxItem Tag="shortcuts" Content="{loc:Loc SettingsShortcutsCategory}" />
+                </ListBox>
+            </Border>
+            <ScrollViewer x:Name="SettingsDetails" Grid.Column="2" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                <StackPanel Margin="0,0,12,0">
+                    <Border x:Name="AppearancePage" Style="{StaticResource Card}" Margin="0,0,0,14">
+                        <StackPanel>
+                            <TextBlock Text="{loc:Loc AppearanceSection}" Style="{StaticResource SectionTitle}" />
+                            <TextBlock Text="{loc:Loc InterfaceLanguage}" Margin="0,12,0,6" />
+                            <ComboBox x:Name="InterfaceLanguageBox" DisplayMemberPath="Label" SelectedValuePath="Code"
+                                      AutomationProperties.Name="{loc:Loc InterfaceLanguage}" />
+                            <TextBlock Text="{loc:Loc InterfaceLanguageHint}" Style="{StaticResource MutedText}" Margin="0,8,0,0" />
+                            <TextBlock Text="{loc:Loc ThemeLabel}" Margin="0,12,0,6" />
+                            <ComboBox x:Name="ThemeBox" DisplayMemberPath="Label" SelectedValuePath="Code"
+                                      AutomationProperties.Name="{loc:Loc ThemeLabel}" />
+                            <TextBlock Text="{loc:Loc ThemeHint}" Style="{StaticResource MutedText}" Margin="0,8,0,0" />
+                            <TextBlock Text="{loc:Loc WorkspacePanels}" FontWeight="SemiBold" Margin="0,16,0,6" />
+                            <CheckBox x:Name="ShowMainPointsCheck" Content="{loc:Loc ShowMainPoints}" />
+                            <CheckBox x:Name="ShowMyNotesCheck" Content="{loc:Loc ShowMyNotes}" />
+                            <TextBlock Text="{loc:Loc WorkspacePanelsHint}" Style="{StaticResource MutedText}" Margin="0,6,0,0" />
+                            <CheckBox x:Name="RainbowRecordingIndicatorCheck" Content="{loc:Loc RainbowRecordingIndicator}"
+                                      Margin="0,16,0,0" ToolTip="{loc:Loc RainbowRecordingIndicatorHint}" />
+                            <TextBlock Text="{loc:Loc RainbowRecordingIndicatorHint}" Style="{StaticResource MutedText}" Margin="0,6,0,0" />
+                            <Separator Margin="0,16,0,12" Background="{DynamicResource AppDivider}" />
+                            <TextBlock Text="{loc:Loc ButtonAppearance}" FontWeight="SemiBold" Margin="0,0,0,6" />
+                            <ComboBox x:Name="ButtonStyleBox" DisplayMemberPath="Label" SelectedValuePath="Code"
+                                      SelectionChanged="ButtonStyle_SelectionChanged" AutomationProperties.Name="{loc:Loc ButtonAppearance}" />
+                            <TextBlock Text="{loc:Loc ButtonAppearanceHint}" Style="{StaticResource MutedText}" Margin="0,8,0,10" />
+                            <Border x:Name="ButtonPreview" Padding="10" BorderBrush="{DynamicResource AppDivider}" BorderThickness="1" CornerRadius="6">
+                                <WrapPanel>
+                                    <Button Content="{loc:Loc PreviewPrimaryButton}" Style="{StaticResource PrimaryButton}" Margin="0,0,8,4" />
+                                    <Button Content="{loc:Loc PreviewButton}" Margin="0,0,8,4" />
+                                    <Button Content="{loc:Loc PreviewDisabledButton}" IsEnabled="False" Margin="0,0,0,4" />
+                                </WrapPanel>
+                            </Border>
+                            <TextBlock Text="{loc:Loc TranscriptHighlightColors}" FontWeight="SemiBold" Margin="0,18,0,6" />
+                            <TextBlock Text="{loc:Loc HighlightColorsHint}" Style="{StaticResource MutedText}" Margin="0,0,0,10" />
+                            <Grid>
+                                <Grid.RowDefinitions><RowDefinition Height="Auto" /><RowDefinition Height="Auto" /><RowDefinition Height="Auto" /><RowDefinition Height="Auto" /></Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions><ColumnDefinition Width="1.1*" /><ColumnDefinition /><ColumnDefinition /></Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="1" Text="{loc:Loc ThemeLight}" FontWeight="SemiBold" Margin="6,0,0,6" />
+                                <TextBlock Grid.Column="2" Text="{loc:Loc ThemeDark}" FontWeight="SemiBold" Margin="6,0,0,6" />
+                                <TextBlock Grid.Row="1" Text="{loc:Loc SelectionColor}" VerticalAlignment="Center" TextWrapping="Wrap" Margin="0,0,8,0" />
+                                <controls:ColorPickerButton x:Name="LightSelectionColor" Grid.Row="1" Grid.Column="1" Label="{loc:Loc SelectionColor}" Margin="0,0,6,6" />
+                                <controls:ColorPickerButton x:Name="DarkSelectionColor" Grid.Row="1" Grid.Column="2" Label="{loc:Loc SelectionColor}" Margin="0,0,0,6" />
+                                <TextBlock Grid.Row="2" Text="{loc:Loc SearchMatchColor}" VerticalAlignment="Center" TextWrapping="Wrap" Margin="0,0,8,0" />
+                                <controls:ColorPickerButton x:Name="LightMatchColor" Grid.Row="2" Grid.Column="1" Label="{loc:Loc SearchMatchColor}" Margin="0,0,6,6" />
+                                <controls:ColorPickerButton x:Name="DarkMatchColor" Grid.Row="2" Grid.Column="2" Label="{loc:Loc SearchMatchColor}" Margin="0,0,0,6" />
+                                <TextBlock Grid.Row="3" Text="{loc:Loc ActiveMatchColor}" VerticalAlignment="Center" TextWrapping="Wrap" Margin="0,0,8,0" />
+                                <controls:ColorPickerButton x:Name="LightActiveMatchColor" Grid.Row="3" Grid.Column="1" Label="{loc:Loc ActiveMatchColor}" Margin="0,0,6,0" />
+                                <controls:ColorPickerButton x:Name="DarkActiveMatchColor" Grid.Row="3" Grid.Column="2" Label="{loc:Loc ActiveMatchColor}" />
+                            </Grid>
+                            <TextBlock Text="{loc:Loc ComparisonColorsTitle}" FontWeight="SemiBold" Margin="0,18,0,6" />
+                            <TextBlock Text="{loc:Loc ComparisonColorsHint}" Style="{StaticResource MutedText}" Margin="0,0,0,10" />
+                            <Grid>
+                                <Grid.RowDefinitions><RowDefinition Height="Auto" /><RowDefinition Height="Auto" /><RowDefinition Height="Auto" /><RowDefinition Height="Auto" /></Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions><ColumnDefinition Width="1.1*" /><ColumnDefinition /><ColumnDefinition /></Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="1" Text="{loc:Loc ThemeLight}" FontWeight="SemiBold" Margin="6,0,0,6" />
+                                <TextBlock Grid.Column="2" Text="{loc:Loc ThemeDark}" FontWeight="SemiBold" Margin="6,0,0,6" />
+                                <TextBlock Grid.Row="1" Text="{loc:Loc ComparisonDifferent}" VerticalAlignment="Center" TextWrapping="Wrap" Margin="0,0,8,0" />
+                                <controls:ColorPickerButton x:Name="LightComparisonDifferentColor" Grid.Row="1" Grid.Column="1" Label="{loc:Loc ComparisonDifferent}" Margin="0,0,6,6" />
+                                <controls:ColorPickerButton x:Name="DarkComparisonDifferentColor" Grid.Row="1" Grid.Column="2" Label="{loc:Loc ComparisonDifferent}" Margin="0,0,0,6" />
+                                <TextBlock Grid.Row="2" Text="{loc:Loc ComparisonMatching}" VerticalAlignment="Center" TextWrapping="Wrap" Margin="0,0,8,0" />
+                                <controls:ColorPickerButton x:Name="LightComparisonMatchingColor" Grid.Row="2" Grid.Column="1" Label="{loc:Loc ComparisonMatching}" Margin="0,0,6,6" />
+                                <controls:ColorPickerButton x:Name="DarkComparisonMatchingColor" Grid.Row="2" Grid.Column="2" Label="{loc:Loc ComparisonMatching}" Margin="0,0,0,6" />
+                                <TextBlock Grid.Row="3" Text="{loc:Loc ComparisonUnclear}" VerticalAlignment="Center" TextWrapping="Wrap" Margin="0,0,8,0" />
+                                <controls:ColorPickerButton x:Name="LightComparisonUnclearColor" Grid.Row="3" Grid.Column="1" Label="{loc:Loc ComparisonUnclear}" Margin="0,0,6,0" />
+                                <controls:ColorPickerButton x:Name="DarkComparisonUnclearColor" Grid.Row="3" Grid.Column="2" Label="{loc:Loc ComparisonUnclear}" />
+                            </Grid>
+                            <Button Content="{loc:Loc ResetHighlightColors}" Click="ResetColors_Click" HorizontalAlignment="Left" Margin="0,12,0,0" />
+                            <Separator Margin="0,18,0,12" Background="{DynamicResource AppDivider}" />
+                            <Button x:Name="RunSetupButton" Content="{loc:Loc SetupRunAgain}" Click="RunSetup_Click" HorizontalAlignment="Left" Margin="0,0,0,8" />
+                            <TextBlock Text="{loc:Loc SetupResetLocationHint}" Style="{StaticResource MutedText}" />
+                        </StackPanel>
+                    </Border>
+                    <Border x:Name="RecordingPage" Style="{StaticResource Card}" Margin="0,0,0,14" Visibility="Collapsed">
+                        <StackPanel>
+                            <TextBlock Text="{loc:Loc RecordingStorage}" Style="{StaticResource SectionTitle}" />
+                            <TextBlock Text="{loc:Loc AudioSavingFolder}" Margin="0,12,0,6" />
+                            <DockPanel>
+                                <Button DockPanel.Dock="Right" Content="{loc:Loc Browse}" Click="BrowseFolder_Click" Margin="8,0,0,0" />
+                                <TextBox x:Name="SaveFolderBox" AutomationProperties.Name="{loc:Loc AudioSavingFolder}" />
+                            </DockPanel>
+                            <TextBlock Style="{StaticResource MutedText}" Margin="0,8,0,10"
+                                       Text="{loc:Loc StorageHint}" />
+                            <Grid Margin="0,0,0,10">
+                                <Grid.ColumnDefinitions><ColumnDefinition /><ColumnDefinition /><ColumnDefinition /></Grid.ColumnDefinitions>
+                                <StackPanel Margin="0,0,8,0">
+                                    <TextBlock Text="{loc:Loc AudioFormat}" Margin="0,0,0,6" />
+                                    <ComboBox x:Name="OutputFormatBox" AutomationProperties.Name="{loc:Loc AudioFormat}" />
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" Margin="0,0,8,0">
+                                    <TextBlock Text="{loc:Loc AudioSampleRate}" Margin="0,0,0,6" />
+                                    <ComboBox x:Name="OutputRateBox" AutomationProperties.Name="{loc:Loc AudioSampleRate}" />
+                                </StackPanel>
+                                <StackPanel Grid.Column="2">
+                                    <TextBlock Text="{loc:Loc AudioChannels}" Margin="0,0,0,6" />
+                                    <ComboBox x:Name="OutputChannelsBox" DisplayMemberPath="Label" SelectedValuePath="Code" AutomationProperties.Name="{loc:Loc AudioChannels}" />
+                                </StackPanel>
+                            </Grid>
+                            <TextBlock Text="{loc:Loc AudioOutputHint}" Style="{StaticResource MutedText}" Margin="0,0,0,14" />
+                            <Grid>
+                                <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="18" /><ColumnDefinition Width="*" /></Grid.ColumnDefinitions>
+                                <StackPanel>
+                                    <TextBlock Text="{loc:Loc MicrophoneGain}" />
+                                    <Slider x:Name="MicGain" Minimum="0" Maximum="2" TickFrequency="0.1" Value="0.8" Margin="0,8,0,0" AutomationProperties.Name="{loc:Loc MicrophoneGain}" />
+                                    <TextBlock Text="{Binding ElementName=MicGain, Path=Value, StringFormat={}{0:P0}}" Style="{StaticResource MutedText}" />
+                                </StackPanel>
+                                <StackPanel Grid.Column="2">
+                                    <TextBlock Text="{loc:Loc PlaybackGain}" />
+                                    <Slider x:Name="PlaybackGain" Minimum="0" Maximum="2" TickFrequency="0.1" Value="0.7" Margin="0,8,0,0" AutomationProperties.Name="{loc:Loc PlaybackGain}" />
+                                    <TextBlock Text="{Binding ElementName=PlaybackGain, Path=Value, StringFormat={}{0:P0}}" Style="{StaticResource MutedText}" />
+                                </StackPanel>
+                            </Grid>
+                            <TextBlock Text="{loc:Loc HeadphonesHint}"
+                                       Style="{StaticResource MutedText}" Margin="0,8,0,0" />
+                            <Separator Margin="0,16,0,12" />
+                            <TextBlock Text="{loc:Loc RecordingAutomation}" Style="{StaticResource SectionTitle}" />
+                            <CheckBox x:Name="AutoStopOnSilenceCheck" Content="{loc:Loc AutoStopOnSilence}" Margin="0,12,0,8" />
+                            <DockPanel IsEnabled="{Binding IsChecked, ElementName=AutoStopOnSilenceCheck}">
+                                <TextBlock DockPanel.Dock="Left" Text="{loc:Loc SilenceTimeout}" VerticalAlignment="Center" Margin="0,0,12,0" />
+                                <TextBox x:Name="SilenceTimeoutBox" Width="90" MaxLength="5" HorizontalAlignment="Left"
+                                         AutomationProperties.Name="{loc:Loc SilenceTimeout}" />
+                            </DockPanel>
+                            <TextBlock Text="{loc:Loc SilenceTimeoutHint}" Style="{StaticResource MutedText}" Margin="0,8,0,14" />
+                            <CheckBox x:Name="SpeakersOnStopCheck" Content="{loc:Loc SpeakersOnStop}" />
+                            <TextBlock Text="{loc:Loc SpeakersOnStopHint}" Style="{StaticResource MutedText}" Margin="0,8,0,0" />
+                        </StackPanel>
+                    </Border>
+                    <Border x:Name="SpeechPage" Style="{StaticResource Card}" Margin="0,0,0,14" Visibility="Collapsed">
+                        <StackPanel>
+                            <TextBlock Text="{loc:Loc LocalSpeech}" Style="{StaticResource SectionTitle}" />
+                            <TextBlock Style="{StaticResource MutedText}" Text="{loc:Loc LocalSpeechHint}" Margin="0,6,0,12" />
+                            <ComboBox x:Name="SpeechModelBox" DisplayMemberPath="Label" SelectedValuePath="Id"
+                                      SelectionChanged="SpeechModel_SelectionChanged" AutomationProperties.Name="{loc:Loc LocalWhisperModel}" />
+                            <DockPanel Margin="0,8,0,0">
+                                <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+                                    <Button x:Name="DownloadButton" Content="{loc:Loc DownloadModel}" Click="Download_Click" FontSize="12" />
+                                    <Button x:Name="CancelDownloadButton" Content="{loc:Loc CancelDownload}" Click="CancelDownload_Click" Margin="8,0,0,0" Visibility="Collapsed" FontSize="12" />
+                                </StackPanel>
+                                <TextBlock x:Name="SpeechModelStatus" services:MessageJournal.Reason="{loc:Loc LocalSpeech}" Style="{StaticResource MutedText}" VerticalAlignment="Center" Margin="0,0,12,0" />
+                            </DockPanel>
+                            <ProgressBar x:Name="DownloadProgress" Minimum="0" Maximum="100" Height="5" Margin="0,10,0,4" Visibility="Collapsed" />
+                            <TextBlock Text="{loc:Loc SpeechAcceleration}" Margin="0,10,0,6" />
+                            <ComboBox x:Name="AccelerationBox" DisplayMemberPath="Label" SelectedValuePath="Code"
+                                      AutomationProperties.Name="{loc:Loc SpeechAcceleration}" />
+                            <TextBlock Text="{loc:Loc AccelerationHint}" Style="{StaticResource MutedText}" Margin="0,6,0,10" />
+                            <CheckBox x:Name="FastLiveDraftsCheck">
+                                <TextBlock Text="{loc:Loc FastLiveDrafts}" TextWrapping="Wrap" MaxWidth="550" />
+                            </CheckBox>
+                            <DockPanel Margin="0,6,0,6">
+                                <Button x:Name="DownloadBaseButton" DockPanel.Dock="Right" Content="{loc:Loc DownloadBase}" Click="DownloadBase_Click" FontSize="12" />
+                                <TextBlock x:Name="BaseModelStatus" services:MessageJournal.Reason="{loc:Loc LocalSpeech}" Style="{StaticResource MutedText}" VerticalAlignment="Center" />
+                            </DockPanel>
+                            <Grid Margin="0,10,0,0">
+                                <Grid.ColumnDefinitions><ColumnDefinition Width="Auto" /><ColumnDefinition Width="210" /><ColumnDefinition Width="*" /></Grid.ColumnDefinitions>
+                                <TextBlock Text="{loc:Loc SpeechLanguage}" VerticalAlignment="Center" Margin="0,0,12,0" />
+                                <ComboBox Grid.Column="1" x:Name="LanguageBox" DisplayMemberPath="Label" SelectedValuePath="Code"
+                                          AutomationProperties.Name="{loc:Loc SpeechLanguage}" />
+                                <TextBlock Grid.Column="2" Style="{StaticResource MutedText}" Text="{loc:Loc SpeechLanguageHint}" VerticalAlignment="Center" Margin="12,0,0,0" />
+                            </Grid>
+                            <Expander Header="{loc:Loc SpeechVocabularyTitle}" Margin="0,12,0,4">
+                                <StackPanel Margin="0,8,0,0">
+                                    <CheckBox x:Name="UseSpeechVocabularyCheck" Content="{loc:Loc UseSpeechVocabulary}" />
+                                    <TextBlock Text="{loc:Loc SpeechVocabularyHint}" Style="{StaticResource MutedText}" Margin="0,4,0,8" />
+                                    <TextBox x:Name="SpeechVocabularyBox" AcceptsReturn="True" TextWrapping="Wrap" Height="110"
+                                             MaxLength="32400" VerticalScrollBarVisibility="Auto" TextChanged="SpeechVocabulary_TextChanged"
+                                             AutomationProperties.Name="{loc:Loc SpeechVocabularyTitle}" />
+                                    <TextBlock x:Name="SpeechVocabularyStatus" Style="{StaticResource MutedText}" Margin="0,6,0,0" />
+                                </StackPanel>
+                            </Expander>
+                            <CheckBox x:Name="TranscribeOnStopCheck" Content="{loc:Loc TranscribeOnStop}" Margin="0,12,0,4"
+                                      ToolTip="{loc:Loc TranscribeOnStopHint}" />
+                            <CheckBox x:Name="ReviewUnclearTranscriptCheck" Margin="0,4,0,4">
+                                <TextBlock Text="{loc:Loc AutoReviewUnclearTranscript}" TextWrapping="Wrap" />
+                            </CheckBox>
+                            <TextBlock Text="{loc:Loc AutoReviewUnclearTranscriptHint}" Style="{StaticResource MutedText}" Margin="0,0,0,10" />
+                            <CheckBox x:Name="LiveTranscriptionCheck" Content="{loc:Loc LiveTextDefault}" />
+                            <TextBlock Text="{loc:Loc LiveTextHint}"
+                                       Style="{StaticResource MutedText}" Margin="0,6,0,0" />
+                            <Separator Margin="0,14,0,12" />
+                            <TextBlock Text="{loc:Loc IdentifySpeakers}" FontWeight="SemiBold" />
+                            <TextBlock Text="{loc:Loc SpeakersHint}" Style="{StaticResource MutedText}" Margin="0,6,0,10" />
+                            <DockPanel>
+                                <Button x:Name="DownloadSpeakersButton" DockPanel.Dock="Right" Content="{loc:Loc DownloadSpeakers}" Click="DownloadSpeakers_Click" FontSize="12" />
+                                <TextBlock x:Name="SpeakerModelsStatus" services:MessageJournal.Reason="{loc:Loc SpeakerModels}" Style="{StaticResource MutedText}" VerticalAlignment="Center" />
+                            </DockPanel>
+                            <DockPanel Margin="0,10,0,0">
+                                <TextBlock DockPanel.Dock="Left" Text="{loc:Loc SpeakerCount}" VerticalAlignment="Center" Margin="0,0,12,0" />
+                                <TextBox x:Name="SpeakerCountBox" MaxLength="2" Width="70" HorizontalAlignment="Left" AutomationProperties.Name="{loc:Loc SpeakerCount}" />
+                            </DockPanel>
+                        </StackPanel>
+                    </Border>
+                    <Border x:Name="SummaryPage" Style="{StaticResource Card}" Margin="0,0,0,14" Visibility="Collapsed">
+                        <StackPanel>
+                            <TextBlock Text="{loc:Loc AiMainPoints}" Style="{StaticResource SectionTitle}" />
+                            <TextBlock Text="{loc:Loc SummaryProvider}" Margin="0,12,0,6" />
+                            <ComboBox x:Name="SummaryProviderBox" DisplayMemberPath="Label" SelectedValuePath="Code"
+                                      SelectionChanged="SummaryProvider_SelectionChanged" AutomationProperties.Name="{loc:Loc SummaryProvider}" />
+                            <StackPanel x:Name="CopilotSettingsPanel">
+                            <TextBlock Text="{loc:Loc CliExecutableHint}" Margin="0,12,0,6" />
+                            <DockPanel>
+                                <Button DockPanel.Dock="Right" Content="{loc:Loc Browse}" Click="BrowseCli_Click" Margin="8,0,0,0" />
+                                <TextBox x:Name="CliPathBox" AutomationProperties.Name="{loc:Loc CliExecutable}" />
+                            </DockPanel>
+                            <TextBlock x:Name="CliDetectedText" Style="{StaticResource MutedText}" Margin="0,8,0,10" />
+                            <TextBlock Text="{loc:Loc SummaryModel}" Margin="0,0,0,6" />
+                            <ComboBox x:Name="SummaryModelBox" IsEditable="True" AutomationProperties.Name="{loc:Loc SummaryModel}" />
+                            <TextBlock x:Name="CurrentModelText" Style="{StaticResource MutedText}" Margin="0,8,0,10" />
+                            <WrapPanel>
+                                <Button x:Name="SignInButton" Content="{loc:Loc SignIn}" Click="SignIn_Click" FontSize="12" Margin="0,0,8,0" />
+                                <Button x:Name="RefreshModelsButton" Content="{loc:Loc ReadCliModels}" Click="RefreshModels_Click" FontSize="12" />
+                            </WrapPanel>
+                            <TextBlock Style="{StaticResource MutedText}" Margin="0,10,0,8"
+                                       Text="{loc:Loc CliPrivacyHint}" />
+                            <CheckBox x:Name="CloudConsentCheck">
+                                <TextBlock TextWrapping="Wrap" MaxWidth="540" Text="{loc:Loc CloudConsent}" />
+                            </CheckBox>
+                            </StackPanel>
+                            <StackPanel x:Name="CloudSettingsPanel" Visibility="Collapsed" Margin="0,12,0,8">
+                                <TextBlock Text="{loc:Loc CloudApiSetupHint}" Style="{StaticResource MutedText}" Margin="0,0,0,10" />
+                                <WrapPanel>
+                                    <Button Content="{loc:Loc OpenCloudConsole}" Click="OpenCloudConsole_Click" FontSize="12" Margin="0,0,8,6" />
+                                    <Button Content="{loc:Loc OpenCloudModels}" Click="OpenCloudModels_Click" FontSize="12" Margin="0,0,0,6" />
+                                </WrapPanel>
+                                <TextBlock Text="{loc:Loc CloudApiEndpoint}" Margin="0,10,0,6" />
+                                <ComboBox x:Name="CloudEndpointBox" IsEditable="True" AutomationProperties.Name="{loc:Loc CloudApiEndpoint}" />
+                                <TextBlock x:Name="QwenEndpointHint" Text="{loc:Loc QwenEndpointHint}" Style="{StaticResource MutedText}" Visibility="Collapsed" Margin="0,6,0,0" />
+                                <TextBlock Text="{loc:Loc CloudModelId}" Margin="0,12,0,6" />
+                                <ComboBox x:Name="CloudModelBox" IsEditable="True" AutomationProperties.Name="{loc:Loc CloudModelId}" />
+                                <TextBlock x:Name="CloudModelHint" Style="{StaticResource MutedText}" Margin="0,6,0,10" />
+                                <TextBlock Text="{loc:Loc CloudApiKey}" Margin="0,0,0,6" />
+                                <PasswordBox x:Name="CloudApiKeyBox" MaxLength="8192" MinHeight="36" Padding="9,7"
+                                             AutomationProperties.Name="{loc:Loc CloudApiKey}" />
+                                <TextBlock x:Name="CloudKeyStatus" services:MessageJournal.Reason="{loc:Loc LlmLabel}" Style="{StaticResource MutedText}" Margin="0,6,0,0" />
+                                <CheckBox x:Name="ForgetCloudKeyCheck" Content="{loc:Loc ForgetCloudKey}" />
+                                <TextBlock Text="{loc:Loc CloudKeyPrivacy}" Style="{StaticResource MutedText}" Margin="0,4,0,10" />
+                                <CheckBox x:Name="DisableCloudThinkingCheck">
+                                    <TextBlock Text="{loc:Loc DisableCloudThinking}" TextWrapping="Wrap" MaxWidth="540" />
+                                </CheckBox>
+                                <TextBlock Text="{loc:Loc CloudThinkingHint}" Style="{StaticResource MutedText}" Margin="0,4,0,10" />
+                                <CheckBox x:Name="CloudApiConsentCheck">
+                                    <TextBlock x:Name="CloudApiConsentText" TextWrapping="Wrap" MaxWidth="540" />
+                                </CheckBox>
+                                <WrapPanel Margin="0,10,0,0">
+                                    <Button x:Name="ReadCloudModelsButton" Content="{loc:Loc ReadCloudModels}" Click="ReadCloudModels_Click" FontSize="12" Margin="0,0,8,6" />
+                                    <Button x:Name="TestCloudModelButton" Content="{loc:Loc TestCloudModel}" Click="TestCloudModel_Click" FontSize="12" Margin="0,0,8,6" />
+                                    <Button x:Name="CancelCloudTestButton" Content="{loc:Loc Cancel}" Click="CancelCloudTest_Click" FontSize="12" Visibility="Collapsed" Margin="0,0,0,6" />
+                                </WrapPanel>
+                                <TextBlock x:Name="CloudModelStatus" services:MessageJournal.Reason="{loc:Loc LlmLabel}" Style="{StaticResource MutedText}" AutomationProperties.LiveSetting="Polite" Margin="0,4,0,6" />
+                            </StackPanel>
+                            <StackPanel x:Name="LocalSettingsPanel" Visibility="Collapsed" Margin="0,12,0,8">
+                                <TextBlock Text="{loc:Loc LocalSummaryPrivacy}" Style="{StaticResource MutedText}" Margin="0,0,0,10" />
+                                <TextBlock Text="{loc:Loc OllamaEndpoint}" Margin="0,0,0,6" />
+                                <TextBox x:Name="OllamaEndpointBox" TextChanged="OllamaEndpoint_TextChanged" AutomationProperties.Name="{loc:Loc OllamaEndpoint}" />
+                                <TextBlock Text="{loc:Loc OllamaModel}" Margin="0,12,0,6" />
+                                <ComboBox x:Name="OllamaModelBox" IsEditable="True" DisplayMemberPath="Name"
+                                          SelectionChanged="OllamaModel_SelectionChanged" AutomationProperties.Name="{loc:Loc OllamaModel}" />
+                                <TextBlock Text="{loc:Loc LocalModelChoiceHint}" Style="{StaticResource MutedText}" Margin="0,6,0,10" />
+                                <WrapPanel>
+                                    <Button x:Name="ReadLocalModelsButton" Content="{loc:Loc ReadLocalModels}" Click="ReadLocalModels_Click" FontSize="12" Margin="0,0,8,6" />
+                                    <Button x:Name="TestLocalModelButton" Content="{loc:Loc TestLocalModel}" Click="TestLocalModel_Click" FontSize="12" Margin="0,0,8,6" />
+                                    <Button x:Name="CancelLocalTestButton" Content="{loc:Loc Cancel}" Click="CancelLocalTest_Click" FontSize="12" Visibility="Collapsed" Margin="0,0,0,6" />
+                                </WrapPanel>
+                                <TextBlock x:Name="LocalModelStatus" services:MessageJournal.Reason="{loc:Loc LlmLabel}" Style="{StaticResource MutedText}" AutomationProperties.LiveSetting="Polite" Margin="0,4,0,6" />
+                                <TextBlock x:Name="ComputerMemoryText" Style="{StaticResource MutedText}" Margin="0,0,0,6" />
+                                <TextBlock x:Name="LocalPerformanceWarning" services:MessageJournal.Reason="{loc:Loc LlmLabel}" TextWrapping="Wrap" Foreground="{DynamicResource SystemFillColorCautionBrush}" FontSize="12"
+                                           AutomationProperties.LiveSetting="Polite" Margin="0,0,0,8" />
+                                <Expander Header="{loc:Loc LocalAdvancedSettings}" Margin="0,4,0,10">
+                                    <StackPanel Margin="0,10,0,0">
+                                        <TextBlock Text="{loc:Loc LocalContextTokens}" Margin="0,0,0,6" />
+                                        <ComboBox x:Name="OllamaContextBox" IsEditable="True" AutomationProperties.Name="{loc:Loc LocalContextTokens}" />
+                                        <TextBlock Text="{loc:Loc LocalContextHint}" Style="{StaticResource MutedText}" Margin="0,6,0,10" />
+                                        <TextBlock Text="{loc:Loc LocalTimeoutMinutes}" Margin="0,0,0,6" />
+                                        <TextBox x:Name="OllamaTimeoutBox" AutomationProperties.Name="{loc:Loc LocalTimeoutMinutes}" />
+                                    </StackPanel>
+                                </Expander>
+                                <Expander Header="{loc:Loc LocalModelGuide}" Margin="0,4,0,10">
+                                    <StackPanel Margin="0,10,0,0">
+                                        <TextBlock Text="{loc:Loc LocalModelGuideHint}" Style="{StaticResource MutedText}" Margin="0,0,0,10" />
+                                        <ComboBox x:Name="GuideModelsBox" DisplayMemberPath="Label" SelectionChanged="GuideModel_SelectionChanged"
+                                                  AutomationProperties.Name="{loc:Loc LocalModelGuide}" />
+                                        <TextBox x:Name="ModelDownloadCommand" IsReadOnly="True" Margin="0,10,0,10"
+                                                 AutomationProperties.Name="{loc:Loc ModelDownloadCommand}" />
+                                        <WrapPanel>
+                                            <Button Content="{loc:Loc DownloadOllama}" Click="DownloadOllama_Click" FontSize="12" Margin="0,0,8,6" />
+                                            <Button Content="{loc:Loc OpenModelPage}" Click="OpenModelPage_Click" FontSize="12" Margin="0,0,8,6" />
+                                            <Button Content="{loc:Loc CopyDownloadCommand}" Click="CopyDownloadCommand_Click" FontSize="12" Margin="0,0,0,6" />
+                                        </WrapPanel>
+                                        <TextBlock Text="{loc:Loc LocalModelHardwareHint}" Style="{StaticResource MutedText}" Margin="0,6,0,0" />
+                                    </StackPanel>
+                                </Expander>
+                            </StackPanel>
+                            <CheckBox x:Name="SummarizeOnStopCheck" Content="{loc:Loc AutoSummaries}" />
+                            <CheckBox x:Name="LiveSummaryCheck" Content="{loc:Loc LiveSummaries}" />
+                            <TextBlock Style="{StaticResource MutedText}" Margin="0,6,0,0"
+                                       Text="{loc:Loc SummaryPrivacyHint}" />
+                        </StackPanel>
+                    </Border>
+                    <Border x:Name="ShortcutsPage" Style="{StaticResource Card}" Margin="0,0,0,14" Visibility="Collapsed">
+                        <StackPanel>
+                            <TextBlock Text="{loc:Loc SettingsShortcutsCategory}" Style="{StaticResource SectionTitle}" />
+                            <TextBlock Text="{loc:Loc ShortcutCaptureHint}" Style="{StaticResource MutedText}" Margin="0,8,0,10" />
+                            <Button Content="{loc:Loc ResetShortcuts}" Click="ResetShortcuts_Click" HorizontalAlignment="Left" Margin="0,0,0,10" />
+                            <TextBlock x:Name="ShortcutStatus" services:MessageJournal.Reason="{loc:Loc SettingsShortcutsCategory}" Text="{loc:Loc ShortcutChangesPending}" TextWrapping="Wrap" Margin="0,0,0,10"
+                                       Foreground="{DynamicResource TextFillColorSecondaryBrush}" AutomationProperties.LiveSetting="Polite" />
+                            <ItemsControl x:Name="ShortcutEditGrid">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border BorderBrush="{DynamicResource AppDivider}" BorderThickness="0,0,0,1" Padding="0,6">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions><ColumnDefinition /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                                                <TextBlock Text="{Binding Label}" TextWrapping="Wrap" VerticalAlignment="Center" Margin="0,0,10,0" />
+                                                <controls:ShortcutCaptureBox Grid.Column="1" Width="160" Style="{StaticResource {x:Type TextBox}}" Text="{Binding Gesture, UpdateSourceTrigger=PropertyChanged}"
+                                                                             AutomationProperties.Name="{Binding Label}" ToolTip="{loc:Loc ShortcutCaptureHint}" />
+                                            </Grid>
+                                        </Border>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </DockPanel>
+</Window>

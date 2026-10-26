@@ -1,0 +1,30 @@
+<Window x:Class="AudioMemo.ColorPickerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:loc="clr-namespace:AudioMemo.Localization"
+        xmlns:services="clr-namespace:AudioMemo.Services"
+        Width="450" SizeToContent="Height" ResizeMode="NoResize" ShowInTaskbar="False"
+        WindowStartupLocation="CenterOwner">
+    <StackPanel Margin="20">
+        <TextBlock Text="{loc:Loc ColorPickerHint}" Style="{StaticResource MutedText}" Margin="0,0,0,12" />
+        <WrapPanel x:Name="PresetsPanel" Margin="0,0,0,12" />
+        <DockPanel>
+            <TextBlock DockPanel.Dock="Left" Text="{loc:Loc HexColor}" VerticalAlignment="Center" Margin="0,0,12,0" />
+            <TextBox x:Name="HexBox" MaxLength="7" TextChanged="Hex_Changed"
+                     AutomationProperties.Name="{loc:Loc HexColor}" />
+        </DockPanel>
+        <Border x:Name="ColorPreview" BorderBrush="{DynamicResource AppDivider}" BorderThickness="1"
+                CornerRadius="6" Padding="12" Margin="0,12,0,0">
+            <TextBlock x:Name="PreviewText" Text="{loc:Loc ColorPreviewText}" FontSize="16" TextWrapping="Wrap" />
+        </Border>
+        <TextBlock x:Name="ColorStatus" services:MessageJournal.Reason="{loc:Loc SetSpeakerColor}" TextWrapping="Wrap" FontSize="12" Margin="0,8,0,12"
+                   AutomationProperties.LiveSetting="Polite" />
+        <WrapPanel HorizontalAlignment="Right">
+            <Button x:Name="NeutralButton" Content="{loc:Loc NeutralSpeakerColor}" Click="Neutral_Click"
+                    Visibility="Collapsed" Padding="10,6" Margin="0,0,8,0" />
+            <Button x:Name="UseColorButton" Content="{loc:Loc UseColor}" Style="{StaticResource PrimaryButton}"
+                    Click="UseColor_Click" IsDefault="True" Padding="10,6" />
+            <Button Content="{loc:Loc Cancel}" IsCancel="True" Padding="10,6" Margin="8,0,0,0" />
+        </WrapPanel>
+    </StackPanel>
+</Window>

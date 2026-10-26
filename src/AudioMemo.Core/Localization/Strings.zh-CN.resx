@@ -1,0 +1,1195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
+  <data name="MainWindowTitle" xml:space="preserve"><value>AudioMemo - 录音与笔记</value></data>
+  <data name="SettingsWindowTitle" xml:space="preserve"><value>AudioMemo 设置</value></data>
+  <data name="Settings" xml:space="preserve"><value>设置</value></data>
+  <data name="SaveSettings" xml:space="preserve"><value>保存设置</value></data>
+  <data name="Cancel" xml:space="preserve"><value>取消</value></data>
+  <data name="Browse" xml:space="preserve"><value>浏览...</value></data>
+  <data name="Microphone" xml:space="preserve"><value>麦克风</value></data>
+  <data name="Playback" xml:space="preserve"><value>播放设备</value></data>
+  <data name="Pause" xml:space="preserve"><value>暂停</value></data>
+  <data name="Resume" xml:space="preserve"><value>继续</value></data>
+  <data name="Stop" xml:space="preserve"><value>停止</value></data>
+  <data name="None" xml:space="preserve"><value>无</value></data>
+  <data name="LocalFirstAudio" xml:space="preserve"><value>音频本地保存</value></data>
+  <data name="BrandTagline" xml:space="preserve"><value>清晰记录，留住重点。</value></data>
+  <data name="YourRecordings" xml:space="preserve"><value>我的录音</value></data>
+  <data name="NewConversationButton" xml:space="preserve"><value>+  新建录音</value></data>
+  <data name="NewConversation" xml:space="preserve"><value>新建录音</value></data>
+  <data name="UntitledRecording" xml:space="preserve"><value>未命名录音</value></data>
+  <data name="LibraryHint" xml:space="preserve"><value>录音和笔记保存在这台电脑上。</value></data>
+  <data name="FirstRecordingHint" xml:space="preserve"><value>您的第一条录音将显示在这里。</value></data>
+  <data name="RecordingCount" xml:space="preserve"><value>本机共 {0} 条录音</value></data>
+  <data name="RecordingSelectionCount" xml:space="preserve"><value>共 {0} 条录音 / 已选 {1} 条</value></data>
+  <data name="SelectAllRecordingsShort" xml:space="preserve"><value>全选</value></data>
+  <data name="SelectAllRecordings" xml:space="preserve"><value>全选或取消选择全部录音</value></data>
+  <data name="HistorySelectionHint" xml:space="preserve"><value>按住 Ctrl 单击可选择多条录音；按住 Shift 单击可选择连续范围。列表获得焦点时，Ctrl+A 可全选；“全选”可全选或取消全部选择。右键可逐个重命名、在资源管理器中选中各文件夹、按录音名称批量导出转写或 MP3，或移到回收站。</value></data>
+  <data name="RenameRecordingProgress" xml:space="preserve"><value>重命名录音（第 {0} 条，共 {1} 条）</value></data>
+  <data name="HistoryRenamed" xml:space="preserve"><value>已重命名 {0} 条录音。</value></data>
+  <data name="HistoryRenameCancelled" xml:space="preserve"><value>已停止重命名。已处理 {0}/{1} 条录音，其余名称保持不变。</value></data>
+  <data name="HistoryRenameFailed" xml:space="preserve"><value>已重命名 {0}/{1} 条录音，随后停止：{2} 已完成的重命名会保留，其余名称保持不变。</value></data>
+  <data name="SelectedFoldersNeedSameParent" xml:space="preserve"><value>所选录音文件夹必须存在于同一个父文件夹中，才能在资源管理器中一起选中。</value></data>
+  <data name="ChooseMp3ExportFolder" xml:space="preserve"><value>选择所选 MP3 文件的导出文件夹</value></data>
+  <data name="ChooseTranscriptExportFolder" xml:space="preserve"><value>选择所选转写的导出文件夹（TXT，含时间和说话人）</value></data>
+  <data name="HistoryExportProgress" xml:space="preserve"><value>正在导出第 {0} 个录音，共 {1} 个：{2}</value></data>
+  <data name="HistoryExportComplete" xml:space="preserve"><value>已将 {0} 个文件导出到 {1}，未覆盖已有文件。</value></data>
+  <data name="HistoryExportCancelled" xml:space="preserve"><value>已停止导出。已完成 {0}/{1} 个文件，完成的导出文件将保留。</value></data>
+  <data name="HistoryExportFailed" xml:space="preserve"><value>已导出 {0}/{1} 个文件。无法导出“{2}”：{3} 已完成的文件将保留，其余录音未导出。</value></data>
+  <data name="SavedMp3Invalid" xml:space="preserve"><value>已保存的 MP3 与当前录音不匹配。请先单独为此录音导出 MP3，从 WAV 音频重新生成后再重试。</value></data>
+  <data name="ConfirmCloseBatchExport" xml:space="preserve"><value>要停止批量导出并关闭 AudioMemo 吗？&#10;&#10;完成的导出文件将保留，未完成的输出不会覆盖任何已有文件。下次打开时不会自动继续本次批量导出。</value></data>
+  <data name="ShowPanels" xml:space="preserve"><value>面板</value></data>
+  <data name="ShowPanelsHint" xml:space="preserve"><value>重新显示“要点”或“我的笔记”，录音期间也可以使用。</value></data>
+  <data name="HideMainPoints" xml:space="preserve"><value>隐藏要点。可通过转录表标题栏中的“面板”重新打开。</value></data>
+  <data name="HideMyNotes" xml:space="preserve"><value>隐藏我的笔记但不删除内容。可通过转录表标题栏中的“面板”重新打开。</value></data>
+  <data name="TranscribeOnStopHint" xml:space="preserve"><value>关闭后，停止录音时保留已保存的实时文字和实时要点，不自动进行最终转写。之后请先运行“转写 / 继续”，再更新最终要点。录音期间的实时要点仍由单独的设置控制。</value></data>
+  <data name="LiveTextKeptForLater" xml:space="preserve"><value>实时文字已保存。准备好后可运行“转写 / 继续”，生成最终转写和要点。</value></data>
+  <data name="SummaryRequiresFinalTranscript" xml:space="preserve"><value>这条录音目前只有实时或未完成的文字。请先完成“转写 / 继续”，再更新最终要点。已保存的实时文字和音频都会保留。</value></data>
+  <data name="AudioEditRecoveryRequired" xml:space="preserve"><value>一次中断的音频编辑需要恢复。请关闭正在使用该录音的外部播放器，然后重新加载录音列表或重新打开 AudioMemo。恢复数据已保留。</value></data>
+  <data name="AudioEditLinkedPath" xml:space="preserve"><value>无法就地更新包含链接文件或链接文件夹的编辑录音。</value></data>
+  <data name="AudioEditHasDependents" xml:space="preserve"><value>其他编辑录音依赖这个较早的副本。请改为选择最新的编辑副本，以免破坏其他录音的恢复历史。</value></data>
+  <data name="AudioEditOriginalPreserved" xml:space="preserve"><value>在此录音中恢复所选音频，不新增历史条目。隐藏的原始音频备份保持不变。</value></data>
+  <data name="AudioEditUpdatePolicy" xml:space="preserve"><value>保留笔记和时间戳，恢复数据保存在当前录音文件夹内。旧要点和过期导出文件会被清除；应用音频修改后可重新更新要点。</value></data>
+  <data name="ApplyMuteChanges" xml:space="preserve"><value>应用静音</value></data>
+  <data name="RestoreSelectedSections" xml:space="preserve"><value>恢复所选片段</value></data>
+  <data name="AudioEditSavingChanges" xml:space="preserve"><value>正在安全保存音频和转写修改...</value></data>
+  <data name="AudioEditUpdated" xml:space="preserve"><value>已更新“{0}”，未创建新的录音。</value></data>
+  <data name="SelectOneRecording" xml:space="preserve"><value>请只选择一条录音后再执行此操作。</value></data>
+  <data name="RecordingFirst" xml:space="preserve"><value>录音优先</value></data>
+  <data name="RecordingFirstHint" xml:space="preserve"><value>持续保存 WAV 安全副本。取消 AI 处理不会丢失录音。</value></data>
+  <data name="OpenSavingFolder" xml:space="preserve"><value>打开保存文件夹</value></data>
+  <data name="SavedRecordings" xml:space="preserve"><value>已保存的录音</value></data>
+  <data name="WorkspaceTitle" xml:space="preserve"><value>用心聆听，随时记录。</value></data>
+  <data name="WorkspaceSubtitle" xml:space="preserve"><value>录制麦克风、电脑播放声音，或同时录制两者。</value></data>
+  <data name="SessionSubtitle" xml:space="preserve"><value>{0:M月d日 HH:mm} | {1}</value></data>
+  <data name="RecoverWave" xml:space="preserve"><value>恢复 WAV</value></data>
+  <data name="OpenFiles" xml:space="preserve"><value>打开文件</value></data>
+  <data name="MicrophoneDevice" xml:space="preserve"><value>麦克风设备</value></data>
+  <data name="PlaybackDevice" xml:space="preserve"><value>播放设备</value></data>
+  <data name="ComputerPlayback" xml:space="preserve"><value>电脑播放</value></data>
+  <data name="ApplyDevices" xml:space="preserve"><value>应用设备</value></data>
+  <data name="RefreshList" xml:space="preserve"><value>刷新列表</value></data>
+  <data name="DevicesHint" xml:space="preserve"><value>空闲时自动保存设备选择；录音或暂停时，更改设备需要确认，选择“否”可保留当前音源。请至少启用一个可用音源。原有的“应用设备”快捷键仍可使用。</value></data>
+  <data name="RecordingTitle" xml:space="preserve"><value>录音标题</value></data>
+  <data name="AudioFormat" xml:space="preserve"><value>音频格式</value></data>
+  <data name="LiveText" xml:space="preserve"><value>实时转写</value></data>
+  <data name="LiveTextTooltip" xml:space="preserve"><value>约保存两秒音频后开始生成草稿，另需模型加载和识别时间。只有启用自动最终转写时，停止录音后才会生成最终转写。</value></data>
+  <data name="RecordingDuration" xml:space="preserve"><value>录音时长</value></data>
+  <data name="MixedAudioLevel" xml:space="preserve"><value>混合音频电平</value></data>
+  <data name="StartRecording" xml:space="preserve"><value>开始录音</value></data>
+  <data name="LocalWhisper" xml:space="preserve"><value>本地 WHISPER</value></data>
+  <data name="Transcript" xml:space="preserve"><value>语音转写</value></data>
+  <data name="TranscriptHint" xml:space="preserve"><value>带时间戳的文字，与音频一同保存。</value></data>
+  <data name="TranscribeResume" xml:space="preserve"><value>转写 / 继续转写</value></data>
+  <data name="CancelAi" xml:space="preserve"><value>取消 AI 处理</value></data>
+  <data name="AudioTranscript" xml:space="preserve"><value>录音转写文本</value></data>
+  <data name="TranscriptPlaceholder" xml:space="preserve"><value>转写文本将显示在这里。&#10;&#10;请在设置中下载本地语音模型。也可以先录音，稍后再转写已保存的音频。</value></data>
+  <data name="MainPoints" xml:space="preserve"><value>主要内容</value></data>
+  <data name="MainPointsHint" xml:space="preserve"><value>提炼重要决策、行动项和待解决问题。</value></data>
+  <data name="UpdateMainPoints" xml:space="preserve"><value>更新主要内容</value></data>
+  <data name="ExportMp3" xml:space="preserve"><value>导出 MP3</value></data>
+  <data name="ConversationMainPoints" xml:space="preserve"><value>对话主要内容</value></data>
+  <data name="SummaryPlaceholder" xml:space="preserve"><value>录音后生成摘要，或在设置中启用实时摘要。&#10;&#10;可选择 Ollama 在本机生成摘要，或明确授权后使用 Copilot CLI。</value></data>
+  <data name="NotesAutoSaved" xml:space="preserve"><value>已启用本地自动保存</value></data>
+  <data name="NotesSaving" xml:space="preserve"><value>正在保存...</value></data>
+  <data name="NotesSaved" xml:space="preserve"><value>已保存到本机</value></data>
+  <data name="MyNotes" xml:space="preserve"><value>我的笔记</value></data>
+  <data name="PersonalNotes" xml:space="preserve"><value>个人笔记</value></data>
+  <data name="Dismiss" xml:space="preserve"><value>关闭提示</value></data>
+  <data name="ReadyStatus" xml:space="preserve"><value>已就绪。点击“开始录音”之前，不会采集麦克风或电脑播放声音。</value></data>
+  <data name="ReadyNewRecording" xml:space="preserve"><value>已准备好开始新的录音。</value></data>
+  <data name="StateRecording" xml:space="preserve"><value>正在录音并保存</value></data>
+  <data name="StatePaused" xml:space="preserve"><value>已暂停</value></data>
+  <data name="StateStarting" xml:space="preserve"><value>正在打开音频设备</value></data>
+  <data name="StateStopping" xml:space="preserve"><value>正在保存音频</value></data>
+  <data name="StateFaulted" xml:space="preserve"><value>录音已中断</value></data>
+  <data name="StateReady" xml:space="preserve"><value>准备录音</value></data>
+  <data name="StateSaved" xml:space="preserve"><value>已保存的录音</value></data>
+  <data name="SessionRecording" xml:space="preserve"><value>录音中</value></data>
+  <data name="SessionPaused" xml:space="preserve"><value>已暂停</value></data>
+  <data name="SessionSaved" xml:space="preserve"><value>已保存</value></data>
+  <data name="SessionInterrupted" xml:space="preserve"><value>已中断</value></data>
+  <data name="SessionRecovered" xml:space="preserve"><value>已恢复</value></data>
+  <data name="SavedAudioSize" xml:space="preserve"><value>48 kHz / 立体声 / 16 位   |   已保存 {0:F1} MB</value></data>
+  <data name="AudioWarnings" xml:space="preserve"><value>音频警告：{0} 帧延迟；{1} 个采样削波；{2} 次不连续</value></data>
+  <data name="SafetyWaveRetained" xml:space="preserve"><value>始终保留 WAV 安全副本，包括 MP3 录音。</value></data>
+  <data name="SpeechModelMissing" xml:space="preserve"><value>尚未下载语音模型</value></data>
+  <data name="CliDefaultModel" xml:space="preserve"><value>CLI 默认模型</value></data>
+  <data name="MakeItYours" xml:space="preserve"><value>个性化设置</value></data>
+  <data name="SettingsHint" xml:space="preserve"><value>无需语音模型、账号或网络连接，也能正常录音。</value></data>
+  <data name="LanguageSection" xml:space="preserve"><value>语言</value></data>
+  <data name="InterfaceLanguage" xml:space="preserve"><value>界面语言</value></data>
+  <data name="InterfaceLanguageHint" xml:space="preserve"><value>保存设置后立即生效，无需重启。语音识别语言在下方单独设置。</value></data>
+  <data name="RecordingStorage" xml:space="preserve"><value>录音与存储</value></data>
+  <data name="AudioSavingFolder" xml:space="preserve"><value>音频保存文件夹</value></data>
+  <data name="StorageHint" xml:space="preserve"><value>在主窗口选择 WAV 或 MP3。每条录音均保留无损 WAV 安全副本（约 0.69 GB/小时）。停止后以 192 kbps 导出 MP3。超过 4 GB 的录音使用 RF64 格式。</value></data>
+  <data name="MicrophoneGain" xml:space="preserve"><value>麦克风增益</value></data>
+  <data name="PlaybackGain" xml:space="preserve"><value>播放声音增益</value></data>
+  <data name="HeadphonesHint" xml:space="preserve"><value>建议使用耳机，避免麦克风重复录入扬声器声音。受 DRM 保护的内容可能不支持回环录音。</value></data>
+  <data name="LocalSpeech" xml:space="preserve"><value>本地语音转文字</value></data>
+  <data name="LocalSpeechHint" xml:space="preserve"><value>请选择最终转写模型。Small 适合兼顾多语言准确率与性能；Large-v3 Turbo Q5 适合配有兼容 GPU 的电脑，识别能力更强。音频始终保留在本机。</value></data>
+  <data name="LocalWhisperModel" xml:space="preserve"><value>本地 Whisper 模型</value></data>
+  <data name="DownloadModel" xml:space="preserve"><value>下载模型</value></data>
+  <data name="CancelDownload" xml:space="preserve"><value>取消下载</value></data>
+  <data name="DownloadAgain" xml:space="preserve"><value>重新下载</value></data>
+  <data name="Downloaded" xml:space="preserve"><value>已下载（使用前会校验完整性）</value></data>
+  <data name="NotDownloaded" xml:space="preserve"><value>尚未下载</value></data>
+  <data name="SpeechLanguage" xml:space="preserve"><value>语音识别语言</value></data>
+  <data name="SpeechLanguageAutomatic" xml:space="preserve"><value>自动检测 (auto)</value></data>
+  <data name="SpeechLanguageChinese" xml:space="preserve"><value>简体中文 (zh)</value></data>
+  <data name="SpeechLanguageEnglish" xml:space="preserve"><value>英语 (en)</value></data>
+  <data name="SpeechLanguageHint" xml:space="preserve"><value>可选择简体中文、英语或自动检测。中文转写和 AI 摘要始终使用简体中文。</value></data>
+  <data name="TranscribeOnStop" xml:space="preserve"><value>停止录音后自动转写</value></data>
+  <data name="LiveTextDefault" xml:space="preserve"><value>默认启用实时转写</value></data>
+  <data name="LiveTextHint" xml:space="preserve"><value>本地识别进程在短音频片段之间保持模型加载。只有启用自动最终转写时，停止录音后才会重新生成最终文本；否则保留草稿，稍后使用“转写 / 继续”。取消时保留已保存的进度。明确选择语言有助于提高短语音识别准确度，速度取决于电脑性能。</value></data>
+  <data name="AiMainPoints" xml:space="preserve"><value>AI 摘要</value></data>
+  <data name="CliExecutableHint" xml:space="preserve"><value>Copilot CLI 程序路径（留空则自动查找）</value></data>
+  <data name="CliExecutable" xml:space="preserve"><value>Copilot CLI 程序路径</value></data>
+  <data name="SummaryModel" xml:space="preserve"><value>摘要模型</value></data>
+  <data name="InheritModel" xml:space="preserve"><value>使用 CLI 当前默认模型</value></data>
+  <data name="SignIn" xml:space="preserve"><value>通过 Copilot CLI 登录</value></data>
+  <data name="ReadCliModels" xml:space="preserve"><value>读取 CLI 模型</value></data>
+  <data name="CliPrivacyHint" xml:space="preserve"><value>沿用当前 CLI 的模型、账号和服务提供方设置。可在此选择其他模型，不会更改 CLI 偏好。模型权限取决于您的账号。AudioMemo 不会提取或保存 CLI 凭据。</value></data>
+  <data name="CloudConsent" xml:space="preserve"><value>允许将转写文本和 AI 摘要发送给我配置的 Copilot 服务提供方，以生成摘要。</value></data>
+  <data name="AutoSummaries" xml:space="preserve"><value>转写完成后自动更新主要内容</value></data>
+  <data name="LiveSummaries" xml:space="preserve"><value>每转写约 90 秒音频后更新实时摘要</value></data>
+  <data name="SummaryPrivacyHint" xml:space="preserve"><value>Ollama 在本机运行。Copilot 和官方云端 API 分别需要转写分享授权，并适用各自的服务政策及费用。实时摘要需要实时转写。个人笔记和音频不会发送给摘要模型，模型无法调用工具。</value></data>
+  <data name="CurrentCliModel" xml:space="preserve"><value>CLI 当前模型：{0}</value></data>
+  <data name="RecentCliModel" xml:space="preserve"><value>CLI 未固定模型，将沿用默认模式；最近使用的模型：{0}</value></data>
+  <data name="CustomProvider" xml:space="preserve"><value>已配置自定义 CLI 服务提供方，将沿用 CLI 环境中的认证信息，无需登录 GitHub。</value></data>
+  <data name="ChooseSavingFolder" xml:space="preserve"><value>选择 AudioMemo 录音保存位置</value></data>
+  <data name="ChooseCliExecutable" xml:space="preserve"><value>选择官方 Copilot CLI 可执行文件</value></data>
+  <data name="CliFileFilter" xml:space="preserve"><value>Copilot 可执行文件|copilot.exe|可执行文件|*.exe</value></data>
+  <data name="DownloadingPercent" xml:space="preserve"><value>正在下载 {0:F0}%</value></data>
+  <data name="ModelDownloading" xml:space="preserve"><value>正在从官方来源下载公开模型文件，不会传输音频。</value></data>
+  <data name="ModelDownloaded" xml:space="preserve"><value>模型文件已下载，并通过 SHA-256 校验。</value></data>
+  <data name="DownloadCancelled" xml:space="preserve"><value>下载已取消，已有的完整模型未受影响。</value></data>
+  <data name="DownloadFailed" xml:space="preserve"><value>模型下载失败：{0}</value></data>
+  <data name="CompleteSignIn" xml:space="preserve"><value>请在 Copilot CLI 或浏览器窗口中完成登录。认证由 CLI 管理，而非 AudioMemo。</value></data>
+  <data name="ChooseSpeechModel" xml:space="preserve"><value>请选择语音模型。</value></data>
+  <data name="InvalidInterfaceLanguage" xml:space="preserve"><value>界面语言请选择 English 或简体中文。</value></data>
+  <data name="InvalidSpeechLanguage" xml:space="preserve"><value>语音识别请选择自动检测、简体中文或英语。</value></data>
+  <data name="InvalidSavingFolder" xml:space="preserve"><value>请选择使用绝对路径的音频保存文件夹。</value></data>
+  <data name="InvalidAudioFormat" xml:space="preserve"><value>音频格式必须为 WAV 或 MP3。</value></data>
+  <data name="InvalidSpeechModel" xml:space="preserve"><value>请选择 Base、Small 或 Large-v3 Turbo Q5。</value></data>
+  <data name="InvalidAudioGain" xml:space="preserve"><value>音频增益必须在 0% 到 200% 之间。</value></data>
+  <data name="ConsentRequiredForAuto" xml:space="preserve"><value>请同意分享转写文本，或关闭自动摘要。</value></data>
+  <data name="LiveTextRequired" xml:space="preserve"><value>请先启用实时转写，才能使用实时摘要。</value></data>
+  <data name="TranscriptionRequired" xml:space="preserve"><value>自动摘要需要启用自动转写或实时转写。</value></data>
+  <data name="SettingsLoadFailed" xml:space="preserve"><value>无法加载设置，现使用默认设置。已有录音未受影响。&#10;&#10;{0}</value></data>
+  <data name="NoAudioDevices" xml:space="preserve"><value>未找到可用的音频设备。请连接设备后刷新列表。</value></data>
+  <data name="UnavailableDevice" xml:space="preserve"><value>（之前选择的设备当前不可用）</value></data>
+  <data name="ChooseWorkingDevice" xml:space="preserve"><value>请选择可用的{0}，或禁用该音源。</value></data>
+  <data name="AtLeastOneDevice" xml:space="preserve"><value>请至少启用一个可用的麦克风或播放设备。</value></data>
+  <data name="RecordingDeviceSetupRequired" xml:space="preserve"><value>请检查音频设备设置</value></data>
+  <data name="RecordingDeviceSetupWarning" xml:space="preserve"><value>录音未能开始或恢复。请连接或启用麦克风或电脑播放设备，刷新设备列表，然后在主窗口中选择该设备。不需要的音源可以禁用，但必须至少有一个可用音源。&#10;&#10;{0}</value></data>
+  <data name="DeviceStoppedDuringStart" xml:space="preserve"><value>音频设备在录音开始前已停止工作。</value></data>
+  <data name="RecordingStarted" xml:space="preserve"><value>正在录音并持续保存到磁盘，更改设备选择会自动生效。</value></data>
+  <data name="RecordingWithoutModel" xml:space="preserve"><value>正在安全录音。在设置中下载语音模型后，才能使用实时转写。</value></data>
+  <data name="RecordingResumed" xml:space="preserve"><value>已继续录音，暂停期间不会计入音频时长。</value></data>
+  <data name="RecordingPaused" xml:space="preserve"><value>已暂停，音频已安全保存。点击“继续”恢复录音。</value></data>
+  <data name="RecordingInterrupted" xml:space="preserve"><value>录音已中断，WAV 安全副本已保留。{0}</value></data>
+  <data name="RecordingSaved" xml:space="preserve"><value>录音已保存。{0}</value></data>
+  <data name="SavedWithoutModel" xml:space="preserve"><value>音频已保存。请在设置中下载本地语音模型，然后点击“转写 / 继续转写”。</value></data>
+  <data name="SourcesUpdated" xml:space="preserve"><value>已更新音源，录音无需重新开始。</value></data>
+  <data name="DevicePreferencesSaved" xml:space="preserve"><value>音频设备设置已保存。</value></data>
+  <data name="CancelCurrentAi" xml:space="preserve"><value>请先取消当前 AI 任务，再开始新的任务。</value></data>
+  <data name="AiCancelled" xml:space="preserve"><value>AI 处理已取消。已保存的音频、已完成的转写片段和笔记均未受影响。</value></data>
+  <data name="ConsentTitle" xml:space="preserve"><value>允许分享转写文本？</value></data>
+  <data name="ConsentMessage" xml:space="preserve"><value>音频保留在本机。生成摘要时，会将转写文本和已有 AI 摘要发送给 Copilot CLI 中配置的服务提供方。&#10;&#10;该服务提供方的隐私政策和使用费用适用。是否允许 AudioMemo 这样生成摘要？您可以随时在设置中撤销授权。</value></data>
+  <data name="ExportingMp3" xml:space="preserve"><value>正在导出 MP3，无损 WAV 安全副本将继续保留。</value></data>
+  <data name="Mp3Saved" xml:space="preserve"><value>MP3 已保存，录音文件夹中也保留了 WAV 安全副本。</value></data>
+  <data name="RecoverFirst" xml:space="preserve"><value>请先点击“恢复 WAV”修复已保存的音频。</value></data>
+  <data name="WaveMissing" xml:space="preserve"><value>该录音文件夹中的 WAV 安全副本缺失。</value></data>
+  <data name="WaveRecovered" xml:space="preserve"><value>已根据磁盘上所有完整的音频帧恢复中断的 WAV 录音。</value></data>
+  <data name="SettingsSaved" xml:space="preserve"><value>设置已保存，界面语言已更新。录音和语音识别设置将在下一次录音或 AI 任务中生效。</value></data>
+  <data name="HistoryReadFailed" xml:space="preserve"><value>部分录音信息无法读取：{0}</value></data>
+  <data name="ErrorDetails" xml:space="preserve"><value>错误：{0}</value></data>
+  <data name="WaitForSave" xml:space="preserve"><value>请等待当前音频保存或导出完成后再关闭。</value></data>
+  <data name="CloseAudioMemo" xml:space="preserve"><value>关闭 AudioMemo</value></data>
+  <data name="ConfirmCloseProcessing" xml:space="preserve"><value>现在关闭 AudioMemo？
+
+录音将停止并保存安全 WAV 文件。未完成的 AI 分析和音频导出将暂停，已完成的结果会保留。下次打开 AudioMemo 时，可以选择是否继续处理。
+
+打开的对话框中尚未保存的修改不会应用。关闭前需要稍等片刻，以安全保存音频并停止处理进程。</value></data>
+  <data name="ClosingSafely" xml:space="preserve"><value>正在保存音频并暂停未完成的处理，以便安全关闭…</value></data>
+  <data name="ResumeProcessing" xml:space="preserve"><value>继续未完成的处理</value></data>
+  <data name="ConfirmResumeProcessing" xml:space="preserve"><value>继续处理“{0}”中未完成的任务？
+
+{1}
+
+将使用已保存的进度。被中断的音频片段、说话人分析或模型请求可能需要重新执行。在线摘要可能产生服务商费用。
+
+选择“否”将保留音频和已完成的结果，不继续分析。准备好后，可选择此录音并点击“继续未完成的处理”；此暂停任务不会再次自动询问。</value></data>
+  <data name="ProcessingDeferred" xml:space="preserve"><value>音频和已完成的结果保持不变。准备好后，选择此录音并点击“继续未完成的处理”。</value></data>
+  <data name="InvalidPendingProcessing" xml:space="preserve"><value>保存的未完成任务计划无效。音频和已完成的结果未被修改。</value></data>
+  <data name="PendingProcessingAudioChanged" xml:space="preserve"><value>音频在任务暂停后已发生变化，不能将旧处理计划用于不同的音频。</value></data>
+  <data name="PendingProcessingConsentRequired" xml:space="preserve"><value>未完成的任务包含摘要，但对应服务商目前没有内容分享授权。请先在设置中检查该服务商的授权，再继续处理。未发送音频或转写文字。</value></data>
+  <data name="ConfirmSaveAndClose" xml:space="preserve"><value>是否停止并保存当前录音，然后关闭？</value></data>
+  <data name="SaveRecording" xml:space="preserve"><value>保存录音</value></data>
+  <data name="SaveFailed" xml:space="preserve"><value>保存失败</value></data>
+  <data name="SaveFailedMessage" xml:space="preserve"><value>无法完成保存。AudioMemo 将保持打开，以便您重试。&#10;&#10;{0}</value></data>
+  <data name="AlreadyRunning" xml:space="preserve"><value>AudioMemo 已在运行。请使用现有窗口，以保持录音和笔记同步。</value></data>
+  <data name="StartupFailed" xml:space="preserve"><value>AudioMemo 无法启动：{0}</value></data>
+  <data name="ModelBase" xml:space="preserve"><value>Base 多语言 - 148 MB（速度更快）</value></data>
+  <data name="ModelSmall" xml:space="preserve"><value>Small 多语言 - 488 MB（准确率更高）</value></data>
+  <data name="DownloadModelFirst" xml:space="preserve"><value>请先在设置中下载所选语音模型。您的音频已保存在本机。</value></data>
+  <data name="ModelChecksumFailed" xml:space="preserve"><value>语音模型校验失败，请重新下载后再使用。</value></data>
+  <data name="CheckingModel" xml:space="preserve"><value>正在检查本地语音模型...</value></data>
+  <data name="TranscribingProgress" xml:space="preserve"><value>本地转写：已处理音频 {0}，共 {1}。</value></data>
+  <data name="TranscriptSaved" xml:space="preserve"><value>转写进度已保存在本机。</value></data>
+  <data name="LiveSummaryFailed" xml:space="preserve"><value>实时摘要生成失败，本地转写将继续。{0}</value></data>
+  <data name="TranscriptionComplete" xml:space="preserve"><value>最终转写已保存。如果启用了要点生成，将继续下一步。</value></data>
+  <data name="ConsentNotApproved" xml:space="preserve"><value>尚未获得分享转写文本的授权。</value></data>
+  <data name="NoTranscript" xml:space="preserve"><value>目前还没有可用于生成摘要的语音转写文本。</value></data>
+  <data name="SummaryProgress" xml:space="preserve"><value>正在通过 Copilot 总结转写文本：第 {0} 批，共 {1} 批...</value></data>
+  <data name="LiveSummaryProgress" xml:space="preserve"><value>正在通过 Copilot 更新实时要点：转写文本第 {0} 批，共 {1} 批...</value></data>
+  <data name="LiveSummarySaved" xml:space="preserve"><value>实时摘要已更新（暂定内容）。</value></data>
+  <data name="SummarySaved" xml:space="preserve"><value>主要内容和整体总结已保存。</value></data>
+  <data name="OverallSummary" xml:space="preserve"><value>整体总结</value></data>
+  <data name="OverallSummaryProgress" xml:space="preserve"><value>要点已保存，正在使用同一模型生成整体总结（单独的处理步骤）...</value></data>
+  <data name="OverallSummaryFailed" xml:space="preserve"><value>整体总结未能完成，主要内容已经保存。请点击“更新主要内容”重试未完成的步骤。{0}</value></data>
+  <data name="InvalidOverallSummary" xml:space="preserve"><value>模型未在支持的长度范围内返回可用的整体总结。</value></data>
+  <data name="TranscriptionFailed" xml:space="preserve"><value>本地转写失败（退出代码 {0}），音频未受影响。Whisper 需要 Windows 11 和 Visual C++ 2022 x64 运行库。{1}</value></data>
+  <data name="ChooseInstalledCli" xml:space="preserve"><value>请选择已安装的 copilot.exe，而不是 .cmd 或 PowerShell 启动脚本。</value></data>
+  <data name="CliNotFound" xml:space="preserve"><value>未找到 Copilot CLI。请安装官方 Windows Copilot CLI，或在设置中选择 copilot.exe。</value></data>
+  <data name="CliModelsFailed" xml:space="preserve"><value>无法读取 Copilot 模型设置：{0}</value></data>
+  <data name="AllowTranscriptFirst" xml:space="preserve"><value>请先在设置中允许向 Copilot 服务提供方分享转写文本。</value></data>
+  <data name="SummaryFailed" xml:space="preserve"><value>Copilot 无法生成摘要。请在“设置”中登录，检查模型权限后重试。{0} {1}</value></data>
+  <data name="EmptySummary" xml:space="preserve"><value>所选模型未返回摘要文本，转写和录音保持不变。</value></data>
+  <data name="OversizedSummary" xml:space="preserve"><value>Copilot 返回的摘要超过支持长度。请选择其他模型后重试，之前保存的要点仍会保留。</value></data>
+  <data name="NoSavedAudio" xml:space="preserve"><value>该录音中没有已保存的音频。</value></data>
+  <data name="StopCurrentRecording" xml:space="preserve"><value>请先停止当前录音。</value></data>
+  <data name="NoRecordingToPause" xml:space="preserve"><value>当前没有正在进行的录音可供暂停。</value></data>
+  <data name="RecordingFailedWhilePausing" xml:space="preserve"><value>暂停时录音发生错误。</value></data>
+  <data name="RecordingNotPaused" xml:space="preserve"><value>录音当前未暂停。</value></data>
+  <data name="SourceStopFailed" xml:space="preserve"><value>部分音源未能正常停止：{0}</value></data>
+  <data name="WaveFinalizeFailed" xml:space="preserve"><value>未能完整结束 WAV 安全副本的保存：{0}</value></data>
+  <data name="ApplyDevicesWhileActive" xml:space="preserve"><value>可以在录音或暂停时应用设备更改。</value></data>
+  <data name="ReplacementDeviceStopped" xml:space="preserve"><value>新音频设备意外停止，原设备仍在工作。</value></data>
+  <data name="NoWorkingDevice" xml:space="preserve"><value>没有可用的录音设备。{0}</value></data>
+  <data name="RemainingDevice" xml:space="preserve"><value>将使用其余可用设备继续录音。{0}</value></data>
+  <data name="DriverStopFailed" xml:space="preserve"><value>音频驱动程序未正常停止。</value></data>
+  <data name="DeviceDisconnected" xml:space="preserve"><value>{0}已断开或发生错误：{1}</value></data>
+  <data name="AllDevicesLost" xml:space="preserve"><value>{0} 已无可用设备，正在停止录音。</value></data>
+  <data name="StayAwakeFailed" xml:space="preserve"><value>Windows 未能启用录音期间的保持唤醒请求，自动睡眠可能中断录音。</value></data>
+  <data name="RecordingStalled" xml:space="preserve"><value>电脑进入睡眠，或录音线程停顿超过 8 秒缓冲时长。</value></data>
+  <data name="RecordingStoppedSafely" xml:space="preserve"><value>为保护已保存的音频，录音已停止：{0}</value></data>
+  <data name="SummaryProvider" xml:space="preserve"><value>摘要服务</value></data>
+  <data name="ProviderCopilot" xml:space="preserve"><value>Copilot CLI（现有账号）</value></data>
+  <data name="ProviderOllama" xml:space="preserve"><value>Ollama（本地）</value></data>
+  <data name="SelectedSummaryProviderHint" xml:space="preserve"><value>下一次生成摘要时使用的服务。切换服务不会修改以前保存的摘要。</value></data>
+  <data name="InvalidSummaryProvider" xml:space="preserve"><value>摘要服务请选择 Copilot CLI、Ollama、豆包、千问或 DeepSeek。</value></data>
+  <data name="InvalidLocalEndpoint" xml:space="preserve"><value>请输入本机 Ollama 地址，如 http://127.0.0.1:11434，不要包含路径、查询参数、凭据或片段。本地模式不允许远程服务器。</value></data>
+  <data name="InvalidLocalModel" xml:space="preserve"><value>本地模型名称不能超过 200 个字符，且不能包含控制字符。</value></data>
+  <data name="InvalidLocalLimits" xml:space="preserve"><value>上下文范围为 8192-1048576 个令牌，等待时间为 1-120 分钟，请输入整数。</value></data>
+  <data name="ChooseLocalModel" xml:space="preserve"><value>请先在设置中选择已安装的 Ollama 模型。没有模型也可以正常录音。</value></data>
+  <data name="LocalModelNotSelected" xml:space="preserve"><value>尚未选择本地摘要模型</value></data>
+  <data name="LocalSummaryPrivacy" xml:space="preserve"><value>转写文本仅发送到本机 Ollama，只允许已下载的本地模型，阻止云端或远程模型，且不会自动切换到 Copilot。请确保您信任的 Ollama 安装使用本地推理。</value></data>
+  <data name="OllamaEndpoint" xml:space="preserve"><value>Ollama 服务器（本机）</value></data>
+  <data name="OllamaModel" xml:space="preserve"><value>已安装的本地摘要模型</value></data>
+  <data name="LocalModelChoiceHint" xml:space="preserve"><value>刷新后选择已安装模型，也可直接输入已安装的模型名称。高性能电脑可以选择更大的模型，硬件提示不会限制您的选择。</value></data>
+  <data name="ReadLocalModels" xml:space="preserve"><value>刷新本地模型</value></data>
+  <data name="TestLocalModel" xml:space="preserve"><value>测试模型及速度</value></data>
+  <data name="ReadingLocalModels" xml:space="preserve"><value>正在连接本机 Ollama 服务器...</value></data>
+  <data name="NoLocalModels" xml:space="preserve"><value>未找到已下载的本地模型。请展开下方模型指南，通过 Ollama 下载模型后刷新。</value></data>
+  <data name="LocalModelsFound" xml:space="preserve"><value>找到 {0} 个本地模型，已排除 {1} 个远程或空模型条目。</value></data>
+  <data name="TestingLocalModel" xml:space="preserve"><value>正在使用内置的简短模拟会议测试，不会读取您的录音或笔记。首次请求可能需要加载模型。</value></data>
+  <data name="LocalTestPassed" xml:space="preserve"><value>本地模型在 {0:F1} 秒内返回，生成速度为每秒 {1:F1} 个令牌。真实会议或首次加载可能需要更长时间。</value></data>
+  <data name="LocalTestPassedNoSpeed" xml:space="preserve"><value>本地模型在 {0:F1} 秒内返回。服务器未提供足够的令牌计时数据，无法估算生成速度。</value></data>
+  <data name="LocalCheckCancelled" xml:space="preserve"><value>本地模型操作已取消，录音和笔记未被修改。</value></data>
+  <data name="ComputerMemory" xml:space="preserve"><value>本机总内存 {0:F1} GiB，当前可用 {1:F1} GiB。显存和上下文长度也会影响性能。</value></data>
+  <data name="LocalMemoryWarning" xml:space="preserve"><value>内存提示：模型权重约 {0:F1} GiB，当前可用内存仅 {1:F1} GiB。上下文、Whisper 和 Windows 还需要额外内存。此提示不会阻止使用：可关闭其他程序、选择较小的量化模型，或在录音结束后生成摘要。</value></data>
+  <data name="LocalMemoryUnavailable" xml:space="preserve"><value>无法读取 Windows 内存信息，启用实时摘要前请先测试模型速度。{0}</value></data>
+  <data name="LocalSlowRequest" xml:space="preserve"><value>本地生成已超过 30 秒，模型加载、CPU/GPU 性能或上下文长度可能使实时更新延迟。可以继续等待、取消 AI、选择较小模型，或停止录音后再生成摘要。已保存音频仍会保留。</value></data>
+  <data name="LocalSpeedWarning" xml:space="preserve"><value>检测到本地生成较慢：每秒 {0:F1} 个令牌，低于 5。实时摘要可能延迟。可选择较小模型、增加 GPU 分担、缩短上下文，或停止录音后再生成摘要。您仍可保留当前模型。</value></data>
+  <data name="LocalAdvancedSettings" xml:space="preserve"><value>本地模型高级设置</value></data>
+  <data name="LocalContextTokens" xml:space="preserve"><value>上下文窗口（令牌数）</value></data>
+  <data name="LocalContextHint" xml:space="preserve"><value>默认为 32768。更长的上下文需要更多内存和显存；较短的上下文更快，但可能无法容纳转写批次和已有摘要。请选择模型支持的大小，GPU 分配由 Ollama 管理。</value></data>
+  <data name="LocalTimeoutMinutes" xml:space="preserve"><value>每次生成最长等待时间（分钟）</value></data>
+  <data name="LocalModelGuide" xml:space="preserve"><value>本地模型指南：通义千问、DeepSeek、智谱 GLM</value></data>
+  <data name="LocalModelGuideHint" xml:space="preserve"><value>安装 Ollama 后，可自行运行下方下载命令。这些只是推荐，并非限制列表。程序不会自动下载或安装模型，请检查各模型的许可和剩余磁盘空间。</value></data>
+  <data name="ModelDownloadCommand" xml:space="preserve"><value>模型下载命令</value></data>
+  <data name="DownloadOllama" xml:space="preserve"><value>Ollama 下载页面</value></data>
+  <data name="OpenModelPage" xml:space="preserve"><value>官方模型页面</value></data>
+  <data name="CopyDownloadCommand" xml:space="preserve"><value>复制下载命令</value></data>
+  <data name="LocalCommandCopied" xml:space="preserve"><value>下载命令已复制。准备好后请在终端中运行，AudioMemo 尚未开始下载。</value></data>
+  <data name="LocalModelHardwareHint" xml:space="preserve"><value>内存范围只是 Q4 量化的粗略建议，不保证实际表现。显存、量化方式、上下文和其他程序都会影响性能。MoE 模型仍需加载全部权重。请在每台电脑上测试速度，并通过 ollama ps 查看 CPU/GPU 分担。</value></data>
+  <data name="ModelGuideQwenSmall" xml:space="preserve"><value>中英文入门选择，建议考虑 16-24 GiB 内存</value></data>
+  <data name="ModelGuideQwenModern" xml:space="preserve"><value>较新的多语言模型，建议 24 GiB 以上内存及新版 Ollama</value></data>
+  <data name="ModelGuideDeepSeekSmall" xml:space="preserve"><value>DeepSeek 蒸馏推理模型，建议考虑 16-24 GiB 内存</value></data>
+  <data name="ModelGuideMedium" xml:space="preserve"><value>更高容量，建议考虑 24-32 GiB 内存</value></data>
+  <data name="ModelGuideLarge" xml:space="preserve"><value>高性能电脑选项，建议考虑 32-64 GiB 内存</value></data>
+  <data name="ModelGuideGlm" xml:space="preserve"><value>另一种支持中文的模型，建议考虑 16-24 GiB 内存</value></data>
+  <data name="ModelGuideWorkstation" xml:space="preserve"><value>高端工作站选项，建议 64-128 GiB 内存及较大显存</value></data>
+  <data name="ModelGuideServer" xml:space="preserve"><value>大型服务器模型，仅权重就约 377 GiB，运行还需额外空间</value></data>
+  <data name="LocalCloudModelBlocked" xml:space="preserve"><value>这不是已下载的本机模型。本地模式已阻止 Ollama 云端或远程模型，尚未发送转写文本进行生成。</value></data>
+  <data name="LocalModelNotInstalled" xml:space="preserve"><value>尚未安装本地模型“{0}”。请先通过 Ollama 下载，再刷新模型列表。程序没有自动开始下载。</value></data>
+  <data name="LocalCompletionRequired" xml:space="preserve"><value>所选模型未声明支持文本生成。请选择聊天或指令模型，而不是嵌入模型，并使用新版 Ollama。</value></data>
+  <data name="LocalContextTooSmall" xml:space="preserve"><value>转写批次和已有摘要超过本地上下文的保守预算。请为支持更大上下文的模型增加令牌数后重试，输入内容未被静默截断。</value></data>
+  <data name="LocalOutputTruncated" xml:space="preserve"><value>本地模型达到输出上限，但尚未完成。请选择简洁的非思考或指令模型后重试，未完成的回复不会保存。</value></data>
+  <data name="LocalUnexpectedTools" xml:space="preserve"><value>本地模型请求调用工具，而不是返回笔记。没有执行任何工具，也没有覆盖摘要。</value></data>
+  <data name="LocalEmptySummary" xml:space="preserve"><value>本地模型未返回最终摘要。请尝试非思考或指令模型，或更新 Ollama 后重试。思考过程不会作为摘要保存。</value></data>
+  <data name="LocalOversizedSummary" xml:space="preserve"><value>本地模型返回的摘要超过支持长度。请使用更简洁的模型后重试，之前保存的摘要仍会保留。</value></data>
+  <data name="LocalResponseTooLarge" xml:space="preserve"><value>本地服务器响应超过安全上限，请更新 Ollama 或选择其他模型。</value></data>
+  <data name="LocalHttpFailed" xml:space="preserve"><value>Ollama 请求失败（HTTP {0}），请检查本地模型或服务器后重试。{1}</value></data>
+  <data name="LocalServerError" xml:space="preserve"><value>Ollama 报告错误：{0}</value></data>
+  <data name="LocalConnectionFailed" xml:space="preserve"><value>无法连接到 {0} 上的 Ollama。请启动本机 Ollama，检查服务器地址后重试。录音不需要 Ollama。{1}</value></data>
+  <data name="LocalRequestTimeout" xml:space="preserve"><value>Ollama 请求超时。请检查服务器负载、选择较小模型，或增加等待时间。已完成的摘要批次和音频仍会保留。</value></data>
+  <data name="LocalInvalidResponse" xml:space="preserve"><value>Ollama 返回了无效或不完整的响应。请检查服务器版本后重试，无效摘要不会保存。</value></data>
+  <data name="LocalSummaryProgress" xml:space="preserve"><value>正在通过本机 Ollama 总结转写文本：第 {0} 批，共 {1} 批...</value></data>
+  <data name="SummaryCheckpointSaved" xml:space="preserve"><value>已保存截至转写文本第 {0} 批的要点，共 {1} 批。中断后可从已保存的进度继续。</value></data>
+  <data name="ModelTurbo" xml:space="preserve"><value>Large-v3 Turbo Q5 - 548 MiB（建议使用 GPU）</value></data>
+  <data name="InvalidSpeechAcceleration" xml:space="preserve"><value>请选择自动、CPU 或 Vulkan 加速。</value></data>
+  <data name="InvalidSpeakerCount" xml:space="preserve"><value>说话人数必须为 0（自动）或 1-20。</value></data>
+  <data name="InvalidSpeakerName" xml:space="preserve"><value>请选择已有说话人，名称长度为 1-80 个字符，不能包含控制字符。</value></data>
+  <data name="InvalidSessionTitle" xml:space="preserve"><value>标题长度应为 1-160 个字符，不能包含控制字符。</value></data>
+  <data name="CopyAllText" xml:space="preserve"><value>复制全部正文</value></data>
+  <data name="CopyAnnotated" xml:space="preserve"><value>复制时间、说话人及正文</value></data>
+  <data name="CopySelectedText" xml:space="preserve"><value>复制选中正文</value></data>
+  <data name="CopySelectedAnnotated" xml:space="preserve"><value>复制选中行（含时间及说话人）</value></data>
+  <data name="FollowingTranscript" xml:space="preserve"><value>正在跟随最新内容</value></data>
+  <data name="JumpToLatest" xml:space="preserve"><value>最新内容</value></data>
+  <data name="TimestampColumn" xml:space="preserve"><value>时间</value></data>
+  <data name="SpeakerColumn" xml:space="preserve"><value>说话人</value></data>
+  <data name="TranscriptTextColumn" xml:space="preserve"><value>正文</value></data>
+  <data name="RenameSpeaker" xml:space="preserve"><value>重命名说话人</value></data>
+  <data name="SaveChanges" xml:space="preserve"><value>保存</value></data>
+  <data name="ApplyModel" xml:space="preserve"><value>应用模型</value></data>
+  <data name="UsingModel" xml:space="preserve"><value>正在使用：{0}</value></data>
+  <data name="ModelSelectionSaved" xml:space="preserve"><value>摘要服务和模型已保存。新的 AI 任务使用此选择，处理期间不能切换模型。</value></data>
+  <data name="HideHistory" xml:space="preserve"><value>隐藏列表</value></data>
+  <data name="ShowHistory" xml:space="preserve"><value>显示列表</value></data>
+  <data name="AutomaticTitleHint" xml:space="preserve"><value>在日期和时间后输入名称，也可以替换此前缀。清空输入框时，将自动使用录音开始的日期和时间命名。</value></data>
+  <data name="ResizePanels" xml:space="preserve"><value>拖动以调整转写和笔记区域的宽度</value></data>
+  <data name="DraftLabel" xml:space="preserve"><value>草稿</value></data>
+  <data name="FinalLabel" xml:space="preserve"><value>最终转写</value></data>
+  <data name="DraftTranscriptSaved" xml:space="preserve"><value>实时草稿已保存。只有启用自动最终转写时，停止录音后才会重新转写。</value></data>
+  <data name="RefiningTranscript" xml:space="preserve"><value>正在重新识别已保存的音频以生成最终转写。音频保持不变，最终转写完成前仍显示实时草稿。</value></data>
+  <data name="SpeechRuntimeStatus" xml:space="preserve"><value>语音处理已就绪：{0} / {1}</value></data>
+  <data name="SpeechAcceleration" xml:space="preserve"><value>最终转写加速</value></data>
+  <data name="AccelerationAuto" xml:space="preserve"><value>自动：优先尝试 Vulkan GPU，否则使用 CPU</value></data>
+  <data name="AccelerationCpu" xml:space="preserve"><value>仅使用 CPU</value></data>
+  <data name="AccelerationVulkan" xml:space="preserve"><value>必须使用 Vulkan GPU</value></data>
+  <data name="AccelerationHint" xml:space="preserve"><value>快速 Base 草稿使用 CPU，避免 GPU 启动延迟。此设置用于最终转写，关闭快速草稿时也用于实时转写。将鼠标停留在“转写”标题上可查看实际后端。Vulkan 需要兼容显卡和驱动，第一次识别可能需要较长预热时间。指定 Vulkan 时不会悄悄切换到 CPU。</value></data>
+  <data name="GpuFallback" xml:space="preserve"><value>GPU 初始化失败，自动模式已改用 CPU：{0}</value></data>
+  <data name="FastLiveDrafts" xml:space="preserve"><value>使用 Base 提供快速实时草稿，需要最终转写时使用所选模型</value></data>
+  <data name="DownloadBase" xml:space="preserve"><value>下载 Base 草稿模型</value></data>
+  <data name="BaseModelReady" xml:space="preserve"><value>Base 草稿模型已下载。</value></data>
+  <data name="BaseModelMissing" xml:space="preserve"><value>快速实时草稿需要 Base 模型（141 MiB）。</value></data>
+  <data name="SpeakersOnStop" xml:space="preserve"><value>停止录音后自动分析说话人</value></data>
+  <data name="SpeakersHint" xml:space="preserve"><value>使用本地 Pyannote 和 3D-Speaker 将声音标为 spkr1、spkr2 等。右键点击带标签的行可重命名。自动人数可能将声音分开或合并，已知人数时请指定（单人演讲可填 1）。标签仅为估计，并非身份验证；重叠或不明确的语音可能不标注。长录音需要更多内存。</value></data>
+  <data name="SpeakerModels" xml:space="preserve"><value>说话人模型</value></data>
+  <data name="SpeakerModelsReady" xml:space="preserve"><value>说话人模型已下载。</value></data>
+  <data name="SpeakerModelsMissing" xml:space="preserve"><value>请在设置中下载说话人模型（约 45 MiB）。</value></data>
+  <data name="DownloadSpeakers" xml:space="preserve"><value>下载说话人模型</value></data>
+  <data name="SpeakerCount" xml:space="preserve"><value>说话人数（0 为自动）</value></data>
+  <data name="ModelDownloadProgress" xml:space="preserve"><value>{0}：正在下载 {1:F0}%</value></data>
+  <data name="IdentifySpeakers" xml:space="preserve"><value>识别说话人</value></data>
+  <data name="IdentifyingSpeakers" xml:space="preserve"><value>正在本地识别说话人，可能需要几分钟。录音和转写均已安全保存。</value></data>
+  <data name="SpeakerAnalysisFailed" xml:space="preserve"><value>说话人分析未完成，录音和转写均已保留：{0}</value></data>
+  <data name="SpeakersIdentified" xml:space="preserve"><value>说话人标签已保存。右键点击带标签的行可重命名说话人。</value></data>
+  <data name="SpeakersAlreadyIdentified" xml:space="preserve"><value>该转写已有说话人标签。右键点击带标签的行可重命名。</value></data>
+  <data name="ConfirmSpeakerReanalysis" xml:space="preserve"><value>使用当前设置重新分析所有说话人？成功后会替换说话人标注、自定义名称和已标注说话人的颜色，包括分析过程中修改的颜色。“未标注”行的共享颜色会保留。已有要点需要更新。</value></data>
+  <data name="SummaryNeedsRefresh" xml:space="preserve"><value>摘要基于旧转写，请更新要点。</value></data>
+  <data name="FinalTranscriptRequired" xml:space="preserve"><value>请先完成最终转写，再识别说话人。</value></data>
+  <data name="SpeakerRenamed" xml:space="preserve"><value>已更新转写和已保存摘要中的说话人引用，个人笔记保持不变。</value></data>
+  <data name="RenameSession" xml:space="preserve"><value>重命名录音</value></data>
+  <data name="SessionRenamed" xml:space="preserve"><value>录音已重命名，音频文件和录音文件夹保持不变。</value></data>
+  <data name="RecycleSession" xml:space="preserve"><value>将录音移到回收站</value></data>
+  <data name="ConfirmRecycleSession" xml:space="preserve"><value>要将“{0}”及其整个文件夹移到 Windows 回收站吗？&#10;&#10;包括音频、转写、摘要和个人笔记。&#10;{1}&#10;&#10;您可以从回收站恢复该文件夹。</value></data>
+  <data name="SessionRecycled" xml:space="preserve"><value>录音文件夹已移到回收站。</value></data>
+  <data name="RecycleSelectedSessions" xml:space="preserve"><value>将 {0} 条录音移到回收站</value></data>
+  <data name="ConfirmRecycleSessions" xml:space="preserve"><value>要将选中的全部 {0} 个录音文件夹移到 Windows 回收站吗？&#10;&#10;包括各文件夹中的音频、转写、摘要和个人笔记。&#10;&#10;{1}&#10;&#10;您可以从回收站恢复这些文件夹。</value></data>
+  <data name="SessionsRecycled" xml:space="preserve"><value>已将 {0} 个录音文件夹移到回收站。</value></data>
+  <data name="RecyclingSessions" xml:space="preserve"><value>正在将录音移到回收站（{0}/{1}）...</value></data>
+  <data name="RecycleSelectionCancelled" xml:space="preserve"><value>已取消移到回收站。已处理 {0}/{1} 个录音文件夹；其余录音未删除。</value></data>
+  <data name="RecycleSelectionFailed" xml:space="preserve"><value>已将 {0}/{1} 个录音文件夹移到回收站。无法处理“{2}”：{3} 其余录音未删除。</value></data>
+  <data name="ConfirmCloseRecycling" xml:space="preserve"><value>要停止移到回收站并关闭 AudioMemo 吗？&#10;&#10;当前文件夹操作将安全完成。其余选中的录音将保持不变，下次打开 AudioMemo 时不会自动删除。</value></data>
+  <data name="DeletionCancelled" xml:space="preserve"><value>已取消删除。</value></data>
+  <data name="SessionBusy" xml:space="preserve"><value>请先停止录音，并等待或取消处理任务，然后再修改已保存的录音或 AI 模型。</value></data>
+  <data name="SelectSession" xml:space="preserve"><value>请先选择已保存的录音。</value></data>
+  <data name="TranscriptCopied" xml:space="preserve"><value>已复制转写正文，不含时间和说话人标签。</value></data>
+  <data name="ExportTranscript" xml:space="preserve"><value>导出转写...</value></data>
+  <data name="TranscriptExportFilter" xml:space="preserve"><value>仅正文|*.txt|正文、时间和说话人|*.txt</value></data>
+  <data name="ProtectedSessionFile" xml:space="preserve"><value>请选择其他导出文件名，该文件包含录音数据或笔记。</value></data>
+  <data name="TranscriptExported" xml:space="preserve"><value>转写已导出：{0}</value></data>
+  <data name="SpeakerFilterLabel" xml:space="preserve"><value>筛选说话人</value></data>
+  <data name="AllSpeakers" xml:space="preserve"><value>全部说话人</value></data>
+  <data name="UnlabeledSpeakers" xml:space="preserve"><value>未标注</value></data>
+  <data name="SpeakerFilterCount" xml:space="preserve"><value>说话人：{0}</value></data>
+  <data name="SpeakerFilterHint" xml:space="preserve"><value>可选择一个或多个说话人。筛选仅影响转写列表和转写复制按钮，不改变摘要或音频本身。</value></data>
+  <data name="CopyFilteredText" xml:space="preserve"><value>复制筛选文本</value></data>
+  <data name="NoMatchingSpeakers" xml:space="preserve"><value>没有符合这些说话人的转写内容。选择“全部说话人”可清除筛选。</value></data>
+  <data name="PlaySelectedRange" xml:space="preserve"><value>播放所选时间段</value></data>
+  <data name="ReplayHint" xml:space="preserve"><value>按住 Shift 点击时间单元格可选择范围。将从所选最早时间连续播放到最晚结束时间，包括期间被筛选隐藏的其他说话人。停止录音后可使用，通过 Windows 默认播放设备回放。</value></data>
+  <data name="TimestampReplayHint" xml:space="preserve"><value>双击可回放这一行。按住 Shift 点击另一处时间，再点击“播放所选时间段”可回放整个范围。</value></data>
+  <data name="ReplayPause" xml:space="preserve"><value>暂停回放</value></data>
+  <data name="ReplayResume" xml:space="preserve"><value>继续回放</value></data>
+  <data name="ReplayStop" xml:space="preserve"><value>停止回放</value></data>
+  <data name="ReplayProgressLabel" xml:space="preserve"><value>音频回放进度</value></data>
+  <data name="ReplayPosition" xml:space="preserve"><value>回放 {0} / {1}</value></data>
+  <data name="ReplayBounds" xml:space="preserve"><value>正在回放 {0} 至 {1}，到达此时间段末尾时自动停止。</value></data>
+  <data name="SelectReplayRange" xml:space="preserve"><value>请选择一个或多个转写时间行以进行回放。</value></data>
+  <data name="InvalidReplayRange" xml:space="preserve"><value>所选转写的音频时间范围无效或为空。</value></data>
+  <data name="ReplayOutsideRecording" xml:space="preserve"><value>所选时间范围内没有已保存的录音。</value></data>
+  <data name="ReplayAfterStop" xml:space="preserve"><value>只能在停止录音后回放已保存的 WAV。中断的录音请先恢复。录音或暂停录音期间不能回放，以免将回放声音再次录入。</value></data>
+  <data name="ReplayNotActive" xml:space="preserve"><value>当前没有正在回放的音频。</value></data>
+  <data name="HistoryPeekHint" xml:space="preserve"><value>悬停或点击可临时显示录音列表。上下拖动可沿左边缘移动此按钮，Escape 取消拖动。点击面板外部会立即隐藏；鼠标在列表内时保持显示，移出后五秒内没有操作则隐藏。点击“固定”可保持显示，点击面板内的左箭头可隐藏列表。</value></data>
+  <data name="PreviewRecordings" xml:space="preserve"><value>临时显示已保存的录音</value></data>
+  <data name="PinHistory" xml:space="preserve"><value>固定</value></data>
+  <data name="PinHistoryHint" xml:space="preserve"><value>始终显示录音列表。</value></data>
+  <data name="ReplayFinished" xml:space="preserve"><value>音频回放完成。</value></data>
+  <data name="ReplayStopped" xml:space="preserve"><value>音频回放已停止。</value></data>
+  <data name="MuteSelectedRows" xml:space="preserve"><value>静音所选...</value></data>
+  <data name="MuteSelectedRowsHint" xml:space="preserve"><value>选择修改此录音或创建副本。所选时间区间将变为静音，并移除对应转写；总时长、其他音频和恢复数据均保留。</value></data>
+  <data name="SelectAllVisibleRows" xml:space="preserve"><value>选择全部可见行</value></data>
+  <data name="EditSessionTitle" xml:space="preserve"><value>创建剪辑录音</value></data>
+  <data name="EditOriginalPreserved" xml:space="preserve"><value>创建独立的编辑录音，当前录音保持不变。之后每次静音仍可选择原位修改或创建副本；恢复操作会更新正在恢复的录音。</value></data>
+  <data name="EditedCopyName" xml:space="preserve"><value>剪辑副本名称</value></data>
+  <data name="EditedTitle" xml:space="preserve"><value>{0}（静音副本）</value></data>
+  <data name="EditSourceLabel" xml:space="preserve"><value>原始会话：{0}</value></data>
+  <data name="EditStatistics" xml:space="preserve"><value>已选行数：{0} | 静音区间：{1}&#10;原时长：{2} | 静音时长：{3} | 新时长：{4}（不变）</value></data>
+  <data name="MutedRangesLabel" xml:space="preserve"><value>将替换为静音的区间（原始录音时间）</value></data>
+  <data name="EditSelectionWarning" xml:space="preserve"><value>这些区间内的全部人声和声音会替换为等长静音，其他音频仍位于原来的时间位置。此功能按时间段静音，不能单独分离重叠的人声。</value></data>
+  <data name="EditedSummaryPolicy" xml:space="preserve"><value>总时长和保留内容的时间戳保持不变。所选文字将移除，不复制旧 AI 摘要，下次摘要仅使用剩余转写。个人笔记的时间引用仍对应原来的位置。</value></data>
+  <data name="EditEmptyTranscriptWarning" xml:space="preserve"><value>剪辑后不会保留已识别的文字，没有转写时无法生成 AI 摘要。</value></data>
+  <data name="EditProgressLabel" xml:space="preserve"><value>音频静音或恢复进度</value></data>
+  <data name="CreateEditedCopy" xml:space="preserve"><value>创建剪辑副本</value></data>
+  <data name="CancelEditing" xml:space="preserve"><value>取消剪辑</value></data>
+  <data name="EditingCopyingAudio" xml:space="preserve"><value>正在创建新的 WAV，并将所选区间替换为静音...</value></data>
+  <data name="EditingEncodingMp3" xml:space="preserve"><value>正在编码剪辑后的 MP3，原始录音保持不变...</value></data>
+  <data name="EditingSavingCopy" xml:space="preserve"><value>正在保存筛选后的转写，保留原有时间戳...</value></data>
+  <data name="EditingCancelling" xml:space="preserve"><value>正在取消并清理未完成的副本...</value></data>
+  <data name="EditingCancelled" xml:space="preserve"><value>已取消剪辑，原始录音保持不变。</value></data>
+  <data name="EditedCopyCreated" xml:space="preserve"><value>已创建剪辑副本：{0}。点击“更新要点”可仅根据剩余转写生成摘要。</value></data>
+  <data name="EditNeedsFinalTranscript" xml:space="preserve"><value>请先停止录音、完成最终转写，并等待当前处理结束后再剪辑。</value></data>
+  <data name="SelectEditRows" xml:space="preserve"><value>请选择需要静音并移除对应文字的转写行。可先筛选说话人，再点击“选择全部可见行”来选择该人声的片段。</value></data>
+  <data name="EditSourceChanged" xml:space="preserve"><value>选择后录音或转写已发生变化，请重新打开会话并选择需要剪除的行。</value></data>
+  <data name="InvalidEditTimeline" xml:space="preserve"><value>转写时间超出已保存录音的范围，请先恢复或重新转写再剪辑。</value></data>
+  <data name="EditOverlappingRow" xml:space="preserve"><value>另一段转写跨越了静音边界，请在需要时清除说话人筛选，并同时选择重叠的行。整行编辑无法准确推断部分静音后仍能听到哪些文字。</value></data>
+  <data name="EditInvalidFormat" xml:space="preserve"><value>剪辑副本格式请选择 WAV 或 MP3。</value></data>
+  <data name="EditLibraryInsideSource" xml:space="preserve"><value>剪辑副本的保存文件夹不能位于原始会话文件夹内。</value></data>
+  <data name="EditDestinationExists" xml:space="preserve"><value>剪辑会话的目标文件夹已存在，未覆盖任何现有文件。</value></data>
+  <data name="RestoreMutedSections" xml:space="preserve"><value>恢复静音片段...</value></data>
+  <data name="RestoreOriginalLabel" xml:space="preserve"><value>恢复来源：{0}</value></data>
+  <data name="RestoreRangesLabel" xml:space="preserve"><value>静音行及音频区间（选择需要恢复的项）</value></data>
+  <data name="RestoreSelectionHint" xml:space="preserve"><value>“播放原声”仅试听备份音频，不会恢复或修改录音。可逐行选择或选择“全部恢复”；所选音频和文字将在原时间位置恢复，未选中的行保持静音。</value></data>
+  <data name="SelectAllRestore" xml:space="preserve"><value>全部恢复（全选）</value></data>
+  <data name="ClearRestoreSelection" xml:space="preserve"><value>清除选择</value></data>
+  <data name="CreateRestoredCopy" xml:space="preserve"><value>创建恢复副本</value></data>
+  <data name="RestoredTitle" xml:space="preserve"><value>{0}（恢复副本）</value></data>
+  <data name="RestoreStatistics" xml:space="preserve"><value>已选区间：{0} | 恢复时长：{1}&#10;录音总时长：{2}（不变）</value></data>
+  <data name="RestoreSummaryPolicy" xml:space="preserve"><value>将创建新副本，原始录音和当前编辑会话均保持不变。保留个人笔记，时间戳不移动，也不复制旧 AI 摘要。点击“更新要点”可将恢复的文字加入新摘要。</value></data>
+  <data name="RestoreRebuildWarning" xml:space="preserve"><value>恢复这些片段时，将根据恢复来源重建当前编辑录音的转写，并排除仍保持静音的区间。之后重新转写的内容或不兼容的说话人修改可能被替换。原始录音和个人笔记保持不变。</value></data>
+  <data name="SelectRestoreRanges" xml:space="preserve"><value>请至少选择一个需要恢复的静音区间，或选择“全部恢复”。</value></data>
+  <data name="LocatingRestoreSource" xml:space="preserve"><value>正在查找原始录音和可恢复的静音区间...</value></data>
+  <data name="RestoringAudio" xml:space="preserve"><value>正在从来源恢复所选音频，其他音频和时间戳保持不变...</value></data>
+  <data name="RestoredCopyCreated" xml:space="preserve"><value>已创建恢复副本：{0}。点击“更新要点”可将恢复的文字加入摘要。</value></data>
+  <data name="NoMutedSections" xml:space="preserve"><value>此会话已没有需要恢复的静音区间。</value></data>
+  <data name="RestoreSourceMissing" xml:space="preserve"><value>找不到来源录音：{0}。请从回收站或备份将来源会话及相关编辑父会话的文件夹恢复到当前录音库。仅凭静音本身无法重建原声音。</value></data>
+  <data name="RestoreNeedsTranscript" xml:space="preserve"><value>恢复需要当前会话和来源会话的完整转写，请先完成或继续它们的转写。</value></data>
+  <data name="RestoreHistoryChanged" xml:space="preserve"><value>来源、转写或编辑历史已发生变化，请关闭预览并重新打开“恢复静音片段”。</value></data>
+  <data name="RestoreHistoryInvalid" xml:space="preserve"><value>编辑历史中的来源引用无效、重复或时间长度不匹配，未更改任何录音。</value></data>
+  <data name="RestoreOverlapSelection" xml:space="preserve"><value>来源转写跨越了仍保持静音的边界。请一起选择相关区间，或使用“全部恢复”，以完整恢复文字而不猜测内容。</value></data>
+  <data name="ProviderDoubao" xml:space="preserve"><value>豆包（火山方舟）</value></data>
+  <data name="ProviderQwen" xml:space="preserve"><value>千问（阿里云百炼）</value></data>
+  <data name="ProviderDeepSeek" xml:space="preserve"><value>DeepSeek（官方 API）</value></data>
+  <data name="InvalidCloudEndpoint" xml:space="preserve"><value>请输入所选服务的官方 HTTPS API 基础地址，不得包含凭据、查询参数或片段。千问也支持官方业务空间专属地址。</value></data>
+  <data name="InvalidCloudSettings" xml:space="preserve"><value>已保存的云端 API 配置无效，请检查该服务的设置。</value></data>
+  <data name="InvalidCloudModel" xml:space="preserve"><value>请填写准确的 API 模型 ID（不超过 200 个 ASCII 字符，不含空格），不要使用翻译后的显示名称。</value></data>
+  <data name="ChooseCloudModel" xml:space="preserve"><value>请选择或填写文本对话模型 ID。</value></data>
+  <data name="InvalidCloudKey" xml:space="preserve"><value>请输入有效的 API 密钥，不含空格或换行，且不超过 8192 个字符。</value></data>
+  <data name="CloudKeyRequired" xml:space="preserve"><value>请先在设置中为此服务和接口地址添加 API 密钥。</value></data>
+  <data name="CloudKeyProtectFailed" xml:space="preserve"><value>Windows 无法加密 API 密钥，密钥没有以明文保存。</value></data>
+  <data name="CloudKeyUnlockFailed" xml:space="preserve"><value>Windows 无法解密已保存的 API 密钥，请使用当前 Windows 账户在设置中重新输入。</value></data>
+  <data name="CloudApiSetupHint" xml:space="preserve"><value>使用服务商官方的计费开发者 API，而非网页聊天账户。请在服务商控制台创建 API 密钥并开通支持的文本对话模型。可用模型和费用取决于账户及地区。</value></data>
+  <data name="OpenCloudConsole" xml:space="preserve"><value>API 密钥 / 服务控制台</value></data>
+  <data name="OpenCloudModels" xml:space="preserve"><value>官方模型目录</value></data>
+  <data name="CloudApiEndpoint" xml:space="preserve"><value>官方 API 基础地址</value></data>
+  <data name="QwenEndpointHint" xml:space="preserve"><value>预设地址分别位于北京和新加坡，API 密钥必须与接口地区一致。也可粘贴官方业务空间地址，例如 https://YOUR-WORKSPACE.cn-beijing.maas.aliyuncs.com/compatible-mode/v1/。切换地址不会转移密钥或分享授权。</value></data>
+  <data name="CloudModelId" xml:space="preserve"><value>模型 ID / 推理接入点 ID</value></data>
+  <data name="DoubaoModelHint" xml:space="preserve"><value>请从火山方舟控制台粘贴已开通的豆包文本模型 ID，或您的 ep-... 推理接入点 ID。不要使用 Seedance、视频或图片模型。模型权限与账户相关，应用不会猜测接入点 ID。</value></data>
+  <data name="CloudPresetHint" xml:space="preserve"><value>这些是建议的 API 模型 ID，不代表您的账户或地区一定可用。您可以填写官方目录中更新的文本对话模型 ID，请选择支持非流式请求的模型。</value></data>
+  <data name="CloudApiKey" xml:space="preserve"><value>API 密钥（留空保留已配置的密钥）</value></data>
+  <data name="CloudKeyConfigured" xml:space="preserve"><value>此接口地址已配置加密密钥，密钥不会在这里显示。</value></data>
+  <data name="CloudKeyNotConfigured" xml:space="preserve"><value>此接口地址尚未配置密钥，请在上方输入；保存设置后生效。</value></data>
+  <data name="ForgetCloudKey" xml:space="preserve"><value>保存设置时忘记此接口地址的 API 密钥</value></data>
+  <data name="CloudKeyPrivacy" xml:space="preserve"><value>密钥先通过 Windows DPAPI 按当前 Windows 账户加密，再存入本地设置，并绑定到对应服务及接口地址。更换电脑或账户后可能需要重新输入。取消将放弃更改。</value></data>
+  <data name="CloudKeyEditConflict" xml:space="preserve"><value>请输入替换密钥或选择忘记密钥，不要同时执行这两项操作。</value></data>
+  <data name="DisableCloudThinking" xml:space="preserve"><value>请求快速、非思考模式摘要</value></data>
+  <data name="CloudThinkingHint" xml:space="preserve"><value>适用于支持思考开关的模型。仅支持思考或不接受此参数的旧模型请取消勾选，使用其 API 默认设置。只保存最终摘要文字，不保存思考字段。</value></data>
+  <data name="CloudApiConsent" xml:space="preserve"><value>允许将转写文本和已有 AI 要点发送给 {0}，接口为 {1}。适用服务商政策及 API 费用，不发送音频和个人笔记。</value></data>
+  <data name="CloudConsentMessage" xml:space="preserve"><value>是否将转写文本和已有 AI 要点发送给 {0}？&#10;&#10;接口地址：{1}&#10;&#10;不发送音频和个人笔记。此服务在外部云端运行，适用其隐私、数据保留政策和 API 费用。本次授权仅针对这个服务和接口地址。</value></data>
+  <data name="ReadCloudModels" xml:space="preserve"><value>读取可用模型</value></data>
+  <data name="TestCloudModel" xml:space="preserve"><value>测试示例（可能产生 API 费用）</value></data>
+  <data name="CloudNoAutomaticRequests" xml:space="preserve"><value>仅浏览这些设置不会发送数据。选用新的 LLM 前会使用模拟内容测试连接，可能产生 API 费用。录音摘要需要分享授权。</value></data>
+  <data name="CloudReadingModels" xml:space="preserve"><value>正在从所选官方 API 读取可用模型...</value></data>
+  <data name="CloudNoModels" xml:space="preserve"><value>API 未返回可用模型，请检查账户开通状态、地区和权限。</value></data>
+  <data name="CloudModelsFound" xml:space="preserve"><value>API 返回的可用模型数量：{0}。</value></data>
+  <data name="CloudCatalogModelsOnly" xml:space="preserve"><value>此连接使用建议模型或控制台中的准确文本模型 ID，不读取实时模型列表。请在设置中打开官方目录；豆包也支持 ep-... 推理接入点 ID。</value></data>
+  <data name="CloudTestingModel" xml:space="preserve"><value>正在向所选 API 发送内置示例文字，不使用录音或个人笔记，可能产生 API 费用...</value></data>
+  <data name="CloudTestPassed" xml:space="preserve"><value>示例请求成功，耗时 {0:F1} 秒，未使用录音或个人笔记。</value></data>
+  <data name="CloudCheckCancelled" xml:space="preserve"><value>API 操作已取消。服务商已收到的请求仍可能产生费用。</value></data>
+  <data name="CloudProviderSetupRequired" xml:space="preserve"><value>模型选择已保存。使用摘要前，请在设置中配置该服务的 API 密钥并授权分享转写文本。</value></data>
+  <data name="CloudSummaryProgress" xml:space="preserve"><value>正在通过在线 LLM 总结转写文本：第 {0} 批，共 {1} 批...</value></data>
+  <data name="CloudInvalidResponse" xml:space="preserve"><value>云端 API 返回了无效响应，已保存的数据保持不变。</value></data>
+  <data name="CloudOutputTruncated" xml:space="preserve"><value>模型达到了输出上限，未保存不完整摘要。请尝试非思考文本模型。</value></data>
+  <data name="CloudOutputIncomplete" xml:space="preserve"><value>API 未在支持的长度范围内返回完整可用的结果，已保存的数据保持不变。</value></data>
+  <data name="CloudUnexpectedTools" xml:space="preserve"><value>模型请求了工具调用而不是返回摘要。应用不会执行工具，也未保存新摘要。</value></data>
+  <data name="CloudResponseTooLarge" xml:space="preserve"><value>云端 API 响应超过了 4 MiB 安全限制。</value></data>
+  <data name="CloudHttpFailed" xml:space="preserve"><value>{0} 返回 HTTP {1}。{2}</value></data>
+  <data name="CloudAuthFailed" xml:space="preserve"><value>请检查 API 密钥及其地区。网页聊天登录信息不是 API 凭据。</value></data>
+  <data name="CloudAccessFailed" xml:space="preserve"><value>请在服务商控制台检查开发者 API 权限、模型开通情况和账户权限。</value></data>
+  <data name="CloudQuotaFailed" xml:space="preserve"><value>请在服务商控制台检查余额、配额及速率限制。应用不会自动重试。</value></data>
+  <data name="CloudRequestTooLarge" xml:space="preserve"><value>请求数据量超过服务商限制。请减少输入内容，并查看服务商公布的限制。应用不会自动重试。</value></data>
+  <data name="CloudRequestRejected" xml:space="preserve"><value>请检查接口地址、准确的文本模型 ID、模型开通状态及非流式支持。如果模型不接受非思考参数，请取消该选项。</value></data>
+  <data name="CloudRedirectBlocked" xml:space="preserve"><value>已阻止重定向，避免将密钥和请求数据转发到其他地址。</value></data>
+  <data name="CloudServerFailed" xml:space="preserve"><value>API 请求失败，请检查服务商状态后再手动重试。</value></data>
+  <data name="CloudConnectionFailed" xml:space="preserve"><value>无法连接 {0}（{1}），请检查访问官方服务的网络或代理配置。应用不会改用其他服务。</value></data>
+  <data name="CloudRequestTimeout" xml:space="preserve"><value>API 请求超时，已有摘要保持不变。应用不会自动重试；服务商已收到的请求仍可能产生费用。</value></data>
+  <data name="InvalidSpeechVocabulary" xml:space="preserve"><value>最多保存 200 个简短名称或短语，每行一个；每个词条不超过 160 个 UTF-8 字节，不能包含控制字符。请勿粘贴整段文字。</value></data>
+  <data name="CorrectionNeedsFinalTranscript" xml:space="preserve"><value>请先停止录音并完成转写，再修改文字或重新转写所选行。</value></data>
+  <data name="SelectCorrectionRows" xml:space="preserve"><value>请先选择一行或多行转写内容。按住 Shift 选择连续范围，按住 Ctrl 选择不连续的行。</value></data>
+  <data name="InvalidCorrectionText" xml:space="preserve"><value>每个修改后的片段都需要文字，最多 16000 个字符。不能保存空白片段；如需排除不需要的发言，请使用现有的静音并生成编辑副本功能。</value></data>
+  <data name="CorrectionSaveFailed" xml:space="preserve"><value>转写更新失败，且无法恢复文字导出文件。请重新打开此会话，检查 transcript.json 后再导出文字。</value></data>
+  <data name="ProtectTranscriptCorrections" xml:space="preserve"><value>此转写包含已经确认的修改。更换模型或语言后重新生成全文会覆盖这些修改，请改用“重新转写所选内容”。如需检查全文，可先选择所有可见行。</value></data>
+  <data name="SpeechHintsLimited" xml:space="preserve"><value>识别提示窗口正在使用已保存词条中的 {0}/{1} 个，优先采用列表末尾的新词条。其余词条仍保留在本地。</value></data>
+  <data name="SelectionNoSpeech" xml:space="preserve"><value>所选时间段没有识别出语音文字，已有文字已保留。请尝试其他已下载的语音模型、选择正确的语言，或手动修改文字。</value></data>
+  <data name="CorrectTranscriptTitle" xml:space="preserve"><value>检查并修改所选转写</value></data>
+  <data name="CorrectTranscriptHint" xml:space="preserve"><value>双击“修改后的文字”单元格进行编辑。显示的一行可能包含多个计时片段；重新转写会逐段处理，保留每个时间戳和说话人。请检查后再保存，音频和未选中的文字不会改变。</value></data>
+  <data name="RetranscribeSelection" xml:space="preserve"><value>重新转写所选内容</value></data>
+  <data name="SelectionRowNoSpeech" xml:space="preserve"><value>此处没有识别出语音，已保留当前编辑中的文字。</value></data>
+  <data name="OriginalTranscriptText" xml:space="preserve"><value>已保存的文字</value></data>
+  <data name="CorrectedTranscriptText" xml:space="preserve"><value>修改后的文字</value></data>
+  <data name="SpeechVocabularyTitle" xml:space="preserve"><value>记忆词汇（可选）</value></data>
+  <data name="UseSpeechVocabulary" xml:space="preserve"><value>语音识别时使用本地词汇提示</value></data>
+  <data name="RememberSelectedWords" xml:space="preserve"><value>将高亮文字添加到词汇表</value></data>
+  <data name="SaveSpeechVocabulary" xml:space="preserve"><value>单独保存词汇表</value></data>
+  <data name="CorrectionVocabularyHint" xml:space="preserve"><value>在编辑单元格中高亮选择简短名称或短语，再添加并保存到这里。词汇表与转写修改分别保存；重新转写也可先试用未保存的词汇。这只是识别提示，不会重新训练 Whisper 或自动替换文字。</value></data>
+  <data name="SaveTranscriptChanges" xml:space="preserve"><value>保存转写修改</value></data>
+  <data name="SelectionRecognitionStarting" xml:space="preserve"><value>正在准备本地重新转写，不会上传或修改音频...</value></data>
+  <data name="SelectionRecognitionProgress" xml:space="preserve"><value>正在重新转写所选语音：已完成 {0} 个片段，共 {1} 个。模型：{2} {3}</value></data>
+  <data name="SelectionRecognitionReady" xml:space="preserve"><value>预览已就绪，尚未保存。请检查可编辑文字后保存；未识别出语音并保留原文的时间段数：{0}。</value></data>
+  <data name="SelectionRecognitionCancelled" xml:space="preserve"><value>操作已取消，已保存的转写和音频没有改变。</value></data>
+  <data name="SelectVocabularyWords" xml:space="preserve"><value>请先在“修改后的文字”单元格中高亮选择一个简短词语、名称或短语。</value></data>
+  <data name="SpeechVocabularySaved" xml:space="preserve"><value>词汇设置已保存到本地，将用于后续转写。这不会改写当前转写或训练模型。</value></data>
+  <data name="SpeechVocabularyStatus" xml:space="preserve"><value>可放入一次识别提示窗口的词条：{0}/{1}，优先采用列表末尾的新词条。提示不能保证纠错成功。</value></data>
+  <data name="EditTranscriptText" xml:space="preserve"><value>修改文字</value></data>
+  <data name="CorrectSelectionHint" xml:space="preserve"><value>修改所选文字，或右键重新转写所选音频。Shift 选择连续范围，Ctrl 选择不连续行，保留原有时间戳和说话人。</value></data>
+  <data name="TranscriptCorrectionsSaved" xml:space="preserve"><value>转写修改已保存。音频、时间戳、说话人和个人笔记均已保留；请点击“更新主要要点”重新生成已过期的摘要。</value></data>
+  <data name="SpeechVocabularyHint" xml:space="preserve"><value>每行填写一个希望优先识别的简短名称、专业术语或拼写，最多 200 个词条。这些词条仅保存在本地，用于实时、最终和所选内容的重新转写。为适应模型上下文，提示窗口最多使用 200 个字节，优先选择列表末尾放得下的新词条。请保留重点词汇，过多提示会降低覆盖率，也可能引入错误文字。这不是模型训练或自动文字替换。</value></data>
+  <data name="AppearanceSection" xml:space="preserve"><value>外观与语言</value></data>
+  <data name="ThemeLabel" xml:space="preserve"><value>应用主题</value></data>
+  <data name="ThemeLight" xml:space="preserve"><value>浅色（日间）</value></data>
+  <data name="ThemeDark" xml:space="preserve"><value>深色</value></data>
+  <data name="ThemeSystem" xml:space="preserve"><value>跟随系统</value></data>
+  <data name="ThemeHint" xml:space="preserve"><value>保存设置后生效。跟随系统会响应 Windows 应用主题的变化，不会修改 Windows 设置。已有安装保持浅色，直到你选择其他主题。</value></data>
+  <data name="InvalidTheme" xml:space="preserve"><value>请选择浅色、深色或跟随系统。</value></data>
+  <data name="SearchTranscript" xml:space="preserve"><value>搜索转录文本</value></data>
+  <data name="SearchHint" xml:space="preserve"><value>在所选说话人范围内搜索。精确模式按原文匹配，不区分英文字母大小写。可选择只显示匹配的转录行。在搜索框内按 Enter / Shift+Enter 查找下一处 / 上一处。关闭窗口会保留搜索词、筛选和高亮。点击左上角图标，在“帮助与关于”中查看已保存的快捷键，或在“设置 &gt; 快捷键”中修改。</value></data>
+  <data name="FuzzySearch" xml:space="preserve"><value>模糊搜索</value></data>
+  <data name="FuzzySearchHint" xml:space="preserve"><value>本地容错搜索，不是语义或拼音搜索。3 至 7 个字符允许一处插入、缺失、替换或相邻字符调换；更长的文本允许最多两处差异。一个或两个字符仍按精确模式匹配。</value></data>
+  <data name="SearchPrevious" xml:space="preserve"><value>上一处匹配</value></data>
+  <data name="SearchNext" xml:space="preserve"><value>下一处匹配</value></data>
+  <data name="SearchClear" xml:space="preserve"><value>清除搜索</value></data>
+  <data name="SearchMatches" xml:space="preserve"><value>{0} / {1} 处</value></data>
+  <data name="SearchNoMatches" xml:space="preserve"><value>没有匹配项</value></data>
+  <data name="SearchInProgress" xml:space="preserve"><value>正在搜索...</value></data>
+  <data name="SearchQueryTooLong" xml:space="preserve"><value>每次最多搜索 128 个字符。</value></data>
+  <data name="SpeakerColorHint" xml:space="preserve"><value>双击“说话人”单元格可为同一标注的所有行设置颜色，AI 处理期间也可使用。本录音中所有“未标注”行共用一种颜色，设置颜色不会分配说话人。选中行保留选中背景，旁边的小色块仍显示说话人颜色。</value></data>
+  <data name="ButtonsWindows" xml:space="preserve"><value>Windows / Fluent 风格</value></data>
+  <data name="ButtonsOffice" xml:space="preserve"><value>Office 式扁平风格</value></data>
+  <data name="ButtonsShadow" xml:space="preserve"><value>柔和阴影</value></data>
+  <data name="ButtonsOutline" xml:space="preserve"><value>实线轮廓</value></data>
+  <data name="InvalidButtonStyle" xml:space="preserve"><value>请选择支持的按钮样式。</value></data>
+  <data name="InvalidAppearanceColors" xml:space="preserve"><value>外观颜色设置无效。</value></data>
+  <data name="InvalidHexColor" xml:space="preserve"><value>请输入 #RRGGBB 格式的颜色，例如 #294B63。</value></data>
+  <data name="InvalidHistoryTabPosition" xml:space="preserve"><value>保存的录音列表边缘按钮位置无效。</value></data>
+  <data name="ChooseLabeledSpeaker" xml:space="preserve"><value>请选择已有的已标记说话人。</value></data>
+  <data name="ColorPickerHint" xml:space="preserve"><value>选择色块或输入精确的 RGB 颜色。预览会显示自动选择的清晰文字颜色。</value></data>
+  <data name="HexColor" xml:space="preserve"><value>RGB 颜色</value></data>
+  <data name="ColorPreviewText" xml:space="preserve"><value>转录文字预览 AaBb 0123</value></data>
+  <data name="NeutralSpeakerColor" xml:space="preserve"><value>使用中性底色</value></data>
+  <data name="UseColor" xml:space="preserve"><value>使用此颜色</value></data>
+  <data name="AutomaticColorContrast" xml:space="preserve"><value>文字会自动使用黑色或白色，确保清晰易读。</value></data>
+  <data name="SettingsCategories" xml:space="preserve"><value>设置分类</value></data>
+  <data name="SettingsAppearanceCategory" xml:space="preserve"><value>外观</value></data>
+  <data name="SettingsRecordingCategory" xml:space="preserve"><value>录音</value></data>
+  <data name="SettingsSpeechCategory" xml:space="preserve"><value>转录</value></data>
+  <data name="SettingsSummaryCategory" xml:space="preserve"><value>AI 摘要</value></data>
+  <data name="ButtonAppearance" xml:space="preserve"><value>按钮样式</value></data>
+  <data name="RainbowRecordingIndicator" xml:space="preserve"><value>任务栏录音爱心使用彩虹渐变</value></data>
+  <data name="RainbowRecordingIndicatorHint" xml:space="preserve"><value>录音时爱心在彩虹颜色之间渐变，而非保持红色。爱心随双次心跳放大并轻轻上跳，休息时淡出为透明；暂停录音时保持琥珀色。动画遵循 Windows 设置。</value></data>
+  <data name="ButtonAppearanceHint" xml:space="preserve"><value>可在下方预览四种样式。保存后生效，不会改变录音或 AI 功能。</value></data>
+  <data name="PreviewPrimaryButton" xml:space="preserve"><value>主要按钮</value></data>
+  <data name="PreviewButton" xml:space="preserve"><value>普通按钮</value></data>
+  <data name="PreviewDisabledButton" xml:space="preserve"><value>已禁用</value></data>
+  <data name="TranscriptHighlightColors" xml:space="preserve"><value>转录高亮颜色</value></data>
+  <data name="HighlightColorsHint" xml:space="preserve"><value>可分别设置浅色和深色模式。选中文字会自动使用清晰的黑色或白色。必要时会调整搜索高亮的深浅以保持文字对比度。Windows 高对比度设置优先。</value></data>
+  <data name="SelectionColor" xml:space="preserve"><value>选中行</value></data>
+  <data name="SearchMatchColor" xml:space="preserve"><value>搜索匹配</value></data>
+  <data name="ActiveMatchColor" xml:space="preserve"><value>当前匹配 / 选中文字</value></data>
+  <data name="ResetHighlightColors" xml:space="preserve"><value>恢复默认颜色</value></data>
+  <data name="ComparisonColorsTitle" xml:space="preserve"><value>转写文字对比颜色</value></data>
+  <data name="ComparisonColorsHint" xml:space="preserve"><value>将已保存的文字与修改后的文字或在线结果进行对比。为整行着色：默认用粉色表示文字不同，绿色表示文字相同，灰色表示缺少可用结果。可分别自定义浅色和深色主题；文字对比度会自动调整。颜色不代表识别准确率或置信度。</value></data>
+  <data name="ComparisonDifferent" xml:space="preserve"><value>有差异</value></data>
+  <data name="ComparisonMatching" xml:space="preserve"><value>相同</value></data>
+  <data name="ComparisonUnclear" xml:space="preserve"><value>不明确</value></data>
+  <data name="ComparisonUnclearHint" xml:space="preserve"><value>一侧或两侧没有返回可用的转写结果。这不是置信度评分，现有的可编辑文字会保留。</value></data>
+  <data name="SearchButton" xml:space="preserve"><value>搜索...</value></data>
+  <data name="SearchWindowHint" xml:space="preserve"><value>打开小型搜索窗口，支持精确、模糊搜索，并可只显示匹配行。</value></data>
+  <data name="SetSpeakerColor" xml:space="preserve"><value>设置说话人颜色...</value></data>
+  <data name="SpeakerColorTitle" xml:space="preserve"><value>{0} 的颜色</value></data>
+  <data name="SpeakerColorSaved" xml:space="preserve"><value>已为此录音保存说话人颜色。音频、文字、时间戳和摘要均未改变。</value></data>
+  <data name="InvalidAudioOutput" xml:space="preserve"><value>请选择 44.1 或 48 kHz，以及单声道或立体声。</value></data>
+  <data name="OutputCannotReplaceSafety" xml:space="preserve"><value>导出不能覆盖原始安全 WAV 文件。</value></data>
+  <data name="ExportConfiguredAudio" xml:space="preserve"><value>导出音频</value></data>
+  <data name="ExportingConfiguredAudio" xml:space="preserve"><value>正在按此录音的输出格式保存音频，安全 WAV 将保留。</value></data>
+  <data name="NameNewConversation" xml:space="preserve"><value>新建录音名称（可不填）</value></data>
+  <data name="SavedAudioProfile" xml:space="preserve"><value>{0} | {1:0.#} kHz / {2} | 安全音频 {3:N1} MB</value></data>
+  <data name="AudioMono" xml:space="preserve"><value>单声道</value></data>
+  <data name="AudioStereo" xml:space="preserve"><value>立体声</value></data>
+  <data name="AudioSampleRate" xml:space="preserve"><value>采样率（Hz）</value></data>
+  <data name="AudioChannels" xml:space="preserve"><value>声道</value></data>
+  <data name="AudioOutputHint" xml:space="preserve"><value>适用于新录音。录音、转录和编辑始终使用 48 kHz 立体声 PCM16 安全 WAV。停止后会按所选参数生成 WAV 或 MP3，不修改安全文件。非默认 WAV 参数会生成 audio-output.wav；MP3 会生成 audio.mp3，码率为 192 kbps。</value></data>
+  <data name="CorrectSpeaker" xml:space="preserve"><value>纠正说话人...</value></data>
+  <data name="CorrectSpeakerHint" xml:space="preserve"><value>将所选行分配给已有说话人，或将首个所选说话人的所有片段合并到目标说话人。音频、文字和时间戳不会改变。已有摘要会标记为待更新，需要另行更新。本操作不会训练识别模型。</value></data>
+  <data name="AssignToSpeaker" xml:space="preserve"><value>分配给已有说话人</value></data>
+  <data name="MergeWholeSpeaker" xml:space="preserve"><value>合并 {0} 的全部 {1} 个片段，而不仅是所选内容</value></data>
+  <data name="ReassignSelectedSegments" xml:space="preserve"><value>已选保存片段：{0} 个</value></data>
+  <data name="SpeakerAlreadyAssigned" xml:space="preserve"><value>这些片段已属于所选说话人。</value></data>
+  <data name="SpeakerAssignmentSaved" xml:space="preserve"><value>已保存说话人纠正。音频、文字和时间戳未改变。请更新要点以反映此次纠正。</value></data>
+  <data name="DeselectAllSpeakers" xml:space="preserve"><value>取消全选</value></data>
+  <data name="OnlyMatchingRows" xml:space="preserve"><value>仅显示匹配的转录行</value></data>
+  <data name="OnlyMatchingRowsHint" xml:space="preserve"><value>与说话人筛选一起过滤主转录表。“复制筛选文本”只复制显示的行。音频、已保存转录和 AI 摘要输入不受影响。</value></data>
+  <data name="SearchFailed" xml:space="preserve"><value>搜索失败，请修改搜索词或重试。</value></data>
+  <data name="SettingsShortcutsCategory" xml:space="preserve"><value>快捷键设置</value></data>
+  <data name="ApplicationMenu" xml:space="preserve"><value>AudioMemo 菜单</value></data>
+  <data name="HelpAndAbout" xml:space="preserve"><value>帮助与关于</value></data>
+  <data name="PinRecordingList" xml:space="preserve"><value>固定录音列表</value></data>
+  <data name="HideRecordingList" xml:space="preserve"><value>隐藏录音列表</value></data>
+  <data name="ShowRecordingList" xml:space="preserve"><value>显示录音列表</value></data>
+  <data name="HideMainPointsMenu" xml:space="preserve"><value>隐藏要点</value></data>
+  <data name="HideMyNotesMenu" xml:space="preserve"><value>隐藏我的笔记</value></data>
+  <data name="HelpAndShortcuts" xml:space="preserve"><value>快捷键</value></data>
+  <data name="AboutVersion" xml:space="preserve"><value>AudioMemo 版本 {0}</value></data>
+  <data name="AboutAudioMemo" xml:space="preserve"><value>面向 Windows 的本地优先录音、转录和笔记工具。</value></data>
+  <data name="ShortcutCaptureHint" xml:space="preserve"><value>点击快捷键输入框后，按下所需组合键。Backspace / Delete 清空并禁用该快捷键，Tab 移到下一项。可使用 Ctrl 或 Alt 加其他键，或功能键。常用文本编辑和 Windows 快捷键受保护。保存后生效，取消则保持当前设置。</value></data>
+  <data name="ShortcutHelpHint" xml:space="preserve"><value>此列表显示已保存的快捷键。点击左上角 AudioMemo 图标，在“设置 &gt; 快捷键”中修改。主窗口快捷键在搜索小窗口中也可使用。转录导航仅在转录区域生效，个人笔记仍保留正常文本导航。Ctrl+C/V/X/A/Z/Y 保留常规编辑功能。在搜索框中按 Enter / Shift+Enter 查找下一处 / 上一处。</value></data>
+  <data name="ShortcutChangesPending" xml:space="preserve"><value>帮助页会预览当前选择，保存设置后正式生效。</value></data>
+  <data name="ShortcutTranscriptScope" xml:space="preserve"><value>转录区域（清除也适用于搜索框）</value></data>
+  <data name="ShortcutWindowScope" xml:space="preserve"><value>主窗口 / 搜索小窗口</value></data>
+  <data name="ShortcutUnassigned" xml:space="preserve"><value>已禁用</value></data>
+  <data name="ResetShortcuts" xml:space="preserve"><value>恢复默认快捷键</value></data>
+  <data name="InvalidShortcuts" xml:space="preserve"><value>保存的快捷键设置无效。</value></data>
+  <data name="InvalidShortcutGesture" xml:space="preserve"><value>请使用 Ctrl 或 Alt 加支持的按键，或使用功能键 F1 至 F24。留空可禁用。</value></data>
+  <data name="ShortcutReserved" xml:space="preserve"><value>{0} 已保留用于文本编辑、转录导航或 Windows 操作。</value></data>
+  <data name="ShortcutConflict" xml:space="preserve"><value>{0} 同时分配给了“{1}”和“{2}”。请选择不同快捷键，或禁用其中一项。</value></data>
+  <data name="StartPauseRecording" xml:space="preserve"><value>开始 / 续录所选会话 / 暂停 / 继续录音</value></data>
+  <data name="ToggleHistory" xml:space="preserve"><value>显示 / 隐藏录音列表</value></data>
+  <data name="RefreshAudioDevices" xml:space="preserve"><value>刷新音频设备</value></data>
+  <data name="RefreshSummaryModels" xml:space="preserve"><value>刷新摘要模型</value></data>
+  <data name="ReplayPauseResume" xml:space="preserve"><value>暂停 / 继续回放</value></data>
+  <data name="TranscriptBeginning" xml:space="preserve"><value>转录开头</value></data>
+  <data name="TranscriptBottom" xml:space="preserve"><value>转录底部</value></data>
+  <data name="TranscriptBottomHint" xml:space="preserve"><value>跳转到转录底部，并跟随新增文字。</value></data>
+  <data name="MoveTranscriptNavigation" xml:space="preserve"><value>移动转录导航工具栏</value></data>
+  <data name="MoveTranscriptNavigationHint" xml:space="preserve"><value>拖动此手柄可在转录区域内移动工具栏，位置会自动保存。键盘：方向键移动，Home 恢复到右下角，Escape 取消拖动。</value></data>
+  <data name="InvalidTranscriptNavigationPosition" xml:space="preserve"><value>保存的转录导航工具栏位置无效。</value></data>
+  <data name="TranscriptPageUp" xml:space="preserve"><value>转录上一页</value></data>
+  <data name="TranscriptPageDown" xml:space="preserve"><value>转录下一页</value></data>
+  <data name="DisplaySizingFailed" xml:space="preserve"><value>无法自动调整窗口以适应屏幕：{0} 你仍可手动调整窗口大小或移动窗口。</value></data>
+  <data name="ReadingPane" xml:space="preserve"><value>查看</value></data>
+  <data name="ShortcutNeedsCorrection" xml:space="preserve"><value>请先纠正快捷键设置页中的错误，再保存。</value></data>
+  <data name="FilePublishFailed" xml:space="preserve"><value>无法保存“{0}”。&#10;文件：{1}&#10;{2}</value></data>
+  <data name="WarningRecordedAt" xml:space="preserve"><value>上次警告时间：{0:HH:mm:ss}</value></data>
+  <data name="OperationErrorDetails" xml:space="preserve"><value>执行“{0}”时出错：{1}</value></data>
+  <data name="RecordingAutomation" xml:space="preserve"><value>录音自动操作</value></data>
+  <data name="AutoStopOnSilence" xml:space="preserve"><value>所有已启用的音源均无声音时自动停止录音</value></data>
+  <data name="SilenceTimeout" xml:space="preserve"><value>无声音超时（秒）</value></data>
+  <data name="SilenceTimeoutHint" xml:space="preserve"><value>默认 300 秒（5 分钟），可输入 1–86400 秒。取消勾选后仅手动停止。任一已启用音源有声音都会重置计时；暂停或应用设备设置后重新计时。无声音指输入增益处理后低于 -60 dBFS 的信号，并非语音检测；背景噪声或音乐可能使录音继续。音频仍会正常保存。</value></data>
+  <data name="InvalidSilenceTimeout" xml:space="preserve"><value>请输入 1 到 86400 秒之间的整数作为无声音超时。</value></data>
+  <data name="RecordingStoppedOnSilence" xml:space="preserve"><value>连续 {0} 秒无声音，已自动停止录音。录制的音频已保存。</value></data>
+  <data name="SpeakersOnStopHint" xml:space="preserve"><value>自动转写或实时转写完成后执行。取消勾选可跳过自动说话人分析；转写表格和已有标签保持不变，仍可手动使用“识别说话人”。说话人模型和人数位于“语音”设置。</value></data>
+  <data name="ProcessingWorking" xml:space="preserve"><value>正在处理录音...</value></data>
+  <data name="ProcessingComplete" xml:space="preserve"><value>数据处理完成</value></data>
+  <data name="ProcessingWarning" xml:space="preserve"><value>处理已结束，请查看警告</value></data>
+  <data name="ProcessingFailed" xml:space="preserve"><value>处理失败，请查看警告</value></data>
+  <data name="ProcessingCancelled" xml:space="preserve"><value>已取消处理</value></data>
+  <data name="ProcessingProgress" xml:space="preserve"><value>录音数据处理进度</value></data>
+  <data name="ProcessingTiming" xml:space="preserve"><value>处理已用时间和当前步骤预计完成时间</value></data>
+  <data name="ProcessingElapsed" xml:space="preserve"><value>已用 {0}</value></data>
+  <data name="ProcessingEstimating" xml:space="preserve"><value>已用 {0} | 正在估算...</value></data>
+  <data name="ProcessingStepEstimate" xml:space="preserve"><value>已用 {0} | 本步骤预计约 {1} 完成</value></data>
+  <data name="ProcessingStepRemaining" xml:space="preserve"><value>本步骤预计还需：{0}。</value></data>
+  <data name="ProcessingTimingHint" xml:space="preserve"><value>已用时间指本次处理运行的时间。预计完成时间根据实际进度估算，仅针对当前步骤，并非整个任务；后续步骤还需额外时间。模型准备、说话人分段/分组和单次 AI 请求可能无法提供足够的进度来估算。切换步骤后重新估算，进度停滞时不再显示旧的预计时间。重新转写暂停期间不计入已用时间。</value></data>
+  <data name="SpeakerFeaturesProgress" xml:space="preserve"><value>说话人分析：声音特征提取 {0:P0}（仅此阶段）...</value></data>
+  <data name="SpeakerFinalizing" xml:space="preserve"><value>正在识别说话人：对声音分组并应用标签...</value></data>
+  <data name="RecordingLanguage" xml:space="preserve"><value>录音语言</value></data>
+  <data name="SpeechLanguageAutomaticShort" xml:space="preserve"><value>自动检测</value></data>
+  <data name="SpeechLanguageChineseShort" xml:space="preserve"><value>简体中文</value></data>
+  <data name="SpeechLanguageEnglishShort" xml:space="preserve"><value>英语</value></data>
+  <data name="SpeechLanguageCurrent" xml:space="preserve"><value>当前：{0}</value></data>
+  <data name="MainSpeechLanguageHint" xml:space="preserve"><value>用于语音识别，不改变界面语言。选择后立即保存，并与“设置 &gt; 语音”同步。应用于下一次录音或转写；录音和处理期间不可更改。</value></data>
+  <data name="RecordingLanguageSaved" xml:space="preserve"><value>录音语言：{0}。新的录音和转写任务将使用此选项。</value></data>
+  <data name="ContinueRecording" xml:space="preserve"><value>继续录音</value></data>
+  <data name="ConfirmContinueRecording" xml:space="preserve"><value>是否继续向“{0}”录音？&#10;&#10;音频文件：{1}&#10;&#10;新音频将追加到此录音，而不是另建会话；原有音频会保留。如果是误点，请选择“否”；要单独录音，请使用“新建录音”。</value></data>
+  <data name="ContinueRecordingCancelled" xml:space="preserve"><value>已取消续录，现有录音未改变。</value></data>
+  <data name="RecordingContinued" xml:space="preserve"><value>正在续录所选会话。新音频追加到原录音末尾，两次录音之间的时间不会计入。</value></data>
+  <data name="ContinueSessionChanged" xml:space="preserve"><value>已保存的会话发生变化，或续录信息无效。请重新选择该会话后再继续录音。</value></data>
+  <data name="ContinueNeedsRecovery" xml:space="preserve"><value>已保存的音频长度或 WAV 文件头与会话不一致。请先恢复安全 WAV 文件再继续录音，原有音频未被覆盖。</value></data>
+  <data name="ContinueTranscriptChanged" xml:space="preserve"><value>已保存的转写文本与续录时保留的内容不一致。原有文字已保留，请恢复匹配的转写文件后重试。</value></data>
+  <data name="AudioSourceDisabled" xml:space="preserve"><value>已禁用</value></data>
+  <data name="ConfirmDeviceChange" xml:space="preserve"><value>是否将以下音源应用到当前录音？&#10;&#10;麦克风：{0}&#10;电脑播放：{1}&#10;&#10;选择“否”可保留当前音源。如果录音已暂停，新音源将在恢复录音时使用。</value></data>
+  <data name="DeviceChangeCancelled" xml:space="preserve"><value>已取消设备更改，当前录音音源保持不变。</value></data>
+  <data name="Close" xml:space="preserve"><value>关闭</value></data>
+  <data name="ImportAudio" xml:space="preserve"><value>导入音频/视频</value></data>
+  <data name="ImportAudioHint" xml:space="preserve"><value>导入音频，或在本地提取视频中的音频，保存为独立的 48 kHz 双声道 WAV。原文件保持不变，导入过程不会上传任何内容。</value></data>
+  <data name="ImportAudioFilter" xml:space="preserve"><value>音频和视频文件|*.wav;*.mp3;*.m4a;*.aac;*.wma;*.flac;*.mp4;*.m4v;*.mov;*.mkv;*.webm;*.avi;*.wmv;*.asf;*.mpg;*.mpeg;*.ts;*.m2ts;*.mts;*.vob;*.3gp;*.3g2;*.ogv|音频文件|*.wav;*.mp3;*.m4a;*.aac;*.wma;*.flac|视频文件|*.mp4;*.m4v;*.mov;*.mkv;*.webm;*.avi;*.wmv;*.asf;*.mpg;*.mpeg;*.ts;*.m2ts;*.mts;*.vob;*.3gp;*.3g2;*.ogv|所有文件|*.*</value></data>
+  <data name="ImportFileMissing" xml:space="preserve"><value>请选择已存在的本地音频或视频文件。</value></data>
+  <data name="VideoAudioTrack" xml:space="preserve"><value>音轨</value></data>
+  <data name="VideoTrackHint" xml:space="preserve"><value>仅导入所选音轨。环绕声音轨会混合为双声道，不分析视频画面、字幕或其他音轨。</value></data>
+  <data name="VideoImportSelected" xml:space="preserve"><value>导入所选音轨</value></data>
+  <data name="VideoInspecting" xml:space="preserve"><value>正在读取“{0}”中的音轨…</value></data>
+  <data name="VideoChooseTrack" xml:space="preserve"><value>此视频包含多个音轨。请选择要导入的音轨，然后确认。</value></data>
+  <data name="VideoTrackLabel" xml:space="preserve"><value>{0}. {1} | {2} | {3} 声道{4}</value></data>
+  <data name="VideoUnknownLanguage" xml:space="preserve"><value>未标明语言</value></data>
+  <data name="VideoDefaultTrack" xml:space="preserve"><value>（默认）</value></data>
+  <data name="VideoHasNoAudio" xml:space="preserve"><value>此视频没有音轨，未导入录音。</value></data>
+  <data name="VideoProbeInvalid" xml:space="preserve"><value>视频音频信息无效或不受支持，原文件保持不变。</value></data>
+  <data name="VideoSourceChanged" xml:space="preserve"><value>读取音轨后，原文件发生了变化。请关闭此窗口并重新选择视频。</value></data>
+  <data name="VideoAudioIncomplete" xml:space="preserve"><value>无法完整解码视频音频，未导入不完整的录音，原文件保持不变。</value></data>
+  <data name="VideoToolsMissing" xml:space="preserve"><value>内置视频工具缺失。请从完整的 AudioMemo 发布包恢复 support\Runtime\FFmpeg，无需另外安装 FFmpeg。</value></data>
+  <data name="VideoImportFailed" xml:space="preserve"><value>视频音频导入失败（退出代码 {0}）。文件可能已损坏、受保护或使用了不支持的编码，原文件保持不变。&#10;&#10;{1}</value></data>
+  <data name="ImportTruncatedWave" xml:space="preserve"><value>WAV 文件短于其声明的音频或数据块长度，请先修复或恢复源文件。没有导入不完整的录音，原文件保持不变。</value></data>
+  <data name="ImportChannelsUnsupported" xml:space="preserve"><value>支持导入单声道或双声道音频。请先将环绕声或多声道音频转换为单声道或双声道，没有丢弃任何声道。</value></data>
+  <data name="ImportedRecording" xml:space="preserve"><value>导入的录音</value></data>
+  <data name="AudioImported" xml:space="preserve"><value>音频已导入，原文件保持不变。选择其他录音时只会加载已保存的结果。</value></data>
+  <data name="ConfirmImportAnalysis" xml:space="preserve"><value>是否立即分析“{0}”？&#10;&#10;选择“是”将进行本地语音识别；如果设置中已启用，还会自动分析说话人并生成要点。在线摘要沿用已有的摘要共享授权。选择“否”仅保存导入的音频，以后可手动转写。&#10;&#10;选择其他录音不会自动开始分析。</value></data>
+  <data name="ImportModelRequired" xml:space="preserve"><value>音频已导入，但所选语音模型尚未安装。请在“设置 &gt; 语音”中选择已安装的模型，再使用“转写”。未下载任何模型。</value></data>
+  <data name="ResizeHistory" xml:space="preserve"><value>调整录音列表宽度</value></data>
+  <data name="ResizeHistoryHint" xml:space="preserve"><value>拖动此边缘可调整固定或浮动列表的宽度。键盘：左右箭头调整，Home 恢复默认，Escape 取消拖动。</value></data>
+  <data name="InvalidHistoryWidth" xml:space="preserve"><value>录音列表宽度必须为 180 到 640 个设备无关像素。</value></data>
+  <data name="OnlineTranscription" xml:space="preserve"><value>在线对比</value></data>
+  <data name="OnlineSelectionHint" xml:space="preserve"><value>经确认后，仅将所选音频发送到千问 ASR 或 OpenAI，与本地转写对比。只有应用并保存结果后，才会修改已保存的文字。</value></data>
+  <data name="OnlineSpeechSetup" xml:space="preserve"><value>在线语音识别与上传授权</value></data>
+  <data name="OnlineSpeechSetupHint" xml:space="preserve"><value>这里选择支持音频的模型，与要点摘要模型相互独立。为保留每行时间，每个选中的转写片段会单独发送，不包含间隔及未选片段。已有说话人标签保持不变。</value></data>
+  <data name="OnlineSpeechModel" xml:space="preserve"><value>在线语音模型</value></data>
+  <data name="OnlineModelLimits" xml:space="preserve"><value>官方模型限制</value></data>
+  <data name="OnlineEndpoint" xml:space="preserve"><value>官方 API 地址与区域</value></data>
+  <data name="OnlineApiKey" xml:space="preserve"><value>在线语音 API 密钥</value></data>
+  <data name="OnlineKeyHint" xml:space="preserve"><value>输入服务商 API 密钥。“保存连接”会为当前 Windows 用户加密保存，并绑定到此地址。不保存则仅在本窗口使用。只有地址完全一致时才能复用已有千问密钥；摘要授权不等于音频上传授权。</value></data>
+  <data name="SaveOnlineConnection" xml:space="preserve"><value>保存连接</value></data>
+  <data name="OnlineSettingsSaved" xml:space="preserve"><value>在线语音连接已保存，密钥已在本地加密保护，未发送音频。</value></data>
+  <data name="OnlineSettingsUnavailable" xml:space="preserve"><value>无法从此窗口保存连接设置。</value></data>
+  <data name="OnlineSpeechKeyRequired" xml:space="preserve"><value>请为所选在线语音服务商和地址输入 API 密钥。</value></data>
+  <data name="OnlineKeyAvailable" xml:space="preserve"><value>此地址有可用的已加密密钥（包括地址匹配的千问摘要密钥）。每次上传音频仍需单独授权。</value></data>
+  <data name="InvalidOnlineSpeechModel" xml:space="preserve"><value>请选择千问 ASR（qwen3-asr-flash）或 OpenAI（gpt-transcribe）。仅支持文本的摘要模型不能转写音频。</value></data>
+  <data name="InvalidOnlineSpeechEndpoint" xml:space="preserve"><value>请使用 OpenAI 官方 /v1 地址，或千问北京、新加坡区域的 /compatible-mode/v1 地址。千问工作空间专属域名仅支持这两个区域。</value></data>
+  <data name="OnlineDurationLimit" xml:space="preserve"><value>时长上限 {0} 秒</value></data>
+  <data name="OnlineNoDurationLimit" xml:space="preserve"><value>未公布单独的时长上限</value></data>
+  <data name="OnlineSelectionLimits" xml:space="preserve"><value>{0}：已选 {1:N2} 秒，预计总上传量 {2:N2} MB。每次请求：{3}，输入上限 {4:N0} MB。请求数：{5}。</value></data>
+  <data name="OnlineBase64LimitHint" xml:space="preserve"><value>千问：10 MB 包含 Base64 编码后的体积，官方时长上限为 5 分钟。使用 16 kHz 单声道 WAV 时，会先达到大小限制（约 234 秒）。软件为请求开销预留空间。账户额度和速率限制因账号而异。限制核对日期：2026-10-20，详情见官方模型限制。</value></data>
+  <data name="OnlineFileLimitHint" xml:space="preserve"><value>OpenAI：每文件上限 25 MB。软件发送 16 kHz 单声道 WAV，并为请求开销预留空间（每段约 13 分钟）。账户额度和速率限制因账号而异。限制核对日期：2026-10-20，详情见官方模型限制。</value></data>
+  <data name="OnlineSelectionTooLarge" xml:space="preserve"><value>所选内容超过当前模型的输入限制。请选择更少的行、改用限制更大的模型，或明确勾选拆分为多次请求。不会自动裁剪或上传。</value></data>
+  <data name="OnlineSpeechRequestRejected" xml:space="preserve"><value>请在服务商控制台检查语音识别模型、官方接口地址和地区，以及语音 API 权限。文字摘要模型不能转写音频。</value></data>
+  <data name="SplitOnlineSelection" xml:space="preserve"><value>允许将超限选区拆分为多次付费请求</value></data>
+  <data name="ReduceOnlineSelection" xml:space="preserve"><value>返回并减少所选行</value></data>
+  <data name="ConfirmReturnToSelection" xml:space="preserve"><value>是否不保存当前文字修改，直接返回转写窗口？&#10;&#10;未保存的修改将被丢弃，已保存的在线对比和连接设置会保留。选择“否”可留在此窗口，先保存修改。</value></data>
+  <data name="OnlineAudioConsent" xml:space="preserve"><value>我同意将所选音频（{3:N2} 秒，共 {2} 次请求）发送到 {0}，地址为 {1}。这些时段中可听到的其他声音也会包含在内。不会上传笔记和本地转写文字。服务商可能收费，取消操作无法撤销已经发送的请求。</value></data>
+  <data name="OnlineAudioConsentRequired" xml:space="preserve"><value>请先检查所选时段、模型、地址、限制和请求数，再勾选音频上传授权。每次运行都需要授权。</value></data>
+  <data name="UploadSelectedAudio" xml:space="preserve"><value>上传所选音频</value></data>
+  <data name="OnlineTranscribing" xml:space="preserve"><value>正在准备所选音频以进行在线转写...</value></data>
+  <data name="OnlineTranscriptionProgress" xml:space="preserve"><value>在线转写：已完成 {0}/{1} 次请求（{2}），不会自动重试。</value></data>
+  <data name="CompareResults" xml:space="preserve"><value>对比结果</value></data>
+  <data name="LocalComparisonText" xml:space="preserve"><value>本地 / 已保存的转写</value></data>
+  <data name="OnlineComparisonText" xml:space="preserve"><value>在线转写</value></data>
+  <data name="OnlyTranscriptDifferences" xml:space="preserve"><value>只看差异</value></data>
+  <data name="UseOnlineResults" xml:space="preserve"><value>使用在线结果</value></data>
+  <data name="OnlineResultSource" xml:space="preserve"><value>来源：{0}，{2} · {1:g}</value></data>
+  <data name="OnlineComparisonReady" xml:space="preserve"><value>在线结果已单独保存，{0} 行有差异，{1} 行未完整识别到语音。请点击“对比结果”。“使用在线结果”只会准备修改，点击“保存”后才会更新转写。</value></data>
+  <data name="OnlineComparisonLoaded" xml:space="preserve"><value>已加载此选区保存的对比结果，没有再次上传。点击“对比结果”即可查看。</value></data>
+  <data name="OnlineResultsNotSaved" xml:space="preserve"><value>在线文字已复制到可编辑列，未识别的行保留当前文字。请检查后保存以更新转写，取消则保持不变。</value></data>
+  <data name="OnlineComparisonInvalid" xml:space="preserve"><value>保存的在线对比结果无效，未应用任何内容。可以重新生成结果。</value></data>
+  <data name="OnlineComparisonStale" xml:space="preserve"><value>保存对比结果后，音频或所选时段发生了变化，未应用结果。请重新选择并生成新的对比。</value></data>
+  <data name="ReplaySeekHint" xml:space="preserve"><value>拖动或点击可跳转到回放范围内的位置。方向键移动一秒，Page Up/Down 移动五秒。</value></data>
+  <data name="WorkspacePanels" xml:space="preserve"><value>工作区面板</value></data>
+  <data name="ShowMainPoints" xml:space="preserve"><value>显示主要要点</value></data>
+  <data name="ShowMyNotes" xml:space="preserve"><value>显示我的笔记</value></data>
+  <data name="WorkspacePanelsHint" xml:space="preserve"><value>只显示一个侧面板时，该面板占满侧边区域；都隐藏时，转录表占满阅读区域。不会删除已保存的笔记，也不会改变自动 AI 处理设置。</value></data>
+  <data name="ContinueRecognition" xml:space="preserve"><value>继续</value></data>
+  <data name="DiscardRecognitionPreview" xml:space="preserve"><value>放弃预览</value></data>
+  <data name="SelectionRecognitionStopping" xml:space="preserve"><value>正在停止转录。已完成的内容将保留以供检查。</value></data>
+  <data name="SelectionRecognitionStopped" xml:space="preserve"><value>已停止：完成 {0}/{1} 行。您可以检查或保存已完成的行，也可以继续处理。未完成的行保留原有文字。</value></data>
+  <data name="SelectionResumeHint" xml:space="preserve"><value>停止会在此窗口中保留已完成的行和音频片段。继续只处理剩余内容，并保留您对已完成行的修改。未完成行的已识别片段仅供预览，整行完成后才会应用。“放弃预览”会恢复本次转录开始前的文字，并重新允许修改模型设置。</value></data>
+  <data name="SelectionPartialPreview" xml:space="preserve"><value>未完成行 {0} 的已识别片段（仅供预览，该行仍保留原有文字）</value></data>
+  <data name="SelectionPartialPreviewLabel" xml:space="preserve"><value>未完成行的已识别片段</value></data>
+  <data name="SelectionResumeChanged" xml:space="preserve"><value>所选范围或转录设置已更改。请放弃预览后重新开始转录。</value></data>
+  <data name="DialogOK" xml:space="preserve"><value>确定</value></data>
+  <data name="DialogYes" xml:space="preserve"><value>是</value></data>
+  <data name="DialogNo" xml:space="preserve"><value>否</value></data>
+  <data name="LlmLabel" xml:space="preserve"><value>LLM</value></data>
+  <data name="WindowMinimize" xml:space="preserve"><value>最小化</value></data>
+  <data name="WindowMaximize" xml:space="preserve"><value>最大化</value></data>
+  <data name="WindowRestore" xml:space="preserve"><value>还原窗口</value></data>
+  <data name="ConfirmRepeatSummary" xml:space="preserve"><value>此录音已有完整要点，转写内容和说话人信息均未变化，无需再次生成摘要。&#10;&#10;是否仍使用当前所选 LLM 重新生成：{0} / {1}？&#10;&#10;选择“是”会重新生成摘要，服务商可能收费；选择“否”保留已保存的摘要，不发送新请求。</value></data>
+  <data name="SummaryGeneratedWith" xml:space="preserve"><value>生成所用模型：{0} / {1}</value></data>
+  <data name="SummaryModelUnrecorded" xml:space="preserve"><value>此摘要未记录确切的模型名称</value></data>
+  <data name="MainPointsNotGenerated" xml:space="preserve"><value>此录音尚未生成要点。</value></data>
+  <data name="SelectedLlmModel" xml:space="preserve"><value>当前选择的 LLM：{0} / {1}</value></data>
+  <data name="PersonalNotesModelUnrecorded" xml:space="preserve"><value>尚未记录已写入“我的笔记”的 AI 更新所用模型。</value></data>
+  <data name="PersonalNotesModelUnavailable" xml:space="preserve"><value>无法读取“关于我”的模型信息。笔记未被更改；详情请查看消息历史。</value></data>
+  <data name="PersonalNotesModelHint" xml:space="preserve"><value>关于我 — {0}
+{1}
+AI 信息仅适用于“关于我”部分。手写笔记仍可编辑，且不会发送给 AI。</value></data>
+  <data name="ExportWholeRecording" xml:space="preserve"><value>导出音频（整段录音）</value></data>
+  <data name="ExportWholeRecordingHint" xml:space="preserve"><value>使用此录音的音频设置，将整段录音导出到已保存的 WAV/MP3 输出文件。所选行和筛选条件不会限制导出范围。此操作不会将要点或笔记转换为语音。</value></data>
+  <data name="UpdateMyNotes" xml:space="preserve"><value>更新我的笔记</value></data>
+  <data name="UpdateMyNotesHint" xml:space="preserve"><value>使用当前选择的 LLM 和完整转写，更新“关于我”部分。请先将一位说话人标记为“我”，并完成转写。手写笔记不会发送给 AI，也不会被直接覆盖。</value></data>
+  <data name="InvalidStatusBarSettings" xml:space="preserve"><value>状态栏设置无效。</value></data>
+  <data name="StatusBarInformation" xml:space="preserve"><value>状态栏信息</value></data>
+  <data name="StatusMessagesOption" xml:space="preserve"><value>通知消息（左侧）</value></data>
+  <data name="StatusLlmOption" xml:space="preserve"><value>当前 LLM 模型</value></data>
+  <data name="StatusSpeechOption" xml:space="preserve"><value>本地语音模型</value></data>
+  <data name="StatusLibrarySizeOption" xml:space="preserve"><value>录音库占用空间</value></data>
+  <data name="StatusRecordingCountOption" xml:space="preserve"><value>录音总数</value></data>
+  <data name="StatusFreeDiskOption" xml:space="preserve"><value>录音所在磁盘可用空间</value></data>
+  <data name="StatusRecordingCount" xml:space="preserve"><value>录音：{0:N0} 个</value></data>
+  <data name="StatusLibrarySize" xml:space="preserve"><value>录音库：{0}</value></data>
+  <data name="StatusFreeDisk" xml:space="preserve"><value>可用：{0}</value></data>
+  <data name="StatusCalculating" xml:space="preserve"><value>正在计算...</value></data>
+  <data name="StatusUnavailable" xml:space="preserve"><value>暂不可用</value></data>
+  <data name="StatusLibrarySizeHint" xml:space="preserve"><value>当前录音库中音频、转写、摘要和笔记文件的逻辑大小，不包括已安装模型、无关文件夹及链接文件。启用后在后台约每 30 秒刷新一次。</value></data>
+  <data name="StatusStatisticsFailed" xml:space="preserve"><value>无法获取录音库统计信息：{0}</value></data>
+  <data name="SetupTitle" xml:space="preserve"><value>设置 AudioMemo</value></data>
+  <data name="SetupIntroduction" xml:space="preserve"><value>先确保可靠录音。音频设备和保存文件夹为必填项；语音识别和摘要模型可选。此向导不会自动录音或上传内容。</value></data>
+  <data name="SetupStepTitle" xml:space="preserve"><value>第 {0} / {1} 步：{2}</value></data>
+  <data name="SetupAudioStep" xml:space="preserve"><value>音频设备（必填）</value></data>
+  <data name="SetupStorageStep" xml:space="preserve"><value>保存文件夹（必填）</value></data>
+  <data name="SetupSpeechStep" xml:space="preserve"><value>本地语音与实时文字（可选）</value></data>
+  <data name="SetupLlmStep" xml:space="preserve"><value>摘要 LLM（可选）</value></data>
+  <data name="SetupReviewStep" xml:space="preserve"><value>检查并完成</value></data>
+  <data name="SetupBack" xml:space="preserve"><value>上一步</value></data>
+  <data name="SetupNext" xml:space="preserve"><value>下一步</value></data>
+  <data name="SetupContinue" xml:space="preserve"><value>继续</value></data>
+  <data name="SetupSkip" xml:space="preserve"><value>暂时跳过</value></data>
+  <data name="SetupFinish" xml:space="preserve"><value>完成设置</value></data>
+  <data name="SetupAudioHint" xml:space="preserve"><value>选择麦克风、电脑播放设备，或同时选择两者。请禁用不使用的音源。至少一个已启用设备必须可用且可访问，此步骤不可跳过。</value></data>
+  <data name="SetupDeviceCheckHint" xml:space="preserve"><value>“下一步”只检查设备访问和格式，不会录音或播放声音。若麦克风访问失败，请检查 Windows“设置 &gt; 隐私和安全性 &gt; 麦克风”及桌面应用访问权限，然后刷新。电脑播放只捕获所选输出设备的声音。</value></data>
+  <data name="SetupNoDevices" xml:space="preserve"><value>未找到活动音频设备。请连接或启用设备后刷新，也可关闭向导后再试。</value></data>
+  <data name="SetupDevicesListed" xml:space="preserve"><value>已找到音频设备。请选择要使用的音源，再点击“下一步”检查访问。</value></data>
+  <data name="SetupChooseDevice" xml:space="preserve"><value>请为每个启用的音源选择可用设备，或禁用该音源。至少保留一个启用的音源。</value></data>
+  <data name="SetupDeviceUnavailable" xml:space="preserve"><value>所选设备不可用，或无法提供音频格式：{0}。请刷新列表并选择可用设备。</value></data>
+  <data name="SetupStorageHint" xml:space="preserve"><value>选择专用录音文件夹，或选择现有 AudioMemo 录音文件夹以继续使用该录音库。不会移动或删除已有文件。</value></data>
+  <data name="SetupFolderValidationHint" xml:space="preserve"><value>“下一步”将检查文件夹是否可创建、写入和读取。一个字节的临时检查文件会自动删除，此步骤不可跳过。</value></data>
+  <data name="SetupFolderCheckFailed" xml:space="preserve"><value>保存文件夹未通过读写检查，请选择其他可写入的文件夹。</value></data>
+  <data name="SetupSpeechHint" xml:space="preserve"><value>Whisper 在本地将音频转为文字，与生成要点的 LLM 相互独立。Base 体积较小，适合先尝试 CPU 和实时文字。下载所选模型后可启用转写，下载会校验文件哈希。快速实时初稿还需要 Base；说话人识别使用另一组可选模型。</value></data>
+  <data name="SetupRuntimeReady" xml:space="preserve"><value>已找到 Visual C++ x64 运行库组件。</value></data>
+  <data name="SetupRuntimeMissing" xml:space="preserve"><value>缺少 Visual C++ x64 运行库组件。启用本地转写前，请从微软安装当前受支持的 x64 可再发行程序包。不安装也可正常录音。</value></data>
+  <data name="SetupRuntimeLink" xml:space="preserve"><value>打开微软 Visual C++ 运行库页面</value></data>
+  <data name="SetupSpeechNotReady" xml:space="preserve"><value>请下载每个已启用转写选项所需的模型，或关闭相应选项。快速实时初稿需要 Base。选择“暂时跳过”可仅使用录音，不自动处理语音。</value></data>
+  <data name="SetupSpeakersNotReady" xml:space="preserve"><value>请下载说话人模型，或关闭自动说话人识别后再继续。</value></data>
+  <data name="SetupSpeechLater" xml:space="preserve"><value>可跳过语音设置，仍可保存录音，但实时文字和自动转写将关闭。以后可进入“设置 &gt; 语音”下载模型并启用实时文字，或对已保存录音使用“转写 / 继续”。</value></data>
+  <data name="SetupLlmHint" xml:space="preserve"><value>LLM 用于概括已完成的转写文字，录音和本地转写不需要它。可选择本机 Ollama 或在线服务；只有主动选择相应操作时才会配置或发送测试请求。</value></data>
+  <data name="SetupLocalLlm" xml:space="preserve"><value>设置本地 LLM（Ollama）</value></data>
+  <data name="SetupLocalLlmHint" xml:space="preserve"><value>设置页面提供 Ollama 官方下载、推荐模型及下载命令。按需安装 Ollama、下载合适模型，然后刷新并选择它。本地模型可能需要数 GB 内存和磁盘空间。</value></data>
+  <data name="SetupOnlineLlm" xml:space="preserve"><value>设置在线 LLM</value></data>
+  <data name="SetupOnlineLlmHint" xml:space="preserve"><value>可选 GitHub Copilot CLI、豆包、千问或 DeepSeek。登录已安装的 Copilot CLI，或填写服务商 API 密钥和模型。向云端共享转写需要单独授权。AudioMemo 保存的密钥由当前 Windows 用户加密保护，复制程序不会复制另一台电脑的登录状态。</value></data>
+  <data name="SetupSelectedLlm" xml:space="preserve"><value>所选 LLM：{0} / {1}。仅选择模型不代表已登录、已安装模型或已成功连接。</value></data>
+  <data name="SetupLlmDeferredStatus" xml:space="preserve"><value>已跳过 LLM 设置 - 设置 &gt; AI 要点</value></data>
+  <data name="SetupLlmLater" xml:space="preserve"><value>可跳过 LLM 设置。以后进入“设置 &gt; AI 要点”，选择服务商和模型并完成配置。主窗口的 LLM 控件用于切换选项。跳过此页会关闭自动要点和启动时的模型发现，但不会清除已有服务商配置。</value></data>
+  <data name="SetupReviewHint" xml:space="preserve"><value>完成前会再次检查必填设备和文件夹，然后保存选项。不会启动测试录音或 AI 请求。</value></data>
+  <data name="SetupReview" xml:space="preserve"><value>麦克风：{0}&#10;电脑播放：{1}&#10;&#10;录音文件夹：{2}&#10;格式：{3}&#10;&#10;实时文字：{4}&#10;语音模型：{5}&#10;所选 LLM：{6} / {7}</value></data>
+  <data name="SetupLaterHint" xml:space="preserve"><value>点击左上角 AudioMemo 图标打开设置。音频和保存位置在“设置 &gt; 录音”，设备在主窗口选择；语音在“设置 &gt; 语音”；LLM 在“设置 &gt; AI 要点”。要再次运行向导，请进入“设置 &gt; 外观 &gt; 运行设置向导 / 重置”。</value></data>
+  <data name="SetupChecking" xml:space="preserve"><value>正在检查设置...</value></data>
+  <data name="SetupEnabled" xml:space="preserve"><value>已启用</value></data>
+  <data name="SetupDisabled" xml:space="preserve"><value>已关闭</value></data>
+  <data name="SetupRunAgain" xml:space="preserve"><value>运行设置向导 / 重置...</value></data>
+  <data name="SetupResetHint" xml:space="preserve"><value>请选择重新设置的方式。设置窗口中未保存的更改不会应用。只有完成向导后才会保存新的偏好设置。</value></data>
+  <data name="SetupKeepSettings" xml:space="preserve"><value>B - 保留当前偏好和已保存的服务商凭据，重新运行向导（默认）。</value></data>
+  <data name="SetupResetPreferences" xml:space="preserve"><value>A - 将偏好恢复默认，并清除 AudioMemo 保存的凭据和云端共享授权，然后运行向导。</value></data>
+  <data name="SetupResetPreservesFiles" xml:space="preserve"><value>两种方式都保留录音、转写、摘要、笔记及已下载模型，不重置外部 Copilot/Ollama 登录。取消向导时，已保存的偏好保持不变。</value></data>
+  <data name="SetupResetLocationHint" xml:space="preserve"><value>可保留当前偏好重新运行首次设置，或选择先重置偏好和 AudioMemo 保存的凭据。不会删除录音或模型文件。</value></data>
+  <data name="MeTag" xml:space="preserve"><value>我</value></data>
+  <data name="MarkAsMe" xml:space="preserve"><value>将此说话人标记为我...</value></data>
+  <data name="EditMeTag" xml:space="preserve"><value>编辑我的说话人标记...</value></data>
+  <data name="RemoveMeTag" xml:space="preserve"><value>移除我的说话人标记</value></data>
+  <data name="SummarizeAboutMe" xml:space="preserve"><value>总结关于我的内容</value></data>
+  <data name="SummarizeAboutMeHint" xml:space="preserve"><value>根据完整转写，总结我的发言以及他人提到我的内容，并写入“我的笔记”。需要先完成转写；此操作不会自动运行。</value></data>
+  <data name="MeSpeakerSelected" xml:space="preserve"><value>选中的说话人：{0}</value></data>
+  <data name="MeTagHint" xml:space="preserve"><value>仅在当前录音中，将一位说话人标记为您本人。这不会修改说话人姓名、转写文字或音频，也不会启动 AI 处理。</value></data>
+  <data name="ReplaceMeTagHint" xml:space="preserve"><value>这将替换现有的“我”标记。已保存的“关于我”笔记会保留，直到您手动更新。</value></data>
+  <data name="MeNamesLabel" xml:space="preserve"><value>我的姓名或昵称（可选）</value></data>
+  <data name="MeNamesHint" xml:space="preserve"><value>每行一个姓名或昵称，最多 10 项，每项最多 80 个字符。说话人当前的姓名和这些称呼可帮助识别他人对您的提及。仅当您选择“总结关于我的内容”时，这些信息才会随转写发送给当前选定的本地或在线大语言模型。现有“我的笔记”不会发送给模型。</value></data>
+  <data name="InvalidMeTag" xml:space="preserve"><value>“我”标记无效。请选择有标签的说话人，最多填写 10 个姓名或昵称，每项不超过 80 个字符，且不含控制字符。</value></data>
+  <data name="ChooseMeFirst" xml:space="preserve"><value>请先右键单击有说话人标签的转写行，选择“将此说话人标记为我”。如果没有说话人标签，请先运行“识别说话人”。</value></data>
+  <data name="MeTagChanged" xml:space="preserve"><value>“我”标记已更改或被移除。请确认哪位说话人是您，再次选择“总结关于我的内容”。已保存的请求不会套用到其他人身上。</value></data>
+  <data name="MeTagSaved" xml:space="preserve"><value>已为当前录音保存“我”标记。准备好后，右键单击转写区域并选择“总结关于我的内容”。</value></data>
+  <data name="MeTagRemoved" xml:space="preserve"><value>已移除“我”标记，现有笔记已保留。</value></data>
+  <data name="MeTagCleared" xml:space="preserve"><value>说话人身份已重新识别，为避免标记到错误的人，“我”标记已清除。请重新标记您本人，再更新“关于我”。现有笔记已保留。</value></data>
+  <data name="AboutMeHeading" xml:space="preserve"><value>关于我 - {0}</value></data>
+  <data name="AboutMeProgress" xml:space="preserve"><value>正在总结“关于我”：转写文本第 {0} 批，共 {1} 批...</value></data>
+  <data name="AboutMeSaved" xml:space="preserve"><value>“关于我”已保存到“我的笔记”，您可以继续编辑；其他笔记已保留。</value></data>
+  <data name="AboutMeSourceChanged" xml:space="preserve"><value>转写、说话人标记或已保存的 AI 结果已更改，未替换任何笔记。请再次选择“总结关于我的内容”，使用当前转写重新生成。</value></data>
+  <data name="InvalidAboutMeSummary" xml:space="preserve"><value>“关于我”的结果或已保存的处理进度无效，您的笔记未被替换。</value></data>
+  <data name="AboutMeSectionChanged" xml:space="preserve"><value>先前的“关于我”段落已被编辑、删除或复制，无法安全地自动替换。</value></data>
+  <data name="ConfirmAppendAboutMe" xml:space="preserve"><value>先前的“关于我”段落已被编辑、删除或复制，AudioMemo 不会覆盖它。是否将新结果追加到“我的笔记”末尾，并保留现有全部内容？选择“否”会保持笔记不变；生成的结果已保存，稍后重试无需重新请求模型。</value></data>
+  <data name="TranscriptModelHint" xml:space="preserve"><value>语音识别：{0}
+{1}</value></data>
+  <data name="AboutCredits" xml:space="preserve"><value>概念、创意与指导：Afanti Ma。
+程序主要由 AI 编写，并由 Afanti Ma 指导。</value></data>
+  <data name="MessageHistory" xml:space="preserve"><value>消息历史</value></data>
+  <data name="MessageHistoryHint" xml:space="preserve"><value>在本机保存通知、警告和错误，重启后仍保留，直到您主动清除。选择一条记录可阅读或复制完整消息。</value></data>
+  <data name="MessageHistoryOlder" xml:space="preserve"><value>加载更早的消息</value></data>
+  <data name="MessageHistoryClear" xml:space="preserve"><value>清除历史...</value></data>
+  <data name="MessageHistoryClearConfirm" xml:space="preserve"><value>清除所有已保存的消息历史？录音、转写、笔记和设置不会改变。</value></data>
+  <data name="MessageHistoryCleared" xml:space="preserve"><value>已按您的要求清除消息历史。</value></data>
+  <data name="MessageHistoryCount" xml:space="preserve"><value>已显示 {0:N0} 条消息，最新消息在前。</value></data>
+  <data name="MessageHistoryUnreadable" xml:space="preserve"><value>发现 {0} 条无法读取的记录。原始内容仍保留在本机历史文件中。</value></data>
+  <data name="MessageHistoryWriteFailed" xml:space="preserve"><value>无法保存消息历史。未保存的消息在本次运行中仍可查看，程序会重试：{0}</value></data>
+  <data name="MessageWhen" xml:space="preserve"><value>时间</value></data>
+  <data name="MessageType" xml:space="preserve"><value>类型</value></data>
+  <data name="MessageWhy" xml:space="preserve"><value>原因 / 操作</value></data>
+  <data name="MessageWhat" xml:space="preserve"><value>消息内容</value></data>
+  <data name="MessageInformation" xml:space="preserve"><value>信息</value></data>
+  <data name="MessageWarning" xml:space="preserve"><value>警告</value></data>
+  <data name="MessageError" xml:space="preserve"><value>错误</value></data>
+  <data name="MessageQuestion" xml:space="preserve"><value>确认</value></data>
+  <data name="MessageApplication" xml:space="preserve"><value>应用程序</value></data>
+  <data name="MessageDialogResponse" xml:space="preserve"><value>选择：{0}</value></data>
+  <data name="LlmValidationNotice" xml:space="preserve"><value>切换 LLM 或模型前会进行简短的模拟测试，不使用录音、转写或笔记。在线服务可能收取请求费用。设置失败或取消时保留原有选择，不会自动下载模型。</value></data>
+  <data name="LlmTestAndSelect" xml:space="preserve"><value>测试并选用</value></data>
+  <data name="LlmValidatingSelection" xml:space="preserve"><value>正在使用模拟内容测试 LLM。测试成功前不会改变当前选择。</value></data>
+  <data name="LlmSelectionNeedsSetup" xml:space="preserve"><value>此 LLM 尚未就绪。请完成配置并通过测试后再选用：{0}</value></data>
+  <data name="LlmSelectionKept" xml:space="preserve"><value>已取消切换 LLM，仍使用原来的服务和模型。</value></data>
+  <data name="LlmSelectionValidated" xml:space="preserve"><value>LLM 测试成功，已选用新的服务和模型。</value></data>
+  <data name="LlmSelectionBusy" xml:space="preserve"><value>LLM 检查期间开始了录音或处理，已保留原有选择。请在结束后重试。</value></data>
+  <data name="LlmValidationTimedOut" xml:space="preserve"><value>LLM 测试未能在两分钟内完成。请检查连接和模型后重试，原有选择保持不变。</value></data>
+  <data name="MuteSaveChoice" xml:space="preserve"><value>要将此次静音修改保存到哪里？</value></data>
+  <data name="MuteCurrentRecording" xml:space="preserve"><value>修改此录音（保留恢复备份）</value></data>
+  <data name="MuteNewCopy" xml:space="preserve"><value>创建新的录音副本</value></data>
+  <data name="MuteRecoveryBackupHint" xml:space="preserve"><value>原位修改不会新增历史条目，但会保留隐藏的无损音频和转写备份，仍需占用磁盘空间。这不是安全擦除；对外分享时请仅导出静音后的音频，不要分享整个录音文件夹。</value></data>
+  <data name="ShowMutedRows" xml:space="preserve"><value>查看静音行...</value></data>
+  <data name="PlayMutedRow" xml:space="preserve"><value>播放原声</value></data>
+  <data name="MutedRowWithoutText" xml:space="preserve"><value>此音频没有已保存的转写文字。</value></data>
+  <data name="RecheckUnlabeledSpeakers" xml:space="preserve"><value>复查未标注的说话人</value></data>
+  <data name="RecheckUnlabeledHint" xml:space="preserve"><value>使用当前已有的说话人标注作为本地声音参考。仅修改未标注行；不确定或过短的语音保留为未标注。不会上传音频。</value></data>
+  <data name="RecheckingUnlabeledSpeakers" xml:space="preserve"><value>正在根据已有的说话人标注匹配未标注行...</value></data>
+  <data name="MatchingUnlabeledProgress" xml:space="preserve"><value>未标注说话人复查：声音特征提取 {0:P0}...</value></data>
+  <data name="UnlabeledSpeakersChecked" xml:space="preserve"><value>说话人复查完成：已为 {0} 行分配说话人，{1} 行仍未标注。已有标注保持不变。</value></data>
+  <data name="NoUnlabeledSpeakers" xml:space="preserve"><value>没有需要复查的未标注转写行。</value></data>
+  <data name="SpeakerReferencesRequired" xml:space="preserve"><value>请先为至少一行清晰、无声音重叠且时长不少于一秒的语音指定说话人，再复查未标注说话人。</value></data>
+  <data name="SpeakerReferencesNoSpeech" xml:space="preserve"><value>已标注的参考片段没有足够可用的人声。请标注更长、更清晰的片段后重试。未做任何修改。</value></data>
+  <data name="InvalidSpeakerMatches" xml:space="preserve"><value>说话人匹配计划或结果无效。已有标注未被修改。</value></data>
+  <data name="MuteInPlacePolicy" xml:space="preserve"><value>将修改应用到此录音，不新增历史条目。</value></data>
+  <data name="RefiningTranscriptProgress" xml:space="preserve"><value>正在本地生成最终转写：已处理音频 {0}，共 {1}。</value></data>
+  <data name="FinalizingMainPoints" xml:space="preserve"><value>正在整理已保存的要点，完成后将生成整体总结...</value></data>
+  <data name="LocalLiveSummaryProgress" xml:space="preserve"><value>正在通过本机 Ollama 更新实时要点：转写文本第 {0} 批，共 {1} 批...</value></data>
+  <data name="CloudLiveSummaryProgress" xml:space="preserve"><value>正在通过在线 LLM 更新实时要点：转写文本第 {0} 批，共 {1} 批...</value></data>
+  <data name="ProcessingStagesHint" xml:space="preserve"><value>摘要的一“批”是部分转写文本，不是一个处理阶段。批次计数仅针对本次摘要处理。最终要点完成后，会单独请求生成整体总结。转写计数表示已处理的音频时长，声音特征百分比仅表示该阶段的进度。滚动进度条表示正在工作，不代表整体完成比例。</value></data>
+  <data name="SetUnlabeledSpeakerColor" xml:space="preserve"><value>设置所有“未标注”行的颜色...</value></data>
+  <data name="UnlabeledSpeakerColorSaved" xml:space="preserve"><value>已为本录音的所有“未标注”行保存颜色。未分配说话人，音频、文字和要点保持不变。</value></data>
+  <data name="SpeakerColorTargetChanged" xml:space="preserve"><value>这些转写行或说话人标注已发生变化。请重新选择说话人后再设置颜色。</value></data>
+  <data name="SpeakerColorUnavailable" xml:space="preserve"><value>请选择一个包含转写行的录音。请先完成当前文件操作或录音控制操作，再设置颜色。</value></data>
+  <data name="ReviewUnclearTranscript" xml:space="preserve"><value>检查转录疑点</value></data>
+  <data name="ReviewUnclearTranscriptHint" xml:space="preserve"><value>使用当前所选大语言模型检查完整的已保存转录，并查找明确的疑点标记。未经您确认，不会修改内容。</value></data>
+  <data name="AutoReviewUnclearTranscript" xml:space="preserve"><value>自动检查转录疑点</value></data>
+  <data name="AutoReviewUnclearTranscriptHint" xml:space="preserve"><value>最终转录完成后、生成要点前，使用当前所选大语言模型检查已保存的文字；发现疑点时暂停并请您确认。不会打断录音或实时文字。仍需可用的模型，以及相应的文字共享授权。</value></data>
+  <data name="TranscriptReviewHint" xml:space="preserve"><value>以下是可能的疑点，不是已证实的错误。大语言模型仅检查文字，可能漏检，也可能将正确内容标为疑点。您可以试听、保留原文，或只修改需要纠正的文字。程序不会擅自认定某种拼写正确。</value></data>
+  <data name="TranscriptReviewSelectionHint" xml:space="preserve"><value>双击“修正后文字”（或按 F2）编辑，程序会勾选该项修正。取消勾选“修正”可保留该段原文。点击继续前不会保存修改。</value></data>
+  <data name="TranscriptReviewCorrect" xml:space="preserve"><value>修正</value></data>
+  <data name="TranscriptReviewReason" xml:space="preserve"><value>需要确认的内容</value></data>
+  <data name="TranscriptReviewApply" xml:space="preserve"><value>应用所选修正并继续</value></data>
+  <data name="TranscriptReviewKeep" xml:space="preserve"><value>全部保留原文并继续</value></data>
+  <data name="TranscriptReviewAgain" xml:space="preserve"><value>使用此模型重新检查</value></data>
+  <data name="TranscriptReviewRetry" xml:space="preserve"><value>重试检查</value></data>
+  <data name="TranscriptReviewResume" xml:space="preserve"><value>继续未完成的检查</value></data>
+  <data name="TranscriptReviewResumeHint" xml:space="preserve"><value>使用此模型从上次完成的位置继续，不会重新发送已完成的部分。放弃本窗口尚未保存的修改前，程序会请您确认。</value></data>
+  <data name="TranscriptReviewRetrying" xml:space="preserve"><value>大语言模型返回的第 {0} / {1} 部分检查结果无法验证，正在重试此部分一次...</value></data>
+  <data name="TranscriptReviewFormatFailed" xml:space="preserve"><value>大语言模型再次返回了无法使用的检查结果（JSON 格式无效，或引用文字与所提供段落不完全一致）。转录文字未被修改。</value></data>
+  <data name="TranscriptReviewCount" xml:space="preserve"><value>在 {1} 段转录中发现 {0} 个可能的疑点。</value></data>
+  <data name="TranscriptReviewModel" xml:space="preserve"><value>检查模型：{0} / {1} | {2}</value></data>
+  <data name="TranscriptReviewMarkerReason" xml:space="preserve"><value>已保存的转录明确将这部分文字标记为不清楚或有待确认。</value></data>
+  <data name="TranscriptReviewInvalidResponse" xml:space="preserve"><value>大语言模型返回的检查结果格式无效，或引用了所提供段落之外的文字。未应用任何模型生成的文字。</value></data>
+  <data name="TranscriptReviewInvalidState" xml:space="preserve"><value>已保存的转录检查记录格式无效。</value></data>
+  <data name="TranscriptReviewNeedsFinal" xml:space="preserve"><value>只能检查已完成且非空的已保存转录。请先完成转录。</value></data>
+  <data name="TranscriptReviewNeedsLlm" xml:space="preserve"><value>大语言模型检查暂不可用。目前仅有明确的疑点标记，以及之前保存的部分结果（如有）。请在“设置 &gt; AI 要点”中配置模型，并按需授权共享转录文字，然后重新检查。</value></data>
+  <data name="TranscriptReviewSavedStateError" xml:space="preserve"><value>无法读取上次检查记录。您可以重新检查、明确选择在未完成完整检查的情况下继续，或取消。详细信息：{0}</value></data>
+  <data name="TranscriptReviewIncomplete" xml:space="preserve"><value>大语言模型检查未完成。已完成的部分已保存，但结果可能不完整。您可以重试或继续检查、保留原文，或取消处理。详细信息：{0}</value></data>
+  <data name="TranscriptReviewProgress" xml:space="preserve"><value>正在检查转录疑点（第 {0} / {1} 部分）...</value></data>
+  <data name="TranscriptReviewWaiting" xml:space="preserve"><value>正在等待您确认转录疑点。</value></data>
+  <data name="ProcessingWaitingForTranscriptReview" xml:space="preserve"><value>已用时 {0} | 等待确认转录疑点</value></data>
+  <data name="TranscriptReviewSaving" xml:space="preserve"><value>正在保存您的转录检查决定...</value></data>
+  <data name="TranscriptReviewSaved" xml:space="preserve"><value>已保存转录检查决定。仅应用了您选中的修正。</value></data>
+  <data name="TranscriptReviewNoItems" xml:space="preserve"><value>本次检查未发现具体疑点，但不能保证转录完全无误。</value></data>
+  <data name="TranscriptReviewNoVerifiedResult" xml:space="preserve"><value>大语言模型检查未完成，尚无完整检查结果。</value></data>
+  <data name="TranscriptReviewListening" xml:space="preserve"><value>正在播放所选段落，前后各包含最多一秒的上下文。</value></data>
+  <data name="TranscriptReviewDiscardForRecheck" xml:space="preserve"><value>重新检查吗？本窗口中尚未保存的修改将被放弃。您确认修正前，已保存的转录不会改变。</value></data>
+  <data name="TranscriptReviewCancelHint" xml:space="preserve"><value>取消本次 AI 任务，不应用尚未保存的修正。已保存的音频和转录仍然可用，本次任务不会继续生成要点。</value></data>
+  <data name="TranscriptReviewDecisionSaveFailed" xml:space="preserve"><value>无法保存检查确认记录。已提交的转录修正仍会保留，但本次任务不会继续生成要点。请重新打开疑点检查，确认当前转录。详细信息：{0}</value></data>
+  <data name="AboutCopyright" xml:space="preserve"><value>版权所有 © 2026 Afanti Ma</value></data>
+  <data name="AboutThirdParty" xml:space="preserve"><value>第三方组件保留各自的版权，并遵循各自的许可证。
+相关声明：support\Licenses 和 support\Docs\THIRD-PARTY-NOTICES.txt。</value></data>
+  <data name="UserGuide" xml:space="preserve"><value>用户指南</value></data>
+  <data name="UserGuideHint" xml:space="preserve"><value>内置离线帮助。请选择下方主题。打开指南不会读取您的录音，也不会联系 AI 服务。</value></data>
+  <data name="UserGuideTopic" xml:space="preserve"><value>主题</value></data>
+  <data name="GuideQuickStartTitle" xml:space="preserve"><value>快速开始</value></data>
+  <data name="GuideQuickStartBody" xml:space="preserve"><value>1. 首次在新电脑上使用时，请完成设置向导。音频设备和可写的保存文件夹为必填项；语音和大语言模型设置可以跳过，录音本身不依赖它们。
+
+2. 启用麦克风、电脑播放，或同时启用两者。选择实际使用的麦克风，以及正在输出所需电脑声音的扬声器或耳机。
+
+3. 选择“新建录音”建立独立会话，再开始录音。同一按钮用于暂停和继续；“停止”会完成音频保存。
+
+4. 如需文字，在“设置 > 语音”中配置本地 Whisper 模型，再使用“转录/继续”。实时文字和停止后自动转录均为可选功能。
+
+5. 如需生成要点，选择并配置大语言模型。出现转录疑点时先确认，再继续处理。您也可以完全不用 AI，直接编辑“我的笔记”。
+
+点击左上角 AudioMemo 图标，可打开设置、帮助与关于、保存文件夹，以及常用录音和窗口命令。</value></data>
+  <data name="GuideRecordingTitle" xml:space="preserve"><value>音频设备与录音</value></data>
+  <data name="GuideRecordingBody" xml:space="preserve"><value>麦克风采集所选输入设备；电脑播放采集发送到所选输出设备的声音，并非同时采集所有扬声器或耳机。可取消勾选不用的来源，但至少一个已启用设备必须可用。暂时没有声音并不代表设备无效。
+
+没有设备能够启动时，程序会显示警告，不会创建空录音。只有一个来源失败时，可继续使用另一个来源并提示。缺少声音时，请检查 Windows 音频路由、麦克风权限、连接、静音和音量。
+
+暂停时间不计入录音。停止后会先保存音频，再进行可选的 AI 处理。录音过程中切换设备需要确认；替换失败时会尽可能保留原有可用来源。
+
+“设置 > 录音”可配置新录音的保存文件夹、WAV/MP3、采样率和声道。程序始终保留 48 kHz 立体声无损安全 WAV，再据此生成 MP3 或自定义 WAV。
+
+“继续录音”会在确认后追加到当前选中的已保存录音。需要独立文件和历史记录时，请使用“新建录音”。</value></data>
+  <data name="GuideSpeechTitle" xml:space="preserve"><value>实时文字与最终转录</value></data>
+  <data name="GuideSpeechBody" xml:space="preserve"><value>Whisper 在本机将已保存音频转换为文字。大语言模型用于摘要和疑点检查，两者不同；仅配置大语言模型不会启用实时文字。
+
+在“设置 > 语音”下载语音模型并选择识别语言，可使用自动检测、简体中文或英语。主窗口的语音语言选择与界面语言相互独立。
+
+录音时可显示实时文字，但模型加载和推理需要时间。快速草稿使用 CPU 上的 Base 模型；后续精修还需要您选择的最终模型，因此两者都应下载。
+
+启用“停止后自动转录”可完成整个录音的文字。关闭此选项时，已保存的实时草稿仍会保留，可稍后用“转录/继续”补完。最终要点需要已完成的转录。
+
+模型或语音运行库缺失时会明确提示，不会丢弃已录音频。可在设置中补完跳过的配置。下载模型和安装软件需要您主动操作，指南不会代为启动。</value></data>
+  <data name="GuideModelsTitle" xml:space="preserve"><value>大语言模型设置与隐私</value></data>
+  <data name="GuideModelsBody" xml:space="preserve"><value>打开“设置 > AI 要点”配置所选服务。主窗口选择的模型尚未就绪时会提示配置；取消后会保留之前可用的选择。
+
+Ollama：安装 Ollama 并下载本地模型，然后刷新模型列表并测试连接。设置页提供安装说明和模型命令。本地摘要不需要云端转录共享授权。
+
+Copilot CLI：使用已安装的 CLI 程序，通过其账户登录，选择支持的模型，并授权共享转录文字。AudioMemo 可以读取 CLI 中配置的模型。
+
+豆包、千问和 DeepSeek：选择支持的官方端点/区域，配置该服务的 API 密钥和模型，测试后授权共享转录文字。账户权限、使用限额及费用由服务提供方决定。
+
+普通摘要和疑点检查发送文字，不发送音频。可编辑的“我的笔记”始终不会作为模型输入。可选的在线语音对比/重新转录不同：它仅在单独授权后上传选中的音频。
+
+更换当前模型不会修改旧结果的模型标注。将鼠标停在“转录”“要点”或“我的笔记”标题上，可查看相关语音模型或已保存结果使用的模型。</value></data>
+  <data name="GuideMainPointsTitle" xml:space="preserve"><value>生成与更新要点</value></data>
+  <data name="GuideMainPointsBody" xml:space="preserve"><value>最终转录完成后，点击要点标题旁的更新按钮。设置中可启用自动摘要或实时摘要。实时要点属于暂时结果；最终要点末尾还可包含独立生成的整体摘要。
+
+启用疑点检查时，请先修正或明确保留标出的段落，再继续最终摘要。模型随后使用您确认后保存的转录。
+
+从未生成摘要的录音会立即开始。文字、说话人修正或重新转录发生变化时，可能需要重新生成。如果已有完整要点仍与转录一致，程序会先询问是否再次请求模型；选择“否”保留现有结果。
+
+要点使用完整的已保存转录，不仅是选中行或说话人/搜索筛选后的可见内容，也不包含“我的笔记”。请核对生成的人名、决定和行动项，不要将它们当作已验证事实。
+
+进度中的数量表示转录文字批次，而不是重复识别音频的次数。整体摘要属于后续请求。“已用时”统计当前处理过程，“当前步骤预计完成时间”仅估计当前可测量的步骤。
+
+处理停止后，已完成结果和检查点仍会保留。可按需继续未完成工作或再次更新；整体摘要未完成不会删除已经保存的要点。</value></data>
+  <data name="GuideNotesTitle" xml:space="preserve"><value>我的笔记与“我”标记</value></data>
+  <data name="GuideNotesBody" xml:space="preserve"><value>“我的笔记”是当前录音的可编辑、自动保存笔记，不需要大语言模型即可使用。现有可编辑笔记，包括对 AI 生成段落的修改，始终不会作为模型输入。
+
+要标识自己在会话中的发言，请右键点击已标注说话人的转录行，选择将该说话人标记为“我”。每个录音只能标记一人。可选姓名/昵称有助于理解他人的提及，但这是您的选择，不是经过验证的生物身份识别。
+
+转录完成后，“更新我的笔记”可生成“关于我”段落，涵盖该人的发言、被他人提及的内容、承诺及待解决问题。它使用完整转录、所选模型和相应共享授权；仅打标签或更新普通要点不会自动触发。
+
+后续更新只替换之前未被改动的 AI 生成段落，周围笔记保持不变。如果该段落已被修改、删除或复制，程序会询问是否改为追加新结果。
+
+将鼠标停在“我的笔记”标题上，可查看已应用 AI 段落使用的模型。完整说话人重新分析可能清除“我”标记，请在再次生成个人摘要前检查。</value></data>
+  <data name="GuideNavigationTitle" xml:space="preserve"><value>浏览、搜索、复制与试听</value></data>
+  <data name="GuideNavigationBody" xml:space="preserve"><value>转录区域显示时间、说话人和文字。向上滚动可暂停跟随新文字；“最新”或“底部”可恢复跟随。需要滚动时会出现顶部/上翻页/下翻页/底部浮动工具条。拖动其点状手柄可移动位置，程序会记住该位置。
+
+在文字单元格内拖动可选择部分文字。需要按行操作时，请选择时间/说话人区域；Shift 选择连续范围，Ctrl 选择不连续行。“复制全部文字”不含时间和姓名，带标注复制则包含这些信息。
+
+说话人筛选可显示指定说话人或“未标注”内容。勾选“全部说话人”选择所有人，取消勾选则清空选择。转录复制按钮遵循当前筛选，但筛选本身不会编辑音频，也不会限制完整摘要的输入。
+
+打开转录搜索可查找文字并在结果间跳转。在搜索框按 Enter/Shift+Enter 可查找下一处/上一处。当前快捷键请查看“帮助与关于 > 快捷键”，不要假定仍在使用默认绑定。
+
+对于已保存的音频，选择范围后可播放、暂停/继续或停止试听。播放在本机进行。重叠时间段中可能听到其他人：说话人筛选不能分离混合声音。</value></data>
+  <data name="GuideReviewTitle" xml:space="preserve"><value>检查转录疑点</value></data>
+  <data name="GuideReviewBody" xml:space="preserve"><value>右键点击转录区域，选择“检查转录疑点”，可检查完整的已保存文字。它结合明确的疑点标记和所选模型的文字检查，可能漏检或将正确内容标为疑点；它不能听到音频，也不能证明某种拼写正确。
+
+“设置 > 语音”默认启用自动检查。它在最终转录完成后、生成最终要点前运行，不会打断录音或实时文字。完整检查未发现疑点时，可以不弹窗直接继续。
+
+列表显示原文、说话人、时间、引用文字及原因。可先试听，只编辑确需修正的文字，并勾选要应用的项目。“应用所选修正并继续”保存选中修改；“全部保留原文并继续”保持原文；取消不会应用未保存修正，并会停止本次 AI 任务。
+
+临时的回复格式问题会重试一次。对于未完成的检查，可重试或继续；来源和模型仍匹配时会复用已完成部分。未完成的结果不能证明转录没有问题。
+
+原文未改变时会记住已确认决定。模型猜测的拼写不会自动应用，可编辑的“我的笔记”也不会参与此检查。</value></data>
+  <data name="GuideCorrectionsTitle" xml:space="preserve"><value>修正文字与说话人</value></data>
+  <data name="GuideCorrectionsBody" xml:space="preserve"><value>录音完成后，选择时间/说话人行并编辑转录文字。文字修正保留音频、时间和说话人信息。“重新转录所选内容”提供本地识别预览，可在保存前检查。
+
+在线对比为可选功能，与要点模型相互独立。上传前请检查所选音频范围、提供方、请求数和共享授权。选中时间段中的其他声音也会包含在内；仅打开对比窗口不表示允许上传。
+
+“修正说话人”将选中行重新分配给已有说话人。“合并全部”会影响来源说话人的所有行，包括隐藏行。重命名与设置颜色是不同操作。
+
+“重新检查未标注说话人”利用现有分配和已下载的本地说话人模型，只检查未标注行，不修改已有标签；短句或含糊内容可能仍保持未标注。
+
+双击说话人单元格可设置颜色，AI 处理时也可使用。所有未标注行共享一种颜色，但不会因此被认定为同一个人。
+
+记忆词汇有助于未来的本地识别。保存词汇与保存转录修改相互独立，也不会自动重写旧文字。重要文字或说话人修改后，请更新要点。</value></data>
+  <data name="GuideSilenceTitle" xml:space="preserve"><value>静音与恢复音频</value></data>
+  <data name="GuideSilenceBody" xml:space="preserve"><value>选择已完成转录中的行并使用“静音所选内容”。检查时间范围，再明确选择编辑当前录音或创建副本。原地编辑不会增加历史记录；独立副本适合保留可单独浏览的版本。
+
+静音将所选时间段替换为等长静音，并移除相应转录行，不会缩短录音时间。时间段内的所有声音都会被静音，包括重叠说话人，请仔细核对边界。
+
+程序会保留隐藏的恢复副本，因此静音不是安全擦除，也仍需要磁盘空间。请保留完整录音文件夹及其中的 .restore-source。分享静音后的声音时，应分享导出的音频，而不是包含可恢复原始材料的整个文件夹。
+
+右键选择“显示静音行”，或打开“恢复静音段落”。“播放原音”只试听恢复源，不修改任何内容。选择需要恢复的行并确认，其余段落仍保持静音。
+
+恢复保留当前录音的时间线和个人笔记。音频编辑会使旧摘要失效，请随后更新要点。缺失的恢复文件无法从静音中重建，因此请保留备份。</value></data>
+  <data name="GuideLibraryTitle" xml:space="preserve"><value>录音库、导入与导出</value></data>
+  <data name="GuideLibraryBody" xml:space="preserve"><value>在左侧列表选择录音可打开已保存的音频、文字和笔记，浏览历史不会启动 AI。右键菜单提供当前可用的重命名、文件、处理、导出或删除操作；批量操作前请核对选中的录音。
+
+导入音频/视频会建立独立录音，不修改来源文件。可导入具有受支持编解码器的常见音频文件和本地视频。视频包含多个音轨时需要选择一个；导入的是声音，不是视频画面或字幕。
+
+导入后的立即分析为可选项。您可以只保留已保存音频，稍后再转录。缺少模型时会提示，不会自动下载。
+
+右键转录区域，选择导出整个录音的音频，可重新生成该录音的 WAV/MP3 输出。这不是将要点转换成语音，选中行或筛选也不会限制导出范围。请在录音及 AI 处理结束后导出。
+
+使用“打开保存文件夹”或“打开文件”定位本地数据。更改保存文件夹只会切换显示的录音库，不会移动旧录音。如需保留笔记、转录和恢复历史，请备份完整录音文件夹。</value></data>
+  <data name="GuideWorkspaceTitle" xml:space="preserve"><value>窗口布局、外观与快捷键</value></data>
+  <data name="GuideWorkspaceBody" xml:space="preserve"><value>左上角图标菜单提供录音命令、设置、导入、保存文件夹、面板显示、消息历史，以及帮助与关于。
+
+可按需固定或隐藏录音列表，以及显示/隐藏要点和我的笔记。窗口较窄时，录音列表可能以临时预览方式出现。拖动细分隔线可调整区域大小；这些面板不代表独立录音。
+
+“设置 > 外观”可选择界面语言、主题、字体等显示偏好，支持英语和简体中文。界面语言与语音识别语言相互独立。
+
+右键底部状态栏可切换消息、当前模型、语音模型、录音库大小、录音数量和剩余磁盘空间。菜单支持连续多次选择；隐藏普通消息不会隐藏警告。
+
+“帮助与关于 > 快捷键”显示当前保存的绑定及其适用范围。修改请到“设置 > 快捷键”：点击输入框、按组合键，然后保存。Backspace/Delete 可清除绑定；冲突或受保护的 Windows/文本编辑命令不能被分配。
+
+外观页的设置向导/重置功能可以重新进行首次配置。请阅读保留偏好与恢复默认的选项；重置偏好不会删除录音或已下载模型。</value></data>
+  <data name="GuideRecoveryTitle" xml:space="preserve"><value>长时间录音、安全关闭与备份</value></data>
+  <data name="GuideRecoveryBody" xml:space="preserve"><value>安全 WAV 每小时约占 0.69 GB，另需为导出、编辑和恢复副本预留空间。建议使用空间充足的本地 NTFS/ReFS 磁盘。FAT32 无法保存超过 4 GB 的单个文件。大型 WAV 使用 RF64，需要兼容播放器，或导出为 MP3。
+
+保持电源和音频连接稳定。AudioMemo 会请求 Windows 保持唤醒，但手动睡眠、合上电脑盖或关机仍可能中断录音。尚未写入存储的音频无法被恢复。
+
+录音或 AI/导出过程中关闭程序需要确认。安全关闭会完成音频保存、保留已发布结果，并记住未完成处理。请等待清理完成，不要强制结束进程。
+
+下次启动时可继续未完成工作，使用当时的处理选项和当前凭据/共享授权。拒绝继续不会启动 AI，也可稍后从录音菜单恢复。修正窗口中未保存的修改不会被擅自应用。
+
+意外退出后，选择中断的录音并使用“恢复 WAV”。它可以修复已保存数据的长度/文件头信息，不能重建缺失或损坏的音频。
+
+每个录音文件夹包含音频、会话信息、转录、摘要及 notes.md。请备份整个文件夹，包括隐藏恢复数据。换电脑后需要重新配置设备、模型及身份验证；仅复制程序不会安装模型，也不能保证凭据可在新电脑使用。</value></data>
+  <data name="GuideTroubleshootingTitle" xml:space="preserve"><value>问题排查与消息历史</value></data>
+  <data name="GuideTroubleshootingBody" xml:space="preserve"><value>没有音频设备：重新连接或刷新设备，启用至少一个有效来源，并检查 Windows 权限和音频路由。电脑播放应指向实际正在输出声音的设备。
+
+没有实时文字：在“设置 > 语音”检查实时文字、本地语音模型下载、语言和运行库要求，并等待模型加载。没有文字时仍可保存录音。
+
+AI 较慢：模型大小及可用 CPU/GPU 内存会影响速度，合适的小模型可能更快。预计完成时间仅针对当前步骤，不是整个任务；无法测量进度的请求可能显示正在估算。
+
+疑点检查等待中：AI 任务可能在等待您的决定，而不是继续推理。请应用所选修正、明确保留原文、重试/继续未完成检查，或取消。未完成的空列表不代表没有疑点。
+
+按钮不可用：部分操作需要完整的已保存录音，或必须等待录音、保存、编辑及 AI 工作结束。请阅读状态或警告，不要强制关闭进程。
+
+在帮助与关于、图标菜单或状态栏打开消息历史，可查看消息发生的时间、原因和内容。排查问题时可复制相关错误，但请勿分享凭据或私人录音信息。消息历史保存在本机，不会发送给 AI。</value></data>
+</root>

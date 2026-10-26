@@ -1,0 +1,98 @@
+<Window x:Class="AudioMemo.SetupWizardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:loc="clr-namespace:AudioMemo.Localization"
+        xmlns:services="clr-namespace:AudioMemo.Services"
+        Title="{loc:Loc SetupTitle}" Width="850" Height="760" MinWidth="540" MinHeight="420"
+        WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Closing="Window_Closing">
+    <DockPanel x:Name="WizardRoot" Margin="24">
+        <StackPanel DockPanel.Dock="Top" Margin="0,0,0,14">
+            <DockPanel>
+                <ComboBox x:Name="WizardLanguageBox" DockPanel.Dock="Right" Width="150" DisplayMemberPath="Label" SelectedValuePath="Code"
+                          SelectionChanged="Language_SelectionChanged" AutomationProperties.Name="{loc:Loc InterfaceLanguage}" />
+                <TextBlock Text="{loc:Loc SetupTitle}" FontSize="24" FontWeight="SemiBold" />
+            </DockPanel>
+            <TextBlock Text="{loc:Loc SetupIntroduction}" Style="{StaticResource MutedText}" Margin="0,8,0,12" />
+            <TextBlock x:Name="StepTitle" FontSize="17" FontWeight="SemiBold" />
+        </StackPanel>
+        <StackPanel DockPanel.Dock="Bottom">
+            <ProgressBar x:Name="WizardProgress" Height="5" Minimum="0" Maximum="100" Visibility="Collapsed" Margin="0,10,0,4" />
+            <TextBlock x:Name="WizardStatus" services:MessageJournal.Reason="{loc:Loc SetupTitle}" Style="{StaticResource MutedText}" Margin="0,10,0,10" AutomationProperties.LiveSetting="Polite" />
+            <WrapPanel HorizontalAlignment="Right">
+                <Button x:Name="CancelOperationButton" Content="{loc:Loc CancelDownload}" Click="CancelOperation_Click" Visibility="Collapsed" Margin="0,0,8,4" />
+                <Button x:Name="BackButton" Content="{loc:Loc SetupBack}" Click="Back_Click" MinWidth="75" Margin="0,0,8,4" />
+                <Button x:Name="SkipButton" Content="{loc:Loc SetupSkip}" Click="Skip_Click" Visibility="Collapsed" Margin="0,0,8,4" />
+                <Button x:Name="NextButton" Content="{loc:Loc SetupNext}" Click="Next_Click" Style="{StaticResource PrimaryButton}" IsDefault="True" MinWidth="110" Margin="0,0,8,4" />
+                <Button Content="{loc:Loc Close}" IsCancel="True" MinWidth="75" Margin="0,0,0,4" />
+            </WrapPanel>
+        </StackPanel>
+        <ScrollViewer x:Name="WizardScroller" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+            <Grid x:Name="WizardPages">
+                <StackPanel x:Name="AudioPage">
+                    <TextBlock Text="{loc:Loc SetupAudioHint}" Style="{StaticResource MutedText}" Margin="0,0,0,16" />
+                    <CheckBox x:Name="WizardMicEnabled" Content="{loc:Loc Microphone}" />
+                    <ComboBox x:Name="WizardMicDevice" DisplayMemberPath="Name" SelectedValuePath="Id"
+                              IsEnabled="{Binding IsChecked, ElementName=WizardMicEnabled}" AutomationProperties.Name="{loc:Loc MicrophoneDevice}" Margin="0,5,0,18" />
+                    <CheckBox x:Name="WizardPlaybackEnabled" Content="{loc:Loc ComputerPlayback}" />
+                    <ComboBox x:Name="WizardPlaybackDevice" DisplayMemberPath="Name" SelectedValuePath="Id"
+                              IsEnabled="{Binding IsChecked, ElementName=WizardPlaybackEnabled}" AutomationProperties.Name="{loc:Loc PlaybackDevice}" Margin="0,5,0,16" />
+                    <Button Content="{loc:Loc RefreshList}" Click="RefreshDevices_Click" HorizontalAlignment="Left" />
+                    <TextBlock Text="{loc:Loc SetupDeviceCheckHint}" Style="{StaticResource MutedText}" Margin="0,12,0,0" />
+                </StackPanel>
+                <StackPanel x:Name="StoragePage" Visibility="Collapsed">
+                    <TextBlock Text="{loc:Loc SetupStorageHint}" Style="{StaticResource MutedText}" Margin="0,0,0,16" />
+                    <TextBlock Text="{loc:Loc AudioSavingFolder}" Margin="0,0,0,6" />
+                    <DockPanel>
+                        <Button DockPanel.Dock="Right" Content="{loc:Loc Browse}" Click="BrowseFolder_Click" Margin="8,0,0,0" />
+                        <TextBox x:Name="WizardFolderBox" AutomationProperties.Name="{loc:Loc AudioSavingFolder}" />
+                    </DockPanel>
+                    <TextBlock Text="{loc:Loc AudioFormat}" Margin="0,18,0,6" />
+                    <ComboBox x:Name="WizardFormatBox" Width="160" HorizontalAlignment="Left" AutomationProperties.Name="{loc:Loc AudioFormat}" />
+                    <TextBlock Text="{loc:Loc SetupFolderValidationHint}" Style="{StaticResource MutedText}" Margin="0,16,0,0" />
+                </StackPanel>
+                <StackPanel x:Name="SpeechPage" Visibility="Collapsed">
+                    <TextBlock Text="{loc:Loc SetupSpeechHint}" Style="{StaticResource MutedText}" Margin="0,0,0,12" />
+                    <TextBlock x:Name="RuntimeStatus" services:MessageJournal.Reason="{loc:Loc LocalSpeech}" TextWrapping="Wrap" Margin="0,0,0,6" />
+                    <Button Content="{loc:Loc SetupRuntimeLink}" Click="OpenRuntime_Click" HorizontalAlignment="Left" Margin="0,0,0,14" />
+                    <ComboBox x:Name="WizardSpeechModelBox" DisplayMemberPath="Label" SelectedValuePath="Id"
+                              SelectionChanged="SpeechModel_SelectionChanged" AutomationProperties.Name="{loc:Loc LocalWhisperModel}" />
+                    <DockPanel Margin="0,8,0,12">
+                        <Button DockPanel.Dock="Right" Content="{loc:Loc DownloadModel}" Click="DownloadSpeech_Click" FontSize="12" />
+                        <TextBlock x:Name="WizardSpeechStatus" services:MessageJournal.Reason="{loc:Loc LocalSpeech}" Style="{StaticResource MutedText}" VerticalAlignment="Center" />
+                    </DockPanel>
+                    <TextBlock Text="{loc:Loc SpeechLanguage}" Margin="0,0,0,6" />
+                    <ComboBox x:Name="WizardSpeechLanguageBox" DisplayMemberPath="Label" SelectedValuePath="Code" AutomationProperties.Name="{loc:Loc SpeechLanguage}" />
+                    <CheckBox x:Name="WizardLiveTextCheck" Content="{loc:Loc LiveTextDefault}" Margin="0,12,0,0" />
+                    <CheckBox x:Name="WizardTranscribeCheck" Content="{loc:Loc TranscribeOnStop}" />
+                    <CheckBox x:Name="WizardFastDraftsCheck"><TextBlock Text="{loc:Loc FastLiveDrafts}" TextWrapping="Wrap" /></CheckBox>
+                    <DockPanel Margin="0,5,0,12">
+                        <Button DockPanel.Dock="Right" Content="{loc:Loc DownloadBase}" Click="DownloadBase_Click" FontSize="12" />
+                        <TextBlock x:Name="WizardBaseStatus" services:MessageJournal.Reason="{loc:Loc LocalSpeech}" Style="{StaticResource MutedText}" VerticalAlignment="Center" />
+                    </DockPanel>
+                    <CheckBox x:Name="WizardSpeakersCheck" Content="{loc:Loc SpeakersOnStop}" />
+                    <DockPanel Margin="0,5,0,12">
+                        <Button DockPanel.Dock="Right" Content="{loc:Loc DownloadSpeakers}" Click="DownloadSpeakers_Click" FontSize="12" />
+                        <TextBlock x:Name="WizardSpeakersStatus" services:MessageJournal.Reason="{loc:Loc SpeakerModels}" Style="{StaticResource MutedText}" VerticalAlignment="Center" />
+                    </DockPanel>
+                    <TextBlock Text="{loc:Loc SetupSpeechLater}" Style="{StaticResource MutedText}" />
+                </StackPanel>
+                <StackPanel x:Name="LlmPage" Visibility="Collapsed">
+                    <TextBlock Text="{loc:Loc SetupLlmHint}" Style="{StaticResource MutedText}" Margin="0,0,0,14" />
+                    <Button Content="{loc:Loc SetupLocalLlm}" Tag="ollama" Click="ConfigureLlm_Click" HorizontalAlignment="Left" Margin="0,0,0,8" />
+                    <TextBlock Text="{loc:Loc SetupLocalLlmHint}" Style="{StaticResource MutedText}" Margin="0,0,0,16" />
+                    <Button Content="{loc:Loc SetupOnlineLlm}" Tag="copilot" Click="ConfigureLlm_Click" HorizontalAlignment="Left" Margin="0,0,0,8" />
+                    <TextBlock Text="{loc:Loc SetupOnlineLlmHint}" Style="{StaticResource MutedText}" Margin="0,0,0,16" />
+                    <TextBlock x:Name="WizardLlmStatus" services:MessageJournal.Reason="{loc:Loc LlmLabel}" TextWrapping="Wrap" Margin="0,0,0,12" />
+                    <CheckBox x:Name="WizardAutoSummaryCheck" Content="{loc:Loc AutoSummaries}" />
+                    <CheckBox x:Name="WizardLiveSummaryCheck" Content="{loc:Loc LiveSummaries}" />
+                    <TextBlock Text="{loc:Loc SetupLlmLater}" Style="{StaticResource MutedText}" Margin="0,12,0,0" />
+                </StackPanel>
+                <StackPanel x:Name="ReviewPage" Visibility="Collapsed">
+                    <TextBlock Text="{loc:Loc SetupReviewHint}" Style="{StaticResource MutedText}" Margin="0,0,0,16" />
+                    <TextBlock x:Name="ReviewText" TextWrapping="Wrap" />
+                    <TextBlock Text="{loc:Loc SetupLaterHint}" Style="{StaticResource MutedText}" Margin="0,18,0,0" />
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+    </DockPanel>
+</Window>

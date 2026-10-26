@@ -1,0 +1,196 @@
+<Window x:Class="AudioMemo.TranscriptEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:loc="clr-namespace:AudioMemo.Localization"
+        xmlns:services="clr-namespace:AudioMemo.Services"
+        xmlns:local="clr-namespace:AudioMemo"
+        Title="{loc:Loc CorrectTranscriptTitle}" Width="1100" Height="800" MinWidth="800" MinHeight="600"
+        WindowStartupLocation="CenterOwner" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Grid Margin="20">
+        <ScrollViewer x:Name="CorrectionScroller" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <Grid MinWidth="560" MinHeight="700" Width="{Binding ViewportWidth, ElementName=CorrectionScroller}"
+              Height="{Binding ViewportHeight, ElementName=CorrectionScroller}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" /><RowDefinition Height="Auto" /><RowDefinition Height="Auto" /><RowDefinition Height="*" />
+            <RowDefinition Height="Auto" /><RowDefinition Height="Auto" /><RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <StackPanel Margin="0,0,0,10">
+            <TextBlock Text="{loc:Loc CorrectTranscriptTitle}" FontSize="24" FontWeight="SemiBold" />
+            <TextBlock Text="{loc:Loc CorrectTranscriptHint}" Style="{StaticResource MutedText}" Margin="0,6,0,0" />
+        </StackPanel>
+        <WrapPanel Grid.Row="1" Margin="0,0,0,10">
+            <ComboBox x:Name="CorrectionModelBox" Width="235" DisplayMemberPath="Label" SelectedValuePath="Id"
+                      AutomationProperties.Name="{loc:Loc LocalWhisperModel}" Margin="0,0,8,6" />
+            <ComboBox x:Name="CorrectionLanguageBox" Width="175" DisplayMemberPath="Label" SelectedValuePath="Code"
+                      AutomationProperties.Name="{loc:Loc SpeechLanguage}" Margin="0,0,8,6" SelectionChanged="OnlineConfig_Changed" />
+            <Button x:Name="RetranscribeButton" Content="{loc:Loc RetranscribeSelection}" Click="Retranscribe_Click" FontSize="12" Margin="0,0,8,6" />
+            <Button x:Name="OnlineOptionsButton" Content="{loc:Loc OnlineTranscription}" Click="OnlineOptions_Click" FontSize="12" Margin="0,0,8,6" />
+            <Button x:Name="CompareResultsButton" Content="{loc:Loc CompareResults}" Click="CompareResults_Click" FontSize="12" Margin="0,0,8,6" />
+            <Button x:Name="StopContinueRecognitionButton" Content="{loc:Loc Stop}" Click="StopContinueRecognition_Click"
+                    Visibility="Collapsed" ToolTip="{loc:Loc SelectionResumeHint}" FontSize="12" Margin="0,0,8,6" />
+            <Button x:Name="CancelRecognitionButton" Content="{loc:Loc Cancel}" Click="CancelRecognition_Click" Visibility="Collapsed" FontSize="12" Margin="0,0,0,6" />
+        </WrapPanel>
+        <Expander x:Name="OnlineOptionsPanel" Grid.Row="2" Header="{loc:Loc OnlineSpeechSetup}" Visibility="Collapsed" Margin="0,0,0,8">
+            <ScrollViewer MaxHeight="235" VerticalScrollBarVisibility="Auto">
+                <StackPanel Margin="0,6,8,0">
+                    <TextBlock Text="{loc:Loc OnlineSpeechSetupHint}" Style="{StaticResource MutedText}" Margin="0,0,0,6" />
+                    <WrapPanel>
+                        <ComboBox x:Name="OnlineProviderBox" Width="150" DisplayMemberPath="Label" SelectedValuePath="Code"
+                                  SelectionChanged="OnlineProvider_Changed" AutomationProperties.Name="{loc:Loc SummaryProvider}" Margin="0,0,8,6" />
+                        <ComboBox x:Name="OnlineModelBox" Width="210" DisplayMemberPath="Id" SelectedValuePath="Id"
+                                  SelectionChanged="OnlineConfig_Changed" AutomationProperties.Name="{loc:Loc OnlineSpeechModel}" Margin="0,0,8,6" />
+                        <Button Content="{loc:Loc OnlineModelLimits}" Click="OnlineDocs_Click" FontSize="12" Margin="0,0,8,6" />
+                    </WrapPanel>
+                    <WrapPanel>
+                        <ComboBox x:Name="OnlineEndpointBox" IsEditable="True" Width="405"
+                                  TextBoxBase.TextChanged="OnlineEndpoint_Changed" AutomationProperties.Name="{loc:Loc OnlineEndpoint}" Margin="0,0,8,6" />
+                        <PasswordBox x:Name="OnlineKeyBox" Width="190" MaxLength="8192" ToolTip="{loc:Loc OnlineKeyHint}"
+                                     AutomationProperties.Name="{loc:Loc OnlineApiKey}" Margin="0,0,8,6" />
+                        <Button x:Name="SaveOnlineConnectionButton" Content="{loc:Loc SaveOnlineConnection}" Click="SaveOnlineConnection_Click" FontSize="12" Margin="0,0,0,6" />
+                    </WrapPanel>
+                    <TextBlock x:Name="OnlineKeyStatus" services:MessageJournal.Reason="{loc:Loc CorrectTranscriptTitle}" Style="{StaticResource MutedText}" Margin="0,0,0,5" />
+                    <TextBlock x:Name="OnlineLimitsText" TextWrapping="Wrap" Margin="0,0,0,5" />
+                    <WrapPanel>
+                        <CheckBox x:Name="SplitOnlineCheck" Content="{loc:Loc SplitOnlineSelection}" Click="OnlineConfig_Changed" Margin="0,0,12,6" />
+                        <Button Content="{loc:Loc ReduceOnlineSelection}" Click="ReduceOnlineSelection_Click" FontSize="12" Padding="6,3" MinHeight="25" Margin="0,0,0,6" />
+                    </WrapPanel>
+                    <CheckBox x:Name="OnlineConsentCheck" Margin="0,0,0,6">
+                        <TextBlock x:Name="OnlineConsentText" TextWrapping="Wrap" />
+                    </CheckBox>
+                    <Button x:Name="UploadOnlineButton" Content="{loc:Loc UploadSelectedAudio}" Click="UploadOnline_Click"
+                            HorizontalAlignment="Left" FontSize="12" Margin="0,0,0,6" />
+                </StackPanel>
+            </ScrollViewer>
+        </Expander>
+        <DataGrid x:Name="CorrectionRows" Grid.Row="3" AutoGenerateColumns="False" CanUserAddRows="False"
+                  CanUserDeleteRows="False" CanUserSortColumns="False" CanUserReorderColumns="False"
+                  HeadersVisibility="Column" SelectionUnit="Cell" SelectionMode="Extended"
+                  EnableRowVirtualization="True" VirtualizingPanel.VirtualizationMode="Recycling"
+                  CellStyle="{StaticResource TranscriptDataGridCell}" MinRowHeight="24"
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto"
+                  AutomationProperties.Name="{loc:Loc CorrectTranscriptTitle}">
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow" BasedOn="{StaticResource {x:Type DataGridRow}}">
+                    <Setter Property="MinHeight" Value="24" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ComparisonState}" Value="{x:Static local:TranscriptComparisonState.Different}">
+                            <Setter Property="Background" Value="{DynamicResource ComparisonDifferentBackground}" />
+                            <Setter Property="Foreground" Value="{DynamicResource ComparisonDifferentForeground}" />
+                            <Setter Property="ToolTip" Value="{loc:Loc ComparisonDifferent}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ComparisonState}" Value="{x:Static local:TranscriptComparisonState.Matching}">
+                            <Setter Property="Background" Value="{DynamicResource ComparisonMatchingBackground}" />
+                            <Setter Property="Foreground" Value="{DynamicResource ComparisonMatchingForeground}" />
+                            <Setter Property="ToolTip" Value="{loc:Loc ComparisonMatching}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ComparisonState}" Value="{x:Static local:TranscriptComparisonState.Unclear}">
+                            <Setter Property="Background" Value="{DynamicResource ComparisonUnclearBackground}" />
+                            <Setter Property="Foreground" Value="{DynamicResource ComparisonUnclearForeground}" />
+                            <Setter Property="ToolTip" Value="{loc:Loc ComparisonUnclearHint}" />
+                        </DataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding Unrecognized}" Value="True" />
+                                <Condition Binding="{Binding ComparingOnline}" Value="False" />
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="ToolTip" Value="{loc:Loc SelectionRowNoSpeech}" />
+                        </MultiDataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="{loc:Loc TimestampColumn}" Binding="{Binding Time}" Width="168" IsReadOnly="True" />
+                <DataGridTextColumn Header="{loc:Loc SpeakerColumn}" Binding="{Binding Speaker}" Width="80" IsReadOnly="True" />
+                <DataGridTextColumn Header="{loc:Loc LocalComparisonText}" Binding="{Binding LocalText}" Width="*" IsReadOnly="True">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="TextWrapping" Value="Wrap" /><Setter Property="Margin" Value="4,2" />
+                            <Setter Property="Foreground" Value="{Binding Foreground, RelativeSource={RelativeSource AncestorType=DataGridCell}}" /><Setter Property="MaxHeight" Value="180" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn x:Name="CorrectedTextColumn" Header="{loc:Loc CorrectedTranscriptText}"
+                                    Binding="{Binding Text, UpdateSourceTrigger=PropertyChanged}" Width="*">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="TextWrapping" Value="Wrap" /><Setter Property="Margin" Value="4,2" />
+                            <Setter Property="Foreground" Value="{Binding Foreground, RelativeSource={RelativeSource AncestorType=DataGridCell}}" />
+                            <Setter Property="MaxHeight" Value="180" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="TextBox" BasedOn="{StaticResource {x:Type TextBox}}">
+                            <Setter Property="TextWrapping" Value="Wrap" /><Setter Property="AcceptsReturn" Value="True" />
+                            <Setter Property="MaxLength" Value="16000" /><Setter Property="MaxHeight" Value="180" />
+                            <Setter Property="VerticalScrollBarVisibility" Value="Auto" />
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn x:Name="OnlineTextColumn" Header="{loc:Loc OnlineComparisonText}" Binding="{Binding OnlineText}"
+                                    Width="*" IsReadOnly="True" Visibility="Collapsed">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="TextWrapping" Value="Wrap" /><Setter Property="Margin" Value="4,2" />
+                            <Setter Property="Foreground" Value="{Binding Foreground, RelativeSource={RelativeSource AncestorType=DataGridCell}}" />
+                            <Setter Property="MaxHeight" Value="180" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Expander Grid.Row="4" Header="{loc:Loc SpeechVocabularyTitle}" Margin="0,12,0,0">
+            <Grid Margin="0,8,0,0">
+                <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="280" /></Grid.ColumnDefinitions>
+                <StackPanel Margin="0,0,12,0">
+                    <CheckBox x:Name="UseVocabularyCheck" Content="{loc:Loc UseSpeechVocabulary}" />
+                    <TextBox x:Name="CorrectionVocabularyBox" AcceptsReturn="True" TextWrapping="Wrap" Height="85" MaxLength="32400"
+                             VerticalScrollBarVisibility="Auto" TextChanged="Vocabulary_TextChanged"
+                             AutomationProperties.Name="{loc:Loc SpeechVocabularyTitle}" />
+                    <TextBlock x:Name="VocabularyStatus" Style="{StaticResource MutedText}" Margin="0,5,0,0" MaxHeight="65" />
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <Button x:Name="RememberSelectionButton" Content="{loc:Loc RememberSelectedWords}" Click="RememberSelection_Click" FontSize="12" IsEnabled="False" />
+                    <Button x:Name="SaveVocabularyButton" Content="{loc:Loc SaveSpeechVocabulary}" Click="SaveVocabulary_Click" FontSize="12" Margin="0,6,0,6" />
+                    <TextBlock Text="{loc:Loc CorrectionVocabularyHint}" Style="{StaticResource MutedText}" FontSize="11" />
+                </StackPanel>
+            </Grid>
+        </Expander>
+        <StackPanel Grid.Row="5" Margin="0,10,0,10">
+            <WrapPanel x:Name="ComparisonActions" Visibility="Collapsed" Margin="0,0,0,6">
+                <CheckBox x:Name="OnlyDifferencesCheck" Content="{loc:Loc OnlyTranscriptDifferences}" Click="OnlyDifferences_Click" Margin="0,0,12,0" />
+                <Border Background="{DynamicResource ComparisonMatchingBackground}" CornerRadius="3" Padding="5,2" Margin="0,0,5,3" VerticalAlignment="Center">
+                    <TextBlock Text="{loc:Loc ComparisonMatching}" Foreground="{DynamicResource ComparisonMatchingForeground}" FontSize="11" />
+                </Border>
+                <Border Background="{DynamicResource ComparisonDifferentBackground}" CornerRadius="3" Padding="5,2" Margin="0,0,5,3" VerticalAlignment="Center">
+                    <TextBlock Text="{loc:Loc ComparisonDifferent}" Foreground="{DynamicResource ComparisonDifferentForeground}" FontSize="11" />
+                </Border>
+                <Border Background="{DynamicResource ComparisonUnclearBackground}" CornerRadius="3" Padding="5,2" Margin="0,0,10,3" VerticalAlignment="Center" ToolTip="{loc:Loc ComparisonUnclearHint}">
+                    <TextBlock Text="{loc:Loc ComparisonUnclear}" Foreground="{DynamicResource ComparisonUnclearForeground}" FontSize="11" />
+                </Border>
+                <Button x:Name="UseOnlineResultsButton" Content="{loc:Loc UseOnlineResults}" Click="UseOnlineResults_Click" FontSize="12" Padding="7,3" MinHeight="26" />
+                <TextBlock x:Name="OnlineResultCaption" Style="{StaticResource MutedText}" MaxWidth="520" Margin="10,0,0,0" VerticalAlignment="Center" />
+            </WrapPanel>
+            <DockPanel x:Name="RecognitionActivity" Visibility="Collapsed">
+                <TextBlock x:Name="RecognitionTimingText" DockPanel.Dock="Right" FontSize="11" MaxWidth="360"
+                           Margin="12,0,0,0" VerticalAlignment="Center" TextTrimming="CharacterEllipsis"
+                           Foreground="{DynamicResource TextFillColorSecondaryBrush}" AutomationProperties.Name="{loc:Loc ProcessingTiming}" />
+                <ProgressBar x:Name="RecognitionProgress" Height="5" Minimum="0" Maximum="100" Visibility="Collapsed"
+                             VerticalAlignment="Center" />
+            </DockPanel>
+            <StackPanel x:Name="PartialRecognitionPanel" Visibility="Collapsed" Margin="0,6,0,0">
+                <TextBlock x:Name="PartialRecognitionCaption" Style="{StaticResource MutedText}" Margin="0,0,0,4" />
+                <TextBox x:Name="PartialRecognitionText" IsReadOnly="True" TextWrapping="Wrap" AcceptsReturn="True"
+                         MaxHeight="72" VerticalScrollBarVisibility="Auto" ToolTip="{loc:Loc SelectionResumeHint}"
+                         AutomationProperties.Name="{loc:Loc SelectionPartialPreviewLabel}" />
+            </StackPanel>
+            <TextBlock x:Name="CorrectionStatus" services:MessageJournal.Reason="{loc:Loc CorrectTranscriptTitle}" Style="{StaticResource MutedText}" Margin="0,6,0,0"
+                       AutomationProperties.LiveSetting="Polite" />
+        </StackPanel>
+        <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="SaveCorrectionButton" Content="{loc:Loc SaveTranscriptChanges}" Style="{StaticResource PrimaryButton}" Click="Save_Click" />
+            <Button Content="{loc:Loc Cancel}" IsCancel="True" Margin="10,0,0,0" />
+        </StackPanel>
+        </Grid>
+        </ScrollViewer>
+    </Grid>
+</Window>

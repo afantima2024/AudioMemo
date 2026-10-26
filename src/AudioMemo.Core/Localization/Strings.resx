@@ -1,0 +1,1195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
+  <data name="MainWindowTitle" xml:space="preserve"><value>AudioMemo - Recorder and notes</value></data>
+  <data name="SettingsWindowTitle" xml:space="preserve"><value>AudioMemo settings</value></data>
+  <data name="Settings" xml:space="preserve"><value>Settings</value></data>
+  <data name="SaveSettings" xml:space="preserve"><value>Save settings</value></data>
+  <data name="Cancel" xml:space="preserve"><value>Cancel</value></data>
+  <data name="Browse" xml:space="preserve"><value>Browse...</value></data>
+  <data name="Microphone" xml:space="preserve"><value>Microphone</value></data>
+  <data name="Playback" xml:space="preserve"><value>Playback</value></data>
+  <data name="Pause" xml:space="preserve"><value>Pause</value></data>
+  <data name="Resume" xml:space="preserve"><value>Resume</value></data>
+  <data name="Stop" xml:space="preserve"><value>Stop</value></data>
+  <data name="None" xml:space="preserve"><value>none</value></data>
+  <data name="LocalFirstAudio" xml:space="preserve"><value>LOCAL-FIRST AUDIO</value></data>
+  <data name="BrandTagline" xml:space="preserve"><value>Record clearly. Keep what matters.</value></data>
+  <data name="YourRecordings" xml:space="preserve"><value>YOUR RECORDINGS</value></data>
+  <data name="NewConversationButton" xml:space="preserve"><value>+  New Recording</value></data>
+  <data name="NewConversation" xml:space="preserve"><value>New Recording</value></data>
+  <data name="UntitledRecording" xml:space="preserve"><value>Untitled recording</value></data>
+  <data name="LibraryHint" xml:space="preserve"><value>Recordings and notes are saved on this PC.</value></data>
+  <data name="FirstRecordingHint" xml:space="preserve"><value>Your first recording will appear here.</value></data>
+  <data name="RecordingCount" xml:space="preserve"><value>{0} recordings on this PC</value></data>
+  <data name="RecordingSelectionCount" xml:space="preserve"><value>{0} recordings / {1} selected</value></data>
+  <data name="SelectAllRecordingsShort" xml:space="preserve"><value>All</value></data>
+  <data name="SelectAllRecordings" xml:space="preserve"><value>Select or clear all recordings</value></data>
+  <data name="HistorySelectionHint" xml:space="preserve"><value>Ctrl+click selects individual recordings; Shift+click selects a range. Ctrl+A selects all while the list has focus. Use All to select or clear all. Right-click to rename selections one by one, select their folders in Explorer, export named transcripts or MP3 files, or move them to Recycle Bin.</value></data>
+  <data name="RenameRecordingProgress" xml:space="preserve"><value>Rename recording ({0} of {1})</value></data>
+  <data name="HistoryRenamed" xml:space="preserve"><value>Renamed {0} recordings.</value></data>
+  <data name="HistoryRenameCancelled" xml:space="preserve"><value>Renaming stopped. {0} of {1} recordings were renamed; the rest are unchanged.</value></data>
+  <data name="HistoryRenameFailed" xml:space="preserve"><value>Renamed {0} of {1} recordings before stopping: {2} Completed renames are kept; remaining names are unchanged.</value></data>
+  <data name="SelectedFoldersNeedSameParent" xml:space="preserve"><value>The selected recording folders must exist in the same parent folder to select them together in Explorer.</value></data>
+  <data name="ChooseMp3ExportFolder" xml:space="preserve"><value>Choose a folder for the selected MP3 files</value></data>
+  <data name="ChooseTranscriptExportFolder" xml:space="preserve"><value>Choose a folder for the selected transcripts (.txt, with time and speaker)</value></data>
+  <data name="HistoryExportProgress" xml:space="preserve"><value>Exporting recording {0} of {1}: {2}</value></data>
+  <data name="HistoryExportComplete" xml:space="preserve"><value>Exported {0} files to {1}. Existing files were not overwritten.</value></data>
+  <data name="HistoryExportCancelled" xml:space="preserve"><value>Export stopped. {0} of {1} files were completed; finished exports are kept.</value></data>
+  <data name="HistoryExportFailed" xml:space="preserve"><value>Exported {0} of {1} files. Could not export "{2}": {3} Finished exports are kept; remaining recordings were not exported.</value></data>
+  <data name="SavedMp3Invalid" xml:space="preserve"><value>The saved MP3 does not match this recording. Export MP3 for this recording individually to rebuild it from its WAV audio, then retry.</value></data>
+  <data name="ConfirmCloseBatchExport" xml:space="preserve"><value>Stop the batch export and close AudioMemo?&#10;&#10;Completed exports will be kept. Incomplete output will not replace any existing file. This batch will not resume automatically next time.</value></data>
+  <data name="ShowPanels" xml:space="preserve"><value>Panels</value></data>
+  <data name="ShowPanelsHint" xml:space="preserve"><value>Show Main points or My notes again, including while recording.</value></data>
+  <data name="HideMainPoints" xml:space="preserve"><value>Hide Main points. Reopen it using Panels in the transcript header.</value></data>
+  <data name="HideMyNotes" xml:space="preserve"><value>Hide My notes without deleting them. Reopen them using Panels in the transcript header.</value></data>
+  <data name="TranscribeOnStopHint" xml:space="preserve"><value>When off, keep saved live text and live main points without running final transcription after Stop. Run Transcribe / Resume later before updating final main points. Live main points during recording are still controlled separately.</value></data>
+  <data name="LiveTextKeptForLater" xml:space="preserve"><value>Live text is saved. Run Transcribe / Resume when you are ready for final transcription and main points.</value></data>
+  <data name="SummaryRequiresFinalTranscript" xml:space="preserve"><value>This recording has live or incomplete text. Finish Transcribe / Resume before updating final main points. Your saved live text and audio are kept.</value></data>
+  <data name="AudioEditRecoveryRequired" xml:space="preserve"><value>An interrupted audio edit needs recovery. Close any external player using this recording, then reload the recording list or reopen AudioMemo. Recovery data has been retained.</value></data>
+  <data name="AudioEditLinkedPath" xml:space="preserve"><value>Updating edited audio is blocked for linked files or folders.</value></data>
+  <data name="AudioEditHasDependents" xml:space="preserve"><value>Other edited recordings depend on this older copy. Select the latest edited copy instead; changing this ancestor would damage their restore history.</value></data>
+  <data name="AudioEditOriginalPreserved" xml:space="preserve"><value>Recover selected audio in this recording without adding another history entry. The hidden original-audio backup is preserved.</value></data>
+  <data name="AudioEditUpdatePolicy" xml:space="preserve"><value>Notes and timestamps are kept. Recovery data stays inside this recording's folder. Old main points and outdated exports are cleared; update main points again after applying the audio changes.</value></data>
+  <data name="ApplyMuteChanges" xml:space="preserve"><value>Apply mute</value></data>
+  <data name="RestoreSelectedSections" xml:space="preserve"><value>Restore selected sections</value></data>
+  <data name="AudioEditSavingChanges" xml:space="preserve"><value>Saving audio and transcript changes safely...</value></data>
+  <data name="AudioEditUpdated" xml:space="preserve"><value>Updated "{0}" without creating another recording.</value></data>
+  <data name="SelectOneRecording" xml:space="preserve"><value>Select just one recording to use this action.</value></data>
+  <data name="RecordingFirst" xml:space="preserve"><value>Recording comes first</value></data>
+  <data name="RecordingFirstHint" xml:space="preserve"><value>A safety WAV is saved continuously. AI work can be cancelled without losing your audio.</value></data>
+  <data name="OpenSavingFolder" xml:space="preserve"><value>Open saving folder</value></data>
+  <data name="SavedRecordings" xml:space="preserve"><value>Saved recordings</value></data>
+  <data name="WorkspaceTitle" xml:space="preserve"><value>A little space to listen.</value></data>
+  <data name="WorkspaceSubtitle" xml:space="preserve"><value>Capture your microphone, computer playback, or both.</value></data>
+  <data name="SessionSubtitle" xml:space="preserve"><value>{0:MM-dd HH:mm} | {1}</value></data>
+  <data name="RecoverWave" xml:space="preserve"><value>Recover WAV</value></data>
+  <data name="OpenFiles" xml:space="preserve"><value>Open files</value></data>
+  <data name="MicrophoneDevice" xml:space="preserve"><value>Microphone device</value></data>
+  <data name="PlaybackDevice" xml:space="preserve"><value>Playback device</value></data>
+  <data name="ComputerPlayback" xml:space="preserve"><value>Playback</value></data>
+  <data name="ApplyDevices" xml:space="preserve"><value>Apply devices</value></data>
+  <data name="RefreshList" xml:space="preserve"><value>Refresh list</value></data>
+  <data name="DevicesHint" xml:space="preserve"><value>Device choices save automatically while idle. During recording or pause, changes require confirmation; choose No to keep the current sources. Keep at least one working source enabled. The existing Apply devices shortcut remains available.</value></data>
+  <data name="RecordingTitle" xml:space="preserve"><value>Recording title</value></data>
+  <data name="AudioFormat" xml:space="preserve"><value>Audio format</value></data>
+  <data name="LiveText" xml:space="preserve"><value>Live text</value></data>
+  <data name="LiveTextTooltip" xml:space="preserve"><value>Draft text starts from about two seconds of saved audio, plus model loading and recognition time. After Stop, a final transcript is generated only if automatic final transcription is enabled.</value></data>
+  <data name="RecordingDuration" xml:space="preserve"><value>Recording duration</value></data>
+  <data name="MixedAudioLevel" xml:space="preserve"><value>Mixed audio level</value></data>
+  <data name="StartRecording" xml:space="preserve"><value>Start recording</value></data>
+  <data name="LocalWhisper" xml:space="preserve"><value>LOCAL WHISPER</value></data>
+  <data name="Transcript" xml:space="preserve"><value>Transcript</value></data>
+  <data name="TranscriptHint" xml:space="preserve"><value>Timestamped speech, saved alongside your audio.</value></data>
+  <data name="TranscribeResume" xml:space="preserve"><value>Transcribe / resume</value></data>
+  <data name="CancelAi" xml:space="preserve"><value>Cancel AI</value></data>
+  <data name="AudioTranscript" xml:space="preserve"><value>Audio transcript</value></data>
+  <data name="TranscriptPlaceholder" xml:space="preserve"><value>Your transcript will appear here.&#10;&#10;Download a local speech model in Settings. You can record first and transcribe the saved audio later.</value></data>
+  <data name="MainPoints" xml:space="preserve"><value>Main points</value></data>
+  <data name="MainPointsHint" xml:space="preserve"><value>Decisions, actions, and questions that matter.</value></data>
+  <data name="UpdateMainPoints" xml:space="preserve"><value>Update main points</value></data>
+  <data name="ExportMp3" xml:space="preserve"><value>Export MP3</value></data>
+  <data name="ConversationMainPoints" xml:space="preserve"><value>Conversation main points</value></data>
+  <data name="SummaryPlaceholder" xml:space="preserve"><value>Summarize after recording, or enable live main points in Settings.&#10;&#10;Choose Ollama for local summaries, or Copilot CLI with your explicit transcript-sharing consent.</value></data>
+  <data name="NotesAutoSaved" xml:space="preserve"><value>Local auto-save enabled</value></data>
+  <data name="NotesSaving" xml:space="preserve"><value>Saving...</value></data>
+  <data name="NotesSaved" xml:space="preserve"><value>Saved locally</value></data>
+  <data name="MyNotes" xml:space="preserve"><value>My notes</value></data>
+  <data name="PersonalNotes" xml:space="preserve"><value>Personal notes</value></data>
+  <data name="Dismiss" xml:space="preserve"><value>Dismiss</value></data>
+  <data name="ReadyStatus" xml:space="preserve"><value>Ready. No microphone or playback capture starts until you press Start.</value></data>
+  <data name="ReadyNewRecording" xml:space="preserve"><value>Ready for a new recording.</value></data>
+  <data name="StateRecording" xml:space="preserve"><value>RECORDING TO DISK</value></data>
+  <data name="StatePaused" xml:space="preserve"><value>PAUSED</value></data>
+  <data name="StateStarting" xml:space="preserve"><value>OPENING AUDIO DEVICES</value></data>
+  <data name="StateStopping" xml:space="preserve"><value>SAVING AUDIO</value></data>
+  <data name="StateFaulted" xml:space="preserve"><value>RECORDING INTERRUPTED</value></data>
+  <data name="StateReady" xml:space="preserve"><value>READY TO RECORD</value></data>
+  <data name="StateSaved" xml:space="preserve"><value>SAVED RECORDING</value></data>
+  <data name="SessionRecording" xml:space="preserve"><value>Recording</value></data>
+  <data name="SessionPaused" xml:space="preserve"><value>Paused</value></data>
+  <data name="SessionSaved" xml:space="preserve"><value>Saved</value></data>
+  <data name="SessionInterrupted" xml:space="preserve"><value>Interrupted</value></data>
+  <data name="SessionRecovered" xml:space="preserve"><value>Recovered</value></data>
+  <data name="SavedAudioSize" xml:space="preserve"><value>48 kHz / stereo / 16-bit   |   {0:F1} MB saved</value></data>
+  <data name="AudioWarnings" xml:space="preserve"><value>Audio warnings: {0} late frames; {1} clipped samples; {2} discontinuities</value></data>
+  <data name="SafetyWaveRetained" xml:space="preserve"><value>Safety WAV retained, including for MP3 recordings.</value></data>
+  <data name="SpeechModelMissing" xml:space="preserve"><value>Speech model not downloaded</value></data>
+  <data name="CliDefaultModel" xml:space="preserve"><value>CLI default model</value></data>
+  <data name="MakeItYours" xml:space="preserve"><value>Make it yours</value></data>
+  <data name="SettingsHint" xml:space="preserve"><value>Recording works without a speech model, an account, or a network connection.</value></data>
+  <data name="LanguageSection" xml:space="preserve"><value>Language</value></data>
+  <data name="InterfaceLanguage" xml:space="preserve"><value>Interface language</value></data>
+  <data name="InterfaceLanguageHint" xml:space="preserve"><value>Applies after Save settings, without restarting. Speech recognition is configured separately below.</value></data>
+  <data name="RecordingStorage" xml:space="preserve"><value>Recording and storage</value></data>
+  <data name="AudioSavingFolder" xml:space="preserve"><value>Audio saving folder</value></data>
+  <data name="StorageHint" xml:space="preserve"><value>WAV or MP3 is selected in the main window. Every session keeps a lossless safety WAV (about 0.69 GB/hour). MP3 is exported at 192 kbps after Stop. Recordings over 4 GB use RF64.</value></data>
+  <data name="MicrophoneGain" xml:space="preserve"><value>Microphone gain</value></data>
+  <data name="PlaybackGain" xml:space="preserve"><value>Playback gain</value></data>
+  <data name="HeadphonesHint" xml:space="preserve"><value>Use headphones to avoid recording speaker audio twice through the microphone. Protected/DRM content may not support loopback capture.</value></data>
+  <data name="LocalSpeech" xml:space="preserve"><value>Local speech-to-text</value></data>
+  <data name="LocalSpeechHint" xml:space="preserve"><value>Choose the final transcription model. Small is a balanced multilingual choice; Large-v3 Turbo Q5 offers stronger recognition on a suitable GPU. Audio stays on this PC.</value></data>
+  <data name="LocalWhisperModel" xml:space="preserve"><value>Local Whisper model</value></data>
+  <data name="DownloadModel" xml:space="preserve"><value>Download model</value></data>
+  <data name="CancelDownload" xml:space="preserve"><value>Cancel download</value></data>
+  <data name="DownloadAgain" xml:space="preserve"><value>Download again</value></data>
+  <data name="Downloaded" xml:space="preserve"><value>Downloaded (checksum checked before use)</value></data>
+  <data name="NotDownloaded" xml:space="preserve"><value>Not downloaded</value></data>
+  <data name="SpeechLanguage" xml:space="preserve"><value>Speech language</value></data>
+  <data name="SpeechLanguageAutomatic" xml:space="preserve"><value>Automatic detection (auto)</value></data>
+  <data name="SpeechLanguageChinese" xml:space="preserve"><value>Simplified Chinese (zh)</value></data>
+  <data name="SpeechLanguageEnglish" xml:space="preserve"><value>English (en)</value></data>
+  <data name="SpeechLanguageHint" xml:space="preserve"><value>Choose Simplified Chinese, English, or automatic detection. Chinese transcripts and AI notes always use Simplified Chinese.</value></data>
+  <data name="TranscribeOnStop" xml:space="preserve"><value>Automatically transcribe after Stop</value></data>
+  <data name="LiveTextDefault" xml:space="preserve"><value>Enable live text by default</value></data>
+  <data name="LiveTextHint" xml:space="preserve"><value>The local speech worker stays loaded between short audio chunks. After Stop, automatic final transcription replaces the draft only if that option is enabled; otherwise keep the draft and use Transcribe / resume later. Cancellation retains saved progress. Choosing a known language can improve short-clip accuracy; speed depends on the PC.</value></data>
+  <data name="AiMainPoints" xml:space="preserve"><value>AI main points</value></data>
+  <data name="CliExecutableHint" xml:space="preserve"><value>Copilot CLI executable (blank = discover automatically)</value></data>
+  <data name="CliExecutable" xml:space="preserve"><value>Copilot CLI executable</value></data>
+  <data name="SummaryModel" xml:space="preserve"><value>Summary model</value></data>
+  <data name="InheritModel" xml:space="preserve"><value>Use current CLI default</value></data>
+  <data name="SignIn" xml:space="preserve"><value>Sign in with Copilot CLI</value></data>
+  <data name="ReadCliModels" xml:space="preserve"><value>Read CLI models</value></data>
+  <data name="CliPrivacyHint" xml:space="preserve"><value>Uses your current CLI model, account, and provider settings. You can override the model here without changing CLI preferences. Model access depends on your account. AudioMemo does not extract or store CLI credentials.</value></data>
+  <data name="CloudConsent" xml:space="preserve"><value>Allow transcript text and AI main points to be sent to my configured Copilot provider for summarization.</value></data>
+  <data name="AutoSummaries" xml:space="preserve"><value>Automatically update main points after transcription</value></data>
+  <data name="LiveSummaries" xml:space="preserve"><value>Update live main points about every 90 seconds of transcribed audio</value></data>
+  <data name="SummaryPrivacyHint" xml:space="preserve"><value>Ollama stays local. Copilot and official cloud APIs require their own transcript-sharing consent; provider policies and charges apply. Live main points require live text. Personal notes and audio are not sent to the summarizer. No tools are available.</value></data>
+  <data name="CurrentCliModel" xml:space="preserve"><value>Current CLI model: {0}</value></data>
+  <data name="RecentCliModel" xml:space="preserve"><value>CLI model is not pinned. Default mode is inherited; recent model: {0}</value></data>
+  <data name="CustomProvider" xml:space="preserve"><value>A custom CLI provider is configured. Its authentication is inherited from your CLI environment; GitHub sign-in is not required.</value></data>
+  <data name="ChooseSavingFolder" xml:space="preserve"><value>Choose where AudioMemo saves recordings</value></data>
+  <data name="ChooseCliExecutable" xml:space="preserve"><value>Select the official Copilot CLI executable</value></data>
+  <data name="CliFileFilter" xml:space="preserve"><value>Copilot executable|copilot.exe|Executables|*.exe</value></data>
+  <data name="DownloadingPercent" xml:space="preserve"><value>Downloading {0:F0}%</value></data>
+  <data name="ModelDownloading" xml:space="preserve"><value>Downloading public model files from official sources. No audio is transmitted.</value></data>
+  <data name="ModelDownloaded" xml:space="preserve"><value>Model files downloaded and SHA-256 verified.</value></data>
+  <data name="DownloadCancelled" xml:space="preserve"><value>Download cancelled. Any previous complete model is unchanged.</value></data>
+  <data name="DownloadFailed" xml:space="preserve"><value>Model download failed: {0}</value></data>
+  <data name="CompleteSignIn" xml:space="preserve"><value>Complete sign-in in the Copilot CLI/browser window. Authentication is managed by the CLI, not AudioMemo.</value></data>
+  <data name="ChooseSpeechModel" xml:space="preserve"><value>Choose a speech model.</value></data>
+  <data name="InvalidInterfaceLanguage" xml:space="preserve"><value>Choose English or Simplified Chinese for the interface language.</value></data>
+  <data name="InvalidSpeechLanguage" xml:space="preserve"><value>Choose automatic detection, Simplified Chinese, or English for speech recognition.</value></data>
+  <data name="InvalidSavingFolder" xml:space="preserve"><value>Choose an absolute audio saving folder.</value></data>
+  <data name="InvalidAudioFormat" xml:space="preserve"><value>Audio format must be WAV or MP3.</value></data>
+  <data name="InvalidSpeechModel" xml:space="preserve"><value>Choose Base, Small, or Large-v3 Turbo Q5.</value></data>
+  <data name="InvalidAudioGain" xml:space="preserve"><value>Audio gain must be between 0 and 200%.</value></data>
+  <data name="ConsentRequiredForAuto" xml:space="preserve"><value>Enable transcript-sharing consent, or turn off automatic summaries.</value></data>
+  <data name="LiveTextRequired" xml:space="preserve"><value>Enable live text to use live main points.</value></data>
+  <data name="TranscriptionRequired" xml:space="preserve"><value>Automatic summaries need automatic or live transcription.</value></data>
+  <data name="SettingsLoadFailed" xml:space="preserve"><value>Settings could not be loaded. Defaults are shown; your existing recordings are unchanged.&#10;&#10;{0}</value></data>
+  <data name="NoAudioDevices" xml:space="preserve"><value>No active audio devices found. Connect a device, then refresh the list.</value></data>
+  <data name="UnavailableDevice" xml:space="preserve"><value>(Previously selected device is unavailable)</value></data>
+  <data name="ChooseWorkingDevice" xml:space="preserve"><value>Choose a working {0} device, or disable that source.</value></data>
+  <data name="AtLeastOneDevice" xml:space="preserve"><value>Enable at least one working microphone or playback device.</value></data>
+  <data name="RecordingDeviceSetupRequired" xml:space="preserve"><value>Check audio device setup</value></data>
+  <data name="RecordingDeviceSetupWarning" xml:space="preserve"><value>Recording did not start or resume. Connect or enable a microphone or computer playback device, refresh the device list, and select it in the main window. Disable any source you do not need. At least one working source is required.&#10;&#10;{0}</value></data>
+  <data name="DeviceStoppedDuringStart" xml:space="preserve"><value>The audio device stopped before recording could begin.</value></data>
+  <data name="RecordingStarted" xml:space="preserve"><value>Recording. Audio is written to disk continuously; device selections apply automatically.</value></data>
+  <data name="RecordingWithoutModel" xml:space="preserve"><value>Recording safely. Live text is unavailable until you download a speech model in Settings.</value></data>
+  <data name="RecordingResumed" xml:space="preserve"><value>Recording resumed. Paused time is not included in the audio.</value></data>
+  <data name="RecordingPaused" xml:space="preserve"><value>Paused. Saved audio is safe; press Resume to continue.</value></data>
+  <data name="RecordingInterrupted" xml:space="preserve"><value>Recording interrupted. The safety WAV is preserved. {0}</value></data>
+  <data name="RecordingSaved" xml:space="preserve"><value>Recording saved. {0}</value></data>
+  <data name="SavedWithoutModel" xml:space="preserve"><value>Audio saved. Download a local speech model in Settings, then choose Transcribe / resume.</value></data>
+  <data name="SourcesUpdated" xml:space="preserve"><value>Audio sources updated without restarting the recording.</value></data>
+  <data name="DevicePreferencesSaved" xml:space="preserve"><value>Audio device preferences saved.</value></data>
+  <data name="CancelCurrentAi" xml:space="preserve"><value>Cancel the current AI job before starting another.</value></data>
+  <data name="AiCancelled" xml:space="preserve"><value>AI processing cancelled. Saved audio, completed transcript chunks, and notes are unchanged.</value></data>
+  <data name="ConsentTitle" xml:space="preserve"><value>Allow transcript sharing?</value></data>
+  <data name="ConsentMessage" xml:space="preserve"><value>Audio stays on this PC. Summarization sends transcript text and existing AI main points to the provider configured in your Copilot CLI.&#10;&#10;Your provider's privacy policy and usage charges apply. Allow this for AudioMemo summaries? You can revoke it in Settings.</value></data>
+  <data name="ExportingMp3" xml:space="preserve"><value>Exporting MP3. The lossless safety WAV will be kept.</value></data>
+  <data name="Mp3Saved" xml:space="preserve"><value>MP3 saved. The safety WAV is also available in the recording folder.</value></data>
+  <data name="RecoverFirst" xml:space="preserve"><value>Recover the saved WAV first using Recover WAV.</value></data>
+  <data name="WaveMissing" xml:space="preserve"><value>The safety WAV is missing from this recording folder.</value></data>
+  <data name="WaveRecovered" xml:space="preserve"><value>The interrupted WAV was recovered from all complete audio frames on disk.</value></data>
+  <data name="SettingsSaved" xml:space="preserve"><value>Settings saved. The interface language is applied now; recording and speech settings apply to the next recording or AI job.</value></data>
+  <data name="HistoryReadFailed" xml:space="preserve"><value>Some recording metadata could not be read: {0}</value></data>
+  <data name="ErrorDetails" xml:space="preserve"><value>Error: {0}</value></data>
+  <data name="WaitForSave" xml:space="preserve"><value>Please wait for the current audio save or export to finish before closing.</value></data>
+  <data name="CloseAudioMemo" xml:space="preserve"><value>Close AudioMemo</value></data>
+  <data name="ConfirmCloseProcessing" xml:space="preserve"><value>Close AudioMemo now?
+
+Recording will stop and the safety WAV will be saved. Unfinished AI analysis and audio export will be paused, with completed results kept. Next time you open AudioMemo, you can choose whether to resume.
+
+Unsaved edits in open dialogs will not be applied. Closing may take a moment to finish saving audio and stop workers safely.</value></data>
+  <data name="ClosingSafely" xml:space="preserve"><value>Saving audio and pausing unfinished processing before closing...</value></data>
+  <data name="ResumeProcessing" xml:space="preserve"><value>Resume unfinished work</value></data>
+  <data name="ConfirmResumeProcessing" xml:space="preserve"><value>Resume unfinished work for "{0}"?
+
+{1}
+
+Saved progress will be reused. An interrupted chunk, speaker pass, or model request may need to run again. Online summaries may incur provider charges.
+
+Choose No to leave the audio and completed results unchanged. You can select this recording and click "Resume unfinished work" whenever you are ready; we will not ask again for this paused work.</value></data>
+  <data name="ProcessingDeferred" xml:space="preserve"><value>Audio and completed results are unchanged. Select this recording and use Resume unfinished work when you are ready.</value></data>
+  <data name="InvalidPendingProcessing" xml:space="preserve"><value>The saved unfinished-work plan is invalid. No audio or completed results were changed.</value></data>
+  <data name="PendingProcessingAudioChanged" xml:space="preserve"><value>The audio has changed since this work was paused. The old processing plan cannot be resumed against different audio.</value></data>
+  <data name="PendingProcessingConsentRequired" xml:space="preserve"><value>This unfinished work includes summaries for a provider that no longer has sharing consent. Review that provider's consent in Settings before resuming. No audio or transcript was sent.</value></data>
+  <data name="ConfirmSaveAndClose" xml:space="preserve"><value>Stop and save the current recording before closing?</value></data>
+  <data name="SaveRecording" xml:space="preserve"><value>Save recording</value></data>
+  <data name="SaveFailed" xml:space="preserve"><value>Save failed</value></data>
+  <data name="SaveFailedMessage" xml:space="preserve"><value>Could not finish saving. AudioMemo will stay open so you can retry.&#10;&#10;{0}</value></data>
+  <data name="AlreadyRunning" xml:space="preserve"><value>AudioMemo is already running. Use the existing window to keep recordings and notes in sync.</value></data>
+  <data name="StartupFailed" xml:space="preserve"><value>AudioMemo could not start: {0}</value></data>
+  <data name="ModelBase" xml:space="preserve"><value>Base multilingual - 148 MB (faster)</value></data>
+  <data name="ModelSmall" xml:space="preserve"><value>Small multilingual - 488 MB (more accurate)</value></data>
+  <data name="DownloadModelFirst" xml:space="preserve"><value>Download the selected speech model in Settings first. Your audio is saved locally.</value></data>
+  <data name="ModelChecksumFailed" xml:space="preserve"><value>Speech model checksum does not match. Download it again before using it.</value></data>
+  <data name="CheckingModel" xml:space="preserve"><value>Checking local speech model...</value></data>
+  <data name="TranscribingProgress" xml:space="preserve"><value>Local transcription: audio processed {0} of {1}.</value></data>
+  <data name="TranscriptSaved" xml:space="preserve"><value>Transcription progress saved locally.</value></data>
+  <data name="LiveSummaryFailed" xml:space="preserve"><value>Live summary failed; local transcription continues. {0}</value></data>
+  <data name="TranscriptionComplete" xml:space="preserve"><value>Final transcript saved. Main points, if enabled, are generated next.</value></data>
+  <data name="ConsentNotApproved" xml:space="preserve"><value>Transcript sharing has not been approved.</value></data>
+  <data name="NoTranscript" xml:space="preserve"><value>There is no speech transcript to summarize yet.</value></data>
+  <data name="SummaryProgress" xml:space="preserve"><value>Summarizing transcript with Copilot - batch {0} of {1}...</value></data>
+  <data name="LiveSummaryProgress" xml:space="preserve"><value>Updating live main points with Copilot - transcript batch {0} of {1}...</value></data>
+  <data name="LiveSummarySaved" xml:space="preserve"><value>Live main points updated (provisional).</value></data>
+  <data name="SummarySaved" xml:space="preserve"><value>Main points and overall summary saved.</value></data>
+  <data name="OverallSummary" xml:space="preserve"><value>Overall summary</value></data>
+  <data name="OverallSummaryProgress" xml:space="preserve"><value>Main points saved. Generating the overall summary with the same model (a separate step)...</value></data>
+  <data name="OverallSummaryFailed" xml:space="preserve"><value>The overall summary could not finish. Your main points are saved. Use Update main points to retry the unfinished step. {0}</value></data>
+  <data name="InvalidOverallSummary" xml:space="preserve"><value>The model returned no usable overall summary within the supported size limit.</value></data>
+  <data name="TranscriptionFailed" xml:space="preserve"><value>Local transcription failed (exit {0}). Audio is safe. Whisper requires Windows 11 and the Visual C++ 2022 x64 runtime. {1}</value></data>
+  <data name="ChooseInstalledCli" xml:space="preserve"><value>Choose the installed copilot.exe, not a .cmd or PowerShell shim.</value></data>
+  <data name="CliNotFound" xml:space="preserve"><value>Copilot CLI was not found. Install the official Windows Copilot CLI, or select copilot.exe in Settings.</value></data>
+  <data name="CliModelsFailed" xml:space="preserve"><value>Could not read Copilot model settings: {0}</value></data>
+  <data name="AllowTranscriptFirst" xml:space="preserve"><value>Allow transcript sharing with your Copilot provider in Settings first.</value></data>
+  <data name="SummaryFailed" xml:space="preserve"><value>Copilot could not summarize. Use Settings &gt; Sign in, check model access, and retry. {0} {1}</value></data>
+  <data name="EmptySummary" xml:space="preserve"><value>The selected model returned no summary text. The transcript and recording are unchanged.</value></data>
+  <data name="OversizedSummary" xml:space="preserve"><value>Copilot returned a summary above the supported length. Choose another model and retry; the previous saved main points are retained.</value></data>
+  <data name="NoSavedAudio" xml:space="preserve"><value>The recording contains no saved audio.</value></data>
+  <data name="StopCurrentRecording" xml:space="preserve"><value>Stop the current recording first.</value></data>
+  <data name="NoRecordingToPause" xml:space="preserve"><value>There is no running recording to pause.</value></data>
+  <data name="RecordingFailedWhilePausing" xml:space="preserve"><value>The recording failed while pausing.</value></data>
+  <data name="RecordingNotPaused" xml:space="preserve"><value>The recording is not paused.</value></data>
+  <data name="SourceStopFailed" xml:space="preserve"><value>Could not stop every audio source cleanly: {0}</value></data>
+  <data name="WaveFinalizeFailed" xml:space="preserve"><value>Could not fully finalize the safety WAV: {0}</value></data>
+  <data name="ApplyDevicesWhileActive" xml:space="preserve"><value>Devices can be applied while recording or paused.</value></data>
+  <data name="ReplacementDeviceStopped" xml:space="preserve"><value>A replacement audio device stopped unexpectedly. Original devices remain active.</value></data>
+  <data name="NoWorkingDevice" xml:space="preserve"><value>No working recording device. {0}</value></data>
+  <data name="RemainingDevice" xml:space="preserve"><value>Recording with the remaining device. {0}</value></data>
+  <data name="DriverStopFailed" xml:space="preserve"><value>An audio driver did not stop normally.</value></data>
+  <data name="DeviceDisconnected" xml:space="preserve"><value>{0} disconnected or failed: {1}</value></data>
+  <data name="AllDevicesLost" xml:space="preserve"><value>{0} No working device remains; recording is stopping.</value></data>
+  <data name="StayAwakeFailed" xml:space="preserve"><value>Windows could not enable the recording stay-awake request. Automatic sleep may interrupt recording.</value></data>
+  <data name="RecordingStalled" xml:space="preserve"><value>The computer slept or the recording thread stalled beyond its 8-second buffer.</value></data>
+  <data name="RecordingStoppedSafely" xml:space="preserve"><value>Recording stopped to protect saved audio: {0}</value></data>
+  <data name="SummaryProvider" xml:space="preserve"><value>Summary provider</value></data>
+  <data name="ProviderCopilot" xml:space="preserve"><value>Copilot CLI (existing account)</value></data>
+  <data name="ProviderOllama" xml:space="preserve"><value>Ollama (local)</value></data>
+  <data name="SelectedSummaryProviderHint" xml:space="preserve"><value>Provider selected for the next summary request. Previously saved summaries are not changed when switching providers.</value></data>
+  <data name="InvalidSummaryProvider" xml:space="preserve"><value>Choose Copilot CLI, Ollama, Doubao, Qwen, or DeepSeek for summaries.</value></data>
+  <data name="InvalidLocalEndpoint" xml:space="preserve"><value>Use a local Ollama server address such as http://127.0.0.1:11434, with no path, query, credentials, or fragment. Remote servers are not allowed in local mode.</value></data>
+  <data name="InvalidLocalModel" xml:space="preserve"><value>The local model name must be at most 200 characters and contain no control characters.</value></data>
+  <data name="InvalidLocalLimits" xml:space="preserve"><value>Use 8192-1048576 context tokens and a 1-120 minute timeout, entered as whole numbers.</value></data>
+  <data name="ChooseLocalModel" xml:space="preserve"><value>Select an installed Ollama model in Settings first. Recording still works without a model.</value></data>
+  <data name="LocalModelNotSelected" xml:space="preserve"><value>Local summary model not selected</value></data>
+  <data name="LocalSummaryPrivacy" xml:space="preserve"><value>Transcripts go only to Ollama on this PC. Downloaded local models only; cloud/remote models are blocked and there is no fallback to Copilot. Keep your trusted Ollama installation configured for local inference.</value></data>
+  <data name="OllamaEndpoint" xml:space="preserve"><value>Ollama server (on this PC)</value></data>
+  <data name="OllamaModel" xml:space="preserve"><value>Installed local summary model</value></data>
+  <data name="LocalModelChoiceHint" xml:space="preserve"><value>Refresh to list installed models, or type an installed model name. Larger models remain available on powerful PCs; hardware warnings do not block your choice.</value></data>
+  <data name="ReadLocalModels" xml:space="preserve"><value>Refresh local models</value></data>
+  <data name="TestLocalModel" xml:space="preserve"><value>Test model and speed</value></data>
+  <data name="ReadingLocalModels" xml:space="preserve"><value>Connecting to the local Ollama server...</value></data>
+  <data name="NoLocalModels" xml:space="preserve"><value>No downloaded local models found. Open the model guide below, install a model with Ollama, then refresh.</value></data>
+  <data name="LocalModelsFound" xml:space="preserve"><value>{0} local models available; {1} remote/empty entries excluded.</value></data>
+  <data name="TestingLocalModel" xml:space="preserve"><value>Testing with a short built-in synthetic meeting, not your recordings or notes. The first request may need to load the model.</value></data>
+  <data name="LocalTestPassed" xml:space="preserve"><value>Local model responded in {0:F1} seconds; generation speed {1:F1} tokens/second. Actual meetings and cold starts may take longer.</value></data>
+  <data name="LocalTestPassedNoSpeed" xml:space="preserve"><value>Local model responded in {0:F1} seconds. The server did not provide enough token timing data to estimate generation speed.</value></data>
+  <data name="LocalCheckCancelled" xml:space="preserve"><value>Local model operation cancelled. No recordings or notes were changed.</value></data>
+  <data name="ComputerMemory" xml:space="preserve"><value>This PC: {0:F1} GiB RAM total, {1:F1} GiB currently available. GPU memory and context length also affect performance.</value></data>
+  <data name="LocalMemoryWarning" xml:space="preserve"><value>Memory warning: model weights are about {0:F1} GiB; only {1:F1} GiB RAM is currently available. Context, Whisper, and Windows need additional memory. This is advisory: close other apps, choose a smaller quantized model, or summarize after recording.</value></data>
+  <data name="LocalMemoryUnavailable" xml:space="preserve"><value>Could not read Windows memory information; use the speed test before enabling live summaries. {0}</value></data>
+  <data name="LocalSlowRequest" xml:space="preserve"><value>Local generation is taking over 30 seconds. Model loading, CPU/GPU capacity, or context size may delay live updates. You may keep waiting, cancel AI, choose a smaller model, or summarize after Stop. Saved audio is retained.</value></data>
+  <data name="LocalSpeedWarning" xml:space="preserve"><value>Slow local generation measured: {0:F1} tokens/second (below 5). Live summaries may lag on this PC. Consider a smaller model, more GPU offload, a shorter context, or summarizing after Stop. Your model choice remains available.</value></data>
+  <data name="LocalAdvancedSettings" xml:space="preserve"><value>Advanced local model settings</value></data>
+  <data name="LocalContextTokens" xml:space="preserve"><value>Context window (tokens)</value></data>
+  <data name="LocalContextHint" xml:space="preserve"><value>Default: 32768. Larger contexts use more RAM/VRAM. Smaller contexts are faster but may not fit a transcript batch plus previous notes. Use a size supported by the selected model. GPU allocation is managed by Ollama.</value></data>
+  <data name="LocalTimeoutMinutes" xml:space="preserve"><value>Maximum wait per generation (minutes)</value></data>
+  <data name="LocalModelGuide" xml:space="preserve"><value>Local model guide: Qwen, DeepSeek, GLM</value></data>
+  <data name="LocalModelGuideHint" xml:space="preserve"><value>Install Ollama, then run the displayed download command yourself. These are suggestions, not an allowlist. Models are not downloaded or installed automatically. Review each model's license and available disk space.</value></data>
+  <data name="ModelDownloadCommand" xml:space="preserve"><value>Model download command</value></data>
+  <data name="DownloadOllama" xml:space="preserve"><value>Ollama download page</value></data>
+  <data name="OpenModelPage" xml:space="preserve"><value>Official model page</value></data>
+  <data name="CopyDownloadCommand" xml:space="preserve"><value>Copy download command</value></data>
+  <data name="LocalCommandCopied" xml:space="preserve"><value>Download command copied. Run it in your terminal when ready; AudioMemo has not started a download.</value></data>
+  <data name="LocalModelHardwareHint" xml:space="preserve"><value>RAM ranges are rough Q4 planning estimates, not guarantees. VRAM, quantization, context, and other apps matter. MoE models still need all model weights in memory. Use ollama ps to inspect CPU/GPU offload and the speed test on each PC.</value></data>
+  <data name="ModelGuideQwenSmall" xml:space="preserve"><value>Chinese/English starter; consider 16-24 GiB RAM</value></data>
+  <data name="ModelGuideQwenModern" xml:space="preserve"><value>Newer multilingual model; consider 24 GiB+ RAM and current Ollama</value></data>
+  <data name="ModelGuideDeepSeekSmall" xml:space="preserve"><value>DeepSeek distilled reasoning; consider 16-24 GiB RAM</value></data>
+  <data name="ModelGuideMedium" xml:space="preserve"><value>More capacity; consider 24-32 GiB RAM</value></data>
+  <data name="ModelGuideLarge" xml:space="preserve"><value>Powerful PC option; consider 32-64 GiB RAM</value></data>
+  <data name="ModelGuideGlm" xml:space="preserve"><value>Another Chinese-capable model; consider 16-24 GiB RAM</value></data>
+  <data name="ModelGuideWorkstation" xml:space="preserve"><value>High-end workstation; consider 64-128 GiB RAM and substantial VRAM</value></data>
+  <data name="ModelGuideServer" xml:space="preserve"><value>Very large server model; roughly 377 GiB of weights before runtime overhead</value></data>
+  <data name="LocalCloudModelBlocked" xml:space="preserve"><value>This is not a downloaded on-device model. Ollama cloud/remote models are blocked in local mode; no transcript has been sent for generation.</value></data>
+  <data name="LocalModelNotInstalled" xml:space="preserve"><value>Local model '{0}' is not installed. Download it with Ollama, then refresh the model list. No automatic download was started.</value></data>
+  <data name="LocalCompletionRequired" xml:space="preserve"><value>The selected model does not advertise text generation. Choose a chat/instruct model, not an embedding model, and use a current Ollama version.</value></data>
+  <data name="LocalContextTooSmall" xml:space="preserve"><value>The transcript batch and previous notes exceed the conservative local context budget. Increase context tokens for a model that supports it, then retry. The input was not silently truncated.</value></data>
+  <data name="LocalOutputTruncated" xml:space="preserve"><value>The local model reached its output limit before finishing. Choose a concise non-thinking/instruct model and retry; the incomplete response was not saved.</value></data>
+  <data name="LocalUnexpectedTools" xml:space="preserve"><value>The local model requested tools instead of notes. No tools were executed and no summary was overwritten.</value></data>
+  <data name="LocalEmptySummary" xml:space="preserve"><value>The local model returned no final notes. Choose a non-thinking/instruct model or update Ollama, then retry. Reasoning traces are not saved as notes.</value></data>
+  <data name="LocalOversizedSummary" xml:space="preserve"><value>The local model returned notes that exceed the supported summary size. Retry with a more concise model; the previous saved summary is retained.</value></data>
+  <data name="LocalResponseTooLarge" xml:space="preserve"><value>The local server response exceeded the safety limit. Update Ollama or choose a different model.</value></data>
+  <data name="LocalHttpFailed" xml:space="preserve"><value>Ollama request failed (HTTP {0}). Check the local model/server and retry. {1}</value></data>
+  <data name="LocalServerError" xml:space="preserve"><value>Ollama reported an error: {0}</value></data>
+  <data name="LocalConnectionFailed" xml:space="preserve"><value>Could not connect to Ollama at {0}. Start Ollama on this PC and check the server address, then retry. Recording does not need Ollama. {1}</value></data>
+  <data name="LocalRequestTimeout" xml:space="preserve"><value>The Ollama request timed out. Check server load, select a smaller model, or increase the generation timeout. Completed summary batches and saved audio are retained.</value></data>
+  <data name="LocalInvalidResponse" xml:space="preserve"><value>Ollama returned an invalid or incomplete response. Check the server/version and retry; no invalid summary was saved.</value></data>
+  <data name="LocalSummaryProgress" xml:space="preserve"><value>Summarizing transcript locally with Ollama - batch {0} of {1}...</value></data>
+  <data name="SummaryCheckpointSaved" xml:space="preserve"><value>Main points saved through transcript batch {0} of {1}. Interrupted work can resume from this saved progress.</value></data>
+  <data name="ModelTurbo" xml:space="preserve"><value>Large-v3 Turbo Q5 - 548 MiB (GPU recommended)</value></data>
+  <data name="InvalidSpeechAcceleration" xml:space="preserve"><value>Choose automatic, CPU, or Vulkan acceleration.</value></data>
+  <data name="InvalidSpeakerCount" xml:space="preserve"><value>Speaker count must be 0 (automatic) or 1-20.</value></data>
+  <data name="InvalidSpeakerName" xml:space="preserve"><value>Choose an existing speaker and a name of 1-80 characters, without control characters.</value></data>
+  <data name="InvalidSessionTitle" xml:space="preserve"><value>Use a title of 1-160 characters, without control characters.</value></data>
+  <data name="CopyAllText" xml:space="preserve"><value>Copy all text</value></data>
+  <data name="CopyAnnotated" xml:space="preserve"><value>Copy with time / speaker</value></data>
+  <data name="CopySelectedText" xml:space="preserve"><value>Copy selected text</value></data>
+  <data name="CopySelectedAnnotated" xml:space="preserve"><value>Copy selected rows with time / speaker</value></data>
+  <data name="FollowingTranscript" xml:space="preserve"><value>Following latest</value></data>
+  <data name="JumpToLatest" xml:space="preserve"><value>Latest</value></data>
+  <data name="TimestampColumn" xml:space="preserve"><value>Time</value></data>
+  <data name="SpeakerColumn" xml:space="preserve"><value>Speaker</value></data>
+  <data name="TranscriptTextColumn" xml:space="preserve"><value>Text</value></data>
+  <data name="RenameSpeaker" xml:space="preserve"><value>Rename speaker</value></data>
+  <data name="SaveChanges" xml:space="preserve"><value>Save</value></data>
+  <data name="ApplyModel" xml:space="preserve"><value>Apply model</value></data>
+  <data name="UsingModel" xml:space="preserve"><value>Using: {0}</value></data>
+  <data name="ModelSelectionSaved" xml:space="preserve"><value>Summary provider and model saved. New AI jobs use this selection; model controls are locked during processing.</value></data>
+  <data name="HideHistory" xml:space="preserve"><value>Hide list</value></data>
+  <data name="ShowHistory" xml:space="preserve"><value>Show list</value></data>
+  <data name="AutomaticTitleHint" xml:space="preserve"><value>Type your name after the date and time, or replace the prefix. Clear the field to use the recording's start date and time automatically.</value></data>
+  <data name="ResizePanels" xml:space="preserve"><value>Drag to resize the transcript and notes</value></data>
+  <data name="DraftLabel" xml:space="preserve"><value>Draft</value></data>
+  <data name="FinalLabel" xml:space="preserve"><value>Final</value></data>
+  <data name="DraftTranscriptSaved" xml:space="preserve"><value>Live draft saved. Final transcription runs after Stop only if enabled.</value></data>
+  <data name="RefiningTranscript" xml:space="preserve"><value>Re-transcribing saved audio to build the final transcript. The audio is unchanged; your live draft remains visible until the final transcript is ready.</value></data>
+  <data name="SpeechRuntimeStatus" xml:space="preserve"><value>Speech worker ready: {0} / {1}</value></data>
+  <data name="SpeechAcceleration" xml:space="preserve"><value>Final transcription acceleration</value></data>
+  <data name="AccelerationAuto" xml:space="preserve"><value>Automatic - try Vulkan GPU, otherwise CPU</value></data>
+  <data name="AccelerationCpu" xml:space="preserve"><value>CPU only</value></data>
+  <data name="AccelerationVulkan" xml:space="preserve"><value>Vulkan GPU required</value></data>
+  <data name="AccelerationHint" xml:space="preserve"><value>Fast Base drafts use CPU to avoid GPU startup delays; this choice applies to final transcription, or live text when fast drafts are off. Hover over the Transcript title to see the actual backend. Vulkan requires a compatible GPU and driver, and its first inference may need a lengthy warm-up. Explicit Vulkan mode never silently switches to CPU.</value></data>
+  <data name="GpuFallback" xml:space="preserve"><value>GPU initialization failed; Automatic mode is using CPU: {0}</value></data>
+  <data name="FastLiveDrafts" xml:space="preserve"><value>Use Base for faster live drafts; use the selected model for final transcription when requested</value></data>
+  <data name="DownloadBase" xml:space="preserve"><value>Download Base draft model</value></data>
+  <data name="BaseModelReady" xml:space="preserve"><value>Base draft model is downloaded.</value></data>
+  <data name="BaseModelMissing" xml:space="preserve"><value>Base is required for fast live drafts (141 MiB).</value></data>
+  <data name="SpeakersOnStop" xml:space="preserve"><value>Automatically analyze speakers after recording stops</value></data>
+  <data name="SpeakersHint" xml:space="preserve"><value>Local Pyannote + 3D-Speaker analysis labels voices spkr1, spkr2, etc. Right-click a speaker row to rename it. Automatic counts can split or merge voices; set the count when known (1 for a single presenter). Labels are estimates, not verified identities; overlapping or ambiguous speech can remain unlabeled. Long recordings need more RAM.</value></data>
+  <data name="SpeakerModels" xml:space="preserve"><value>Speaker models</value></data>
+  <data name="SpeakerModelsReady" xml:space="preserve"><value>Speaker models are downloaded.</value></data>
+  <data name="SpeakerModelsMissing" xml:space="preserve"><value>Download the speaker models in Settings (about 45 MiB).</value></data>
+  <data name="DownloadSpeakers" xml:space="preserve"><value>Download speaker models</value></data>
+  <data name="SpeakerCount" xml:space="preserve"><value>Speaker count (0 = automatic)</value></data>
+  <data name="ModelDownloadProgress" xml:space="preserve"><value>{0}: downloading {1:F0}%</value></data>
+  <data name="IdentifySpeakers" xml:space="preserve"><value>Identify speakers</value></data>
+  <data name="IdentifyingSpeakers" xml:space="preserve"><value>Identifying speakers locally. The saved recording and transcript are safe; this may take several minutes.</value></data>
+  <data name="SpeakerAnalysisFailed" xml:space="preserve"><value>Speaker analysis did not finish. Audio and transcript are retained: {0}</value></data>
+  <data name="SpeakersIdentified" xml:space="preserve"><value>Speaker labels saved. Right-click a labeled row to rename its speaker.</value></data>
+  <data name="SpeakersAlreadyIdentified" xml:space="preserve"><value>This transcript already has speaker labels. Right-click a labeled row to rename a speaker.</value></data>
+  <data name="ConfirmSpeakerReanalysis" xml:space="preserve"><value>Reanalyze all speakers with the current settings? If successful, the labels, custom speaker names, and labeled-speaker colors will be replaced, including colors changed during this analysis. The shared Not labeled color is kept. Existing summaries will need updating.</value></data>
+  <data name="SummaryNeedsRefresh" xml:space="preserve"><value>Previous transcript summary - update main points.</value></data>
+  <data name="FinalTranscriptRequired" xml:space="preserve"><value>Complete final transcription before identifying speakers.</value></data>
+  <data name="SpeakerRenamed" xml:space="preserve"><value>Speaker renamed throughout this transcript and saved summary references. Personal notes are unchanged.</value></data>
+  <data name="RenameSession" xml:space="preserve"><value>Rename recording</value></data>
+  <data name="SessionRenamed" xml:space="preserve"><value>Recording renamed. Audio files and the session folder are unchanged.</value></data>
+  <data name="RecycleSession" xml:space="preserve"><value>Move recording to Recycle Bin</value></data>
+  <data name="ConfirmRecycleSession" xml:space="preserve"><value>Move "{0}" and its entire folder to the Windows Recycle Bin?&#10;&#10;This includes audio, transcripts, summaries, and personal notes.&#10;{1}&#10;&#10;You can restore the folder from the Recycle Bin.</value></data>
+  <data name="SessionRecycled" xml:space="preserve"><value>The recording folder was moved to the Recycle Bin.</value></data>
+  <data name="RecycleSelectedSessions" xml:space="preserve"><value>Move {0} recordings to Recycle Bin</value></data>
+  <data name="ConfirmRecycleSessions" xml:space="preserve"><value>Move all {0} selected recording folders to the Windows Recycle Bin?&#10;&#10;This includes audio, transcripts, summaries, and personal notes in each folder.&#10;&#10;{1}&#10;&#10;You can restore the folders from the Recycle Bin.</value></data>
+  <data name="SessionsRecycled" xml:space="preserve"><value>{0} recording folders were moved to the Recycle Bin.</value></data>
+  <data name="RecyclingSessions" xml:space="preserve"><value>Moving recordings to Recycle Bin ({0}/{1})...</value></data>
+  <data name="RecycleSelectionCancelled" xml:space="preserve"><value>Recycling cancelled. {0} of {1} recording folders were moved to Recycle Bin; remaining recordings were not deleted.</value></data>
+  <data name="RecycleSelectionFailed" xml:space="preserve"><value>Moved {0} of {1} recording folders to Recycle Bin. Could not recycle "{2}": {3} Remaining recordings were not deleted.</value></data>
+  <data name="ConfirmCloseRecycling" xml:space="preserve"><value>Stop recycling and close AudioMemo?&#10;&#10;The current folder operation will finish safely. Remaining selected recordings will be left untouched and will not be automatically deleted the next time you open AudioMemo.</value></data>
+  <data name="DeletionCancelled" xml:space="preserve"><value>Deletion cancelled.</value></data>
+  <data name="SessionBusy" xml:space="preserve"><value>Stop recording and wait for, or cancel, processing before changing saved sessions or AI models.</value></data>
+  <data name="SelectSession" xml:space="preserve"><value>Select a saved recording first.</value></data>
+  <data name="TranscriptCopied" xml:space="preserve"><value>Transcript text copied without timestamps or speaker labels.</value></data>
+  <data name="ExportTranscript" xml:space="preserve"><value>Export transcript...</value></data>
+  <data name="TranscriptExportFilter" xml:space="preserve"><value>Text only|*.txt|Text with time and speaker|*.txt</value></data>
+  <data name="ProtectedSessionFile" xml:space="preserve"><value>Choose a different export filename; this file contains recording data or notes.</value></data>
+  <data name="TranscriptExported" xml:space="preserve"><value>Transcript exported: {0}</value></data>
+  <data name="SpeakerFilterLabel" xml:space="preserve"><value>Filter speakers</value></data>
+  <data name="AllSpeakers" xml:space="preserve"><value>All speakers</value></data>
+  <data name="UnlabeledSpeakers" xml:space="preserve"><value>Not labeled</value></data>
+  <data name="SpeakerFilterCount" xml:space="preserve"><value>Speakers: {0}</value></data>
+  <data name="SpeakerFilterHint" xml:space="preserve"><value>Select one or more speakers. This filters transcript rows and the transcript copy buttons, not summaries or the audio itself.</value></data>
+  <data name="CopyFilteredText" xml:space="preserve"><value>Copy filtered text</value></data>
+  <data name="NoMatchingSpeakers" xml:space="preserve"><value>No transcript lines match these speakers. Choose All speakers to clear the filter.</value></data>
+  <data name="PlaySelectedRange" xml:space="preserve"><value>Play selected range</value></data>
+  <data name="ReplayHint" xml:space="preserve"><value>Shift-click time cells to select a range. Replay runs continuously from the earliest selected start to the latest end, including intervening speakers hidden by the filter. Available after Stop, through the Windows default playback device.</value></data>
+  <data name="TimestampReplayHint" xml:space="preserve"><value>Double-click to replay this line. Shift-click another time to select a range, then choose Play selected range.</value></data>
+  <data name="ReplayPause" xml:space="preserve"><value>Pause replay</value></data>
+  <data name="ReplayResume" xml:space="preserve"><value>Resume replay</value></data>
+  <data name="ReplayStop" xml:space="preserve"><value>Stop replay</value></data>
+  <data name="ReplayProgressLabel" xml:space="preserve"><value>Audio replay progress</value></data>
+  <data name="ReplayPosition" xml:space="preserve"><value>{0} / {1}</value></data>
+  <data name="ReplayBounds" xml:space="preserve"><value>Replaying {0} to {1}. Stops automatically at the end of this range.</value></data>
+  <data name="SelectReplayRange" xml:space="preserve"><value>Select one or more transcript time rows to replay.</value></data>
+  <data name="InvalidReplayRange" xml:space="preserve"><value>The selected transcript has an invalid or empty audio time range.</value></data>
+  <data name="ReplayOutsideRecording" xml:space="preserve"><value>The selected time range has no audio in this saved recording.</value></data>
+  <data name="ReplayAfterStop" xml:space="preserve"><value>Replay is available only after Stop, from a saved WAV. Recover interrupted recordings first. Replay is disabled while recording or paused to avoid recording it again.</value></data>
+  <data name="ReplayNotActive" xml:space="preserve"><value>No audio replay is currently active.</value></data>
+  <data name="HistoryPeekHint" xml:space="preserve"><value>Hover or click to preview recordings. Drag up or down to move this tab along the left edge; Escape cancels a drag. Clicking outside closes the preview immediately. Otherwise it stays open while the pointer is inside and hides after five seconds of outside inactivity. Pin it to keep it open; use the panel's left arrow to hide it.</value></data>
+  <data name="PreviewRecordings" xml:space="preserve"><value>Preview saved recordings</value></data>
+  <data name="PinHistory" xml:space="preserve"><value>Pin</value></data>
+  <data name="PinHistoryHint" xml:space="preserve"><value>Keep the recording list visible.</value></data>
+  <data name="ReplayFinished" xml:space="preserve"><value>Audio replay finished.</value></data>
+  <data name="ReplayStopped" xml:space="preserve"><value>Audio replay stopped.</value></data>
+  <data name="MuteSelectedRows" xml:space="preserve"><value>Silence selected...</value></data>
+  <data name="MuteSelectedRowsHint" xml:space="preserve"><value>Choose to edit this recording or create a copy. These time ranges become silence and their transcript text is removed. Duration, other audio, and recovery data are preserved.</value></data>
+  <data name="SelectAllVisibleRows" xml:space="preserve"><value>Select all visible rows</value></data>
+  <data name="EditSessionTitle" xml:space="preserve"><value>Create an edited recording</value></data>
+  <data name="EditOriginalPreserved" xml:space="preserve"><value>Create a separate edited recording and leave this recording unchanged. Every later mute operation offers the same choice; restoration updates the recording being restored.</value></data>
+  <data name="EditedCopyName" xml:space="preserve"><value>Edited copy name</value></data>
+  <data name="EditedTitle" xml:space="preserve"><value>{0} (silenced)</value></data>
+  <data name="EditSourceLabel" xml:space="preserve"><value>Source: {0}</value></data>
+  <data name="EditStatistics" xml:space="preserve"><value>Selected rows: {0} | Silent intervals: {1}&#10;Before: {2} | Silence: {3} | After: {4} (unchanged)</value></data>
+  <data name="MutedRangesLabel" xml:space="preserve"><value>Intervals to replace with silence (original recording time)</value></data>
+  <data name="EditSelectionWarning" xml:space="preserve"><value>All voices and sounds in these intervals become equal-length silence. Other audio stays at its original position. This mutes time ranges; it does not isolate overlapping voices.</value></data>
+  <data name="EditedSummaryPolicy" xml:space="preserve"><value>Duration and remaining timestamps stay unchanged. Selected text is removed and old AI summaries are not copied. New summaries use only the remaining transcript. Personal notes keep their original time references.</value></data>
+  <data name="EditEmptyTranscriptWarning" xml:space="preserve"><value>No recognized text will remain. This recording cannot generate an AI summary without a transcript.</value></data>
+  <data name="EditProgressLabel" xml:space="preserve"><value>Audio muting or restoration progress</value></data>
+  <data name="CreateEditedCopy" xml:space="preserve"><value>Create edited copy</value></data>
+  <data name="CancelEditing" xml:space="preserve"><value>Cancel editing</value></data>
+  <data name="EditingCopyingAudio" xml:space="preserve"><value>Writing a new WAV with silence in the selected intervals...</value></data>
+  <data name="EditingEncodingMp3" xml:space="preserve"><value>Encoding the edited MP3. The original remains unchanged...</value></data>
+  <data name="EditingSavingCopy" xml:space="preserve"><value>Saving the filtered transcript with unchanged timestamps...</value></data>
+  <data name="EditingCancelling" xml:space="preserve"><value>Cancelling and removing the incomplete copy...</value></data>
+  <data name="EditingCancelled" xml:space="preserve"><value>Editing cancelled. The original recording is unchanged.</value></data>
+  <data name="EditedCopyCreated" xml:space="preserve"><value>Edited copy created: {0}. Update main points to summarize only its remaining transcript.</value></data>
+  <data name="EditNeedsFinalTranscript" xml:space="preserve"><value>Finish recording and final transcription, and wait for current processing before editing.</value></data>
+  <data name="SelectEditRows" xml:space="preserve"><value>Select the rows to silence in the audio and remove from the transcript. Use a speaker filter and Select all visible rows to select one voice's sections.</value></data>
+  <data name="EditSourceChanged" xml:space="preserve"><value>The recording or transcript changed since selection. Reopen the session and select the rows again.</value></data>
+  <data name="InvalidEditTimeline" xml:space="preserve"><value>The transcript contains times outside the saved recording. Recover or re-transcribe it before editing.</value></data>
+  <data name="EditOverlappingRow" xml:space="preserve"><value>Another transcript segment crosses a silence boundary. Clear the speaker filter if needed and include the overlapping row too; this whole-row editor cannot guess which words remain audible.</value></data>
+  <data name="EditInvalidFormat" xml:space="preserve"><value>Choose WAV or MP3 for the edited copy.</value></data>
+  <data name="EditLibraryInsideSource" xml:space="preserve"><value>The edited-copy saving folder cannot be inside the original session folder.</value></data>
+  <data name="EditDestinationExists" xml:space="preserve"><value>The edited-session destination already exists. No existing files were overwritten.</value></data>
+  <data name="RestoreMutedSections" xml:space="preserve"><value>Restore muted sections...</value></data>
+  <data name="RestoreOriginalLabel" xml:space="preserve"><value>Recovering from: {0}</value></data>
+  <data name="RestoreRangesLabel" xml:space="preserve"><value>Muted rows and audio intervals (select those to recover)</value></data>
+  <data name="RestoreSelectionHint" xml:space="preserve"><value>Play original previews the recovery audio without restoring it. Select rows individually or choose Restore all. Selected audio and text return at their original times; unselected rows stay muted.</value></data>
+  <data name="SelectAllRestore" xml:space="preserve"><value>Restore all (select all)</value></data>
+  <data name="ClearRestoreSelection" xml:space="preserve"><value>Clear selection</value></data>
+  <data name="CreateRestoredCopy" xml:space="preserve"><value>Create restored copy</value></data>
+  <data name="RestoredTitle" xml:space="preserve"><value>{0} (restored)</value></data>
+  <data name="RestoreStatistics" xml:space="preserve"><value>Selected intervals: {0} | Recover: {1}&#10;Recording duration: {2} (unchanged)</value></data>
+  <data name="RestoreSummaryPolicy" xml:space="preserve"><value>A new copy is created; the original and current edited session stay unchanged. Notes are kept, timestamps do not shift, and old AI summaries are not copied. Update main points to include the recovered transcript.</value></data>
+  <data name="RestoreRebuildWarning" xml:space="preserve"><value>Restoring these sections rebuilds this edited recording's transcript from its recovery source, excluding remaining muted sections. Later re-transcription or incompatible speaker edits may be replaced. The original recording and personal notes are unchanged.</value></data>
+  <data name="SelectRestoreRanges" xml:space="preserve"><value>Select at least one muted interval to recover, or choose Restore all.</value></data>
+  <data name="LocatingRestoreSource" xml:space="preserve"><value>Locating the original recording and recoverable muted sections...</value></data>
+  <data name="RestoringAudio" xml:space="preserve"><value>Recovering selected audio from the source. Other audio and timestamps stay unchanged...</value></data>
+  <data name="RestoredCopyCreated" xml:space="preserve"><value>Restored copy created: {0}. Update main points to include the recovered text.</value></data>
+  <data name="NoMutedSections" xml:space="preserve"><value>This session has no muted intervals left to restore.</value></data>
+  <data name="RestoreSourceMissing" xml:space="preserve"><value>The source recording is missing: {0}. Restore its session folder and any edited parent sessions to this recording library from the Recycle Bin or a backup. Audio cannot be reconstructed from silence alone.</value></data>
+  <data name="RestoreNeedsTranscript" xml:space="preserve"><value>Recovery needs a complete transcript for both this session and its source. Finish or resume their transcription first.</value></data>
+  <data name="RestoreHistoryChanged" xml:space="preserve"><value>The source, transcript, or edit history changed. Close this preview and reopen Restore muted sections.</value></data>
+  <data name="RestoreHistoryInvalid" xml:space="preserve"><value>The edit history contains invalid, ambiguous, or mismatched source references. No recordings were changed.</value></data>
+  <data name="RestoreOverlapSelection" xml:space="preserve"><value>A source transcript segment crosses a remaining silence boundary. Select the related intervals together, or use Restore all, to recover complete text without guessing words.</value></data>
+  <data name="ProviderDoubao" xml:space="preserve"><value>Doubao (Volcengine)</value></data>
+  <data name="ProviderQwen" xml:space="preserve"><value>Qwen (Alibaba Cloud)</value></data>
+  <data name="ProviderDeepSeek" xml:space="preserve"><value>DeepSeek (official API)</value></data>
+  <data name="InvalidCloudEndpoint" xml:space="preserve"><value>Enter an official HTTPS API base URL for the selected provider, without credentials, a query, or a fragment. Qwen also accepts official workspace-specific endpoints.</value></data>
+  <data name="InvalidCloudSettings" xml:space="preserve"><value>The saved cloud API configuration is invalid. Check this provider's settings.</value></data>
+  <data name="InvalidCloudModel" xml:space="preserve"><value>Use the exact API Model ID (up to 200 ASCII characters, without spaces), not a translated display name.</value></data>
+  <data name="ChooseCloudModel" xml:space="preserve"><value>Select or enter a text-chat Model ID.</value></data>
+  <data name="InvalidCloudKey" xml:space="preserve"><value>Enter a valid API key without spaces or line breaks (up to 8192 characters).</value></data>
+  <data name="CloudKeyRequired" xml:space="preserve"><value>Add an API key for this provider and endpoint in Settings first.</value></data>
+  <data name="CloudKeyProtectFailed" xml:space="preserve"><value>Windows could not encrypt the API key. The key was not saved as plain text.</value></data>
+  <data name="CloudKeyUnlockFailed" xml:space="preserve"><value>Windows could not unlock the saved API key. Re-enter it in Settings using your current Windows account.</value></data>
+  <data name="CloudApiSetupHint" xml:space="preserve"><value>Uses the provider's official, billable developer API, not its consumer chat login. Create an API key and activate a supported text-chat model in the provider console. Availability and charges depend on your account and region.</value></data>
+  <data name="OpenCloudConsole" xml:space="preserve"><value>API key / provider console</value></data>
+  <data name="OpenCloudModels" xml:space="preserve"><value>Official model catalog</value></data>
+  <data name="CloudApiEndpoint" xml:space="preserve"><value>Official API base URL</value></data>
+  <data name="QwenEndpointHint" xml:space="preserve"><value>The presets are Beijing and Singapore. The API key must match the endpoint's region. You may paste your official workspace URL, such as https://YOUR-WORKSPACE.cn-beijing.maas.aliyuncs.com/compatible-mode/v1/. Changing endpoints does not transfer keys or sharing consent.</value></data>
+  <data name="CloudModelId" xml:space="preserve"><value>Model ID / inference endpoint ID</value></data>
+  <data name="DoubaoModelHint" xml:space="preserve"><value>Paste an activated Doubao text Model ID or your ep-... inference endpoint ID from the Volcengine Ark console. Do not use Seedance/video/image models. Model access is account-specific; no deployment ID is guessed.</value></data>
+  <data name="CloudPresetHint" xml:space="preserve"><value>These are suggested API Model IDs, not a guarantee of account or regional access. You can type a newer supported text-chat ID from the official catalog. Use a non-streaming-compatible model.</value></data>
+  <data name="CloudApiKey" xml:space="preserve"><value>API key (blank keeps the configured key)</value></data>
+  <data name="CloudKeyConfigured" xml:space="preserve"><value>A protected key is configured for this endpoint. It is never displayed here.</value></data>
+  <data name="CloudKeyNotConfigured" xml:space="preserve"><value>No key is configured for this endpoint. Enter one above; changes apply when you save settings.</value></data>
+  <data name="ForgetCloudKey" xml:space="preserve"><value>Forget this endpoint's API key when saving settings</value></data>
+  <data name="CloudKeyPrivacy" xml:space="preserve"><value>Keys are encrypted with Windows DPAPI for your Windows account before being stored in local settings. They are bound to the provider and endpoint. You may need to re-enter them after changing PC/account. Cancel discards changes.</value></data>
+  <data name="CloudKeyEditConflict" xml:space="preserve"><value>Either enter a replacement key or choose Forget key, not both.</value></data>
+  <data name="DisableCloudThinking" xml:space="preserve"><value>Request fast, non-thinking summaries</value></data>
+  <data name="CloudThinkingHint" xml:space="preserve"><value>For models supporting a thinking toggle. Clear this for thinking-only or older models that reject the option; their API defaults then apply. Only final note text is saved, not reasoning fields.</value></data>
+  <data name="CloudApiConsent" xml:space="preserve"><value>Allow transcript text and previous AI main points to be sent to {0} at {1}. Provider policies and API charges apply. Audio and personal notes are excluded.</value></data>
+  <data name="CloudConsentMessage" xml:space="preserve"><value>Send transcript text and previous AI main points to {0}?&#10;&#10;Endpoint: {1}&#10;&#10;Audio and personal notes are not sent. This is an external cloud service; its privacy/retention policies and API charges apply. Approval is specific to this provider and endpoint.</value></data>
+  <data name="ReadCloudModels" xml:space="preserve"><value>Read available models</value></data>
+  <data name="TestCloudModel" xml:space="preserve"><value>Test sample (API charges may apply)</value></data>
+  <data name="CloudNoAutomaticRequests" xml:space="preserve"><value>Browsing these settings sends nothing. Selecting a new LLM runs a synthetic connection test before activation and may incur API charges. Recording summaries require sharing consent.</value></data>
+  <data name="CloudReadingModels" xml:space="preserve"><value>Reading available models from the selected official API...</value></data>
+  <data name="CloudNoModels" xml:space="preserve"><value>The API returned no available models. Check account activation, region, and permissions.</value></data>
+  <data name="CloudModelsFound" xml:space="preserve"><value>Available models returned by the API: {0}.</value></data>
+  <data name="CloudCatalogModelsOnly" xml:space="preserve"><value>This connection uses suggested IDs or an exact text-chat Model ID from the provider console, rather than a live model list. Open the official catalog in Settings; Doubao also accepts ep-... inference IDs.</value></data>
+  <data name="CloudTestingModel" xml:space="preserve"><value>Sending built-in sample text to the selected API. No recordings or personal notes are used; API charges may apply...</value></data>
+  <data name="CloudTestPassed" xml:space="preserve"><value>The sample request succeeded in {0:F1} seconds. No recording or personal notes were used.</value></data>
+  <data name="CloudCheckCancelled" xml:space="preserve"><value>API operation cancelled. A request already received by the provider may still incur charges.</value></data>
+  <data name="CloudProviderSetupRequired" xml:space="preserve"><value>Model selection saved. Configure this provider's API key and transcript-sharing consent in Settings before using summaries.</value></data>
+  <data name="CloudSummaryProgress" xml:space="preserve"><value>Summarizing transcript with the online LLM - batch {0} of {1}...</value></data>
+  <data name="CloudInvalidResponse" xml:space="preserve"><value>The cloud API returned an invalid response. Existing saved data is unchanged.</value></data>
+  <data name="CloudOutputTruncated" xml:space="preserve"><value>The model reached its output limit. The incomplete notes were not saved; try a non-thinking text model.</value></data>
+  <data name="CloudOutputIncomplete" xml:space="preserve"><value>The API did not return a complete, usable result within the supported size limit. Existing saved data is unchanged.</value></data>
+  <data name="CloudUnexpectedTools" xml:space="preserve"><value>The model requested a tool instead of returning notes. Tools are not executed; no new summary was saved.</value></data>
+  <data name="CloudResponseTooLarge" xml:space="preserve"><value>The cloud API response exceeded the 4 MiB safety limit.</value></data>
+  <data name="CloudHttpFailed" xml:space="preserve"><value>{0} returned HTTP {1}. {2}</value></data>
+  <data name="CloudAuthFailed" xml:space="preserve"><value>Check the API key and its region. Consumer chat logins are not API credentials.</value></data>
+  <data name="CloudAccessFailed" xml:space="preserve"><value>Check developer API access, model activation, and account permissions in the provider console.</value></data>
+  <data name="CloudQuotaFailed" xml:space="preserve"><value>Check balance, quota, and rate limits in the provider console. No automatic retry is made.</value></data>
+  <data name="CloudRequestTooLarge" xml:space="preserve"><value>The request exceeds the provider's size limit. Reduce the amount of input and check the provider's published limits. No automatic retry is made.</value></data>
+  <data name="CloudRequestRejected" xml:space="preserve"><value>Check the endpoint, exact text Model ID, model activation, and non-streaming support. Clear the non-thinking option if the model rejects it.</value></data>
+  <data name="CloudRedirectBlocked" xml:space="preserve"><value>Redirects are blocked so keys and request data cannot be forwarded to another endpoint.</value></data>
+  <data name="CloudServerFailed" xml:space="preserve"><value>The API request failed. Check the provider's service status before retrying.</value></data>
+  <data name="CloudConnectionFailed" xml:space="preserve"><value>Could not connect to {0} at {1}. Check network/proxy access to the official service. No other provider is used as a fallback.</value></data>
+  <data name="CloudRequestTimeout" xml:space="preserve"><value>The API request timed out. Existing saved notes are unchanged. No automatic retry is made; a received request may still incur charges.</value></data>
+  <data name="InvalidSpeechVocabulary" xml:space="preserve"><value>Use at most 200 short names or phrases, one per line. Each term must fit 160 UTF-8 bytes and contain no control characters. Do not paste whole paragraphs.</value></data>
+  <data name="CorrectionNeedsFinalTranscript" xml:space="preserve"><value>Stop recording and finish transcription before correcting text or re-transcribing selected rows.</value></data>
+  <data name="SelectCorrectionRows" xml:space="preserve"><value>Select one or more transcript rows first. Use Shift for a range or Ctrl for separate rows.</value></data>
+  <data name="InvalidCorrectionText" xml:space="preserve"><value>Each edited segment needs text, up to 16,000 characters. Blank segments are not saved; use the existing mute/edit-copy action to exclude unwanted speech.</value></data>
+  <data name="CorrectionSaveFailed" xml:space="preserve"><value>The transcript update failed and its text export could not be restored. Reopen the session and inspect transcript.json before exporting text.</value></data>
+  <data name="ProtectTranscriptCorrections" xml:space="preserve"><value>This transcript contains reviewed corrections. A full model/language regeneration would overwrite them. Use Re-transcribe selection instead; select all visible rows if you want to review the entire transcript.</value></data>
+  <data name="SpeechHintsLimited" xml:space="preserve"><value>Using {0} of {1} saved vocabulary terms in the small recognition hint window. Most recently listed terms take priority; all terms remain saved.</value></data>
+  <data name="SelectionNoSpeech" xml:space="preserve"><value>No speech text was recognized in the selected intervals. Existing text was kept. Try another downloaded speech model, choose the correct language, or edit the text manually.</value></data>
+  <data name="CorrectTranscriptTitle" xml:space="preserve"><value>Review and correct selected transcript</value></data>
+  <data name="CorrectTranscriptHint" xml:space="preserve"><value>Double-click the corrected-text cells to edit. Displayed rows may contain several timed segments; each is re-transcribed separately to preserve every timestamp and speaker. Review before saving. Audio and unselected text are never changed.</value></data>
+  <data name="RetranscribeSelection" xml:space="preserve"><value>Re-transcribe selection</value></data>
+  <data name="SelectionRowNoSpeech" xml:space="preserve"><value>No speech recognized here; the existing draft text was kept.</value></data>
+  <data name="OriginalTranscriptText" xml:space="preserve"><value>Saved text</value></data>
+  <data name="CorrectedTranscriptText" xml:space="preserve"><value>Corrected text</value></data>
+  <data name="SpeechVocabularyTitle" xml:space="preserve"><value>Remembered vocabulary (optional)</value></data>
+  <data name="UseSpeechVocabulary" xml:space="preserve"><value>Use local vocabulary hints for speech recognition</value></data>
+  <data name="RememberSelectedWords" xml:space="preserve"><value>Add highlighted words to vocabulary</value></data>
+  <data name="SaveSpeechVocabulary" xml:space="preserve"><value>Save vocabulary separately</value></data>
+  <data name="CorrectionVocabularyHint" xml:space="preserve"><value>Highlight a short name or phrase in an edited cell, then add and save it here. Vocabulary is saved separately from transcript edits. Re-transcription can try these hints before saving them. This guides recognition; it does not retrain Whisper or replace words automatically.</value></data>
+  <data name="SaveTranscriptChanges" xml:space="preserve"><value>Save transcript changes</value></data>
+  <data name="SelectionRecognitionStarting" xml:space="preserve"><value>Preparing local re-transcription. No audio is uploaded or modified...</value></data>
+  <data name="SelectionRecognitionProgress" xml:space="preserve"><value>Re-transcribing selected speech: {0} of {1} segments completed. Model: {2} {3}</value></data>
+  <data name="SelectionRecognitionReady" xml:space="preserve"><value>Preview ready; nothing has been saved. Review the editable text, then save. Intervals with no recognized speech (kept unchanged): {0}.</value></data>
+  <data name="SelectionRecognitionCancelled" xml:space="preserve"><value>Operation cancelled. The saved transcript and audio were not changed.</value></data>
+  <data name="SelectVocabularyWords" xml:space="preserve"><value>Highlight a short word, name, or phrase in a corrected-text cell first.</value></data>
+  <data name="SpeechVocabularySaved" xml:space="preserve"><value>Vocabulary preferences saved locally for future transcription. This does not rewrite the current transcript or train the model.</value></data>
+  <data name="SpeechVocabularyStatus" xml:space="preserve"><value>Terms fitting one recognition hint window: {0}/{1}. Most recently listed terms take priority. Hints are not guaranteed corrections.</value></data>
+  <data name="EditTranscriptText" xml:space="preserve"><value>Edit text</value></data>
+  <data name="CorrectSelectionHint" xml:space="preserve"><value>Edit selected text, or right-click to re-transcribe selected audio. Shift selects a range; Ctrl selects separate rows. Saved timestamps and speakers are preserved.</value></data>
+  <data name="TranscriptCorrectionsSaved" xml:space="preserve"><value>Transcript changes saved. Audio, timestamps, speakers, and personal notes were preserved. Update main points to regenerate any outdated summary.</value></data>
+  <data name="SpeechVocabularyHint" xml:space="preserve"><value>Enter preferred names, technical terms, or spellings, one short phrase per line (up to 200). These stay local and guide live, final, and selected re-transcription. A conservative 200-byte prompt window uses the most recently listed terms that fit. Keep the list focused; too many hints reduce coverage and can cause incorrect words. This is not model training or automatic text replacement.</value></data>
+  <data name="AppearanceSection" xml:space="preserve"><value>Appearance and language</value></data>
+  <data name="ThemeLabel" xml:space="preserve"><value>App theme</value></data>
+  <data name="ThemeLight" xml:space="preserve"><value>Light (day)</value></data>
+  <data name="ThemeDark" xml:space="preserve"><value>Dark</value></data>
+  <data name="ThemeSystem" xml:space="preserve"><value>Follow system</value></data>
+  <data name="ThemeHint" xml:space="preserve"><value>Applies after saving settings. Follow system responds to the Windows app theme without changing Windows settings. Existing installations keep Light until you choose another theme.</value></data>
+  <data name="InvalidTheme" xml:space="preserve"><value>Choose Light, Dark, or Follow system.</value></data>
+  <data name="SearchTranscript" xml:space="preserve"><value>Search transcript</value></data>
+  <data name="SearchHint" xml:space="preserve"><value>Search within the selected speakers. Exact mode finds literal text, ignoring letter case. Optionally show only matching rows in the transcript. Enter / Shift+Enter in the search field moves next / previous. Closing the window keeps the query, filter, and highlights. Open Help &amp; About from the top-left logo menu to view saved shortcuts, or Settings &gt; Keyboard shortcuts to change them.</value></data>
+  <data name="FuzzySearch" xml:space="preserve"><value>Fuzzy</value></data>
+  <data name="FuzzySearchHint" xml:space="preserve"><value>Local typo-tolerant search, not semantic or pinyin search. Allows one inserted, missing, changed, or transposed character for 3-7 characters; up to two edits for longer text. One- or two-character queries stay exact.</value></data>
+  <data name="SearchPrevious" xml:space="preserve"><value>Previous match</value></data>
+  <data name="SearchNext" xml:space="preserve"><value>Next match</value></data>
+  <data name="SearchClear" xml:space="preserve"><value>Clear search</value></data>
+  <data name="SearchMatches" xml:space="preserve"><value>{0} / {1}</value></data>
+  <data name="SearchNoMatches" xml:space="preserve"><value>No matches</value></data>
+  <data name="SearchInProgress" xml:space="preserve"><value>Searching...</value></data>
+  <data name="SearchQueryTooLong" xml:space="preserve"><value>Search for up to 128 characters at a time.</value></data>
+  <data name="SpeakerColorHint" xml:space="preserve"><value>Double-click a Speaker cell to color all rows with that label, even while AI is processing. All Not labeled rows share one color in this recording; coloring does not assign a speaker. Selected rows use the selection background, while the small swatch keeps the speaker color.</value></data>
+  <data name="ButtonsWindows" xml:space="preserve"><value>Windows / Fluent</value></data>
+  <data name="ButtonsOffice" xml:space="preserve"><value>Office-like flat</value></data>
+  <data name="ButtonsShadow" xml:space="preserve"><value>Soft shadow</value></data>
+  <data name="ButtonsOutline" xml:space="preserve"><value>Solid outline</value></data>
+  <data name="InvalidButtonStyle" xml:space="preserve"><value>Choose a supported button appearance.</value></data>
+  <data name="InvalidAppearanceColors" xml:space="preserve"><value>The appearance color settings are invalid.</value></data>
+  <data name="InvalidHexColor" xml:space="preserve"><value>Enter a color as #RRGGBB, for example #294B63.</value></data>
+  <data name="InvalidHistoryTabPosition" xml:space="preserve"><value>The saved recording-list tab position is invalid.</value></data>
+  <data name="ChooseLabeledSpeaker" xml:space="preserve"><value>Select an existing labeled speaker.</value></data>
+  <data name="ColorPickerHint" xml:space="preserve"><value>Choose a swatch or enter an exact RGB color. The preview shows the automatically chosen readable text color.</value></data>
+  <data name="HexColor" xml:space="preserve"><value>RGB color</value></data>
+  <data name="ColorPreviewText" xml:space="preserve"><value>AaBb 0123 - Transcript preview</value></data>
+  <data name="NeutralSpeakerColor" xml:space="preserve"><value>Use neutral color</value></data>
+  <data name="UseColor" xml:space="preserve"><value>Use color</value></data>
+  <data name="AutomaticColorContrast" xml:space="preserve"><value>Text automatically uses black or white for readable contrast.</value></data>
+  <data name="SettingsCategories" xml:space="preserve"><value>Settings categories</value></data>
+  <data name="SettingsAppearanceCategory" xml:space="preserve"><value>Appearance</value></data>
+  <data name="SettingsRecordingCategory" xml:space="preserve"><value>Recording</value></data>
+  <data name="SettingsSpeechCategory" xml:space="preserve"><value>Transcription</value></data>
+  <data name="SettingsSummaryCategory" xml:space="preserve"><value>AI summaries</value></data>
+  <data name="ButtonAppearance" xml:space="preserve"><value>Button appearance</value></data>
+  <data name="RainbowRecordingIndicator" xml:space="preserve"><value>Rainbow taskbar recording heart</value></data>
+  <data name="RainbowRecordingIndicatorHint" xml:space="preserve"><value>Cycle through rainbow colors instead of red while recording. The heart grows and lifts with a double beat, fading to transparent at rest; paused recording stays amber. Animation follows Windows preferences.</value></data>
+  <data name="ButtonAppearanceHint" xml:space="preserve"><value>Preview the four styles below. Changes apply after Save; they do not change recording or AI behavior.</value></data>
+  <data name="PreviewPrimaryButton" xml:space="preserve"><value>Primary</value></data>
+  <data name="PreviewButton" xml:space="preserve"><value>Button</value></data>
+  <data name="PreviewDisabledButton" xml:space="preserve"><value>Disabled</value></data>
+  <data name="TranscriptHighlightColors" xml:space="preserve"><value>Transcript highlight colors</value></data>
+  <data name="HighlightColorsHint" xml:space="preserve"><value>Choose separate colors for light and dark mode. Selection text uses readable black or white. Search shades adjust when needed to preserve text contrast. Windows high contrast takes priority.</value></data>
+  <data name="SelectionColor" xml:space="preserve"><value>Selected rows</value></data>
+  <data name="SearchMatchColor" xml:space="preserve"><value>Search matches</value></data>
+  <data name="ActiveMatchColor" xml:space="preserve"><value>Current match / text selection</value></data>
+  <data name="ResetHighlightColors" xml:space="preserve"><value>Restore color defaults</value></data>
+  <data name="ComparisonColorsTitle" xml:space="preserve"><value>Transcript comparison colors</value></data>
+  <data name="ComparisonColorsHint" xml:space="preserve"><value>Compare saved text with corrected or online results. Color entire rows: different text is pink, identical text is green, and a missing usable result is gray by default. Customize each theme below. Text contrast adjusts automatically; colors do not indicate accuracy or confidence.</value></data>
+  <data name="ComparisonDifferent" xml:space="preserve"><value>Different</value></data>
+  <data name="ComparisonMatching" xml:space="preserve"><value>Matching</value></data>
+  <data name="ComparisonUnclear" xml:space="preserve"><value>Unclear</value></data>
+  <data name="ComparisonUnclearHint" xml:space="preserve"><value>One or both sides did not return a usable transcription. This is not a confidence score. Existing editable text is retained.</value></data>
+  <data name="SearchButton" xml:space="preserve"><value>Search...</value></data>
+  <data name="SearchWindowHint" xml:space="preserve"><value>Open the small search window for exact or fuzzy search, with optional matching-row filtering.</value></data>
+  <data name="SetSpeakerColor" xml:space="preserve"><value>Set speaker color...</value></data>
+  <data name="SpeakerColorTitle" xml:space="preserve"><value>Color for {0}</value></data>
+  <data name="SpeakerColorSaved" xml:space="preserve"><value>Speaker color saved for this recording. Audio, wording, timestamps, and summaries are unchanged.</value></data>
+  <data name="InvalidAudioOutput" xml:space="preserve"><value>Choose 44.1 or 48 kHz, and mono or stereo audio.</value></data>
+  <data name="OutputCannotReplaceSafety" xml:space="preserve"><value>Export must not overwrite the original safety WAV.</value></data>
+  <data name="ExportConfiguredAudio" xml:space="preserve"><value>Export audio</value></data>
+  <data name="ExportingConfiguredAudio" xml:space="preserve"><value>Saving audio in this recording's output format. The safety WAV is retained.</value></data>
+  <data name="NameNewConversation" xml:space="preserve"><value>Name new recording (optional)</value></data>
+  <data name="SavedAudioProfile" xml:space="preserve"><value>{0} | {1:0.#} kHz / {2} | safety audio {3:N1} MB</value></data>
+  <data name="AudioMono" xml:space="preserve"><value>Mono</value></data>
+  <data name="AudioStereo" xml:space="preserve"><value>Stereo</value></data>
+  <data name="AudioSampleRate" xml:space="preserve"><value>Sample rate (Hz)</value></data>
+  <data name="AudioChannels" xml:space="preserve"><value>Channels</value></data>
+  <data name="AudioOutputHint" xml:space="preserve"><value>Applies to new recordings. Recording, transcription, and edits always use a 48 kHz stereo PCM16 safety WAV. After Stop, your chosen WAV or MP3 is generated without changing that safety file. Non-default WAV settings produce audio-output.wav; MP3 produces audio.mp3. MP3 uses 192 kbps.</value></data>
+  <data name="CorrectSpeaker" xml:space="preserve"><value>Correct speaker...</value></data>
+  <data name="CorrectSpeakerHint" xml:space="preserve"><value>Assign the selected rows to an existing speaker, or merge every segment of the first selected speaker into that speaker. Audio, text, and timestamps stay unchanged. Existing summaries become outdated; update them separately. This does not train the recognition model.</value></data>
+  <data name="AssignToSpeaker" xml:space="preserve"><value>Assign to existing speaker</value></data>
+  <data name="MergeWholeSpeaker" xml:space="preserve"><value>Merge all of {0} ({1} segments), not just the selection</value></data>
+  <data name="ReassignSelectedSegments" xml:space="preserve"><value>Selected saved segments: {0}</value></data>
+  <data name="SpeakerAlreadyAssigned" xml:space="preserve"><value>These segments are already assigned to the selected speaker.</value></data>
+  <data name="SpeakerAssignmentSaved" xml:space="preserve"><value>Speaker assignment saved. Audio, text, and timestamps are unchanged. Update main points to reflect the correction.</value></data>
+  <data name="DeselectAllSpeakers" xml:space="preserve"><value>Deselect all</value></data>
+  <data name="OnlyMatchingRows" xml:space="preserve"><value>Show only matching transcript rows</value></data>
+  <data name="OnlyMatchingRowsHint" xml:space="preserve"><value>Filters the main transcript together with the speaker filter. Copy filtered text copies only displayed rows. Audio, saved transcript, and AI summary input are unchanged.</value></data>
+  <data name="SearchFailed" xml:space="preserve"><value>Search failed. Correct the query or try again.</value></data>
+  <data name="SettingsShortcutsCategory" xml:space="preserve"><value>Keyboard shortcuts</value></data>
+  <data name="ApplicationMenu" xml:space="preserve"><value>AudioMemo menu</value></data>
+  <data name="HelpAndAbout" xml:space="preserve"><value>Help &amp; About</value></data>
+  <data name="PinRecordingList" xml:space="preserve"><value>Pin recording list</value></data>
+  <data name="HideRecordingList" xml:space="preserve"><value>Hide recording list</value></data>
+  <data name="ShowRecordingList" xml:space="preserve"><value>Show recording list</value></data>
+  <data name="HideMainPointsMenu" xml:space="preserve"><value>Hide main points</value></data>
+  <data name="HideMyNotesMenu" xml:space="preserve"><value>Hide my notes</value></data>
+  <data name="HelpAndShortcuts" xml:space="preserve"><value>Keyboard shortcuts</value></data>
+  <data name="AboutVersion" xml:space="preserve"><value>AudioMemo {0}</value></data>
+  <data name="AboutAudioMemo" xml:space="preserve"><value>Local-first audio recording, transcription, and notes for Windows.</value></data>
+  <data name="ShortcutCaptureHint" xml:space="preserve"><value>Click a shortcut field and press your key combination. Backspace / Delete clears it to disable the shortcut; Tab moves to the next field. Use Ctrl or Alt with a key, or a function key. Text-editing and Windows shortcuts are protected. Save applies the changes; Cancel leaves current shortcuts unchanged.</value></data>
+  <data name="ShortcutHelpHint" xml:space="preserve"><value>This list shows your saved shortcuts. Change them in Settings &gt; Keyboard shortcuts, opened from the top-left AudioMemo logo menu. Main-window shortcuts also work from the search popup. Transcript navigation applies only inside the transcript, so notes keep normal text navigation. Ctrl+C/V/X/A/Z/Y remain normal editing commands. Enter / Shift+Enter in the search field moves next / previous.</value></data>
+  <data name="ShortcutChangesPending" xml:space="preserve"><value>Help previews your choices. Save settings to apply them.</value></data>
+  <data name="ShortcutTranscriptScope" xml:space="preserve"><value>Transcript (clear also works in search)</value></data>
+  <data name="ShortcutWindowScope" xml:space="preserve"><value>Main window / search popup</value></data>
+  <data name="ShortcutUnassigned" xml:space="preserve"><value>Disabled</value></data>
+  <data name="ResetShortcuts" xml:space="preserve"><value>Restore default shortcuts</value></data>
+  <data name="InvalidShortcuts" xml:space="preserve"><value>The saved keyboard shortcut settings are invalid.</value></data>
+  <data name="InvalidShortcutGesture" xml:space="preserve"><value>Use Ctrl or Alt with a supported key, or a function key (F1-F24). Leave the field empty to disable it.</value></data>
+  <data name="ShortcutReserved" xml:space="preserve"><value>{0} is reserved for text editing, transcript navigation, or Windows.</value></data>
+  <data name="ShortcutConflict" xml:space="preserve"><value>{0} is assigned to both "{1}" and "{2}". Choose a different shortcut or disable one.</value></data>
+  <data name="StartPauseRecording" xml:space="preserve"><value>Start / continue selected / pause / resume recording</value></data>
+  <data name="ToggleHistory" xml:space="preserve"><value>Show / hide recording list</value></data>
+  <data name="RefreshAudioDevices" xml:space="preserve"><value>Refresh audio devices</value></data>
+  <data name="RefreshSummaryModels" xml:space="preserve"><value>Refresh summary models</value></data>
+  <data name="ReplayPauseResume" xml:space="preserve"><value>Pause / resume replay</value></data>
+  <data name="TranscriptBeginning" xml:space="preserve"><value>Transcript beginning</value></data>
+  <data name="TranscriptBottom" xml:space="preserve"><value>Transcript bottom</value></data>
+  <data name="TranscriptBottomHint" xml:space="preserve"><value>Go to the bottom of the transcript and follow incoming text.</value></data>
+  <data name="MoveTranscriptNavigation" xml:space="preserve"><value>Move transcript navigation toolbar</value></data>
+  <data name="MoveTranscriptNavigationHint" xml:space="preserve"><value>Drag this grip to move the toolbar within Transcript. Its position is saved. Keyboard: arrow keys to move, Home to reset to the lower-right, Escape to cancel a drag.</value></data>
+  <data name="InvalidTranscriptNavigationPosition" xml:space="preserve"><value>The saved transcript navigation toolbar position is invalid.</value></data>
+  <data name="TranscriptPageUp" xml:space="preserve"><value>Transcript page up</value></data>
+  <data name="TranscriptPageDown" xml:space="preserve"><value>Transcript page down</value></data>
+  <data name="DisplaySizingFailed" xml:space="preserve"><value>Automatic window fitting is unavailable: {0} You can still resize or move the window manually.</value></data>
+  <data name="ReadingPane" xml:space="preserve"><value>View</value></data>
+  <data name="ShortcutNeedsCorrection" xml:space="preserve"><value>Fix the error on the Keyboard shortcuts page before saving.</value></data>
+  <data name="FilePublishFailed" xml:space="preserve"><value>Could not save "{0}".&#10;File: {1}&#10;{2}</value></data>
+  <data name="WarningRecordedAt" xml:space="preserve"><value>Last warning at {0:HH:mm:ss}</value></data>
+  <data name="OperationErrorDetails" xml:space="preserve"><value>Error during "{0}": {1}</value></data>
+  <data name="RecordingAutomation" xml:space="preserve"><value>Automatic recording actions</value></data>
+  <data name="AutoStopOnSilence" xml:space="preserve"><value>Stop recording automatically when all enabled inputs are silent</value></data>
+  <data name="SilenceTimeout" xml:space="preserve"><value>Silence timeout (seconds)</value></data>
+  <data name="SilenceTimeoutHint" xml:space="preserve"><value>Default: 300 seconds (5 minutes). Enter 1–86400 seconds. Uncheck for manual stopping only. Sound on either enabled source resets the timer; pausing or applying devices restarts it. Silence means signals below -60 dBFS after input gain, not speech detection; background noise or music can keep recording active. Audio is saved normally.</value></data>
+  <data name="InvalidSilenceTimeout" xml:space="preserve"><value>Enter a whole-number silence timeout from 1 to 86400 seconds.</value></data>
+  <data name="RecordingStoppedOnSilence" xml:space="preserve"><value>Recording stopped automatically after {0} seconds of silence. Your recorded audio was saved.</value></data>
+  <data name="SpeakersOnStopHint" xml:space="preserve"><value>Runs after automatic or live transcription finishes. Uncheck to skip automatic speaker analysis; the transcript table and existing labels are kept, and Identify speakers remains available manually. Speaker models and count are under Speech settings.</value></data>
+  <data name="ProcessingWorking" xml:space="preserve"><value>Processing recording...</value></data>
+  <data name="ProcessingComplete" xml:space="preserve"><value>Processing complete</value></data>
+  <data name="ProcessingWarning" xml:space="preserve"><value>Processing finished with warnings</value></data>
+  <data name="ProcessingFailed" xml:space="preserve"><value>Processing failed — see the warning</value></data>
+  <data name="ProcessingCancelled" xml:space="preserve"><value>Processing canceled</value></data>
+  <data name="ProcessingProgress" xml:space="preserve"><value>Recorded-data processing progress</value></data>
+  <data name="ProcessingTiming" xml:space="preserve"><value>Processing elapsed time and estimated step finish</value></data>
+  <data name="ProcessingElapsed" xml:space="preserve"><value>Elapsed {0}</value></data>
+  <data name="ProcessingEstimating" xml:space="preserve"><value>Elapsed {0} | Estimating...</value></data>
+  <data name="ProcessingStepEstimate" xml:space="preserve"><value>Elapsed {0} | Step ETA ~{1}</value></data>
+  <data name="ProcessingStepRemaining" xml:space="preserve"><value>Estimated time remaining in this step: {0}.</value></data>
+  <data name="ProcessingTimingHint" xml:space="preserve"><value>Elapsed time covers this processing run. Step ETA estimates the current step from measured progress, not the entire job; later steps may take additional time. Model setup, speaker segmentation/grouping and individual AI requests may not expose enough progress for an estimate. Estimates reset between steps and are withdrawn if progress stalls. Re-transcription pauses do not count toward elapsed time.</value></data>
+  <data name="SpeakerFeaturesProgress" xml:space="preserve"><value>Speaker analysis: voice-feature extraction {0:P0} (this stage only)...</value></data>
+  <data name="SpeakerFinalizing" xml:space="preserve"><value>Identifying speakers: grouping voices and applying labels...</value></data>
+  <data name="RecordingLanguage" xml:space="preserve"><value>Recording language</value></data>
+  <data name="SpeechLanguageAutomaticShort" xml:space="preserve"><value>Auto-detect</value></data>
+  <data name="SpeechLanguageChineseShort" xml:space="preserve"><value>Chinese (Simplified)</value></data>
+  <data name="SpeechLanguageEnglishShort" xml:space="preserve"><value>English</value></data>
+  <data name="SpeechLanguageCurrent" xml:space="preserve"><value>Current: {0}</value></data>
+  <data name="MainSpeechLanguageHint" xml:space="preserve"><value>Language for speech recognition, not the interface. Saved immediately and shared with Settings &gt; Speech. Applies to the next recording or transcription; locked during recording and processing.</value></data>
+  <data name="RecordingLanguageSaved" xml:space="preserve"><value>Recording language: {0}. New recordings and transcription jobs use this selection.</value></data>
+  <data name="ContinueRecording" xml:space="preserve"><value>Continue recording</value></data>
+  <data name="ConfirmContinueRecording" xml:space="preserve"><value>Continue recording into "{0}"?&#10;&#10;Audio file: {1}&#10;&#10;New audio will be appended to this recording, not saved as a new conversation. Existing audio is kept. Choose No if this was accidental; use New Recording to start a separate recording.</value></data>
+  <data name="ContinueRecordingCancelled" xml:space="preserve"><value>Continuation cancelled. The existing recording is unchanged.</value></data>
+  <data name="RecordingContinued" xml:space="preserve"><value>Continuing the selected recording. New audio is appended at its end; the time between recordings is excluded.</value></data>
+  <data name="ContinueSessionChanged" xml:space="preserve"><value>The saved session has changed or has invalid continuation metadata. Select it again before continuing.</value></data>
+  <data name="ContinueNeedsRecovery" xml:space="preserve"><value>The saved audio length or WAV header does not match the session. Recover the safety WAV before continuing; the existing audio was not overwritten.</value></data>
+  <data name="ContinueTranscriptChanged" xml:space="preserve"><value>The saved transcript no longer matches the protected part of the continued recording. Existing text has been preserved; restore the matching transcript before retrying.</value></data>
+  <data name="AudioSourceDisabled" xml:space="preserve"><value>Disabled</value></data>
+  <data name="ConfirmDeviceChange" xml:space="preserve"><value>Apply these audio sources to the current recording?&#10;&#10;Microphone: {0}&#10;Playback: {1}&#10;&#10;Choose No to keep the current sources. If paused, the new sources will be used when you resume.</value></data>
+  <data name="DeviceChangeCancelled" xml:space="preserve"><value>Device change cancelled. The current recording sources are unchanged.</value></data>
+  <data name="Close" xml:space="preserve"><value>Close</value></data>
+  <data name="ImportAudio" xml:space="preserve"><value>Import audio/video</value></data>
+  <data name="ImportAudioHint" xml:space="preserve"><value>Imports audio, or extracts a video's audio locally, into a separate 48 kHz stereo WAV. The original file is unchanged. Nothing is uploaded during import.</value></data>
+  <data name="ImportAudioFilter" xml:space="preserve"><value>Audio and video files|*.wav;*.mp3;*.m4a;*.aac;*.wma;*.flac;*.mp4;*.m4v;*.mov;*.mkv;*.webm;*.avi;*.wmv;*.asf;*.mpg;*.mpeg;*.ts;*.m2ts;*.mts;*.vob;*.3gp;*.3g2;*.ogv|Audio files|*.wav;*.mp3;*.m4a;*.aac;*.wma;*.flac|Video files|*.mp4;*.m4v;*.mov;*.mkv;*.webm;*.avi;*.wmv;*.asf;*.mpg;*.mpeg;*.ts;*.m2ts;*.mts;*.vob;*.3gp;*.3g2;*.ogv|All files|*.*</value></data>
+  <data name="ImportFileMissing" xml:space="preserve"><value>Select an existing local audio or video file.</value></data>
+  <data name="VideoAudioTrack" xml:space="preserve"><value>Audio track</value></data>
+  <data name="VideoTrackHint" xml:space="preserve"><value>Only the selected track is imported. Surround audio is mixed down to stereo. Video frames, subtitles, and other audio tracks are not analyzed.</value></data>
+  <data name="VideoImportSelected" xml:space="preserve"><value>Import selected track</value></data>
+  <data name="VideoInspecting" xml:space="preserve"><value>Reading audio tracks in "{0}"...</value></data>
+  <data name="VideoChooseTrack" xml:space="preserve"><value>This video has multiple audio tracks. Select the track to import, then confirm.</value></data>
+  <data name="VideoTrackLabel" xml:space="preserve"><value>{0}. {1} | {2} | {3} channels{4}</value></data>
+  <data name="VideoUnknownLanguage" xml:space="preserve"><value>Unspecified language</value></data>
+  <data name="VideoDefaultTrack" xml:space="preserve"><value> (default)</value></data>
+  <data name="VideoHasNoAudio" xml:space="preserve"><value>This video contains no audio track. No recording was imported.</value></data>
+  <data name="VideoProbeInvalid" xml:space="preserve"><value>The video's audio information is invalid or unsupported. The original file is unchanged.</value></data>
+  <data name="VideoSourceChanged" xml:space="preserve"><value>The source file changed after its tracks were read. Close this dialog and select the video again.</value></data>
+  <data name="VideoAudioIncomplete" xml:space="preserve"><value>The video audio could not be decoded completely. No partial recording was imported; the original file is unchanged.</value></data>
+  <data name="VideoToolsMissing" xml:space="preserve"><value>The bundled video tools are missing. Restore support\Runtime\FFmpeg from a complete AudioMemo release; no separate FFmpeg installation is needed.</value></data>
+  <data name="VideoImportFailed" xml:space="preserve"><value>Video audio import failed (exit code {0}). The file may be damaged, protected, or use an unsupported codec. The original file is unchanged.&#10;&#10;{1}</value></data>
+  <data name="ImportTruncatedWave" xml:space="preserve"><value>The WAV file ends before its declared audio/chunk length. Repair or recover the source first. No partial recording was imported and the original file is unchanged.</value></data>
+  <data name="ImportChannelsUnsupported" xml:space="preserve"><value>Import supports mono or stereo audio. Convert surround/multichannel audio to mono or stereo first; no channels have been discarded.</value></data>
+  <data name="ImportedRecording" xml:space="preserve"><value>Imported recording</value></data>
+  <data name="AudioImported" xml:space="preserve"><value>Audio imported. The original file is unchanged. Selecting another recording only loads its saved results.</value></data>
+  <data name="ConfirmImportAnalysis" xml:space="preserve"><value>Analyze "{0}" now?&#10;&#10;Yes runs local speech recognition, plus automatic speaker analysis and main points if enabled in your settings. Online summaries use your existing summary-sharing permission. No keeps only the imported audio; you can transcribe it later.&#10;&#10;Selecting another recording does not start analysis.</value></data>
+  <data name="ImportModelRequired" xml:space="preserve"><value>The audio was imported, but your selected speech model is not installed. Choose an available model in Settings &gt; Speech, then use Transcribe. No model was downloaded.</value></data>
+  <data name="ResizeHistory" xml:space="preserve"><value>Resize recording list</value></data>
+  <data name="ResizeHistoryHint" xml:space="preserve"><value>Drag this edge to change the list width in pinned or floating mode. Keyboard: Left/Right to resize, Home to reset, Escape to cancel a drag.</value></data>
+  <data name="InvalidHistoryWidth" xml:space="preserve"><value>The recording-list width must be between 180 and 640 display-independent pixels.</value></data>
+  <data name="OnlineTranscription" xml:space="preserve"><value>Online comparison</value></data>
+  <data name="OnlineSelectionHint" xml:space="preserve"><value>Send only the selected audio to Qwen ASR or OpenAI after approval, and compare it with the local transcript. Saved text is unchanged until you apply and save the result.</value></data>
+  <data name="OnlineSpeechSetup" xml:space="preserve"><value>Online speech recognition and upload approval</value></data>
+  <data name="OnlineSpeechSetupHint" xml:space="preserve"><value>These are audio-capable models, separate from the main-points model. Each selected transcript segment is sent separately to preserve row timing; gaps and unselected segments are excluded. Existing speaker labels are retained.</value></data>
+  <data name="OnlineSpeechModel" xml:space="preserve"><value>Online speech model</value></data>
+  <data name="OnlineModelLimits" xml:space="preserve"><value>Official model limits</value></data>
+  <data name="OnlineEndpoint" xml:space="preserve"><value>Official API endpoint and region</value></data>
+  <data name="OnlineApiKey" xml:space="preserve"><value>Online speech API key</value></data>
+  <data name="OnlineKeyHint" xml:space="preserve"><value>Enter a provider API key. Save connection protects it for this Windows user and exact endpoint. Without saving, it is used only in this popup. The app can reuse an existing Qwen key only for the same endpoint; summary consent never authorizes audio uploads.</value></data>
+  <data name="SaveOnlineConnection" xml:space="preserve"><value>Save connection</value></data>
+  <data name="OnlineSettingsSaved" xml:space="preserve"><value>Online speech connection saved. Keys are protected locally; no audio was sent.</value></data>
+  <data name="OnlineSettingsUnavailable" xml:space="preserve"><value>Connection settings cannot be saved from this window.</value></data>
+  <data name="OnlineSpeechKeyRequired" xml:space="preserve"><value>Enter an API key for the selected online speech provider and endpoint.</value></data>
+  <data name="OnlineKeyAvailable" xml:space="preserve"><value>A protected key is available for this exact endpoint (including a matching Qwen summary key). Audio still requires approval for every upload.</value></data>
+  <data name="InvalidOnlineSpeechModel" xml:space="preserve"><value>Choose Qwen ASR (qwen3-asr-flash) or OpenAI (gpt-transcribe). Text-only summary models cannot transcribe audio.</value></data>
+  <data name="InvalidOnlineSpeechEndpoint" xml:space="preserve"><value>Use the official OpenAI /v1 endpoint, or Qwen's Beijing/Singapore /compatible-mode/v1 endpoint. Qwen workspace domains are supported in those two regions only.</value></data>
+  <data name="OnlineDurationLimit" xml:space="preserve"><value>duration limit {0} seconds</value></data>
+  <data name="OnlineNoDurationLimit" xml:space="preserve"><value>no separate published duration limit</value></data>
+  <data name="OnlineSelectionLimits" xml:space="preserve"><value>{0}: selected {1:N2} seconds; estimated total upload {2:N2} MB. Per request: {3}, {4:N0} MB input limit. Requests: {5}.</value></data>
+  <data name="OnlineBase64LimitHint" xml:space="preserve"><value>Qwen: 10 MB includes Base64 expansion; published duration limit is 5 minutes. With 16 kHz mono WAV, the size limit is reached first (about 234 seconds). AudioMemo reserves request overhead. Account quotas and rates vary. Limits checked 2026-10-20; see official model limits.</value></data>
+  <data name="OnlineFileLimitHint" xml:space="preserve"><value>OpenAI: 25 MB per file. AudioMemo sends 16 kHz mono WAV and reserves request overhead (about 13 minutes per part). Account quotas and rates vary. Limits checked 2026-10-20; see official model limits.</value></data>
+  <data name="OnlineSelectionTooLarge" xml:space="preserve"><value>This selection exceeds the selected model's input limit. Select fewer rows, choose a model with a larger limit, or explicitly enable splitting into multiple requests. Nothing is cropped or uploaded automatically.</value></data>
+  <data name="OnlineSpeechRequestRejected" xml:space="preserve"><value>Check the speech model, official endpoint and region, and speech API access in the provider console. Text-summary models cannot transcribe audio.</value></data>
+  <data name="SplitOnlineSelection" xml:space="preserve"><value>Allow splitting oversized selections into multiple paid requests</value></data>
+  <data name="ReduceOnlineSelection" xml:space="preserve"><value>Return to select fewer rows</value></data>
+  <data name="ConfirmReturnToSelection" xml:space="preserve"><value>Return to the transcript without saving your current text edits?&#10;&#10;Unsaved edits will be discarded. Saved online comparisons and connection settings will remain. Choose No to stay here and save your edits first.</value></data>
+  <data name="OnlineAudioConsent" xml:space="preserve"><value>I approve sending the selected audio ({3:N2} seconds, {2} requests) to {0} at {1}. Other voices audible in these ranges are included. Notes and local transcript text are not uploaded. The provider may charge; cancellation does not undo requests already sent.</value></data>
+  <data name="OnlineAudioConsentRequired" xml:space="preserve"><value>Review the selected ranges, model, endpoint, limits, and request count, then approve the audio upload. Consent is required for each run.</value></data>
+  <data name="UploadSelectedAudio" xml:space="preserve"><value>Upload selected audio</value></data>
+  <data name="OnlineTranscribing" xml:space="preserve"><value>Preparing selected audio for online transcription...</value></data>
+  <data name="OnlineTranscriptionProgress" xml:space="preserve"><value>Online transcription: {0}/{1} requests completed ({2}). No automatic retries.</value></data>
+  <data name="CompareResults" xml:space="preserve"><value>Compare results</value></data>
+  <data name="LocalComparisonText" xml:space="preserve"><value>Local / saved transcript</value></data>
+  <data name="OnlineComparisonText" xml:space="preserve"><value>Online transcript</value></data>
+  <data name="OnlyTranscriptDifferences" xml:space="preserve"><value>Differences only</value></data>
+  <data name="UseOnlineResults" xml:space="preserve"><value>Use online result</value></data>
+  <data name="OnlineResultSource" xml:space="preserve"><value>{0} at {2} · {1:g}</value></data>
+  <data name="OnlineComparisonReady" xml:space="preserve"><value>Online result saved separately. {0} differing rows; {1} rows without complete recognized speech. Click Compare results. Use online result prepares edits; Save is still required to change the transcript.</value></data>
+  <data name="OnlineComparisonLoaded" xml:space="preserve"><value>Loaded a saved comparison for this selection without uploading again. Click Compare results to view it.</value></data>
+  <data name="OnlineResultsNotSaved" xml:space="preserve"><value>Online text copied into the editable column. Unrecognized rows kept their current text. Review and Save to update the transcript; Cancel leaves it unchanged.</value></data>
+  <data name="OnlineComparisonInvalid" xml:space="preserve"><value>The saved online comparison is invalid. It was not applied. You can generate a new result.</value></data>
+  <data name="OnlineComparisonStale" xml:space="preserve"><value>The audio or selected ranges have changed since this comparison was saved. It was not applied. Reselect the rows and generate a new comparison.</value></data>
+  <data name="ReplaySeekHint" xml:space="preserve"><value>Drag or click to seek within the replay range. Arrow keys move one second; Page Up/Down move five seconds.</value></data>
+  <data name="WorkspacePanels" xml:space="preserve"><value>Workspace panels</value></data>
+  <data name="ShowMainPoints" xml:space="preserve"><value>Show main points</value></data>
+  <data name="ShowMyNotes" xml:space="preserve"><value>Show my notes</value></data>
+  <data name="WorkspacePanelsHint" xml:space="preserve"><value>A single visible side panel fills the side area; hiding both gives all reading space to the transcript. Saved notes and automatic AI processing are not changed.</value></data>
+  <data name="ContinueRecognition" xml:space="preserve"><value>Continue</value></data>
+  <data name="DiscardRecognitionPreview" xml:space="preserve"><value>Discard preview</value></data>
+  <data name="SelectionRecognitionStopping" xml:space="preserve"><value>Stopping recognition. Finished work will remain available for review.</value></data>
+  <data name="SelectionRecognitionStopped" xml:space="preserve"><value>Stopped: {0} of {1} rows finished. Review or save finished rows, or Continue. Unfinished rows retain their previous text.</value></data>
+  <data name="SelectionResumeHint" xml:space="preserve"><value>Stop retains completed rows and audio chunks in this dialog. Continue processes only the remaining work and preserves edits to finished rows. An unfinished row's excerpt is preview-only until that row finishes. Discard preview restores the text from before this recognition run; model settings then become editable again.</value></data>
+  <data name="SelectionPartialPreview" xml:space="preserve"><value>Completed excerpt of unfinished row {0} (preview only; the row's previous text is retained)</value></data>
+  <data name="SelectionPartialPreviewLabel" xml:space="preserve"><value>Completed excerpt of unfinished row</value></data>
+  <data name="SelectionResumeChanged" xml:space="preserve"><value>The selection or recognition settings changed. Discard the preview and start a new recognition run.</value></data>
+  <data name="DialogOK" xml:space="preserve"><value>OK</value></data>
+  <data name="DialogYes" xml:space="preserve"><value>Yes</value></data>
+  <data name="DialogNo" xml:space="preserve"><value>No</value></data>
+  <data name="LlmLabel" xml:space="preserve"><value>LLM</value></data>
+  <data name="WindowMinimize" xml:space="preserve"><value>Minimize</value></data>
+  <data name="WindowMaximize" xml:space="preserve"><value>Maximize</value></data>
+  <data name="WindowRestore" xml:space="preserve"><value>Restore window</value></data>
+  <data name="ConfirmRepeatSummary" xml:space="preserve"><value>This recording already has completed main points, and its transcript and speaker information have not changed. There is no need to summarize it again.&#10;&#10;Generate a new summary anyway using the currently selected LLM: {0} / {1}?&#10;&#10;Yes starts a fresh summary; the provider may charge. No keeps the saved summary without sending another request.</value></data>
+  <data name="SummaryGeneratedWith" xml:space="preserve"><value>Generated with: {0} / {1}</value></data>
+  <data name="SummaryModelUnrecorded" xml:space="preserve"><value>Exact model was not recorded for this summary</value></data>
+  <data name="MainPointsNotGenerated" xml:space="preserve"><value>No main points have been generated for this recording.</value></data>
+  <data name="SelectedLlmModel" xml:space="preserve"><value>Selected LLM: {0} / {1}</value></data>
+  <data name="PersonalNotesModelUnrecorded" xml:space="preserve"><value>No model is recorded for an AI update applied to My notes.</value></data>
+  <data name="PersonalNotesModelUnavailable" xml:space="preserve"><value>Could not read the About me model information. Your notes are unchanged; see message history for details.</value></data>
+  <data name="PersonalNotesModelHint" xml:space="preserve"><value>About me — {0}
+{1}
+AI information applies only to the About me section. Your manual notes stay private and editable.</value></data>
+  <data name="ExportWholeRecording" xml:space="preserve"><value>Export audio (whole recording)</value></data>
+  <data name="ExportWholeRecordingHint" xml:space="preserve"><value>Export the whole recording to its saved WAV/MP3 output using this recording's audio settings. Row selection and filters do not limit the export. This does not turn main points or notes into speech.</value></data>
+  <data name="UpdateMyNotes" xml:space="preserve"><value>Update my notes</value></data>
+  <data name="UpdateMyNotesHint" xml:space="preserve"><value>Refresh the About me section using the selected LLM and the full, completed transcript. First mark a speaker as Me. Your manual notes are never sent to AI or silently replaced.</value></data>
+  <data name="InvalidStatusBarSettings" xml:space="preserve"><value>The status bar preferences are invalid.</value></data>
+  <data name="StatusBarInformation" xml:space="preserve"><value>Status bar information</value></data>
+  <data name="StatusMessagesOption" xml:space="preserve"><value>Notification messages (left)</value></data>
+  <data name="StatusLlmOption" xml:space="preserve"><value>Current LLM</value></data>
+  <data name="StatusSpeechOption" xml:space="preserve"><value>Local speech model</value></data>
+  <data name="StatusLibrarySizeOption" xml:space="preserve"><value>Recording library size</value></data>
+  <data name="StatusRecordingCountOption" xml:space="preserve"><value>Total recordings</value></data>
+  <data name="StatusFreeDiskOption" xml:space="preserve"><value>Free space on recording drive</value></data>
+  <data name="StatusRecordingCount" xml:space="preserve"><value>Recordings: {0:N0}</value></data>
+  <data name="StatusLibrarySize" xml:space="preserve"><value>Library: {0}</value></data>
+  <data name="StatusFreeDisk" xml:space="preserve"><value>Free: {0}</value></data>
+  <data name="StatusCalculating" xml:space="preserve"><value>calculating...</value></data>
+  <data name="StatusUnavailable" xml:space="preserve"><value>unavailable</value></data>
+  <data name="StatusLibrarySizeHint" xml:space="preserve"><value>Logical file size of recordings, transcripts, summaries and notes in the current recording library. Excludes installed models, unrelated folders and linked files. Refreshed in the background, approximately every 30 seconds while enabled.</value></data>
+  <data name="StatusStatisticsFailed" xml:space="preserve"><value>Recording-library statistics are unavailable: {0}</value></data>
+  <data name="SetupTitle" xml:space="preserve"><value>Set up AudioMemo</value></data>
+  <data name="SetupIntroduction" xml:space="preserve"><value>Set up reliable recording first. Audio devices and a saving folder are required; speech and summary models are optional. Nothing is recorded or uploaded automatically by this wizard.</value></data>
+  <data name="SetupStepTitle" xml:space="preserve"><value>Step {0} of {1}: {2}</value></data>
+  <data name="SetupAudioStep" xml:space="preserve"><value>Audio devices (required)</value></data>
+  <data name="SetupStorageStep" xml:space="preserve"><value>Saving folder (required)</value></data>
+  <data name="SetupSpeechStep" xml:space="preserve"><value>Local speech and live text (optional)</value></data>
+  <data name="SetupLlmStep" xml:space="preserve"><value>Summary LLM (optional)</value></data>
+  <data name="SetupReviewStep" xml:space="preserve"><value>Review and finish</value></data>
+  <data name="SetupBack" xml:space="preserve"><value>Back</value></data>
+  <data name="SetupNext" xml:space="preserve"><value>Next</value></data>
+  <data name="SetupContinue" xml:space="preserve"><value>Continue</value></data>
+  <data name="SetupSkip" xml:space="preserve"><value>Skip for now</value></data>
+  <data name="SetupFinish" xml:space="preserve"><value>Finish setup</value></data>
+  <data name="SetupAudioHint" xml:space="preserve"><value>Choose a microphone, a computer-playback endpoint, or both. Disable any unused source. At least one enabled device must be available and accessible; this step cannot be skipped.</value></data>
+  <data name="SetupDeviceCheckHint" xml:space="preserve"><value>Next checks device access and format without recording or playing sound. For microphone access errors, check Windows Settings &gt; Privacy &amp; security &gt; Microphone, including desktop-app access, then refresh. Playback captures only the chosen output device.</value></data>
+  <data name="SetupNoDevices" xml:space="preserve"><value>No active audio devices were found. Connect or enable a device, then refresh. You can close setup and return later.</value></data>
+  <data name="SetupDevicesListed" xml:space="preserve"><value>Audio devices found. Choose the sources you want, then select Next to check access.</value></data>
+  <data name="SetupChooseDevice" xml:space="preserve"><value>Select an available device for each enabled source, or disable that source. At least one source must remain enabled.</value></data>
+  <data name="SetupDeviceUnavailable" xml:space="preserve"><value>The selected device is unavailable or cannot provide an audio format: {0}. Refresh the list and choose a working device.</value></data>
+  <data name="SetupStorageHint" xml:space="preserve"><value>Choose a dedicated recording folder, or select your existing AudioMemo recording folder to keep using that library. Existing files are not moved or deleted.</value></data>
+  <data name="SetupFolderValidationHint" xml:space="preserve"><value>Next checks that the folder can be created, written and read. A temporary one-byte check file is removed automatically. This step cannot be skipped.</value></data>
+  <data name="SetupFolderCheckFailed" xml:space="preserve"><value>The saving folder did not pass its write/read check. Choose another writable folder.</value></data>
+  <data name="SetupSpeechHint" xml:space="preserve"><value>Whisper turns audio into text locally; it is separate from the LLM that writes main points. Base is a smaller starting choice for CPU/live text. Download a selected model to enable transcription; downloads are checksum-verified. Fast live drafts also need Base. Speaker identification uses separate optional models.</value></data>
+  <data name="SetupRuntimeReady" xml:space="preserve"><value>Visual C++ x64 runtime components were found.</value></data>
+  <data name="SetupRuntimeMissing" xml:space="preserve"><value>Visual C++ x64 runtime components are missing. Install the current supported x64 Redistributable from Microsoft before enabling local transcription. Recording can still be used without it.</value></data>
+  <data name="SetupRuntimeLink" xml:space="preserve"><value>Open Microsoft's Visual C++ runtime page</value></data>
+  <data name="SetupSpeechNotReady" xml:space="preserve"><value>Download the model required by each enabled transcription option, or disable that option. Fast live drafts require Base. Skip for now keeps recording available without automatic speech processing.</value></data>
+  <data name="SetupSpeakersNotReady" xml:space="preserve"><value>Download the speaker models or disable automatic speaker identification before continuing.</value></data>
+  <data name="SetupSpeechLater" xml:space="preserve"><value>Speech setup can be skipped. Recording will still save audio, but live text and automatic transcription will be off. Later: Settings &gt; Speech, download a model and enable live text; use Transcribe / resume for saved recordings.</value></data>
+  <data name="SetupLlmHint" xml:space="preserve"><value>An LLM summarizes completed transcript text. It is not required for recording or local transcription. Choose local Ollama or an online provider; configuration and test requests happen only when you choose them.</value></data>
+  <data name="SetupLocalLlm" xml:space="preserve"><value>Set up local LLM (Ollama)</value></data>
+  <data name="SetupLocalLlmHint" xml:space="preserve"><value>The setup page includes the official Ollama download, suggested models and their download commands. Install Ollama if needed, download a suitable model, then refresh and select it. Local models can require several GB of memory and disk space.</value></data>
+  <data name="SetupOnlineLlm" xml:space="preserve"><value>Set up online LLM</value></data>
+  <data name="SetupOnlineLlmHint" xml:space="preserve"><value>Choose GitHub Copilot CLI, Doubao, Qwen or DeepSeek. Sign in to an installed Copilot CLI, or enter your provider's API key and model. Cloud transcript sharing requires separate approval. Keys stored by AudioMemo are protected for this Windows user; copying the app does not copy another computer's sign-in.</value></data>
+  <data name="SetupSelectedLlm" xml:space="preserve"><value>Selected LLM: {0} / {1}. A selection alone does not confirm sign-in, installed model availability or successful access.</value></data>
+  <data name="SetupLlmDeferredStatus" xml:space="preserve"><value>LLM setup skipped - Settings &gt; AI main points</value></data>
+  <data name="SetupLlmLater" xml:space="preserve"><value>LLM setup can be skipped. Later: Settings &gt; AI main points, choose a provider/model and complete its setup. The main window's LLM controls change the selection. Skipping turns off automatic summaries and startup model discovery, but does not erase an existing provider profile.</value></data>
+  <data name="SetupReviewHint" xml:space="preserve"><value>Finish rechecks the required devices and folder, then saves your choices. No test recording or AI request is started.</value></data>
+  <data name="SetupReview" xml:space="preserve"><value>Microphone: {0}&#10;Computer playback: {1}&#10;&#10;Recording folder: {2}&#10;Format: {3}&#10;&#10;Live text: {4}&#10;Speech model: {5}&#10;Selected LLM: {6} / {7}</value></data>
+  <data name="SetupLaterHint" xml:space="preserve"><value>Open Settings from the top-left AudioMemo logo menu. Audio and storage: Settings &gt; Recording, with device selection in the main window. Speech: Settings &gt; Speech. LLM: Settings &gt; AI main points. To rerun this wizard, use Settings &gt; Appearance &gt; Run setup / reset.</value></data>
+  <data name="SetupChecking" xml:space="preserve"><value>Checking your setup...</value></data>
+  <data name="SetupEnabled" xml:space="preserve"><value>enabled</value></data>
+  <data name="SetupDisabled" xml:space="preserve"><value>disabled</value></data>
+  <data name="SetupRunAgain" xml:space="preserve"><value>Run setup / reset...</value></data>
+  <data name="SetupResetHint" xml:space="preserve"><value>Choose how to run setup again. Unsaved changes in the Settings window are not applied. No preference changes are saved until you finish the wizard.</value></data>
+  <data name="SetupKeepSettings" xml:space="preserve"><value>B - Keep my preferences and saved provider credentials; rerun the wizard (default).</value></data>
+  <data name="SetupResetPreferences" xml:space="preserve"><value>A - Restore app preferences to defaults and clear credentials and cloud-sharing consent saved by AudioMemo; then run the wizard.</value></data>
+  <data name="SetupResetPreservesFiles" xml:space="preserve"><value>Both choices preserve recordings, transcripts, summaries, notes and downloaded model files. External Copilot/Ollama sign-ins are not reset. Canceling the wizard leaves your saved preferences unchanged.</value></data>
+  <data name="SetupResetLocationHint" xml:space="preserve"><value>Rerun first-use setup with your current preferences, or choose to reset preferences and AudioMemo's saved credentials first. Recordings and model files are never deleted.</value></data>
+  <data name="MeTag" xml:space="preserve"><value>Me</value></data>
+  <data name="MarkAsMe" xml:space="preserve"><value>Mark speaker as me...</value></data>
+  <data name="EditMeTag" xml:space="preserve"><value>Edit my speaker tag...</value></data>
+  <data name="RemoveMeTag" xml:space="preserve"><value>Remove my speaker tag</value></data>
+  <data name="SummarizeAboutMe" xml:space="preserve"><value>Summarize about me</value></data>
+  <data name="SummarizeAboutMeHint" xml:space="preserve"><value>Use the full transcript to summarize my contributions and mentions by others into My notes. Requires a completed transcript; never runs automatically.</value></data>
+  <data name="MeSpeakerSelected" xml:space="preserve"><value>Selected speaker: {0}</value></data>
+  <data name="MeTagHint" xml:space="preserve"><value>Mark one speaker as yourself in this recording only. This does not change their name, the transcript, or the audio, and does not start AI processing.</value></data>
+  <data name="ReplaceMeTagHint" xml:space="preserve"><value>This will replace the existing Me tag. Any saved About me notes are kept until you explicitly update them.</value></data>
+  <data name="MeNamesLabel" xml:space="preserve"><value>My names or nicknames (optional)</value></data>
+  <data name="MeNamesHint" xml:space="preserve"><value>One name per line, up to 10 names of 80 characters each. The speaker's current name and these names help identify mentions by others. They are included with the transcript only when you choose Summarize about me, using your selected local or online LLM. Your existing My notes are never sent to the model.</value></data>
+  <data name="InvalidMeTag" xml:space="preserve"><value>The Me tag is invalid. Use a labeled speaker and at most 10 names of 80 characters each, without control characters.</value></data>
+  <data name="ChooseMeFirst" xml:space="preserve"><value>First right-click a labeled transcript row and choose Mark speaker as me. If there are no speaker labels, run Identify speakers.</value></data>
+  <data name="MeTagChanged" xml:space="preserve"><value>The Me tag has changed or was removed. Check which speaker is you, then choose Summarize about me again. The saved request will not be applied to a different person.</value></data>
+  <data name="MeTagSaved" xml:space="preserve"><value>Me tag saved for this recording. Right-click the transcript and choose Summarize about me when ready.</value></data>
+  <data name="MeTagRemoved" xml:space="preserve"><value>Me tag removed. Your existing notes have been kept.</value></data>
+  <data name="MeTagCleared" xml:space="preserve"><value>Speaker identities were rebuilt, so the Me tag was cleared to avoid assigning it to the wrong person. Mark yourself again before updating About me. Existing notes have been kept.</value></data>
+  <data name="AboutMeHeading" xml:space="preserve"><value>About me - {0}</value></data>
+  <data name="AboutMeProgress" xml:space="preserve"><value>Summarizing About me - transcript batch {0} of {1}...</value></data>
+  <data name="AboutMeSaved" xml:space="preserve"><value>About me saved in My notes. You can edit it; your other notes were preserved.</value></data>
+  <data name="AboutMeSourceChanged" xml:space="preserve"><value>The transcript, speaker tag, or saved AI result changed. No notes were replaced. Choose Summarize about me again for the current transcript.</value></data>
+  <data name="InvalidAboutMeSummary" xml:space="preserve"><value>The About me result or saved processing checkpoint is invalid. Your notes have not been replaced.</value></data>
+  <data name="AboutMeSectionChanged" xml:space="preserve"><value>The previous About me section was edited, removed, or duplicated. It cannot be safely replaced automatically.</value></data>
+  <data name="ConfirmAppendAboutMe" xml:space="preserve"><value>The previous About me section was edited, removed, or duplicated, so AudioMemo will not overwrite it. Append the new result at the end of My notes and keep everything already there? Choose No to leave your notes unchanged; the generated result is saved for a later retry.</value></data>
+  <data name="TranscriptModelHint" xml:space="preserve"><value>Speech: {0}
+{1}</value></data>
+  <data name="AboutCredits" xml:space="preserve"><value>Concept, ideas, and guidance: Afanti Ma.
+Primarily programmed by AI, under Afanti Ma's guidance.</value></data>
+  <data name="MessageHistory" xml:space="preserve"><value>Message history</value></data>
+  <data name="MessageHistoryHint" xml:space="preserve"><value>Local notices, warnings, and errors, retained across restarts until you clear them. Select an entry to read or copy its full message.</value></data>
+  <data name="MessageHistoryOlder" xml:space="preserve"><value>Load older messages</value></data>
+  <data name="MessageHistoryClear" xml:space="preserve"><value>Clear history...</value></data>
+  <data name="MessageHistoryClearConfirm" xml:space="preserve"><value>Clear all saved message history? Recordings, transcripts, notes, and settings will not be changed.</value></data>
+  <data name="MessageHistoryCleared" xml:space="preserve"><value>Message history was cleared at your request.</value></data>
+  <data name="MessageHistoryCount" xml:space="preserve"><value>{0:N0} messages shown. Newest first.</value></data>
+  <data name="MessageHistoryUnreadable" xml:space="preserve"><value>{0} unreadable entries were found. Their original bytes are preserved in the local history file.</value></data>
+  <data name="MessageHistoryWriteFailed" xml:space="preserve"><value>Message history could not be saved. Unsaved messages remain available in this app session and will be retried: {0}</value></data>
+  <data name="MessageWhen" xml:space="preserve"><value>When</value></data>
+  <data name="MessageType" xml:space="preserve"><value>Type</value></data>
+  <data name="MessageWhy" xml:space="preserve"><value>Why / operation</value></data>
+  <data name="MessageWhat" xml:space="preserve"><value>What</value></data>
+  <data name="MessageInformation" xml:space="preserve"><value>Information</value></data>
+  <data name="MessageWarning" xml:space="preserve"><value>Warning</value></data>
+  <data name="MessageError" xml:space="preserve"><value>Error</value></data>
+  <data name="MessageQuestion" xml:space="preserve"><value>Confirmation</value></data>
+  <data name="MessageApplication" xml:space="preserve"><value>Application</value></data>
+  <data name="MessageDialogResponse" xml:space="preserve"><value>Response: {0}</value></data>
+  <data name="LlmValidationNotice" xml:space="preserve"><value>Changing the LLM or model runs a short synthetic test before selection. No recordings, transcripts, or notes are used. Online providers may charge for this request. A failed or canceled setup keeps your previous selection; no model is downloaded automatically.</value></data>
+  <data name="LlmTestAndSelect" xml:space="preserve"><value>Test and select</value></data>
+  <data name="LlmValidatingSelection" xml:space="preserve"><value>Testing the LLM with a synthetic sample. The current selection is unchanged until the test succeeds.</value></data>
+  <data name="LlmSelectionNeedsSetup" xml:space="preserve"><value>This LLM is not ready. Configure it and complete a successful test before selecting it: {0}</value></data>
+  <data name="LlmSelectionKept" xml:space="preserve"><value>LLM change canceled. The previous provider and model are still selected.</value></data>
+  <data name="LlmSelectionValidated" xml:space="preserve"><value>The LLM test succeeded. The new provider and model are selected.</value></data>
+  <data name="LlmSelectionBusy" xml:space="preserve"><value>Recording or processing started during the LLM check. The previous selection was kept; retry after it finishes.</value></data>
+  <data name="LlmValidationTimedOut" xml:space="preserve"><value>The LLM test did not finish within two minutes. Check the connection and model, then retry. The previous selection was kept.</value></data>
+  <data name="MuteSaveChoice" xml:space="preserve"><value>Where should these mute changes be saved?</value></data>
+  <data name="MuteCurrentRecording" xml:space="preserve"><value>Edit this recording (keep a recovery backup)</value></data>
+  <data name="MuteNewCopy" xml:space="preserve"><value>Create a new recording copy</value></data>
+  <data name="MuteRecoveryBackupHint" xml:space="preserve"><value>In-place editing avoids another history entry. A hidden lossless audio/transcript backup is retained for recovery and still uses disk space. It is not secure erasure; share only exported muted audio, not the recording folder.</value></data>
+  <data name="ShowMutedRows" xml:space="preserve"><value>Show muted rows...</value></data>
+  <data name="PlayMutedRow" xml:space="preserve"><value>Play original</value></data>
+  <data name="MutedRowWithoutText" xml:space="preserve"><value>Audio without saved transcript text.</value></data>
+  <data name="RecheckUnlabeledSpeakers" xml:space="preserve"><value>Recheck unlabeled speakers</value></data>
+  <data name="RecheckUnlabeledHint" xml:space="preserve"><value>Use existing speaker assignments as local voice references. Only unlabeled rows can change; uncertain or very short speech stays unlabeled. No audio is uploaded.</value></data>
+  <data name="RecheckingUnlabeledSpeakers" xml:space="preserve"><value>Matching unlabeled rows against existing speaker assignments...</value></data>
+  <data name="MatchingUnlabeledProgress" xml:space="preserve"><value>Unlabeled speaker check: voice-feature extraction {0:P0}...</value></data>
+  <data name="UnlabeledSpeakersChecked" xml:space="preserve"><value>Speaker recheck complete: {0} rows assigned; {1} remain unlabeled. Existing assignments were preserved.</value></data>
+  <data name="NoUnlabeledSpeakers" xml:space="preserve"><value>There are no unlabeled transcript rows to recheck.</value></data>
+  <data name="SpeakerReferencesRequired" xml:space="preserve"><value>Assign a speaker to at least one clear, non-overlapping row lasting one second or longer, then recheck unlabeled speakers.</value></data>
+  <data name="SpeakerReferencesNoSpeech" xml:space="preserve"><value>The labeled reference clips did not contain enough usable voice audio. Assign longer, clearer rows and try again. Nothing was changed.</value></data>
+  <data name="InvalidSpeakerMatches" xml:space="preserve"><value>The speaker-matching plan or result is invalid. Existing assignments were not changed.</value></data>
+  <data name="MuteInPlacePolicy" xml:space="preserve"><value>Apply changes to this recording without adding another history entry.</value></data>
+  <data name="RefiningTranscriptProgress" xml:space="preserve"><value>Building the final transcript locally: audio processed {0} of {1}.</value></data>
+  <data name="FinalizingMainPoints" xml:space="preserve"><value>Finalizing saved main points before generating the overall summary...</value></data>
+  <data name="LocalLiveSummaryProgress" xml:space="preserve"><value>Updating live main points locally with Ollama - transcript batch {0} of {1}...</value></data>
+  <data name="CloudLiveSummaryProgress" xml:space="preserve"><value>Updating live main points with the online LLM - transcript batch {0} of {1}...</value></data>
+  <data name="ProcessingStagesHint" xml:space="preserve"><value>A summary batch is one portion of transcript text, not a processing stage. The count covers this summary run. Final main points are followed by a separate overall-summary request. Transcription counters show processed audio duration. Voice-feature percentages cover that stage only. The moving bar indicates activity, not overall completion.</value></data>
+  <data name="SetUnlabeledSpeakerColor" xml:space="preserve"><value>Color all Not labeled rows...</value></data>
+  <data name="UnlabeledSpeakerColorSaved" xml:space="preserve"><value>Color saved for all Not labeled rows in this recording. No speaker was assigned; audio, text, and summaries are unchanged.</value></data>
+  <data name="SpeakerColorTargetChanged" xml:space="preserve"><value>These transcript rows or speaker labels have changed. Select the speaker again before applying its color.</value></data>
+  <data name="SpeakerColorUnavailable" xml:space="preserve"><value>Select one recording with transcript rows. Finish the current file operation or recording-control action before changing colors.</value></data>
+  <data name="ReviewUnclearTranscript" xml:space="preserve"><value>Review unclear transcript</value></data>
+  <data name="ReviewUnclearTranscriptHint" xml:space="preserve"><value>Check the complete saved transcript with the selected LLM and explicit uncertainty markers. Nothing changes without your approval.</value></data>
+  <data name="AutoReviewUnclearTranscript" xml:space="preserve"><value>Review unclear transcript automatically</value></data>
+  <data name="AutoReviewUnclearTranscriptHint" xml:space="preserve"><value>After final transcription and before main points, check the saved text with the selected LLM. Pause for confirmation when uncertainties are found. Does not interrupt recording or live text. An available LLM and any required sharing consent are still needed.</value></data>
+  <data name="TranscriptReviewHint" xml:space="preserve"><value>These are possible uncertainties, not verified errors. The LLM checks text only and may miss mistakes or flag correct wording. Listen to a passage, keep it, or edit only the text you want to correct. No spelling is assumed to be correct automatically.</value></data>
+  <data name="TranscriptReviewSelectionHint" xml:space="preserve"><value>Double-click Corrected text (or press F2) to edit and select a correction. Clear Correct to keep that passage unchanged. Nothing is saved until you continue.</value></data>
+  <data name="TranscriptReviewCorrect" xml:space="preserve"><value>Correct</value></data>
+  <data name="TranscriptReviewReason" xml:space="preserve"><value>What needs confirmation</value></data>
+  <data name="TranscriptReviewApply" xml:space="preserve"><value>Apply selected corrections &amp; continue</value></data>
+  <data name="TranscriptReviewKeep" xml:space="preserve"><value>Keep all unchanged &amp; continue</value></data>
+  <data name="TranscriptReviewAgain" xml:space="preserve"><value>Check again with this LLM</value></data>
+  <data name="TranscriptReviewRetry" xml:space="preserve"><value>Retry review</value></data>
+  <data name="TranscriptReviewResume" xml:space="preserve"><value>Resume unfinished review</value></data>
+  <data name="TranscriptReviewResumeHint" xml:space="preserve"><value>Continue from the last completed part with this LLM. Completed parts are not sent again. Unsaved edits in this window require confirmation before they are discarded.</value></data>
+  <data name="TranscriptReviewRetrying" xml:space="preserve"><value>The LLM response for part {0} of {1} could not be validated. Retrying this part once...</value></data>
+  <data name="TranscriptReviewFormatFailed" xml:space="preserve"><value>The LLM returned an unusable review response again (invalid JSON or text that does not exactly match the supplied passage). No transcript text was changed.</value></data>
+  <data name="TranscriptReviewCount" xml:space="preserve"><value>{0} possible uncertainties in {1} transcript passages.</value></data>
+  <data name="TranscriptReviewModel" xml:space="preserve"><value>Review LLM: {0} / {1} | {2}</value></data>
+  <data name="TranscriptReviewMarkerReason" xml:space="preserve"><value>The saved transcript explicitly marks this text as unclear or needing confirmation.</value></data>
+  <data name="TranscriptReviewInvalidResponse" xml:space="preserve"><value>The LLM returned an invalid review response or quoted text outside the supplied passage. No model-written text was applied.</value></data>
+  <data name="TranscriptReviewInvalidState" xml:space="preserve"><value>The saved transcript review does not match a valid review format.</value></data>
+  <data name="TranscriptReviewNeedsFinal" xml:space="preserve"><value>Review is available only for a completed, nonempty saved transcript. Finish transcription first.</value></data>
+  <data name="TranscriptReviewNeedsLlm" xml:space="preserve"><value>LLM review is unavailable. Only explicit markers and any saved partial findings are available. Configure a model in Settings &gt; AI main points and approve transcript sharing if required, then check again.</value></data>
+  <data name="TranscriptReviewSavedStateError" xml:space="preserve"><value>The previous review could not be read. Check again, deliberately continue without a full review, or cancel. Details: {0}</value></data>
+  <data name="TranscriptReviewIncomplete" xml:space="preserve"><value>The LLM review could not finish. Completed parts are saved, but results may be incomplete. Retry or resume the review, keep the original, or cancel processing. Details: {0}</value></data>
+  <data name="TranscriptReviewProgress" xml:space="preserve"><value>Checking possible transcript uncertainties ({0} of {1})...</value></data>
+  <data name="TranscriptReviewWaiting" xml:space="preserve"><value>Waiting for you to review possible transcript uncertainties.</value></data>
+  <data name="ProcessingWaitingForTranscriptReview" xml:space="preserve"><value>Elapsed {0} | Waiting for transcript review</value></data>
+  <data name="TranscriptReviewSaving" xml:space="preserve"><value>Saving your transcript review decisions...</value></data>
+  <data name="TranscriptReviewSaved" xml:space="preserve"><value>Transcript review decisions saved. Only selected corrections were applied.</value></data>
+  <data name="TranscriptReviewNoItems" xml:space="preserve"><value>The review found no specific uncertainties. This does not guarantee error-free transcription.</value></data>
+  <data name="TranscriptReviewNoVerifiedResult" xml:space="preserve"><value>The LLM review is incomplete. No full-review result is available.</value></data>
+  <data name="TranscriptReviewListening" xml:space="preserve"><value>Playing the selected passage, with up to one second of context on each side.</value></data>
+  <data name="TranscriptReviewDiscardForRecheck" xml:space="preserve"><value>Check again? Unsaved edits in this review will be discarded. The saved transcript will not change until you approve corrections.</value></data>
+  <data name="TranscriptReviewCancelHint" xml:space="preserve"><value>Cancel this AI task without applying review edits. Saved audio and transcript remain available; this task will not proceed to main points.</value></data>
+  <data name="TranscriptReviewDecisionSaveFailed" xml:space="preserve"><value>The review confirmation could not be saved. Any transcript corrections already committed remain saved, but this task will not proceed to main points. Reopen the review to confirm the current transcript. Details: {0}</value></data>
+  <data name="AboutCopyright" xml:space="preserve"><value>Copyright © 2026 Afanti Ma</value></data>
+  <data name="AboutThirdParty" xml:space="preserve"><value>Third-party components retain their own copyrights and licenses.
+Notices: support\Licenses and support\Docs\THIRD-PARTY-NOTICES.txt.</value></data>
+  <data name="UserGuide" xml:space="preserve"><value>User guide</value></data>
+  <data name="UserGuideHint" xml:space="preserve"><value>Built-in, offline help. Choose a topic below. Opening this guide does not read your recordings or contact an AI provider.</value></data>
+  <data name="UserGuideTopic" xml:space="preserve"><value>Topic</value></data>
+  <data name="GuideQuickStartTitle" xml:space="preserve"><value>Quick start</value></data>
+  <data name="GuideQuickStartBody" xml:space="preserve"><value>1. On a new PC, finish the setup wizard. Audio devices and a writable saving folder are required. Speech and LLM setup can be skipped; recording does not require either.
+
+2. Enable a microphone, computer playback, or both. Select the microphone you use and the speaker/headset receiving the computer sound you want to capture.
+
+3. Choose New Recording for a separate session, then Start recording. Pause and Resume use the same button. Stop finalizes the saved audio.
+
+4. For text, set up a local Whisper model under Settings > Speech, then use Transcribe / resume. Live text and automatic transcription after Stop are optional.
+
+5. Select and configure an LLM for main points. Review any transcript uncertainties when prompted, then continue. You can also write My notes yourself without using AI.
+
+Click the AudioMemo logo at the top-left for Settings, Help &amp; About, the saving folder, and common recording/window commands.</value></data>
+  <data name="GuideRecordingTitle" xml:space="preserve"><value>Audio devices and recording</value></data>
+  <data name="GuideRecordingBody" xml:space="preserve"><value>Microphone captures the selected input. Computer playback captures sound sent to the selected output endpoint, not every speaker or headset at once. Uncheck unused sources; at least one enabled device must work. Quiet or silent input is still a valid device.
+
+If no device can start, AudioMemo shows a warning rather than creating an empty recording. If only one source fails, it can continue with the other and warn you. Check Windows audio routing, microphone permissions, connections, and mute/volume settings if sound is missing.
+
+Pause excludes the paused time. Stop saves the recording before optional AI work. Changing a device during recording asks for confirmation; a failed replacement keeps the working sources where possible.
+
+Settings > Recording controls the saving folder and WAV/MP3, sample-rate, and channel choices for new recordings. A lossless 48 kHz stereo safety WAV is always retained; MP3 or a custom WAV is generated from it.
+
+Continue recording appends to the selected saved session only after confirmation. Use New Recording when you want a separate file and history entry.</value></data>
+  <data name="GuideSpeechTitle" xml:space="preserve"><value>Live text and final transcription</value></data>
+  <data name="GuideSpeechBody" xml:space="preserve"><value>Whisper turns saved audio into text locally. An LLM is a separate model used for summaries and uncertainty review; configuring an LLM alone does not enable live text.
+
+Under Settings > Speech, download a speech model and choose the recognition language. Auto-detect, Chinese (Simplified), and English are available. The speech-language selector on the main window is separate from the interface language.
+
+Live text can appear while recording, but model loading and inference add delay. Fast drafts use Base on CPU and need both Base and your selected final model for the later refinement pass.
+
+Enable automatic transcription after Stop to finish the recording's text. If it is off, the saved live draft remains available; use Transcribe / resume later to complete it. Final main points require completed transcription.
+
+A missing model or speech-runtime prerequisite is reported without discarding recorded audio. Complete skipped setup in Settings. Model downloads and software installation require your action; the guide does not start them.</value></data>
+  <data name="GuideModelsTitle" xml:space="preserve"><value>LLM setup and privacy</value></data>
+  <data name="GuideModelsBody" xml:space="preserve"><value>Open Settings > AI main points to configure the selected provider. The main-window LLM selector asks for setup when a choice is not ready; cancelling keeps a usable previous choice.
+
+Ollama: install Ollama, download a local model, then refresh the model list and test the connection. The setup page supplies installation guidance and model commands. Local summaries do not need cloud transcript-sharing consent.
+
+Copilot CLI: use an installed CLI executable, sign in with its account, choose a supported model, and approve transcript sharing. AudioMemo can read the CLI's configured model.
+
+Doubao, Qwen, and DeepSeek: choose the supported official endpoint/region, configure that provider's API key and model, test it, and approve transcript sharing. Account access, usage limits, and charges belong to the provider.
+
+Normal summaries and uncertainty reviews send text, not audio. Editable My notes are never sent as model input. Optional online speech comparison/re-transcription is different: it uploads selected audio only after its own consent.
+
+Changing the selected LLM does not relabel an old result. Hover over Transcript, Main points, or My notes to see the relevant speech or saved-result model information.</value></data>
+  <data name="GuideMainPointsTitle" xml:space="preserve"><value>Generate and update main points</value></data>
+  <data name="GuideMainPointsBody" xml:space="preserve"><value>After final transcription, click Update main points beside that pane's title. Automatic and live-summary options are available in Settings. Live summaries are provisional; final main points can include a separate Overall summary at the end.
+
+If uncertainty review is enabled, resolve or deliberately keep the flagged passages before a final summary continues. The summary then uses the approved saved transcript.
+
+A recording that has never been summarized starts immediately. Changed text, speaker corrections, or re-transcription can require a fresh summary. If an already-completed summary still matches, AudioMemo asks before spending another model request; choosing No keeps the result.
+
+Main points use the complete saved transcript, not just selected rows or the visible speaker/search filter. My notes are not included. Review generated names, decisions, and action items rather than treating them as verified facts.
+
+Progress counts transcript batches, not repeated transcription passes. Overall summary is a later request. Elapsed covers the current processing run; Step ETA estimates only the current measurable step.
+
+If processing stops, completed results and checkpoints remain saved. Resume unfinished work or update again as appropriate; an incomplete overall summary does not erase completed main points.</value></data>
+  <data name="GuideNotesTitle" xml:space="preserve"><value>My notes and the Me speaker tag</value></data>
+  <data name="GuideNotesBody" xml:space="preserve"><value>My notes is your editable, automatically saved notebook for the selected recording. You can use it without an LLM. Existing editable notes, including edits to AI-generated sections, are never sent to the model.
+
+To identify your part in a conversation, right-click a labeled transcript row and choose Mark speaker as me. Only one speaker is tagged per recording. Optional names/nicknames help interpret mentions, but a Me tag is your choice, not verified biometric identity.
+
+For a complete transcript, Update my notes requests an About me section covering that speaker's contributions, mentions by others, commitments, and open questions. It uses the whole transcript with the selected LLM and applicable sharing consent. It does not run merely because you tagged someone or updated general main points.
+
+Only the previous unchanged generated section is replaced. Your surrounding notes stay intact. If that section was edited, removed, or duplicated, AudioMemo asks whether to append a new result instead.
+
+Hover over My notes for the model used by the applied AI section. Full speaker reanalysis can clear the Me tag; check it before generating another personal summary.</value></data>
+  <data name="GuideNavigationTitle" xml:space="preserve"><value>Navigate, search, copy, and replay</value></data>
+  <data name="GuideNavigationBody" xml:space="preserve"><value>The transcript shows Time, Speaker, and Text. Scroll upward to stop following new text; Latest or Bottom resumes following. The floating Top/Page up/Page down/Bottom pad appears when scrolling is needed. Drag its dotted grip to move it; the position is remembered.
+
+Drag inside a text cell to select words. Select Time/Speaker rows for row actions; Shift selects a range and Ctrl selects separate rows. Copy all text omits times/names; the annotated copy includes them.
+
+The speaker filter can show selected speakers or Not labeled. Check All speakers to include everyone, or uncheck it to clear the selection. Transcript copy buttons respect the active filter; filtering alone does not edit audio or restrict a full summary.
+
+Open transcript search to find text and move between matches. Enter/Shift+Enter in the search field moves next/previous. Open Help &amp; About > Keyboard shortcuts for your current bindings rather than assuming the defaults.
+
+For saved audio, select a range and use Play selected, then pause/resume or stop replay. Playback is local. Hearing another voice in an overlapping interval is normal: a speaker filter does not separate mixed audio.</value></data>
+  <data name="GuideReviewTitle" xml:space="preserve"><value>Review unclear transcript passages</value></data>
+  <data name="GuideReviewBody" xml:space="preserve"><value>Right-click Transcript > Review unclear transcript to check the complete saved text. It combines explicit uncertainty markers with the selected LLM's text-based review. This can miss errors or flag correct wording; it cannot hear the audio or prove a spelling.
+
+Automatic review is on by default in Settings > Speech. It runs after final transcription and before final main points, not during recording or live text. A completed check with no findings can continue without a popup.
+
+The list shows the original passage, speaker, time, quote, and reason. Replay a passage, edit Corrected text only when needed, and select the corrections you want. Apply selected corrections &amp; continue saves those choices. Keep all unchanged &amp; continue preserves the wording. Cancel applies no unsaved corrections and stops that AI task.
+
+Temporary response-format problems are retried once. Retry review or Resume unfinished review can continue an incomplete check; completed parts are reused when the source and model still match. Incomplete results are not a clean bill of health.
+
+Accepted decisions are remembered for unchanged text. No model-suggested spelling is applied automatically, and editable My notes are never included in this check.</value></data>
+  <data name="GuideCorrectionsTitle" xml:space="preserve"><value>Correct text and speaker assignments</value></data>
+  <data name="GuideCorrectionsBody" xml:space="preserve"><value>For a finished recording, select Time/Speaker rows and use Edit transcript text. Corrections preserve audio, timing, and speaker metadata. Re-transcribe selection offers a local recognition preview that you can review before saving.
+
+Online comparison is optional and separate from the main-points LLM. Review its selected audio ranges, provider, request count, and consent before uploading. Other voices inside those ranges are also included. Opening a comparison is not permission to upload.
+
+Correct speaker reassigns selected rows to an existing speaker. Merge all applies to all rows of the source speaker, including hidden rows. Renaming a speaker and changing its color are different operations.
+
+Recheck unlabeled speakers uses existing assignments and downloaded local speaker models to examine only unlabeled rows. It does not change already-labeled rows; short or ambiguous speech may remain unlabeled.
+
+Double-click a Speaker cell to set its color, even during AI work. All Not labeled rows share one color without being treated as one identified person.
+
+Remembered vocabulary can help future local recognition. Saving vocabulary is separate from saving transcript edits and does not rewrite older text automatically. Update main points after meaningful text or speaker changes.</value></data>
+  <data name="GuideSilenceTitle" xml:space="preserve"><value>Silence and restore audio</value></data>
+  <data name="GuideSilenceBody" xml:space="preserve"><value>Select finished transcript rows and choose Silence selected. Review the intervals and explicitly choose Edit this recording or Create a copy. In-place editing avoids another library entry; a separate copy gives you independently browsable versions.
+
+Silencing replaces the selected intervals with equal-length silence and removes their transcript rows. It does not cut time from the recording. Every sound in an interval is muted, including overlapping voices. Review boundaries carefully.
+
+A hidden recovery copy is retained, so silencing is not secure erasure and still needs disk space. Keep the complete recording folder, including .restore-source, for restoration. When sharing muted sound, share the exported audio, not a folder containing recoverable original material.
+
+Right-click Transcript > Show muted rows, or use Restore muted sections. Play original previews the recovery audio without changing anything. Select the rows to restore and confirm; unselected sections stay muted.
+
+Restoration keeps the current recording's timeline and your notes. Old summaries are invalidated by audio edits; update main points afterward. Missing recovery files cannot be recreated from silence, so retain backups.</value></data>
+  <data name="GuideLibraryTitle" xml:space="preserve"><value>Library, import, and export</value></data>
+  <data name="GuideLibraryBody" xml:space="preserve"><value>Select a recording in the left list to open its saved audio/text/notes. Browsing history does not start AI. Use the recording's context menu for available rename, file, processing, export, or deletion actions; review the selected recordings before any batch operation.
+
+Import audio/video creates a separate session without changing the source file. Common audio files and local videos are supported when their codecs are available. For a video with several audio tracks, choose one. Audio is imported, not video frames or subtitles.
+
+After import, Analyze now is optional. You can keep the saved audio and transcribe later. Missing models are reported rather than downloaded automatically.
+
+Right-click Transcript > Export audio (whole recording) to rebuild that recording's WAV/MP3 output. This is not text-to-speech of main points, and selected rows or filters do not limit the export. Finish recording/AI work before exporting.
+
+Open saving folder or Open files to locate local data. Changing the saving folder changes which library is shown; it does not move old recordings. Back up complete recording folders if you need their notes, transcripts, and recovery history.</value></data>
+  <data name="GuideWorkspaceTitle" xml:space="preserve"><value>Window layout, appearance, and shortcuts</value></data>
+  <data name="GuideWorkspaceBody" xml:space="preserve"><value>The top-left logo menu provides recording commands, Settings, import, the saving folder, panel visibility, Message history, and Help &amp; About.
+
+Pin or hide the recording list and show/hide Main points or My notes as needed. In narrow windows the recording list may use a temporary preview. Drag the thin dividers to resize panes; these are not separate audio recordings.
+
+Settings > Appearance controls the interface language, theme, fonts, and other display preferences. English and Simplified Chinese are supported. Interface language and speech-recognition language are separate choices.
+
+Right-click the bottom status bar to toggle messages, current LLM, speech model, library size, recording count, and free disk space. The menu stays open for several choices; hiding ordinary messages does not hide warnings.
+
+Help &amp; About > Keyboard shortcuts displays your current saved bindings and their scope. Change them in Settings > Keyboard shortcuts: click a field, press a combination, and Save. Backspace/Delete clears a binding. Conflicting and protected Windows/text-editing commands cannot be assigned.
+
+Run setup / reset in Appearance can rerun onboarding. Read its keep/default-preferences choices; resetting preferences does not delete recordings or downloaded models.</value></data>
+  <data name="GuideRecoveryTitle" xml:space="preserve"><value>Long recordings, safe close, and backups</value></data>
+  <data name="GuideRecoveryBody" xml:space="preserve"><value>Allow about 0.69 GB per hour for the safety WAV, plus exports, edits, and recovery copies. Prefer a local NTFS/ReFS drive with free space. FAT32 cannot hold a file above 4 GB. Very large WAVs use RF64 and need a compatible player or an MP3 export.
+
+Keep power and audio connections stable. AudioMemo requests that Windows stay awake, but manually sleeping, closing a laptop lid, or shutting down can still interrupt capture. No program can recover audio that never reached storage.
+
+Closing during recording or AI/export work asks for confirmation. Confirmed safe close finalizes capture, preserves published results, and remembers unfinished processing. Let cleanup finish instead of force-ending the process.
+
+On the next launch, Resume unfinished work can continue with the recorded choices and current credentials/consent. Declining starts no AI; you can resume later from the recording's menu. Unsaved edits in a correction dialog are not silently applied.
+
+After an unexpected exit, select the interrupted recording and use Recover WAV. It can repair saved length/header information, not reconstruct missing or corrupt audio.
+
+Each recording folder holds audio, session metadata, transcript, summaries, and notes.md. Back up the complete folder, including hidden recovery data. On another PC, rerun device/model setup and authentication; copying the executable alone does not install models or transfer working credentials.</value></data>
+  <data name="GuideTroubleshootingTitle" xml:space="preserve"><value>Troubleshooting and message history</value></data>
+  <data name="GuideTroubleshootingBody" xml:space="preserve"><value>No audio device: reconnect or refresh devices, enable at least one valid source, and check Windows permissions/routing. Computer playback must point to the output actually receiving the sound.
+
+No live text: check Live text, the local speech-model download, language, and runtime prerequisites in Settings > Speech. Wait for model loading. Recording can still be saved without text.
+
+Slow AI: model size and available CPU/GPU memory matter. A smaller suitable model may be faster. Step ETA is an estimate for one step, not the entire job; a request without measurable progress may show Estimating.
+
+Review waiting: the AI task may be waiting for your decision, not doing more inference. Apply selected corrections, keep the original deliberately, retry/resume an incomplete check, or cancel. An empty incomplete list does not mean no uncertainties exist.
+
+Controls unavailable: some actions need a completed saved recording or must wait for recording, saving, editing, or AI work to finish. Read the status or warning rather than forcing the process to close.
+
+Open Message history from Help &amp; About, the logo menu, or the status bar to see when, why, and what the app reported. Copy relevant error details for troubleshooting, but avoid sharing credentials or private recording information. History is stored locally and is not sent to AI.</value></data>
+</root>

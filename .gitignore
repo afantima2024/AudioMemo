@@ -1,0 +1,16 @@
+**/bin/
+**/obj/
+artifacts/
+.vs/
+*.user
+*.pfx
+*.cer
+TestResults/
+# Recreated by scripts/Get-FFmpeg.ps1 from dependencies/ffmpeg.json.
+src/AudioMemo/Native/FFmpeg/win-x64/
+src/AudioMemo/Licenses/FFmpeg/
+*.p12
+*.pem
+*.key
+.env
+.env.*

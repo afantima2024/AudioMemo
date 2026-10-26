@@ -1,0 +1,92 @@
+AudioMemo for Windows 11 x64
+===========================
+Copyright (C) 2026 Afanti Ma
+Concept, ideas, and guidance: Afanti Ma.
+Primarily programmed by AI, under Afanti Ma's guidance.
+
+INSTALL
+Close AudioMemo normally, then run AudioMemo-<version>-Setup-x64.exe.
+The installer supports English and Simplified Chinese.
+It installs for the current Windows user in:
+  %LOCALAPPDATA%\Programs\AudioMemo
+No administrator permission or certificate installation is required.
+A Start menu shortcut is created. A desktop shortcut is optional.
+The installer does not start AudioMemo or begin recording automatically.
+
+This package is unsigned. Windows SmartScreen or your organization's policies
+may warn about or block it. A trusted code-signing certificate is needed for a
+signed distribution; this installer does not change or bypass those protections.
+The SHA-256 file identifies this exact download but is not a publisher signature.
+
+FIRST USE
+Open AudioMemo from the Start menu. On a new PC, finish the setup wizard:
+choose at least one working microphone/playback device and a writable recording
+folder. Speech and LLM setup may be skipped and completed later in Settings.
+Recording itself does not require a model or online account.
+
+The .NET desktop runtime, FFmpeg, and speech engine libraries are included.
+For local speech, install Microsoft's Visual C++ 2022 x64 Redistributable if
+it is missing, and download a speech model in AudioMemo's Settings:
+  https://learn.microsoft.com/cpp/windows/latest-supported-vc-redist
+Ollama, Copilot CLI, AI accounts, and model weights are optional and are not
+bundled. The installer does not download or silently install these components.
+Open AudioMemo logo > Help & About for the offline user guide and shortcuts.
+
+EXISTING PORTABLE USERS / UPDATES
+Settings and models in %LOCALAPPDATA%\AudioMemo and your selected recording
+folder are reused. Existing portable program folders are not moved or deleted.
+Keep only one copy of AudioMemo running. Close it normally before installing
+an update; setup does not force-close the application.
+Run a later Setup.exe to update the same per-user program location.
+Do not use the program installation folder as your recording or backup folder.
+
+UNINSTALL
+Use Windows Settings > Apps > Installed apps > AudioMemo > Uninstall.
+Only installer-owned program files and its shortcuts are removed.
+Your recordings, settings, downloaded models, and message history are retained.
+Added files and nonempty folders are not recursively deleted.
+
+Third-party copyrights and licenses are separate from AudioMemo's credits.
+Retain support\Licenses and support\Docs\THIRD-PARTY-NOTICES.txt.
+
+---------------------------------------------------------------------------
+AudioMemo Windows 11 x64 安装说明
+---------------------------------------------------------------------------
+版权所有 (C) 2026 Afanti Ma
+概念、创意与指导：Afanti Ma。
+在 Afanti Ma 指导下，主要由 AI 编程实现。
+
+正常关闭 AudioMemo 后，运行 AudioMemo-<版本>-Setup-x64.exe。
+安装界面支持英语和简体中文。无需管理员权限或安装证书，
+仅为当前用户安装到 %LOCALAPPDATA%\Programs\AudioMemo。
+创建开始菜单快捷方式，可选择创建桌面快捷方式。
+安装完成后不会自动启动应用或录音。
+
+此安装包未进行代码签名。Windows SmartScreen 或组织策略可能警告或阻止
+运行。正式签名分发需要受信任的代码签名证书；安装程序不会修改或绕过
+这些保护。SHA-256 文件用于核对文件内容，不代表发布者数字签名。
+
+在新电脑上，从开始菜单打开 AudioMemo 并完成首次设置：
+至少选择一个有效的麦克风/播放设备，以及可写的录音保存文件夹。
+语音和大语言模型设置可以跳过，稍后在设置中完成。
+录音本身不需要模型或在线账户。
+
+已包含 .NET 桌面运行库、FFmpeg 和语音引擎库。
+本地语音还需要微软 Visual C++ 2022 x64 运行库（缺少时安装），
+以及在 AudioMemo 设置中下载的语音模型：
+  https://learn.microsoft.com/cpp/windows/latest-supported-vc-redist
+Ollama、Copilot CLI、AI 账户和模型权重均为可选项，不包含在此安装包内，
+也不会被安装程序自动下载或静默安装。
+点击 AudioMemo 图标 > 帮助与关于，可查看离线用户指南和快捷键。
+
+现有 %LOCALAPPDATA%\AudioMemo 中的设置和模型，以及所选录音文件夹
+将被继续使用。已有便携版文件夹不会被移动或删除。
+请勿同时运行多个 AudioMemo 副本。升级前请正常关闭应用以保存工作，
+安装程序不会强制结束它。后续版本的 Setup.exe 会更新相同的安装位置。
+请勿将应用安装目录用作录音或备份文件夹。
+
+卸载：Windows 设置 > 应用 > 安装的应用 > AudioMemo > 卸载。
+仅移除安装程序拥有的应用文件和快捷方式，保留录音、设置、已下载模型、
+消息历史和您自行添加的文件，不会递归删除非空文件夹。
+第三方组件遵循各自的版权和许可证，详见 support\Licenses
+及 support\Docs\THIRD-PARTY-NOTICES.txt。

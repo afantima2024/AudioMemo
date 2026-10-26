@@ -1,0 +1,47 @@
+AudioMemo's Windows x64 speaker runtime
+
+The shipped sherpa-onnx-c-api.dll is built from the unmodified sherpa-onnx
+v1.13.8 source with SHERPA_ONNX_ENABLE_TTS=OFF. The stock NuGet native
+binary is explicitly excluded. Disabling TTS excludes Piper/eSpeak-ng;
+these unused text-to-speech implementations are not linked into this build.
+Python, binaries/examples, WebSocket support, and PortAudio are also disabled.
+Speaker diarization and the C API remain enabled.
+
+Source:
+https://github.com/k2-fsa/sherpa-onnx/tree/v1.13.8
+Archive:
+https://github.com/k2-fsa/sherpa-onnx/archive/refs/tags/v1.13.8.tar.gz
+Archive SHA-256:
+B0374CC56DBC186D442AE73D5DE743BB092470B640C4C50CE7B029044C0C4FA8
+
+This supplied native binary's SHA-256:
+F2EDDC04AAC761FFDD66B687BF4E477AE3FC2FB4BECC48B822504449EA1CF1F6
+Rebuilding with a different compiler or path can change the binary hash.
+See scripts\Build-SpeakerRuntime.ps1 in the source project for the recipe.
+
+The managed sherpa-onnx binding remains the Apache-2.0 NuGet version 1.13.8.
+ONNX Runtime 1.28.2 is retained from the Windows x64 native package.
+
+Native dependency sources are pinned with hashes in the source's CMake files.
+Their original license texts accompany this notice:
+- kaldi-native-fbank, kaldi-decoder, kaldifst (Apache-2.0)
+  https://github.com/csukuangfj/kaldi-native-fbank
+  https://github.com/k2-fsa/kaldi-decoder
+  https://github.com/k2-fsa/kaldifst
+- OpenFst (Apache-2.0)
+  https://github.com/csukuangfj/openfst
+- Eigen (MPL-2.0 and its listed permissive contributions)
+  https://gitlab.com/libeigen/eigen/-/tree/5.0.1
+- hclust-cpp / fastcluster (BSD-style, original notice retained)
+  https://github.com/csukuangfj/hclust-cpp/tree/2026-02-25
+- Kiss FFT (BSD-3-Clause)
+  https://github.com/mborgerding/kissfft
+- simple-sentencepiece (Apache-2.0)
+  https://github.com/pkufool/simple-sentencepiece
+- nlohmann/json (MIT)
+  https://github.com/nlohmann/json
+
+No upstream C/C++ source files were modified for this build. The complete
+source and dependency revisions, build flags, and source URLs are available
+through the pinned source archive and its CMake files. This notice does not
+replace the accompanying licenses or imply Microsoft Store certification.

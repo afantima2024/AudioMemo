@@ -1,0 +1,27 @@
+<UserControl x:Class="AudioMemo.Controls.TranscriptSearchPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:loc="clr-namespace:AudioMemo.Localization">
+    <Grid Margin="12">
+        <Grid.RowDefinitions><RowDefinition Height="Auto" /><RowDefinition Height="Auto" /><RowDefinition Height="Auto" /></Grid.RowDefinitions>
+        <Grid.ColumnDefinitions><ColumnDefinition /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+        <TextBox x:Name="SearchBox" MaxLength="128" Padding="7,4" MinHeight="32"
+                 ToolTip="{loc:Loc SearchHint}" AutomationProperties.Name="{loc:Loc SearchTranscript}" />
+        <CheckBox x:Name="FuzzySearchCheck" Grid.Column="1" Content="{loc:Loc FuzzySearch}" FontSize="12"
+                  Margin="10,0,0,0" ToolTip="{loc:Loc FuzzySearchHint}" />
+        <DockPanel Grid.Row="1" Grid.ColumnSpan="2" Margin="0,10,0,0">
+            <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+                <Button x:Name="SearchPreviousButton" Content="&#x2191;" Padding="9,2" MinHeight="28"
+                        ToolTip="{loc:Loc SearchPrevious}" AutomationProperties.Name="{loc:Loc SearchPrevious}" />
+                <Button x:Name="SearchNextButton" Content="&#x2193;" Padding="9,2" MinHeight="28" Margin="5,0,0,0"
+                        ToolTip="{loc:Loc SearchNext}" AutomationProperties.Name="{loc:Loc SearchNext}" />
+                <Button x:Name="ClearSearchButton" Content="{loc:Loc SearchClear}" Padding="9,2" MinHeight="28" Margin="5,0,0,0" />
+            </StackPanel>
+            <TextBlock x:Name="SearchStatus" FontSize="12" Foreground="{DynamicResource TextFillColorSecondaryBrush}"
+                       VerticalAlignment="Center" Margin="0,0,10,0" TextTrimming="CharacterEllipsis"
+                       AutomationProperties.LiveSetting="Polite" />
+        </DockPanel>
+        <CheckBox x:Name="OnlyMatchesCheck" Grid.Row="2" Grid.ColumnSpan="2" Content="{loc:Loc OnlyMatchingRows}"
+                  Margin="0,10,0,0" FontSize="12" ToolTip="{loc:Loc OnlyMatchingRowsHint}" />
+    </Grid>
+</UserControl>
