@@ -82,13 +82,13 @@ public sealed partial class ProductUiTests
     private static void VerifySearchPopup(TranscriptView view, FrameworkElement root, TranscriptSearchPanel panel)
     {
         Assert.Null(view.FindName("SearchBox"));
-        var toolbar = Assert.IsType<ToolBar>(Assert.IsType<Button>(view.FindName("SearchButton")).Parent);
-        Assert.Equal(toolbar.Items.IndexOf(Assert.IsType<Button>(view.FindName("CorrectRowsButton"))) + 1,
-            toolbar.Items.IndexOf(Assert.IsType<Button>(view.FindName("SearchButton"))));
+        var actions = Assert.IsType<ContextMenu>(view.FindName("TranscriptActionsMenu"));
+        Assert.Equal(actions.Items.IndexOf(Assert.IsType<MenuItem>(view.FindName("CorrectRowsAction"))) + 1,
+            actions.Items.IndexOf(Assert.IsType<MenuItem>(view.FindName("SearchAction"))));
         var requestCount = 0;
         Action requested = () => requestCount++;
         view.SearchRequested += requested;
-        Assert.IsType<Button>(view.FindName("SearchButton")).RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+        Assert.IsType<MenuItem>(view.FindName("SearchAction")).RaiseEvent(new RoutedEventArgs(MenuItem.ClickEvent));
         Assert.True(HandleSearchKey(view, Key.F, ModifierKeys.Control, false));
         Assert.Equal(2, requestCount);
         view.SearchRequested -= requested;

@@ -1,0 +1,29 @@
+AudioMemo video-audio import uses unmodified FFmpeg and ffprobe as separate
+local child processes. This package uses the LGPL shared Windows x64 build,
+not the GPL or nonfree variants. FFplay is not included.
+
+FFmpeg copyright belongs to the FFmpeg developers and the authors identified
+in its source files. The applicable GNU LGPL version 3 and GNU GPL version 3
+texts accompany this notice. Retain all license and source materials when
+redistributing AudioMemo. The FFmpeg libraries can be replaced or rebuilt
+subject to their licenses; AudioMemo does not enforce binary hashes at runtime.
+
+This software is based in part on the work of the Independent JPEG Group.
+AudioMemo makes no changes to the FFmpeg source.
+
+Exact binary archive, SHA-256, source commit, and build-recipe commit are
+recorded in dependency.json. Build configuration is in build-configuration.txt.
+Sources\ffmpeg-source.zip contains that FFmpeg revision, including its
+copyright and license notices. Sources\ffmpeg-build-source.zip contains the
+matching BtbN build recipes, patches, and external-dependency source references.
+External libraries have their own licensing terms; consult those recipes,
+upstream notices, and Upstream-LICENSE.md when rebuilding or redistributing.
+
+Upstream: https://ffmpeg.org/
+Source: https://github.com/FFmpeg/FFmpeg
+Windows build recipes and dependency sources:
+https://github.com/BtbN/FFmpeg-Builds
+
+The media tools are used only to inspect selected local video containers and
+decode the selected audio track. AudioMemo does not use them to stream online
+media, access recording devices, decode video frames, or upload files.

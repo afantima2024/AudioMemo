@@ -4,7 +4,7 @@ param(
     [string]$Publisher = 'CN=AudioMemo.Development',
     [string]$PublisherDisplayName = 'AudioMemo',
     [ValidatePattern('^\d+\.\d+\.\d+\.\d+$')]
-    [string]$Version = '0.1.0.0',
+    [string]$Version,
     [string]$CertificateThumbprint,
     [string]$PublishedDirectory
 )
@@ -13,6 +13,10 @@ $root = Split-Path -Parent $PSScriptRoot
 if (-not $PublishedDirectory) { $PublishedDirectory = Join-Path $root 'artifacts\app' }
 if (-not (Test-Path -LiteralPath (Join-Path $PublishedDirectory 'AudioMemo.exe'))) {
     throw 'Run scripts\Publish.ps1 first.'
+}
+if (-not $Version) {
+    $assembly = Join-Path $PublishedDirectory 'support\Runtime\AudioMemo.dll'
+    $Version = ([version][Diagnostics.FileVersionInfo]::GetVersionInfo($assembly).FileVersion).ToString(4)
 }
 $sdkRoot = "${env:ProgramFiles(x86)}\Windows Kits\10\bin"
 $sdk = Get-ChildItem -LiteralPath $sdkRoot -Directory |

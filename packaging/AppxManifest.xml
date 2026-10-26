@@ -3,7 +3,8 @@
          xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
          xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
          IgnorableNamespaces="uap rescap">
-  <Identity Name="AudioMemo.Development" Publisher="CN=AudioMemo.Development" Version="0.1.0.0" ProcessorArchitecture="x64" />
+  <!-- Package-MSIX.ps1 replaces the template version with the published file version or an explicit Store override. -->
+  <Identity Name="AudioMemo.Development" Publisher="CN=AudioMemo.Development" Version="0.0.0.0" ProcessorArchitecture="x64" />
   <Properties>
     <DisplayName>AudioMemo</DisplayName>
     <PublisherDisplayName>AudioMemo</PublisherDisplayName>

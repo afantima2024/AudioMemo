@@ -186,7 +186,7 @@ public sealed partial class ProductUiTests
             Assert.Equal(Cursors.SizeAll, grip.Cursor);
             Assert.True(grip.Focusable && grip.IsTabStop && grip.IsEnabled);
             Assert.Equal(["first", "pageUp", "pageDown", "latest"],
-                Assert.IsType<StackPanel>(navigation.Child).Children.OfType<Button>().Select(button => button.Tag));
+                Assert.IsType<StackPanel>(view.FindName("NavigationButtonStrip")).Children.OfType<Button>().Select(button => button.Tag));
             Assert.False(top.IsEnabled || pageUp.IsEnabled);
             Assert.True(pageDown.IsEnabled && bottom.IsEnabled);
             foreach (var (button, label, command) in new[]
@@ -376,7 +376,7 @@ public sealed partial class ProductUiTests
             Resize(760, 360);
             StartDrag();
             Drag(30, 20);
-            Resize(140, 180);
+            Resize(120, 180);
             EndDrag();
             Assert.Equal(Visibility.Collapsed, navigation.Visibility);
             Assert.Equal(new Point(0.3, 0.4), view.NavigationPosition);
@@ -390,7 +390,7 @@ public sealed partial class ProductUiTests
             view.SetSpeakerFilter([]);
             Pump(root);
             EndDrag();
-            Assert.Equal(Visibility.Collapsed, navigation.Visibility);
+            Assert.Equal(Visibility.Visible, navigation.Visibility);
             Assert.Equal(new Point(0.3, 0.4), view.NavigationPosition);
             Assert.Empty(savedPositions);
             view.SetSpeakerFilter(null);
@@ -399,10 +399,10 @@ public sealed partial class ProductUiTests
             view.SetDocument(new() { Segments = [new(0, 1, "Short transcript.")] }, reset: true);
             Pump(root);
             Assert.Equal(0, scroll.ScrollableHeight);
-            Assert.Equal(Visibility.Collapsed, navigation.Visibility);
+            Assert.Equal(Visibility.Visible, navigation.Visibility);
             view.SetDocument(new(), reset: true);
             Pump(root);
-            Assert.Equal(Visibility.Collapsed, navigation.Visibility);
+            Assert.Equal(Visibility.Visible, navigation.Visibility);
             Assert.False(top.IsEnabled || pageUp.IsEnabled || pageDown.IsEnabled || bottom.IsEnabled);
             view.SetDocument(document, reset: true);
             Pump(root);

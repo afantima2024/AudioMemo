@@ -8,7 +8,6 @@
     <UseWPF>true</UseWPF>
     <PlatformTarget>x64</PlatformTarget>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
-    <Version>0.1.0</Version>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <ApplicationIcon Condition="Exists('Assets\AudioMemo.ico')">Assets\AudioMemo.ico</ApplicationIcon>
     <Product>AudioMemo</Product>

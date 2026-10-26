@@ -570,8 +570,9 @@ reading panes. Short, narrow workspaces provide a pane selector beside
 Transcript, Main points, and My notes so each remains usable rather than being
 compressed into a few pixels. Larger windows retain the resizable multi-pane
 layout. Very small work areas can scroll the workspace instead of clipping
-its controls or collapsing the reading area. The transcript toolbar keeps Edit text and Search visible and puts
-additional commands in its overflow menu instead of taking extra text rows.
+its controls or collapsing the reading area. The floating Transcript toolbar has
+an **Actions** menu instead of a second row of buttons. In narrow panes, the
+navigation buttons hide while Actions remains available.
 Selection backgrounds are drawn behind the glyphs, with a contrasting
 text brush in light and dark themes.
 
@@ -629,10 +630,18 @@ still expands to show every line.
 
 - New text follows the bottom. Scroll up to hold your position; scroll to the
   bottom, press **Ctrl+End**, or click **Latest** to resume following.
-- A compact floating pad, initially in the lower-right of Transcript, provides **Top**,
-  **Page up**, **Page down**, and **Bottom** without another toolbar row.
-  It appears only when the transcript needs scrolling and the viewport has
-  room, stays clear of the scrollbar, and works during recording and AI work.
+- A compact floating toolbar, initially in the lower-right of Transcript, provides
+  **Actions**, **Top**, **Page up**, **Page down**, and **Bottom**.
+  **Actions** contains the former second-row commands: speaker filtering, copy
+  plain/annotated text, follow latest, replay, silence, edit text, search, and
+  online comparison. Speaker filtering is a submenu whose checkboxes stay open
+  for multiple selections. The Transcript title-row buttons, right-click menu,
+  and replay controls remain in place.
+  The toolbar stays available for short or empty transcripts, including when
+  filters match no rows. It stays clear of the scrollbar and works during
+  recording and AI work; each command retains its availability rules and shortcuts.
+  Narrow panes retain Actions and the grip while hiding the four navigation
+  buttons. The entire toolbar hides only when the viewport cannot fit it.
   Top pauses following; Bottom resumes it. Page buttons preserve row/text
   selection. Hover over a button to see its action and configured shortcut.
   Drag the dotted grip on its left to move it anywhere inside the transcript
@@ -1451,6 +1460,12 @@ dotnet test AudioMemo.sln --no-restore
 dotnet run --project src\AudioMemo\AudioMemo.csproj
 ```
 
+Generated FFmpeg executables, libraries, downloaded source archives, and their
+generated notices are not committed. `Get-FFmpeg.ps1` recreates them using the
+URLs and checksums in `dependencies\ffmpeg.json`; the handwritten
+`AudioMemo-FFmpeg-notice.txt` remains in source control. Build outputs, installers,
+recordings, personal settings, and credentials must not be committed.
+
 The included Windows x64 speaker DLL is a pinned sherpa-onnx 1.13.8 build with
 **TTS disabled**, excluding unused Piper/eSpeak-ng code from the app. The stock
 native package is explicitly excluded; its ONNX Runtime DLL is retained.
@@ -1567,10 +1582,24 @@ $env:AUDIOMEMO_TEST_PORTABLE = (Resolve-Path 'artifacts\app\AudioMemo.exe').Path
 dotnet test AudioMemo.sln --no-restore --filter 'Category=Portable'
 ```
 
+## Local release versions
+
+`Directory.Build.props` contains the single `<Version>` for application releases.
+Advance it before delivering an update: normally a patch increment for fixes or
+a minor increment for a new feature. About, managed assembly versions, and
+Windows file metadata use this value. Setup reads the published file version;
+MSIX does the same unless an explicit Partner Center `-Version` is supplied.
+The version in the MSIX source template is only a placeholder.
+
+Release-number changes are local by default. Do not automatically commit, tag,
+push, or publish a GitHub release; those operations require a request for the
+current update. A previous push request does not authorize future pushes.
+See `AGENTS.md` for the project release and data-preservation policy.
+
 ## Windows Setup.exe installer
 
 For a conventional Windows 11 x64 installation, use
-`artifacts\packages\AudioMemo-0.1.0-Setup-x64.exe`. Setup supports English and
+`artifacts\packages\AudioMemo-<version>-Setup-x64.exe`. Setup supports English and
 Simplified Chinese and installs for the current user in
 `%LOCALAPPDATA%\Programs\AudioMemo`, without administrator elevation. It creates
 a Start menu shortcut; the desktop shortcut is optional. The application is
@@ -1625,7 +1654,7 @@ packaging scripts. Install the Windows 11 SDK, publish, then run:
 .\scripts\Package-MSIX.ps1
 ```
 
-The development output is an **unsigned** `artifacts\packages\AudioMemo-0.1.0.0-x64.msix`.
+The development output is an **unsigned** `artifacts\packages\AudioMemo-<major.minor.patch.revision>-x64.msix`.
 This does not install anything or alter certificate trust. For Partner Center,
 reserve the app name and pass its exact identity information:
 

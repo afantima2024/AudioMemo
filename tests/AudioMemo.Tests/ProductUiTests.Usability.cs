@@ -339,7 +339,7 @@ public sealed partial class ProductUiTests
                 Assert.Equal(3, requests);
                 Assert.True(Assert.IsType<bool>(Call(main, "ExecuteShortcut", Key.F7, ModifierKeys.None, true, true)));
                 Assert.Equal(3, requests);
-                var search = Assert.IsType<Button>(transcript.FindName("SearchButton"));
+                var search = Assert.IsType<MenuItem>(transcript.FindName("SearchAction"));
                 Assert.Contains("F7", Assert.IsType<string>(search.ToolTip));
                 Assert.DoesNotContain("Ctrl+F", Assert.IsType<string>(search.ToolTip));
                 Assert.Empty(Assert.IsType<MenuItem>(transcript.FindName("CorrectRowsMenu")).InputGestureText);
@@ -407,7 +407,7 @@ public sealed partial class ProductUiTests
         Assert.IsType<MenuItem>(view.FindName("CorrectSpeakerMenu")).RaiseEvent(new RoutedEventArgs(MenuItem.ClickEvent));
         Assert.Equal(2, Assert.Single(selected!).StartSeconds);
 
-        var menu = Assert.IsType<ContextMenu>(view.GetType().GetField("speakerMenu", BindingFlags.Instance | BindingFlags.NonPublic)!.GetValue(view));
+        var menu = Assert.IsType<MenuItem>(view.FindName("SpeakerFilterAction"));
         Assert.DoesNotContain(menu.Items.OfType<MenuItem>(), item => Equals(item.Header, UiText.Get("DeselectAllSpeakers")));
         var all = Assert.IsType<MenuItem>(menu.Items[0]);
         all.IsChecked = false;

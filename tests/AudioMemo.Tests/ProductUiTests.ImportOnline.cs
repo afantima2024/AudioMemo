@@ -116,7 +116,7 @@ public sealed partial class ProductUiTests
             Invoke(window, "UpdateControls");
             Assert.True(Assert.IsType<Button>(window.FindName("ImportAudioButton")).IsEnabled);
             Assert.Same(window.FindName("ImportAudioButton"), Call(window, "ShortcutTarget", "import"));
-            Assert.Same(Assert.IsType<AudioMemo.Controls.TranscriptView>(window.FindName("TranscriptPanel")).FindName("OnlineRowsButton"),
+            Assert.Same(Assert.IsType<AudioMemo.Controls.TranscriptView>(window.FindName("TranscriptPanel")).FindName("OnlineRowsAction"),
                 Call(window, "ShortcutTarget", "online"));
             Assert.Equal("", settings.Shortcuts.Gesture("import"));
             Assert.Equal("", settings.Shortcuts.Gesture("online"));

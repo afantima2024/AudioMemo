@@ -32,22 +32,27 @@ public partial class TranscriptView
         var scrollbarWidth = scroll?.Template?.FindName("PART_VerticalScrollBar", scroll) is FrameworkElement { ActualWidth: > 0 } scrollbar
             ? scrollbar.ActualWidth : SystemParameters.VerticalScrollBarWidth;
         var viewportHeight = scroll?.ViewportHeight ?? 0;
+        var showNavigation = NavigationCanvas.ActualWidth >= 216 + scrollbarWidth + 16;
+        NavigationButtonStrip.Visibility = showNavigation ? Visibility.Visible : Visibility.Collapsed;
+        FloatingNavigation.Width = showNavigation ? 216 : 104;
         navigationTravel = new Rect(8, Math.Max(0, NavigationCanvas.ActualHeight - viewportHeight) + 8,
             Math.Max(0, NavigationCanvas.ActualWidth - scrollbarWidth - FloatingNavigation.Width - 16),
             Math.Max(0, viewportHeight - FloatingNavigation.Height - 16));
-        var visible = rows.Count > 0 && scroll is { ScrollableHeight: > 1 } &&
-            viewportHeight >= FloatingNavigation.Height + 16 &&
+        var visible = viewportHeight >= FloatingNavigation.Height + 16 &&
             NavigationCanvas.ActualWidth >= FloatingNavigation.Width + scrollbarWidth + 16;
         if (!visible)
+        {
             CancelNavigationDrag();
+            TranscriptActionsMenu.IsOpen = false;
+        }
         FloatingNavigation.Visibility = visible ? Visibility.Visible : Visibility.Collapsed;
         PlaceNavigation();
         var canGoUp = visible && scroll is { VerticalOffset: > 1 };
         var canGoDown = visible && scroll is not null && scroll.ScrollableHeight - scroll.VerticalOffset > 1;
-        TranscriptTopButton.IsEnabled = visible && (canGoUp || IsFollowing);
+        TranscriptTopButton.IsEnabled = visible && rows.Count > 0 && (canGoUp || IsFollowing);
         TranscriptPageUpButton.IsEnabled = canGoUp;
         TranscriptPageDownButton.IsEnabled = canGoDown;
-        TranscriptBottomButton.IsEnabled = visible && (canGoDown || !IsFollowing);
+        TranscriptBottomButton.IsEnabled = visible && rows.Count > 0 && (canGoDown || !IsFollowing);
     }
 
     private void PlaceNavigation()

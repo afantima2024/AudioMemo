@@ -12,24 +12,6 @@
         </Style>
     </UserControl.Resources>
     <DockPanel>
-        <ToolBar DockPanel.Dock="Top" Margin="0,0,0,6" Padding="0" Background="Transparent"
-                 ToolBarTray.IsLocked="True" AutomationProperties.Name="{loc:Loc Transcript}">
-            <ToolBar.Resources>
-                <Style x:Key="{x:Static ToolBar.ButtonStyleKey}" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}" />
-            </ToolBar.Resources>
-            <Button x:Name="SpeakerFilterButton" Click="SpeakerFilter_Click" Padding="8,4" MinHeight="28" FontSize="12" Margin="0,0,6,0"
-                    AutomationProperties.Name="{loc:Loc SpeakerFilterLabel}">
-                <TextBlock x:Name="SpeakerFilterText" Text="{loc:Loc AllSpeakers}" MaxWidth="135" TextTrimming="CharacterEllipsis" />
-            </Button>
-            <Button x:Name="CopyVisibleButton" Content="{loc:Loc CopyAllText}" Click="CopyAll_Click" Padding="8,4" MinHeight="28" FontSize="12" Margin="0,0,6,0" />
-            <Button x:Name="CopyAnnotatedButton" Content="{loc:Loc CopyAnnotated}" Click="CopyAnnotated_Click" Padding="8,4" MinHeight="28" FontSize="12" Margin="0,0,6,0" />
-            <Button x:Name="FollowButton" Content="{loc:Loc FollowingTranscript}" Click="Follow_Click" Padding="8,4" MinHeight="28" FontSize="12" Margin="0,0,6,0" />
-            <Button x:Name="PlayRangeButton" Content="{loc:Loc PlaySelectedRange}" Click="PlayRange_Click" Padding="8,4" MinHeight="28" FontSize="12" ToolTip="{loc:Loc ReplayHint}" />
-            <Button x:Name="MuteRowsButton" Content="{loc:Loc MuteSelectedRows}" Click="MuteRows_Click" Padding="8,4" MinHeight="28" FontSize="12" Margin="6,0,0,0" ToolTip="{loc:Loc MuteSelectedRowsHint}" />
-            <Button x:Name="CorrectRowsButton" ToolBar.OverflowMode="Never" Content="{loc:Loc EditTranscriptText}" Click="CorrectRows_Click" Padding="8,4" MinHeight="28" FontSize="12" Margin="6,0,0,0" ToolTip="{loc:Loc CorrectSelectionHint}" />
-            <Button x:Name="SearchButton" ToolBar.OverflowMode="Never" Content="{loc:Loc SearchButton}" Click="OpenSearch_Click" Padding="8,4" MinHeight="28" FontSize="12" Margin="6,0,0,0" ToolTip="{loc:Loc SearchWindowHint}" />
-            <Button x:Name="OnlineRowsButton" Content="{loc:Loc OnlineTranscription}" Click="OnlineRows_Click" Padding="8,4" MinHeight="28" FontSize="12" Margin="6,0,0,0" ToolTip="{loc:Loc OnlineSelectionHint}" />
-        </ToolBar>
         <DockPanel x:Name="ReplayTransport" DockPanel.Dock="Bottom" Visibility="Collapsed" Margin="0,5,0,0">
             <Button x:Name="ReplayPauseButton" DockPanel.Dock="Left" Content="{loc:Loc ReplayPause}" Click="ReplayPause_Click" Padding="8,3" MinHeight="26" FontSize="12" Margin="0,0,5,0" />
             <Button x:Name="ReplayStopButton" DockPanel.Dock="Left" Content="{loc:Loc ReplayStop}" Click="ReplayStop_Click" Padding="8,3" MinHeight="26" FontSize="12" Margin="0,0,8,0" />
@@ -136,7 +118,7 @@
                        Foreground="{DynamicResource TextFillColorSecondaryBrush}" IsHitTestVisible="False" />
             <Canvas x:Name="NavigationCanvas" Panel.ZIndex="1" ClipToBounds="True"
                     SizeChanged="NavigationCanvas_SizeChanged" PreviewMouseWheel="Navigation_MouseWheel">
-                <Border x:Name="FloatingNavigation" Canvas.Left="8" Canvas.Top="8" Width="136" Height="36" Visibility="Collapsed"
+                <Border x:Name="FloatingNavigation" Canvas.Left="8" Canvas.Top="8" Width="216" Height="36" Visibility="Collapsed"
                         Background="{DynamicResource SolidBackgroundFillColorQuarternaryBrush}"
                         BorderBrush="{DynamicResource AppDivider}" BorderThickness="1" CornerRadius="8" Padding="3">
                     <StackPanel Orientation="Horizontal">
@@ -164,6 +146,38 @@
                                 </ControlTemplate>
                             </Thumb.Template>
                         </Thumb>
+                        <Button x:Name="TranscriptActionsButton" Width="80" Height="28" MinHeight="28" Padding="5,0"
+                                FontSize="12" BorderThickness="0" Click="TranscriptActions_Click"
+                                ToolTip="{loc:Loc TranscriptActionsHint}" AutomationProperties.Name="{loc:Loc TranscriptActionsLabel}">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{loc:Loc TranscriptActionsLabel}" />
+                                <Path Data="M0,0 L3,3 6,0" Width="6" Height="3" Margin="5,0,0,0" VerticalAlignment="Center"
+                                      Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}"
+                                      StrokeThickness="1.3" StrokeLineJoin="Round" />
+                            </StackPanel>
+                            <Button.ContextMenu>
+                                <ContextMenu x:Name="TranscriptActionsMenu" Placement="Bottom">
+                                    <MenuItem x:Name="SpeakerFilterAction" Click="SpeakerFilter_Click"
+                                              AutomationProperties.Name="{loc:Loc SpeakerFilterLabel}">
+                                        <MenuItem.Header>
+                                            <TextBlock x:Name="SpeakerFilterText" Text="{loc:Loc AllSpeakers}"
+                                                       MaxWidth="240" TextTrimming="CharacterEllipsis" />
+                                        </MenuItem.Header>
+                                    </MenuItem>
+                                    <Separator />
+                                    <MenuItem x:Name="CopyVisibleAction" Header="{loc:Loc CopyAllText}" Click="CopyAll_Click" />
+                                    <MenuItem x:Name="CopyAnnotatedAction" Header="{loc:Loc CopyAnnotated}" Click="CopyAnnotated_Click" />
+                                    <MenuItem x:Name="FollowAction" Header="{loc:Loc FollowingTranscript}" Click="Follow_Click" />
+                                    <Separator />
+                                    <MenuItem x:Name="PlayRangeAction" Header="{loc:Loc PlaySelectedRange}" Click="PlayRange_Click" ToolTip="{loc:Loc ReplayHint}" />
+                                    <MenuItem x:Name="MuteRowsAction" Header="{loc:Loc MuteSelectedRows}" Click="MuteRows_Click" ToolTip="{loc:Loc MuteSelectedRowsHint}" />
+                                    <MenuItem x:Name="CorrectRowsAction" Header="{loc:Loc EditTranscriptText}" Click="CorrectRows_Click" ToolTip="{loc:Loc CorrectSelectionHint}" />
+                                    <MenuItem x:Name="SearchAction" Header="{loc:Loc SearchButton}" Click="OpenSearch_Click" ToolTip="{loc:Loc SearchWindowHint}" />
+                                    <MenuItem x:Name="OnlineRowsAction" Header="{loc:Loc OnlineTranscription}" Click="OnlineRows_Click" ToolTip="{loc:Loc OnlineSelectionHint}" />
+                                </ContextMenu>
+                            </Button.ContextMenu>
+                        </Button>
+                        <StackPanel x:Name="NavigationButtonStrip" Orientation="Horizontal">
                         <Button x:Name="TranscriptTopButton" Tag="first" Style="{StaticResource TranscriptNavigationButton}" Click="Navigation_Click"
                                 ToolTip="{loc:Loc TranscriptBeginning}" AutomationProperties.Name="{loc:Loc TranscriptBeginning}">
                             <Path Data="M1,1 L11,1 M2,7 L6,3 10,7 M6,3 L6,11" Width="12" Height="12"
@@ -188,6 +202,7 @@
                                   Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" StrokeThickness="1.4"
                                   StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeEndLineCap="Round" />
                         </Button>
+                        </StackPanel>
                     </StackPanel>
                 </Border>
             </Canvas>

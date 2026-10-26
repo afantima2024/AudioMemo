@@ -1105,11 +1105,13 @@ Only the previous unchanged generated section is replaced. Your surrounding note
 
 Hover over My notes for the model used by the applied AI section. Full speaker reanalysis can clear the Me tag; check it before generating another personal summary.</value></data>
   <data name="GuideNavigationTitle" xml:space="preserve"><value>Navigate, search, copy, and replay</value></data>
-  <data name="GuideNavigationBody" xml:space="preserve"><value>The transcript shows Time, Speaker, and Text. Scroll upward to stop following new text; Latest or Bottom resumes following. The floating Top/Page up/Page down/Bottom pad appears when scrolling is needed. Drag its dotted grip to move it; the position is remembered.
+  <data name="GuideNavigationBody" xml:space="preserve"><value>The transcript shows Time, Speaker, and Text. The floating toolbar's Actions menu contains speaker filtering, copying, following the latest text, replay, silence, text correction, search, and online comparison. The buttons on the Transcript title row remain in place.
+
+Scroll upward to stop following new text; Latest or Bottom resumes following. The toolbar stays available for short or empty transcripts, so you can change filters or open search. In narrow panes, Actions remains available while the four navigation buttons are hidden. Drag its dotted grip to move it; the position is remembered.
 
 Drag inside a text cell to select words. Select Time/Speaker rows for row actions; Shift selects a range and Ctrl selects separate rows. Copy all text omits times/names; the annotated copy includes them.
 
-The speaker filter can show selected speakers or Not labeled. Check All speakers to include everyone, or uncheck it to clear the selection. Transcript copy buttons respect the active filter; filtering alone does not edit audio or restrict a full summary.
+The speaker filter can show selected speakers or Not labeled. Check All speakers to include everyone, or uncheck it to clear the selection. Transcript copy commands respect the active filter; filtering alone does not edit audio or restrict a full summary.
 
 Open transcript search to find text and move between matches. Enter/Shift+Enter in the search field moves next/previous. Open Help &amp; About > Keyboard shortcuts for your current bindings rather than assuming the defaults.
 
@@ -1192,4 +1194,6 @@ Review waiting: the AI task may be waiting for your decision, not doing more inf
 Controls unavailable: some actions need a completed saved recording or must wait for recording, saving, editing, or AI work to finish. Read the status or warning rather than forcing the process to close.
 
 Open Message history from Help &amp; About, the logo menu, or the status bar to see when, why, and what the app reported. Copy relevant error details for troubleshooting, but avoid sharing credentials or private recording information. History is stored locally and is not sent to AI.</value></data>
+  <data name="TranscriptActionsLabel" xml:space="preserve"><value>Actions</value></data>
+  <data name="TranscriptActionsHint" xml:space="preserve"><value>Speaker filter, copy, follow, replay, silence, text correction, search, and online comparison.</value></data>
 </root>

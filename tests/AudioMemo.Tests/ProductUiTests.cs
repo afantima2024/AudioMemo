@@ -58,6 +58,7 @@ public sealed partial class ProductUiTests
                     ReportPhase($"{language}: transcript selection and compact rows");
                     VerifyTranscriptSelectionPersistence(language);
                     ReportPhase($"{language}: floating transcript navigation");
+                    VerifyFloatingTranscriptActions(application, language);
                     VerifyFloatingTranscriptNavigation(application, language);
                     VerifyTranscriptNavigationPersistence(language);
                     ReportPhase($"{language}: display-only speaker colors and shared unlabeled colors");
@@ -933,7 +934,7 @@ public sealed partial class ProductUiTests
         Assert.Equal(2, grid.Items.Count);
         Assert.DoesNotContain("Second", view.VisibleText());
         Assert.Contains("Second", view.AllText());
-        Assert.Equal(new UiText(language)["CopyFilteredText"], Assert.IsType<Button>(view.FindName("CopyVisibleButton")).Content);
+        Assert.Equal(new UiText(language)["CopyFilteredText"], Assert.IsType<MenuItem>(view.FindName("CopyVisibleAction")).Header);
         document.RenameSpeaker("spkr1", "Jamie");
         view.SetDocument(document);
         Pump(host);
@@ -942,7 +943,7 @@ public sealed partial class ProductUiTests
         grid.SelectedItems.Add(grid.Items[1]);
         grid.SelectedItems.Add(grid.Items[0]);
         Assert.Equal(new PlaybackRange(0, 3), view.SelectedPlaybackRange());
-        Assert.True(Assert.IsType<Button>(view.FindName("PlayRangeButton")).IsEnabled);
+        Assert.True(Assert.IsType<MenuItem>(view.FindName("PlayRangeAction")).IsEnabled);
         PlaybackRange? requested = null;
         Exception? failure = null;
         view.ReplayRequested += range => requested = range;
@@ -960,7 +961,7 @@ public sealed partial class ProductUiTests
         view.SelectAllVisibleRows();
         IReadOnlyList<TranscriptRow>? editing = null;
         view.EditRequested += selection => editing = selection;
-        Assert.IsType<Button>(view.FindName("MuteRowsButton")).RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+        Assert.IsType<MenuItem>(view.FindName("MuteRowsAction")).RaiseEvent(new RoutedEventArgs(MenuItem.ClickEvent));
         Assert.NotNull(editing);
         Assert.Equal(2, editing.Count);
         Assert.All(editing, row => Assert.Equal("spkr1", row.SpeakerId));
@@ -972,7 +973,7 @@ public sealed partial class ProductUiTests
         IReadOnlyList<TranscriptRow>? correction = null;
         var reTranscribe = false;
         view.CorrectionRequested += (selection, rerun) => { correction = selection; reTranscribe = rerun; };
-        Assert.IsType<Button>(view.FindName("CorrectRowsButton")).RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+        Assert.IsType<MenuItem>(view.FindName("CorrectRowsAction")).RaiseEvent(new RoutedEventArgs(MenuItem.ClickEvent));
         Assert.NotNull(correction);
         Assert.False(reTranscribe);
         Assert.Equal(2, correction.Count);
@@ -980,16 +981,16 @@ public sealed partial class ProductUiTests
         Assert.IsType<MenuItem>(view.FindName("RetranscribeRowsMenu")).RaiseEvent(new RoutedEventArgs(MenuItem.ClickEvent));
         Assert.True(reTranscribe);
         view.CanReplay = false;
-        Assert.True(Assert.IsType<Button>(view.FindName("CorrectRowsButton")).IsEnabled);
+        Assert.True(Assert.IsType<MenuItem>(view.FindName("CorrectRowsAction")).IsEnabled);
         Assert.False(Assert.IsType<MenuItem>(view.FindName("RetranscribeRowsMenu")).IsEnabled);
         grid.SelectedItems.Clear();
-        Assert.False(Assert.IsType<Button>(view.FindName("CorrectRowsButton")).IsEnabled);
+        Assert.False(Assert.IsType<MenuItem>(view.FindName("CorrectRowsAction")).IsEnabled);
         grid.SelectedItems.Add(grid.Items[1]);
-        Assert.IsType<Button>(view.FindName("CorrectRowsButton")).RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+        Assert.IsType<MenuItem>(view.FindName("CorrectRowsAction")).RaiseEvent(new RoutedEventArgs(MenuItem.ClickEvent));
         Assert.Equal(grid.Items[1], Assert.Single(correction));
         view.CanReplay = true;
         view.CanCorrect = false;
-        Assert.False(Assert.IsType<Button>(view.FindName("CorrectRowsButton")).IsEnabled);
+        Assert.False(Assert.IsType<MenuItem>(view.FindName("CorrectRowsAction")).IsEnabled);
         Assert.False(Assert.IsType<MenuItem>(view.FindName("RetranscribeRowsMenu")).IsEnabled);
         using (var previewFolder = new TestFolder())
         {
@@ -1017,9 +1018,9 @@ public sealed partial class ProductUiTests
             finally { preview.Close(); }
         }
         view.CanEdit = false;
-        Assert.False(Assert.IsType<Button>(view.FindName("MuteRowsButton")).IsEnabled);
+        Assert.False(Assert.IsType<MenuItem>(view.FindName("MuteRowsAction")).IsEnabled);
         view.CanReplay = false;
-        Assert.False(Assert.IsType<Button>(view.FindName("PlayRangeButton")).IsEnabled);
+        Assert.False(Assert.IsType<MenuItem>(view.FindName("PlayRangeAction")).IsEnabled);
         requested = null;
         grid.RaiseEvent(new MouseButtonEventArgs(Mouse.PrimaryDevice, 0, MouseButton.Left)
         {
@@ -1060,7 +1061,7 @@ public sealed partial class ProductUiTests
         view.CanCorrect = view.CanChangeSpeakers = view.CanSummarizeAboutMe = true;
         view.CanSetSpeakerColors = true;
         Pump(host);
-        Assert.True(Assert.IsType<Button>(view.FindName("CorrectRowsButton")).IsEnabled);
+        Assert.True(Assert.IsType<MenuItem>(view.FindName("CorrectRowsAction")).IsEnabled);
         Assert.False(Assert.IsType<MenuItem>(view.FindName("CorrectSpeakerMenu")).IsEnabled);
         Assert.False(Assert.IsType<MenuItem>(view.FindName("MarkMeMenu")).IsEnabled);
         Assert.False(Assert.IsType<MenuItem>(view.FindName("RemoveMeMenu")).IsEnabled);
@@ -1070,7 +1071,7 @@ public sealed partial class ProductUiTests
             Assert.IsType<MenuItem>(view.FindName("SpeakerColorMenu")).Header);
         view.SetDocument(new());
         Pump(host);
-        Assert.False(Assert.IsType<Button>(view.FindName("CorrectRowsButton")).IsEnabled);
+        Assert.False(Assert.IsType<MenuItem>(view.FindName("CorrectRowsAction")).IsEnabled);
         Assert.False(Assert.IsType<MenuItem>(view.FindName("SpeakerColorMenu")).IsEnabled);
     }
 

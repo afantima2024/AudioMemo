@@ -8,7 +8,8 @@ artifacts/
 TestResults/
 # Recreated by scripts/Get-FFmpeg.ps1 from dependencies/ffmpeg.json.
 src/AudioMemo/Native/FFmpeg/win-x64/
-src/AudioMemo/Licenses/FFmpeg/
+src/AudioMemo/Licenses/FFmpeg/*
+!src/AudioMemo/Licenses/FFmpeg/AudioMemo-FFmpeg-notice.txt
 *.p12
 *.pem
 *.key

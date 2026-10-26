@@ -19,7 +19,6 @@ public partial class TranscriptView : UserControl
     private ScrollViewer? scroll;
     private bool updating;
     private readonly SpeakerFilter speakerFilter = new();
-    private readonly ContextMenu speakerMenu = new() { Placement = PlacementMode.Bottom };
     private IReadOnlyList<SpeakerChoice> speakerChoices = [];
     private bool canReplay;
     private bool canExportAudio;
@@ -123,7 +122,8 @@ public partial class TranscriptView : UserControl
             else if (ReplayProgress.Value != playbackDragStart && playback is not null)
                 ReplaySeekRequested?.Invoke(ReplayProgress.Value);
         }));
-        speakerMenu.PlacementTarget = SpeakerFilterButton;
+        TranscriptActionsMenu.PlacementTarget = TranscriptActionsButton;
+        Unloaded += (_, _) => TranscriptActionsMenu.IsOpen = false;
         RowsGrid.ItemsSource = rows;
         RowsGrid.AddHandler(ScrollViewer.ScrollChangedEvent, new ScrollChangedEventHandler(Scroll_Changed));
         CommandBindings.Add(new(ApplicationCommands.Copy, (_, e) =>
@@ -143,6 +143,7 @@ public partial class TranscriptView : UserControl
         document = next;
         if (reset)
         {
+            CancelNavigationDrag();
             speakerFilter.ShowAll();
             SearchBox.Clear();
         }
@@ -208,7 +209,7 @@ public partial class TranscriptView : UserControl
         NoMatchingSpeakers.Text = UiText.Get(!IsSearchFiltered ? "NoMatchingSpeakers" :
             searchFailed ? "SearchFailed" : searchReady ? "SearchNoMatches" : "SearchInProgress");
         NoMatchingSpeakers.Visibility = rows.Count == 0 && (!speakerFilter.IsAll || IsSearchFiltered) ? Visibility.Visible : Visibility.Collapsed;
-        CopyVisibleButton.Content = UiText.Get(speakerFilter.IsAll && !IsSearchFiltered ? "CopyAllText" : "CopyFilteredText");
+        CopyVisibleAction.Header = UiText.Get(speakerFilter.IsAll && !IsSearchFiltered ? "CopyAllText" : "CopyFilteredText");
         UpdateReplayControls();
         RefreshRowPresentation();
     }
@@ -219,6 +220,7 @@ public partial class TranscriptView : UserControl
 
     public void SetSpeakerFilter(IEnumerable<string?>? speakerIds)
     {
+        CancelNavigationDrag();
         if (speakerIds is null)
             speakerFilter.ShowAll();
         else
@@ -238,11 +240,11 @@ public partial class TranscriptView : UserControl
         if (!speakerChoices.SequenceEqual(choices))
         {
             speakerChoices = choices;
-            speakerMenu.Items.Clear();
+            SpeakerFilterAction.Items.Clear();
             var all = new MenuItem { Header = UiText.Get("AllSpeakers"), IsCheckable = true, StaysOpenOnClick = true };
             all.Click += (_, _) => SetSpeakerFilter(all.IsChecked ? null : []);
-            speakerMenu.Items.Add(all);
-            speakerMenu.Items.Add(new Separator());
+            SpeakerFilterAction.Items.Add(all);
+            SpeakerFilterAction.Items.Add(new Separator());
             foreach (var choice in choices)
             {
                 var item = new MenuItem { Header = choice.Label, Tag = choice.Id, IsCheckable = true, StaysOpenOnClick = true };
@@ -255,24 +257,32 @@ public partial class TranscriptView : UserControl
                         selection.Remove(choice.Id);
                     SetSpeakerFilter(selection);
                 };
-                speakerMenu.Items.Add(item);
+                SpeakerFilterAction.Items.Add(item);
             }
         }
         var selected = speakerChoices.Where(choice => speakerFilter.Includes(choice.Id)).ToArray();
         SpeakerFilterText.Text = speakerFilter.IsAll ? UiText.Get("AllSpeakers") :
             selected.Length == 1 ? selected[0].Label : UiText.Format("SpeakerFilterCount", selected.Length);
-        SpeakerFilterButton.ToolTip = ShortcutActions.Hint(Shortcuts, "speakerFilter") +
+        SpeakerFilterAction.ToolTip = ShortcutActions.Hint(Shortcuts, "speakerFilter") +
             (speakerFilter.IsAll ? "" : Environment.NewLine + string.Join(", ", selected.Select(choice => choice.Label)));
-        CopyVisibleButton.Content = UiText.Get(speakerFilter.IsAll && !IsSearchFiltered ? "CopyAllText" : "CopyFilteredText");
-        if (speakerMenu.Items.Count > 0)
+        CopyVisibleAction.Header = UiText.Get(speakerFilter.IsAll && !IsSearchFiltered ? "CopyAllText" : "CopyFilteredText");
+        if (SpeakerFilterAction.Items.Count > 0)
         {
-            ((MenuItem)speakerMenu.Items[0]).IsChecked = speakerFilter.IsAll;
-            foreach (var item in speakerMenu.Items.OfType<MenuItem>().Skip(1))
+            ((MenuItem)SpeakerFilterAction.Items[0]).IsChecked = speakerFilter.IsAll;
+            foreach (var item in SpeakerFilterAction.Items.OfType<MenuItem>().Skip(1))
                 item.IsChecked = speakerFilter.Includes(item.Tag as string);
         }
     }
 
-    private void SpeakerFilter_Click(object sender, RoutedEventArgs e) => speakerMenu.IsOpen = true;
+    private void TranscriptActions_Click(object sender, RoutedEventArgs e) => TranscriptActionsMenu.IsOpen = true;
+
+    private void SpeakerFilter_Click(object sender, RoutedEventArgs e)
+    {
+        if (!ReferenceEquals(e.OriginalSource, SpeakerFilterAction))
+            return;
+        TranscriptActionsMenu.IsOpen = true;
+        SpeakerFilterAction.IsSubmenuOpen = true;
+    }
 
     public PlaybackRange SelectedPlaybackRange() =>
         PlaybackRange.FromRows(RowsGrid.SelectedItems.Cast<TranscriptRow>());
@@ -325,23 +335,23 @@ public partial class TranscriptView : UserControl
 
     private void UpdateReplayControls()
     {
-        if (PlayRangeButton is null || RowsGrid is null)
+        if (PlayRangeAction is null || RowsGrid is null)
             return;
-        CopyVisibleButton.IsEnabled = CopyAnnotatedButton.IsEnabled = rows.Count > 0;
+        CopyVisibleAction.IsEnabled = CopyAnnotatedAction.IsEnabled = FollowAction.IsEnabled = rows.Count > 0;
         SelectVisibleRowsMenu.IsEnabled = CopySelectedMenu.IsEnabled = CopySelectedAnnotatedMenu.IsEnabled =
             FollowMenu.IsEnabled = rows.Count > 0;
-        PlayRangeButton.IsEnabled = CanReplay && RowsGrid.SelectedItems.Count > 0;
-        PlayRangeMenu.IsEnabled = PlayRangeButton.IsEnabled;
-        MuteRowsButton.IsEnabled = CanEdit && RowsGrid.SelectedItems.Count > 0;
-        MuteRowsMenu.IsEnabled = MuteRowsButton.IsEnabled;
+        PlayRangeAction.IsEnabled = CanReplay && RowsGrid.SelectedItems.Count > 0;
+        PlayRangeMenu.IsEnabled = PlayRangeAction.IsEnabled;
+        MuteRowsAction.IsEnabled = CanEdit && RowsGrid.SelectedItems.Count > 0;
+        MuteRowsMenu.IsEnabled = MuteRowsAction.IsEnabled;
         ShowMutedRowsMenu.IsEnabled = CanRestoreMutedRows;
         ExportAudioMenu.IsEnabled = CanExportAudio;
         RecheckUnlabeledMenu.IsEnabled = CanRecheckUnlabeled;
-        CorrectRowsButton.IsEnabled = CanCorrect && RowsGrid.SelectedItems.Count > 0;
+        CorrectRowsAction.IsEnabled = CanCorrect && RowsGrid.SelectedItems.Count > 0;
         ReviewUnclearMenu.IsEnabled = CanReviewUnclear;
-        CorrectRowsMenu.IsEnabled = CorrectRowsButton.IsEnabled;
-        RetranscribeRowsMenu.IsEnabled = CorrectRowsButton.IsEnabled && CanReplay;
-        OnlineRowsButton.IsEnabled = OnlineRowsMenu.IsEnabled = RetranscribeRowsMenu.IsEnabled;
+        CorrectRowsMenu.IsEnabled = CorrectRowsAction.IsEnabled;
+        RetranscribeRowsMenu.IsEnabled = CorrectRowsAction.IsEnabled && CanReplay;
+        OnlineRowsAction.IsEnabled = OnlineRowsMenu.IsEnabled = RetranscribeRowsMenu.IsEnabled;
         SpeakerColorMenu.IsEnabled = CanSetSpeakerColors && RowsGrid.SelectedItem is TranscriptRow;
         SpeakerColorMenu.Header = UiText.Get(RowsGrid.SelectedItem is TranscriptRow { SpeakerId: null }
             ? "SetUnlabeledSpeakerColor" : "SetSpeakerColor");
@@ -392,7 +402,7 @@ public partial class TranscriptView : UserControl
     private void RetranscribeRows_Click(object sender, RoutedEventArgs e) => RequestCorrection(true);
     private void OnlineRows_Click(object sender, RoutedEventArgs e)
     {
-        if (OnlineRowsButton.IsEnabled)
+        if (OnlineRowsAction.IsEnabled)
             OnlineTranscriptionRequested?.Invoke(SelectedRows().ToArray());
     }
 
@@ -598,7 +608,7 @@ public partial class TranscriptView : UserControl
 
     private void UpdateFollowLabel()
     {
-        FollowButton.Content = UiText.Get(IsFollowing ? "FollowingTranscript" : "JumpToLatest");
+        FollowAction.Header = UiText.Get(IsFollowing ? "FollowingTranscript" : "JumpToLatest");
         UpdateNavigationControls();
     }
     private void Follow_Click(object sender, RoutedEventArgs e) => JumpToLatest();

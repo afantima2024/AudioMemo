@@ -3,6 +3,7 @@ using System.Security.Cryptography;
 using System.Security.Principal;
 using System.Text;
 using System.Text.Json;
+using System.Xml.Linq;
 using AudioMemo.Services;
 using Microsoft.Win32;
 
@@ -11,6 +12,23 @@ namespace AudioMemo.Tests;
 public sealed class InstallerPackagingTests
 {
     private static string RepositoryRoot => Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, @"..\..\..\..\.."));
+
+    [Fact]
+    public void ReleaseVersionIsSharedByApplicationCoreAndWindowsMetadata()
+    {
+        var properties = XDocument.Load(Path.Combine(RepositoryRoot, "Directory.Build.props"));
+        var release = Assert.Single(properties.Descendants("Version")).Value;
+        Assert.Matches(@"^\d+\.\d+\.\d+$", release);
+        foreach (var assembly in new[] { typeof(MainWindow).Assembly, typeof(AudioMemo.Core.Models.AppSettings).Assembly })
+        {
+            Assert.Equal(release, assembly.GetName().Version!.ToString(3));
+            var info = FileVersionInfo.GetVersionInfo(assembly.Location);
+            Assert.Equal(release + ".0", info.FileVersion);
+            Assert.Equal(release, info.ProductVersion);
+        }
+        foreach (var project in new[] { @"src\AudioMemo\AudioMemo.csproj", @"src\AudioMemo.Core\AudioMemo.Core.csproj" })
+            Assert.Empty(XDocument.Load(Path.Combine(RepositoryRoot, project)).Descendants("Version"));
+    }
 
     [Fact]
     public void InstallerIsPerUserOfflineAndDoesNotRecursivelyDeleteUserData()
@@ -48,6 +66,9 @@ public sealed class InstallerPackagingTests
         Assert.Equal($"{hash} *{Path.GetFileName(package)}", File.ReadAllText(package + ".sha256").Trim());
         Assert.False(manifest.RootElement.GetProperty("Signed").GetBoolean());
         var info = FileVersionInfo.GetVersionInfo(package);
+        var release = manifest.RootElement.GetProperty("Version").GetString();
+        Assert.Equal(release + ".0", info.FileVersion);
+        Assert.Equal(release, info.ProductVersion);
         Assert.Equal("Afanti Ma", info.CompanyName);
         Assert.Equal("AudioMemo", info.ProductName);
         Assert.Equal("Copyright \u00a9 2026 Afanti Ma", info.LegalCopyright);
